@@ -1,0 +1,14 @@
+{
+  "name": "rcuv-html-converter",
+  "version": "1.0.0",
+  "description": "Convert the RCUV HTML Bible texts to different formats.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eddie Lau",
+  "license": "ISC",
+  "dependencies": {
+    "rcuv-html-parser": "file:../rcuv-html-parser"
+  }
+}
