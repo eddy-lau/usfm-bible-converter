@@ -143,9 +143,11 @@ function convertBook(shortName, opts) {
         throw new Error('Verse number not found: ', text);
       }
 
+      var nonBreakableVerse = verseNumber[0].replace(' ', '&nbsp;');
+
       var anchor = chapter.trim() + ':' + verseNumber[0];
       result += '<a class="verse" name="' + anchor.trim() + '">';
-      result += htmlElement(tag, verseNumber[0]);
+      result += htmlElement(tag, nonBreakableVerse);
       result += text.substring(verseNumber[0].length);
       result += '</a>';
 

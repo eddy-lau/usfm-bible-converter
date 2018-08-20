@@ -1,11 +1,30 @@
 span.id {
   display: none;
 }
+.mt1 {
+  display: none;
+}
+.restore {
+  display: none;
+}
 
+/* book name */
+h1.h {
+  text-align: center;
+}
+
+/* chapter */
+h2.c {
+  margin-top: 3em;
+  text-align: center;
+}
+
+/* verse number */
 sup.v {
   color: red;
 }
 
+/* paragraph */
 p {
   margin-bottom: 0em;
 }
@@ -14,6 +33,24 @@ p.p {
   text-indent: 2em;
 }
 
-p.q1 {
+p.q1, p.q2 {
+  margin-top: 0em;
+  margin-bottom: 0em;
   margin-left: 2em;
+}
+
+/* underline */
+span.pn {
+  border-bottom: 1px solid #000;
+  white-space: nowrap;
+}
+
+/* footnote */
+span.f {
+  display: none;
+}
+
+/* reference */
+span.r {
+  font-size: smaller;
 }
