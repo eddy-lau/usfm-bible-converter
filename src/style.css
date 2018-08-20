@@ -1,0 +1,19 @@
+span.id {
+  display: none;
+}
+
+sup.v {
+  color: red;
+}
+
+p {
+  margin-bottom: 0em;
+}
+
+p.p {
+  text-indent: 2em;
+}
+
+p.q1 {
+  margin-left: 2em;
+}
