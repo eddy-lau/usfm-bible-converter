@@ -56,6 +56,7 @@ function convertBook(shortName, opts) {
   var isParagraphOpened = false;
   var writer;
   var chapter;
+  var verse;
   var footnotes = [];
 
   //
@@ -113,12 +114,7 @@ function convertBook(shortName, opts) {
       attrText += ' ' + key + '="' + attr[key] + '" ';
     });
 
-    if (tag == 'f') {
-      // FIXME no special handling for 'f'
-      result += '<' + htmlTag + attrText + '>';
-    } else {
-      result += '<' + htmlTag + ' class="' + tag + '"' + attrText + '>';
-    }
+    result += '<' + htmlTag + ' class="' + tag + '"' + attrText + '>';
 
     if (htmlTag == 'p') {
       isParagraphOpened = true;
@@ -154,7 +150,7 @@ function convertBook(shortName, opts) {
 
       result += '<aside id="footnote-' + footnote.index + '" epub:type="footnote">\n';
       result += '<p class="footnote">';
-      result += '<a href="#footnote-' + footnote.index + '-ref">' + footnote.index + '. </a>';
+      result += '<a href="#footnote-' + footnote.index + '-ref">' + footnote.chapter + ':' + footnote.verse + '</a> ';
       result += footnote.text + '</p>\n';
       result += '</aside>\n';
 
@@ -188,7 +184,7 @@ function convertBook(shortName, opts) {
 
       var nonBreakableVerse = verseNumber[0].replace(' ', '&#160;');
 
-      var anchor = (chapter.trim() + ':' + verseNumber[0]).trim();
+      var anchor = ('' + chapter + ':' + verseNumber[0]).trim();
       result += '<a class="verse" id="' + anchor + '">';
       result += htmlElement(tag, nonBreakableVerse);
       result += '</a>';
@@ -196,9 +192,8 @@ function convertBook(shortName, opts) {
 
     } else if (tag == 'c') {
 
-      chapter = text;
       result += closeParagraphIfOpened() + '\n';
-      result += '<a class="chapter" id="' + chapter.trim() + '">';
+      result += '<a class="chapter" id="' + chapter + '">';
       result += htmlElement(tag, text);
       result += '</a>';
 
@@ -219,8 +214,10 @@ function convertBook(shortName, opts) {
         footnoteText = footnoteText.substring(2);
       }
       footnotes.push({
+        chapter: chapter,
+        verse: verse,
         index: footnotes.length + 1,
-        text: footnoteText
+        text: footnoteText,
       });
 
       var attr = {
@@ -273,7 +270,9 @@ function convertBook(shortName, opts) {
       onStartBook: function() {
         writer.write(startDoc() + '\n');
       },
-      onStartLine: function(line) {
+      onStartLine: function(line, c, v) {
+        chapter = c || chapter;
+        verse = v || verse;
         currentLine = line;
         tags = [];
         texts = [];
