@@ -13,16 +13,43 @@ h1.h {
   text-align: center;
 }
 
-/* chapter */
-h2.c {
+/* intro headings */
+h3.imt, h3.is, h3.iot {
   text-align: center;
-  display: block;
-  font-size: 2em;
+}
+
+/* chapter */
+span.c {
+  text-align: center;
+  display: inline;
+  font-size: 2.5em;
   margin-top: 0.67em;
   margin-bottom: 0.67em;
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+}
+
+div.chap-nav {
+  margin-top: 2em;
+  text-align: center;
+}
+
+a.prev-chap-link {
+  font-size: smaller;
+  margin-right: 1em;
+}
+
+a.next-chap-link {
+  font-size: smaller;
+  margin-left: 1em;
+}
+
+/* subject */
+h3.s {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 1.5em;
 }
 
 /* verse number */
@@ -56,8 +83,16 @@ span.pn {
 span.f {
   display: none;
 }
+p.footnote {
+  margin-bottom: 0em;
+  margin-top: 0.5em;
+}
 
 /* reference */
 span.r {
   font-size: smaller;
+  display: block;
+  text-align: center;
+  margin-top: -1.5em;
+  margin-bottom: 2em;
 }

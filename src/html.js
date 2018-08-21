@@ -10,7 +10,7 @@ const PAIRED_TAGS = [
 const TAGS_MAP = {
   'b': 'p',
   'bk': 'span',
-  'c': 'h2',
+  'c': 'span',
   'd': 'h4',
   'f': 'a',
   'ft': 'span',
@@ -67,6 +67,7 @@ function convertBook(shortName, opts) {
     result += '<html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">\n';
     result += '';
     result += '<head>\n';
+    result += '<meta charset="UTF-8">\n';
     result += '<title>' + shortName.toUpperCase() + '</title>\n';
     result += css() + '\n';
     result += '</head>\n';
@@ -193,9 +194,13 @@ function convertBook(shortName, opts) {
     } else if (tag == 'c') {
 
       result += closeParagraphIfOpened() + '\n';
-      result += '<a class="chapter" id="' + chapter + '">';
+      result += '<a class="chapter" id="' + chapter + '">\n';
+      result += '<div class="chap-nav">\n';
+      result += '&lt; <a class="prev-chap-link" href="#' + (chapter - 1) + '">上一章</a> ';
       result += htmlElement(tag, text);
-      result += '</a>';
+      result += ' <a class="next-chap-link" href="#' + (chapter + 1) + '">下一章</a> &gt;\n';
+      result += '</div>\n';
+      result += '</a>\n';
 
     } else if (tag == 's') {
 
