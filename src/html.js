@@ -51,7 +51,7 @@ function convertBook(shortName, opts) {
 
   opts = opts || {};
   var outputPath = opts.outputFileName ||
-    path.join(__dirname, '..', 'output', shortName + '.xhtml');
+    path.join(__dirname, '..', 'output', shortName + '.html');
 
   var isParagraphOpened = false;
   var writer;
@@ -153,8 +153,9 @@ function convertBook(shortName, opts) {
     footnotes.forEach( footnote => {
 
       result += '<aside id="footnote-' + footnote.index + '" epub:type="footnote">\n';
+      result += '<p class="footnote">';
       result += '<a href="#footnote-' + footnote.index + '-ref">' + footnote.index + '. </a>';
-      result += '<p class="footnote">' + footnote.text + '</p>\n';
+      result += footnote.text + '</p>\n';
       result += '</aside>\n';
 
     });
@@ -200,6 +201,11 @@ function convertBook(shortName, opts) {
       result += '<a class="chapter" id="' + chapter.trim() + '">';
       result += htmlElement(tag, text);
       result += '</a>';
+
+    } else if (tag == 's') {
+
+      result += closeParagraphIfOpened();
+      result += htmlElement(tag, text);
 
     } else if (PARAGRAPH_BREAKS.indexOf(tag) != -1) {
 
