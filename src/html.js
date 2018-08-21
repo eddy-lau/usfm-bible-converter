@@ -12,7 +12,7 @@ const TAGS_MAP = {
   'bk': 'span',
   'c': 'h2',
   'd': 'h4',
-  'f': 'span',
+  'f': 'a',
   'ft': 'span',
   'fv': 'span',
   'h': 'h1',
@@ -51,21 +51,22 @@ function convertBook(shortName, opts) {
 
   opts = opts || {};
   var outputPath = opts.outputFileName ||
-    path.join(__dirname, '..', 'output', shortName + '.html');
+    path.join(__dirname, '..', 'output', shortName + '.xhtml');
 
   var isParagraphOpened = false;
   var writer;
   var chapter;
-
+  var footnotes = [];
 
   //
   // Methods
   //
   function startDoc() {
-    var result = '<!DOCTYPE HTML>\n';
-    result += '<html>\n';
+    var result = '<!DOCTYPE html>\n';
+    result += '<html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">\n';
+    result += '';
     result += '<head>\n';
-    result += '<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">\n';
+    result += '<title>' + shortName.toUpperCase() + '</title>\n';
     result += css() + '\n';
     result += '</head>\n';
     result += '<body>';
@@ -85,6 +86,8 @@ function convertBook(shortName, opts) {
   }
 
   function closeParagraphIfOpened(tag) {
+
+    tag = tag || 'p';
     var htmlTag = TAGS_MAP[tag];
     if (htmlTag == 'p') {
       if (isParagraphOpened) {
@@ -94,14 +97,29 @@ function convertBook(shortName, opts) {
     return '';
   }
 
-  function startHtmlTag(tag, text) {
+  function startHtmlTag(tag, attr, text) {
+
+    attr = attr || {};
 
     var htmlTag = TAGS_MAP[tag];
     if (!htmlTag) {
       throw new Error('No HTML Tag for: ', tag);
     }
 
-    var result = '<' + htmlTag + ' class="' + tag + '">';
+    var result = closeParagraphIfOpened(tag);
+
+    var attrText = '';
+    Object.keys(attr).forEach( key => {
+      attrText += ' ' + key + '="' + attr[key] + '" ';
+    });
+
+    if (tag == 'f') {
+      // FIXME no special handling for 'f'
+      result += '<' + htmlTag + attrText + '>';
+    } else {
+      result += '<' + htmlTag + ' class="' + tag + '"' + attrText + '>';
+    }
+
     if (htmlTag == 'p') {
       isParagraphOpened = true;
     }
@@ -125,8 +143,26 @@ function convertBook(shortName, opts) {
     return result;
   }
 
-  function htmlElement(tag, text) {
-    return startHtmlTag(tag) + text + endHtmlTag(tag);
+  function htmlElement(tag, text, attr) {
+    return startHtmlTag(tag, attr) + text + endHtmlTag(tag);
+  }
+
+  function generateFootnotes() {
+
+    var result = '<hr/>';
+    footnotes.forEach( footnote => {
+
+      result += '<aside id="footnote-' + footnote.index + '" epub:type="footnote">\n';
+      result += '<a href="#footnote-' + footnote.index + '-ref">' + footnote.index + '. </a>';
+      result += '<p class="footnote">' + footnote.text + '</p>\n';
+      result += '</aside>\n';
+
+    });
+
+    footnotes = [];
+    return result;
+
+
   }
 
   function convertTag(tag, text) {
@@ -136,35 +172,63 @@ function convertBook(shortName, opts) {
     }
 
     var result = '';
-    if (tag == 'v') {
+
+    if (tag == 'h') {
+
+      bookName = text.trim();
+      result += htmlElement(tag, text);
+
+    } else if (tag == 'v') {
 
       let verseNumber = text.match( /^\d+? / );
       if (!verseNumber || verseNumber.length == 0) {
         throw new Error('Verse number not found: ', text);
       }
 
-      var nonBreakableVerse = verseNumber[0].replace(' ', '&nbsp;');
+      var nonBreakableVerse = verseNumber[0].replace(' ', '&#160;');
 
-      var anchor = chapter.trim() + ':' + verseNumber[0];
-      result += '<a class="verse" name="' + anchor.trim() + '">';
+      var anchor = (chapter.trim() + ':' + verseNumber[0]).trim();
+      result += '<a class="verse" id="' + anchor + '">';
       result += htmlElement(tag, nonBreakableVerse);
-      result += text.substring(verseNumber[0].length);
       result += '</a>';
+      result += text.substring(verseNumber[0].length);
 
     } else if (tag == 'c') {
 
       chapter = text;
-      result += '<a class="chapter" name="' + chapter.trim() + '">';
+      result += closeParagraphIfOpened() + '\n';
+      result += '<a class="chapter" id="' + chapter.trim() + '">';
       result += htmlElement(tag, text);
       result += '</a>';
 
     } else if (PARAGRAPH_BREAKS.indexOf(tag) != -1) {
 
       result += closeParagraphIfOpened(tag);
-      result += startHtmlTag(tag, text);
+      result += startHtmlTag(tag, {}, text);
+
+    } else if (tag == 'f') {
+
+      var footnoteText = text;
+      if (footnoteText.startsWith('+ ')) {
+        footnoteText = footnoteText.substring(2);
+      }
+      footnotes.push({
+        index: footnotes.length + 1,
+        text: footnoteText
+      });
+
+      var attr = {
+        id: 'footnote-' + footnotes.length + '-ref',
+        href:'#footnote-' + footnotes.length,
+        'epub:type':'noteref'
+      };
+
+      result += htmlElement(tag, '<sup>[註]</sup>', attr);
 
     } else {
+
       result += htmlElement(tag, text);
+
     }
 
     return result;
@@ -235,6 +299,7 @@ function convertBook(shortName, opts) {
       },
       onEndLine: function(line) {
 
+        //writer.write( '<!-- ' + line + ' -->\n');
         while(tags.length > 0) {
           writer.write( convertTag(tags.pop(), texts.pop()) + '\n');
         }
@@ -242,6 +307,7 @@ function convertBook(shortName, opts) {
       },
       onEndBook: function() {
         writer.write( closeParagraphIfOpened() + '\n');
+        writer.write( generateFootnotes() + '\n');
         writer.write( endDoc() + '\n');
       }
     });

@@ -15,13 +15,19 @@ h1.h {
 
 /* chapter */
 h2.c {
-  margin-top: 3em;
   text-align: center;
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* verse number */
 sup.v {
-  color: red;
+  color: rgb(255, 153, 0);
 }
 
 /* paragraph */
@@ -41,7 +47,8 @@ p.q1, p.q2 {
 
 /* underline */
 span.pn {
-  border-bottom: 1px solid #000;
+  /*border-bottom: 1px solid #000;*/
+  text-decoration: underline;
   white-space: nowrap;
 }
 
