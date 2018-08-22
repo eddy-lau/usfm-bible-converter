@@ -10,5 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "rcuv-html-parser": "file:../rcuv-html-parser"
-  }
+  },
+  "engines" : { "node" : ">=6.0.0" }
 }

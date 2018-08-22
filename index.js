@@ -2,4 +2,7 @@
 
 var converter  = require('./src/html.js');
 
-converter.convertBook('gen');
+converter.convertAll()
+.catch( err => {
+  console.log(err);
+});

@@ -4,7 +4,7 @@ var path = require('path');
 var fs = require('fs');
 
 const PAIRED_TAGS = [
-  'bk', 'f', 'ft', 'fv', 'pn', 'qs'
+  'bk', 'f', 'fv', 'ft', 'pn', 'qs'
 ];
 
 const TAGS_MAP = {
@@ -21,6 +21,7 @@ const TAGS_MAP = {
   'iot': 'h3',
   'ip': 'p',
   'is': 'h3',
+  'is2': 'h3',
   'li1': 'p',
   'm': 'p',
   'ms': 'p',
@@ -54,6 +55,8 @@ function convertBook(shortName, opts) {
     path.join(__dirname, '..', 'output', shortName + '.html');
 
   var isParagraphOpened = false;
+  var book;
+  var chapterCount;
   var writer;
   var chapter;
   var verse;
@@ -87,6 +90,29 @@ function convertBook(shortName, opts) {
     return '</body></html>';
   }
 
+  function bookNavigation() {
+
+    var result = '<div class="book-nav">\n';
+    for (var i = 0; i<chapterCount; i++) {
+
+      if ( (i % 10) == 0) {
+        result += '<p>\n';
+      }
+
+      result += '<span class="book-nav-link">';
+      result += '<a href="#' + (i+1) + '">' + (i+1) + '</a> ';
+      result += '</span>';
+
+      if ( ((i + 1) % 10) == 0) {
+        result += '</p>\n';
+      }
+
+    }
+    result += '</div>\n';
+    return result;
+
+  }
+
   function closeParagraphIfOpened(tag) {
 
     tag = tag || 'p';
@@ -105,7 +131,7 @@ function convertBook(shortName, opts) {
 
     var htmlTag = TAGS_MAP[tag];
     if (!htmlTag) {
-      throw new Error('No HTML Tag for: ', tag);
+      throw new Error('No HTML Tag for: "' + tag + '"');
     }
 
     var result = closeParagraphIfOpened(tag);
@@ -131,7 +157,7 @@ function convertBook(shortName, opts) {
   function endHtmlTag(tag) {
     var htmlTag = TAGS_MAP[tag];
     if (!htmlTag) {
-      throw new Error('No HTML Tag for: ', tag);
+      throw new Error('No HTML Tag for: "' + tag + '"');
     }
     var result = '</' + htmlTag + '>';
     if (htmlTag == 'p') {
@@ -146,7 +172,10 @@ function convertBook(shortName, opts) {
 
   function generateFootnotes() {
 
-    var result = '<hr/>';
+    var result = '<a class="chapter" id="' + (chapter + 1) + '">\n';
+    result += '<h2 class="footnote-title">註釋</h2>\n';
+    result += '</a>\n';
+
     footnotes.forEach( footnote => {
 
       result += '<aside id="footnote-' + footnote.index + '" epub:type="footnote">\n';
@@ -166,7 +195,7 @@ function convertBook(shortName, opts) {
   function convertTag(tag, text) {
     var htmlTag = TAGS_MAP[tag];
     if (!htmlTag) {
-      throw new Error('No HTML Tag for: ', tag);
+      throw new Error('No HTML Tag for: "' + tag + '"');
     }
 
     var result = '';
@@ -174,22 +203,35 @@ function convertBook(shortName, opts) {
     if (tag == 'h') {
 
       bookName = text.trim();
+      result += '<a class="chapter" id="0">';
       result += htmlElement(tag, text);
+      result += '</a>';
+      result += bookNavigation();
 
     } else if (tag == 'v') {
 
-      let verseNumber = text.match( /^\d+? / );
-      if (!verseNumber || verseNumber.length == 0) {
-        throw new Error('Verse number not found: ', text);
+      var verseNumberStr;
+      let matches = text.match( /^\d+? / );
+      if (!matches || matches.length == 0) {
+
+        matches = text.match( /^\d+-\d+ / );
+        if (!matches || matches.length == 0) {
+          throw new Error('Verse number not found: ' + errorLocation() + " '" + text + "'");
+        }
+
+        verseNumberStr = matches[0];
+
+      } else {
+        verseNumberStr = matches[0];
       }
 
-      var nonBreakableVerse = verseNumber[0].replace(' ', '&#160;');
+      var nonBreakableVerse = verseNumberStr.replace(' ', '&#160;');
 
-      var anchor = ('' + chapter + ':' + verseNumber[0]).trim();
+      var anchor = ('' + chapter + ':' + verseNumberStr).trim();
       result += '<a class="verse" id="' + anchor + '">';
       result += htmlElement(tag, nonBreakableVerse);
       result += '</a>';
-      result += text.substring(verseNumber[0].length);
+      result += text.substring(verseNumberStr.length);
 
     } else if (tag == 'c') {
 
@@ -242,10 +284,20 @@ function convertBook(shortName, opts) {
     return result;
   }
 
+  function errorLocation() {
+    return '[' + book.index + shortName.toUpperCase() + ' ' + chapter + ':' + verse + ']';
+  }
 
+  function errorMessage(err) {
+    return '<pre>' + err + '</pre>';
+  }
 
+  return Parser.Book.getBook(shortName).then( result => {
 
-  return new Promise( (resolve, reject) => {
+    book = result;
+    var filename = book.index + shortName.toUpperCase() + '.html';
+    var outputPath = opts.outputFileName ||
+      path.join(__dirname, '..', 'output', filename);
 
     var outputDir = path.dirname(outputPath);
     if (!fs.existsSync(outputDir)) {
@@ -256,17 +308,24 @@ function convertBook(shortName, opts) {
           resolve();
         }
       });
-    } else {
-      resolve();
     }
 
-  }).then( () => {
+    return outputPath;
 
+  }).then( result => {
+
+    outputPath = result;
     writer = fs.createWriteStream(outputPath);
     return Parser.Book.getBook(shortName);
 
-  }).then( book => {
+  }).then( result => {
 
+    book = result;
+    return book.getChapterCount();
+
+  }).then( result => {
+
+    chapterCount = result;
     var tags = [];
     var texts = [];
 
@@ -295,10 +354,10 @@ function convertBook(shortName, opts) {
       },
       onEndTag: function(tag) {
         if (PAIRED_TAGS.indexOf(tag) == -1) {
-          throw new Error('Invalid Tag: ' + tag);
+          throw new Error('Invalid Tag: ' + "'" + tag + "' " + errorLocation());
         }
         if (tags[tags.length-1] !== tag) {
-          throw new Error('Tag mismatched: ' + tag);
+          throw new Error('Tag mismatched: ' + tag + '. ' + errorLocation());
         }
         if (texts.length == 0) {
           throw new Error('Invalid content: ' + line);
@@ -328,8 +387,8 @@ function convertBook(shortName, opts) {
 
   }).catch( error => {
 
-    console.log('Error');
     if (writer) {
+      writer.write( errorMessage(error) + '\n');
       writer.end();
     }
     return Promise.reject(error);
@@ -338,7 +397,22 @@ function convertBook(shortName, opts) {
 
 }
 
+function convertAll() {
+
+  return Parser.Book.getBooks().then( books => {
+
+    return Promise.all(
+      books.map( book => {
+        convertBook(book.shortName);
+      })
+    );
+
+  });
+
+}
+
 
 module.exports = {
-  convertBook: convertBook
+  convertBook: convertBook,
+  convertAll: convertAll
 };

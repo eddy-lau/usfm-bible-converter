@@ -18,6 +18,16 @@ h3.imt, h3.is, h3.iot {
   text-align: center;
 }
 
+/* book nav */
+div.book-nav {
+  text-align: center;
+}
+span.book-nav-link {
+  font-size: 1em;
+  padding: 0.2em;
+  display: inline;
+}
+
 /* chapter */
 span.c {
   text-align: center;
@@ -28,6 +38,10 @@ span.c {
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+}
+
+span.c a sup {
+  font-size: 0.5em;
 }
 
 div.chap-nav {
@@ -43,6 +57,11 @@ a.prev-chap-link {
 a.next-chap-link {
   font-size: smaller;
   margin-left: 1em;
+}
+
+h4.d {
+  text-align: center;
+  margin-top: -0.2em;
 }
 
 /* subject */
@@ -87,6 +106,9 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
+h2.footnote-title {
+  text-align: center;
+}
 
 /* reference */
 span.r {
@@ -95,4 +117,8 @@ span.r {
   text-align: center;
   margin-top: -1.5em;
   margin-bottom: 2em;
+}
+
+.error {
+  color: red;
 }
