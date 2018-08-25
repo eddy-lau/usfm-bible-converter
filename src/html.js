@@ -1,10 +1,12 @@
 /*jshint esversion: 6 */
-var Parser = require('rcuv-html-parser');
+const rcuv = require('rcuv-usfm').pathOfFiles;
+const parser = require('usfm-bible-parser')(rcuv);
+
 var path = require('path');
 var fs = require('fs');
 
 const PAIRED_TAGS = [
-  'bk', 'f', 'fv', 'ft', 'pn', 'qs'
+  'bk', 'f', 'fv', 'pn', 'qs'
 ];
 
 const TAGS_MAP = {
@@ -30,6 +32,7 @@ const TAGS_MAP = {
   'p': 'p',
   'pn': 'span',
   'ps': 'p',
+  'q' : 'p',
   'q1': 'p',
   'q2': 'p',
   'q3': 'p',
@@ -37,6 +40,7 @@ const TAGS_MAP = {
   'r': 'span',
   'restore': 'p',
   's': 'h3',
+  's1': 'h3',
   's2': 'h3',
   'sp': 'h3',
   'tc1': 'span',
@@ -45,7 +49,7 @@ const TAGS_MAP = {
 };
 
 const PARAGRAPH_BREAKS = [
-  'b', 'm', 'nb', 'p', 'ps', 'q1', 'q2', 'q3'
+  'b', 'm', 'nb', 'p', 'ps', 'q', 'q1', 'q2', 'q3'
 ];
 
 function convertBook(shortName, opts) {
@@ -131,7 +135,7 @@ function convertBook(shortName, opts) {
 
     var htmlTag = TAGS_MAP[tag];
     if (!htmlTag) {
-      throw new Error('No HTML Tag for: "' + tag + '"');
+      throw new Error('No HTML Tag for: "' + tag + '" ' + errorLocation());
     }
 
     var result = closeParagraphIfOpened(tag);
@@ -157,7 +161,7 @@ function convertBook(shortName, opts) {
   function endHtmlTag(tag) {
     var htmlTag = TAGS_MAP[tag];
     if (!htmlTag) {
-      throw new Error('No HTML Tag for: "' + tag + '"');
+      throw new Error('No HTML Tag for: "' + tag + '" ' + errorLocation());
     }
     var result = '</' + htmlTag + '>';
     if (htmlTag == 'p') {
@@ -178,9 +182,11 @@ function convertBook(shortName, opts) {
 
     footnotes.forEach( footnote => {
 
+      let footnoteLinkText = footnote.verse ? (footnote.chapter + ':' + footnote.verse) : (footnote.chapter)
+
       result += '<aside id="footnote-' + footnote.index + '" epub:type="footnote">\n';
       result += '<p class="footnote">';
-      result += '<a href="#footnote-' + footnote.index + '-ref">' + footnote.chapter + ':' + footnote.verse + '</a> ';
+      result += '<a href="#footnote-' + footnote.index + '-ref">' + footnoteLinkText + '</a> ';
       result += footnote.text + '</p>\n';
       result += '</aside>\n';
 
@@ -195,7 +201,7 @@ function convertBook(shortName, opts) {
   function convertTag(tag, text) {
     var htmlTag = TAGS_MAP[tag];
     if (!htmlTag) {
-      throw new Error('No HTML Tag for: "' + tag + '"');
+      throw new Error('No HTML Tag for: "' + tag + '" ' + errorLocation());
     }
 
     var result = '';
@@ -244,7 +250,7 @@ function convertBook(shortName, opts) {
       result += '</div>\n';
       result += '</a>\n';
 
-    } else if (tag == 's') {
+    } else if (tag == 's' || tag == 's1') {
 
       result += closeParagraphIfOpened();
       result += htmlElement(tag, text);
@@ -285,14 +291,14 @@ function convertBook(shortName, opts) {
   }
 
   function errorLocation() {
-    return '[' + book.index + shortName.toUpperCase() + ' ' + chapter + ':' + verse + ']';
+    return '[' + book.index + '-' + shortName.toUpperCase() + ' ' + chapter + ':' + verse + ']';
   }
 
   function errorMessage(err) {
     return '<pre>' + err + '</pre>';
   }
 
-  return Parser.Book.getBook(shortName).then( result => {
+  return parser.getBook(shortName).then( result => {
 
     book = result;
     var filename = book.index + shortName.toUpperCase() + '.html';
@@ -316,7 +322,7 @@ function convertBook(shortName, opts) {
 
     outputPath = result;
     writer = fs.createWriteStream(outputPath);
-    return Parser.Book.getBook(shortName);
+    return parser.getBook(shortName);
 
   }).then( result => {
 
@@ -356,8 +362,11 @@ function convertBook(shortName, opts) {
         if (PAIRED_TAGS.indexOf(tag) == -1) {
           throw new Error('Invalid Tag: ' + "'" + tag + "' " + errorLocation());
         }
-        if (tags[tags.length-1] !== tag) {
-          throw new Error('Tag mismatched: ' + tag + '. ' + errorLocation());
+        while (tags[tags.length-1] !== tag) {
+          let prevTag = tags.pop();
+          var taggedText = convertTag(prevTag, texts.pop());
+          texts[texts.length-1] += taggedText;
+          //throw new Error('Tag mismatched: ' + tag + '. ' + errorLocation());
         }
         if (texts.length == 0) {
           throw new Error('Invalid content: ' + line);
@@ -399,7 +408,7 @@ function convertBook(shortName, opts) {
 
 function convertAll() {
 
-  return Parser.Book.getBooks().then( books => {
+  return parser.getBooks().then( books => {
 
     return Promise.all(
       books.map( book => {

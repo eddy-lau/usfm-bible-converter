@@ -9,7 +9,10 @@
   "author": "Eddie Lau",
   "license": "ISC",
   "dependencies": {
-    "rcuv-html-parser": "file:../rcuv-html-parser"
+    "rcuv-usfm": "file:../rcuv-usfm",
+    "usfm-bible-parser": "file:../usfm-bible-parser"
   },
-  "engines" : { "node" : ">=6.0.0" }
+  "engines": {
+    "node": ">=6.0.0"
+  }
 }
