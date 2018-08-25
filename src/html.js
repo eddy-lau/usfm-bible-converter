@@ -182,7 +182,7 @@ function convertBook(shortName, opts) {
 
     footnotes.forEach( footnote => {
 
-      let footnoteLinkText = footnote.verse ? (footnote.chapter + ':' + footnote.verse) : (footnote.chapter)
+      let footnoteLinkText = footnote.verse ? (footnote.chapter + ':' + footnote.verse) : (footnote.chapter);
 
       result += '<aside id="footnote-' + footnote.index + '" epub:type="footnote">\n';
       result += '<p class="footnote">';
@@ -362,9 +362,11 @@ function convertBook(shortName, opts) {
         if (PAIRED_TAGS.indexOf(tag) == -1) {
           throw new Error('Invalid Tag: ' + "'" + tag + "' " + errorLocation());
         }
+
+        var taggedText;
         while (tags[tags.length-1] !== tag) {
           let prevTag = tags.pop();
-          var taggedText = convertTag(prevTag, texts.pop());
+          taggedText = convertTag(prevTag, texts.pop());
           texts[texts.length-1] += taggedText;
           //throw new Error('Tag mismatched: ' + tag + '. ' + errorLocation());
         }
@@ -372,7 +374,7 @@ function convertBook(shortName, opts) {
           throw new Error('Invalid content: ' + line);
         }
         tags.pop();
-        var taggedText = convertTag(tag, texts.pop());
+        taggedText  = convertTag(tag, texts.pop());
         texts[texts.length-1] += taggedText;
       },
       onEndLine: function(line) {
