@@ -301,7 +301,7 @@ function convertBook(shortName, opts) {
   return parser.getBook(shortName).then( result => {
 
     book = result;
-    var filename = book.index + shortName.toUpperCase() + '.html';
+    var filename = book.index + '-' + shortName.toUpperCase() + '.html';
     var outputPath = opts.outputFileName ||
       path.join(__dirname, '..', 'output', filename);
 
