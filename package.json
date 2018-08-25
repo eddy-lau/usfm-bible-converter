@@ -1,7 +1,7 @@
 {
-  "name": "rcuv-html-converter",
+  "name": "usfm-converter",
   "version": "1.0.0",
-  "description": "Convert the RCUV HTML Bible texts to different formats.",
+  "description": "Convert the USFM Bible texts to different formats.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,6 @@
   "author": "Eddie Lau",
   "license": "ISC",
   "dependencies": {
-    "rcuv-usfm": "file:../rcuv-usfm",
     "usfm-bible-parser": "file:../usfm-bible-parser"
   },
   "engines": {

@@ -1,6 +1,5 @@
 /*jshint esversion: 6 */
-const rcuv = require('rcuv-usfm').pathOfFiles;
-const parser = require('usfm-bible-parser')(rcuv);
+var parser;
 
 var path = require('path');
 var fs = require('fs');
@@ -423,7 +422,10 @@ function convertAll() {
 }
 
 
-module.exports = {
-  convertBook: convertBook,
-  convertAll: convertAll
+module.exports = function(path) {
+  parser = require('usfm-bible-parser')(path);
+  return {
+    convertBook: convertBook,
+    convertAll: convertAll
+  };
 };

@@ -1,18 +1,4 @@
 /*jshint esversion: 6 */
-var converter  = require('./src/html.js');
-
-console.log('');
-console.log('');
-console.log('');
-console.log('');
-console.log('');
-console.log('');
-console.log('');
-console.log('');
-console.log('');
-console.log('');
-
-converter.convertAll()
-.catch( err => {
-  console.log(err);
-});
+var path = process.argv[2];
+var converter  = require('./src/html.js')(path);
+converter.convertAll();
