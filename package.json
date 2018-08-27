@@ -9,6 +9,7 @@
   "author": "Eddie Lau",
   "license": "ISC",
   "dependencies": {
+    "commander": "^2.17.1",
     "usfm-bible-parser": "file:../usfm-bible-parser"
   },
   "engines": {

@@ -4,11 +4,11 @@ var parser;
 var path = require('path');
 var fs = require('fs');
 
-const PAIRED_TAGS = [
+const PAIRED_MARKERS = [
   'bk', 'f', 'fv', 'pn', 'qs'
 ];
 
-const TAGS_MAP = {
+const HTML_TAGS = {
   'b': 'p',
   'bk': 'span',
   'c': 'span',
@@ -116,35 +116,35 @@ function convertBook(shortName, opts) {
 
   }
 
-  function closeParagraphIfOpened(tag) {
+  function closeParagraphIfOpened(marker) {
 
-    tag = tag || 'p';
-    var htmlTag = TAGS_MAP[tag];
+    marker = marker || 'p';
+    var htmlTag = HTML_TAGS[marker];
     if (htmlTag == 'p') {
       if (isParagraphOpened) {
-        return endHtmlTag(tag);
+        return endHtmlTag(marker);
       }
     }
     return '';
   }
 
-  function startHtmlTag(tag, attr, text) {
+  function startHtmlTag(marker, attr, text) {
 
     attr = attr || {};
 
-    var htmlTag = TAGS_MAP[tag];
+    var htmlTag = HTML_TAGS[marker];
     if (!htmlTag) {
-      throw new Error('No HTML Tag for: "' + tag + '" ' + errorLocation());
+      throw new Error('No HTML Tag for: "' + marker + '" ' + errorLocation());
     }
 
-    var result = closeParagraphIfOpened(tag);
+    var result = closeParagraphIfOpened(marker);
 
     var attrText = '';
     Object.keys(attr).forEach( key => {
       attrText += ' ' + key + '="' + attr[key] + '" ';
     });
 
-    result += '<' + htmlTag + ' class="' + tag + '"' + attrText + '>';
+    result += '<' + htmlTag + ' class="' + marker + '"' + attrText + '>';
 
     if (htmlTag == 'p') {
       isParagraphOpened = true;
@@ -157,10 +157,10 @@ function convertBook(shortName, opts) {
     return result;
   }
 
-  function endHtmlTag(tag) {
-    var htmlTag = TAGS_MAP[tag];
+  function endHtmlTag(marker) {
+    var htmlTag = HTML_TAGS[marker];
     if (!htmlTag) {
-      throw new Error('No HTML Tag for: "' + tag + '" ' + errorLocation());
+      throw new Error('No HTML Tag for: "' + marker + '" ' + errorLocation());
     }
     var result = '</' + htmlTag + '>';
     if (htmlTag == 'p') {
@@ -169,8 +169,8 @@ function convertBook(shortName, opts) {
     return result;
   }
 
-  function htmlElement(tag, text, attr) {
-    return startHtmlTag(tag, attr) + text + endHtmlTag(tag);
+  function htmlElement(marker, text, attr) {
+    return startHtmlTag(marker, attr) + text + endHtmlTag(marker);
   }
 
   function generateFootnotes() {
@@ -197,23 +197,23 @@ function convertBook(shortName, opts) {
 
   }
 
-  function convertTag(tag, text) {
-    var htmlTag = TAGS_MAP[tag];
+  function convertMarker(marker, text) {
+    var htmlTag = HTML_TAGS[marker];
     if (!htmlTag) {
-      throw new Error('No HTML Tag for: "' + tag + '" ' + errorLocation());
+      throw new Error('No HTML Tag for: "' + marker + '" ' + errorLocation());
     }
 
     var result = '';
 
-    if (tag == 'h') {
+    if (marker == 'h') {
 
       bookName = text.trim();
       result += '<a class="chapter" id="0">';
-      result += htmlElement(tag, text);
+      result += htmlElement(marker, text);
       result += '</a>';
       result += bookNavigation();
 
-    } else if (tag == 'v') {
+    } else if (marker == 'v') {
 
       var verseNumberStr;
       let matches = text.match( /^\d+? / );
@@ -234,32 +234,32 @@ function convertBook(shortName, opts) {
 
       var anchor = ('' + chapter + ':' + verseNumberStr).trim();
       result += '<a class="verse" id="' + anchor + '">';
-      result += htmlElement(tag, nonBreakableVerse);
+      result += htmlElement(marker, nonBreakableVerse);
       result += '</a>';
       result += text.substring(verseNumberStr.length);
 
-    } else if (tag == 'c') {
+    } else if (marker == 'c') {
 
       result += closeParagraphIfOpened() + '\n';
       result += '<a class="chapter" id="' + chapter + '">\n';
       result += '<div class="chap-nav">\n';
       result += '&lt; <a class="prev-chap-link" href="#' + (chapter - 1) + '">上一章</a> ';
-      result += htmlElement(tag, text);
+      result += htmlElement(marker, text);
       result += ' <a class="next-chap-link" href="#' + (chapter + 1) + '">下一章</a> &gt;\n';
       result += '</div>\n';
       result += '</a>\n';
 
-    } else if (tag == 's' || tag == 's1') {
+    } else if (marker == 's' || marker == 's1') {
 
       result += closeParagraphIfOpened();
-      result += htmlElement(tag, text);
+      result += htmlElement(marker, text);
 
-    } else if (PARAGRAPH_BREAKS.indexOf(tag) != -1) {
+    } else if (PARAGRAPH_BREAKS.indexOf(marker) != -1) {
 
-      result += closeParagraphIfOpened(tag);
-      result += startHtmlTag(tag, {}, text);
+      result += closeParagraphIfOpened(marker);
+      result += startHtmlTag(marker, {}, text);
 
-    } else if (tag == 'f') {
+    } else if (marker == 'f') {
 
       var footnoteText = text;
       if (footnoteText.startsWith('+ ')) {
@@ -278,11 +278,11 @@ function convertBook(shortName, opts) {
         'epub:type':'noteref'
       };
 
-      result += htmlElement(tag, '<sup>[註]</sup>', attr);
+      result += htmlElement(marker, '<sup>[註]</sup>', attr);
 
     } else {
 
-      result += htmlElement(tag, text);
+      result += htmlElement(marker, text);
 
     }
 
@@ -331,7 +331,7 @@ function convertBook(shortName, opts) {
   }).then( result => {
 
     chapterCount = result;
-    var tags = [];
+    var markers = [];
     var texts = [];
 
     var currentLine;
@@ -343,7 +343,7 @@ function convertBook(shortName, opts) {
         chapter = c || chapter;
         verse = v || verse;
         currentLine = line;
-        tags = [];
+        markers = [];
         texts = [];
       },
       onText: function(text) {
@@ -353,34 +353,34 @@ function convertBook(shortName, opts) {
           texts[texts.length-1] += text;
         }
       },
-      onStartTag: function(tag) {
-        tags.push(tag);
+      onStartMarker: function(marker) {
+        markers.push(marker);
         texts.push('');
       },
-      onEndTag: function(tag) {
-        if (PAIRED_TAGS.indexOf(tag) == -1) {
-          throw new Error('Invalid Tag: ' + "'" + tag + "' " + errorLocation());
+      onEndMarker: function(marker) {
+        if (PAIRED_MARKERS.indexOf(marker) == -1) {
+          throw new Error('Invalid Marker: ' + "'" + marker + "' " + errorLocation());
         }
 
-        var taggedText;
-        while (tags[tags.length-1] !== tag) {
-          let prevTag = tags.pop();
-          taggedText = convertTag(prevTag, texts.pop());
-          texts[texts.length-1] += taggedText;
-          //throw new Error('Tag mismatched: ' + tag + '. ' + errorLocation());
+        var html;
+        while (markers[markers.length-1] !== marker) {
+          let prevMarker = markers.pop();
+          html = convertMarker(prevMarker, texts.pop());
+          texts[texts.length-1] += html;
+          //throw new Error('Marker mismatched: ' + marker + '. ' + errorLocation());
         }
         if (texts.length == 0) {
           throw new Error('Invalid content: ' + line);
         }
-        tags.pop();
-        taggedText  = convertTag(tag, texts.pop());
-        texts[texts.length-1] += taggedText;
+        markers.pop();
+        html  = convertMarker(marker, texts.pop());
+        texts[texts.length-1] += html;
       },
       onEndLine: function(line) {
 
         //writer.write( '<!-- ' + line + ' -->\n');
-        while(tags.length > 0) {
-          writer.write( convertTag(tags.pop(), texts.pop()) + '\n');
+        while(markers.length > 0) {
+          writer.write( convertMarker(markers.pop(), texts.pop()) + '\n');
         }
 
       },
