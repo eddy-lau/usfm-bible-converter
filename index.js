@@ -8,14 +8,14 @@ program
   .option('-o, --output-dir [output_directory]')
   .parse(process.argv);
 
-var outputDir = program.outputDir || path.join(__dirname, 'output');
+var outputDir = program.outputDir || path.join(__dirname, 'output', 'html');
 
 if (!path.isAbsolute(outputDir) ) {
   outputDir = path.join(__dirname, outputDir);
 }
 
 if (program.inputDir) {
-  var converter  = require('./src/html')(program.inputDir);
+  var converter  = require('./modules/html')(program.inputDir);
   converter.convertAll( {
     outputDir: outputDir
   });
