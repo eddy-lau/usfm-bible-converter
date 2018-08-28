@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="zh">
+  <head>
+    <meta content="3b6a7c23-ca3f-45b7-913b-660c742f8a74" name="dtb:uid"/>
+    <meta content="2" name="dtb:depth"/>
+    <meta content="calibre (3.30.0)" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>聖經．和合本修訂版</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="num_1" playOrder="1">
+      <navLabel>
+        <text>創世記</text>
+      </navLabel>
+      <content src="01-GEN.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_2" playOrder="2">
+      <navLabel>
+        <text>出埃及記</text>
+      </navLabel>
+      <content src="02-EXO.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_3" playOrder="3">
+      <navLabel>
+        <text>利未記</text>
+      </navLabel>
+      <content src="03-LEV.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_4" playOrder="4">
+      <navLabel>
+        <text>民數記</text>
+      </navLabel>
+      <content src="04-NUM.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_5" playOrder="5">
+      <navLabel>
+        <text>申命記</text>
+      </navLabel>
+      <content src="05-DEU.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_6" playOrder="6">
+      <navLabel>
+        <text>約書亞記</text>
+      </navLabel>
+      <content src="06-JOS.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_7" playOrder="7">
+      <navLabel>
+        <text>士師記</text>
+      </navLabel>
+      <content src="07-JDG.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_8" playOrder="8">
+      <navLabel>
+        <text>路得記</text>
+      </navLabel>
+      <content src="08-RUT.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_9" playOrder="9">
+      <navLabel>
+        <text>撒母耳記上</text>
+      </navLabel>
+      <content src="09-1SA.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_10" playOrder="10">
+      <navLabel>
+        <text>撒母耳記下</text>
+      </navLabel>
+      <content src="10-2SA.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_11" playOrder="11">
+      <navLabel>
+        <text>列王紀上</text>
+      </navLabel>
+      <content src="11-1KI.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_12" playOrder="12">
+      <navLabel>
+        <text>列王紀下</text>
+      </navLabel>
+      <content src="12-2KI.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_13" playOrder="13">
+      <navLabel>
+        <text>歷代志上</text>
+      </navLabel>
+      <content src="13-1CH.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_14" playOrder="14">
+      <navLabel>
+        <text>歷代志下</text>
+      </navLabel>
+      <content src="14-2CH.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_15" playOrder="15">
+      <navLabel>
+        <text>以斯拉記</text>
+      </navLabel>
+      <content src="15-EZR.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_16" playOrder="16">
+      <navLabel>
+        <text>尼希米記</text>
+      </navLabel>
+      <content src="16-NEH.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_17" playOrder="17">
+      <navLabel>
+        <text>以斯帖記</text>
+      </navLabel>
+      <content src="17-EST.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_18" playOrder="18">
+      <navLabel>
+        <text>約伯記</text>
+      </navLabel>
+      <content src="18-JOB.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_19" playOrder="19">
+      <navLabel>
+        <text>詩篇</text>
+      </navLabel>
+      <content src="19-PSA.html#toc_2"/>
+    </navPoint>
+    <navPoint id="num_20" playOrder="20">
+      <navLabel>
+        <text>箴言</text>
+      </navLabel>
+      <content src="20-PRO.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_21" playOrder="21">
+      <navLabel>
+        <text>傳道書</text>
+      </navLabel>
+      <content src="21-ECC.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_22" playOrder="22">
+      <navLabel>
+        <text>雅歌</text>
+      </navLabel>
+      <content src="22-SNG.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_23" playOrder="23">
+      <navLabel>
+        <text>以賽亞書</text>
+      </navLabel>
+      <content src="23-ISA.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_24" playOrder="24">
+      <navLabel>
+        <text>耶利米書</text>
+      </navLabel>
+      <content src="24-JER.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_25" playOrder="25">
+      <navLabel>
+        <text>耶利米哀歌</text>
+      </navLabel>
+      <content src="25-LAM.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_26" playOrder="26">
+      <navLabel>
+        <text>以西結書</text>
+      </navLabel>
+      <content src="26-EZK.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_27" playOrder="27">
+      <navLabel>
+        <text>但以理書</text>
+      </navLabel>
+      <content src="27-DAN.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_28" playOrder="28">
+      <navLabel>
+        <text>何西阿書</text>
+      </navLabel>
+      <content src="28-HOS.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_29" playOrder="29">
+      <navLabel>
+        <text>約珥書</text>
+      </navLabel>
+      <content src="29-JOL.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_30" playOrder="30">
+      <navLabel>
+        <text>阿摩司書</text>
+      </navLabel>
+      <content src="30-AMO.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_31" playOrder="31">
+      <navLabel>
+        <text>俄巴底亞書</text>
+      </navLabel>
+      <content src="31-OBA.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_32" playOrder="32">
+      <navLabel>
+        <text>約拿書</text>
+      </navLabel>
+      <content src="32-JON.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_33" playOrder="33">
+      <navLabel>
+        <text>彌迦書</text>
+      </navLabel>
+      <content src="33-MIC.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_34" playOrder="34">
+      <navLabel>
+        <text>那鴻書</text>
+      </navLabel>
+      <content src="34-NAM.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_35" playOrder="35">
+      <navLabel>
+        <text>哈巴谷書</text>
+      </navLabel>
+      <content src="35-HAB.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_36" playOrder="36">
+      <navLabel>
+        <text>西番雅書</text>
+      </navLabel>
+      <content src="36-ZEP.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_37" playOrder="37">
+      <navLabel>
+        <text>哈該書</text>
+      </navLabel>
+      <content src="37-HAG.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_38" playOrder="38">
+      <navLabel>
+        <text>撒迦利亞書</text>
+      </navLabel>
+      <content src="38-ZEC.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_39" playOrder="39">
+      <navLabel>
+        <text>瑪拉基書</text>
+      </navLabel>
+      <content src="39-MAL.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_40" playOrder="40">
+      <navLabel>
+        <text>馬太福音</text>
+      </navLabel>
+      <content src="41-MAT.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_41" playOrder="41">
+      <navLabel>
+        <text>馬可福音</text>
+      </navLabel>
+      <content src="42-MRK.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_42" playOrder="42">
+      <navLabel>
+        <text>路加福音</text>
+      </navLabel>
+      <content src="43-LUK.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_43" playOrder="43">
+      <navLabel>
+        <text>約翰福音</text>
+      </navLabel>
+      <content src="44-JHN.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_44" playOrder="44">
+      <navLabel>
+        <text>使徒行傳</text>
+      </navLabel>
+      <content src="45-ACT.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_45" playOrder="45">
+      <navLabel>
+        <text>羅馬書</text>
+      </navLabel>
+      <content src="46-ROM.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_46" playOrder="46">
+      <navLabel>
+        <text>哥林多前書</text>
+      </navLabel>
+      <content src="47-1CO.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_47" playOrder="47">
+      <navLabel>
+        <text>哥林多後書</text>
+      </navLabel>
+      <content src="48-2CO.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_48" playOrder="48">
+      <navLabel>
+        <text>加拉太書</text>
+      </navLabel>
+      <content src="49-GAL.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_49" playOrder="49">
+      <navLabel>
+        <text>以弗所書</text>
+      </navLabel>
+      <content src="50-EPH.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_50" playOrder="50">
+      <navLabel>
+        <text>腓立比書</text>
+      </navLabel>
+      <content src="51-PHP.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_51" playOrder="51">
+      <navLabel>
+        <text>歌羅西書</text>
+      </navLabel>
+      <content src="52-COL.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_52" playOrder="52">
+      <navLabel>
+        <text>帖撒羅尼迦前書</text>
+      </navLabel>
+      <content src="53-1TH.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_53" playOrder="53">
+      <navLabel>
+        <text>帖撒羅尼迦後書</text>
+      </navLabel>
+      <content src="54-2TH.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_54" playOrder="54">
+      <navLabel>
+        <text>提摩太前書</text>
+      </navLabel>
+      <content src="55-1TI.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_55" playOrder="55">
+      <navLabel>
+        <text>提摩太後書</text>
+      </navLabel>
+      <content src="56-2TI.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_56" playOrder="56">
+      <navLabel>
+        <text>提多書</text>
+      </navLabel>
+      <content src="57-TIT.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_57" playOrder="57">
+      <navLabel>
+        <text>腓利門書</text>
+      </navLabel>
+      <content src="58-PHM.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_58" playOrder="58">
+      <navLabel>
+        <text>希伯來書</text>
+      </navLabel>
+      <content src="59-HEB.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_59" playOrder="59">
+      <navLabel>
+        <text>雅各書</text>
+      </navLabel>
+      <content src="60-JAS.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_60" playOrder="60">
+      <navLabel>
+        <text>彼得前書</text>
+      </navLabel>
+      <content src="61-1PE.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_61" playOrder="61">
+      <navLabel>
+        <text>彼得後書</text>
+      </navLabel>
+      <content src="62-2PE.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_62" playOrder="62">
+      <navLabel>
+        <text>約翰一書</text>
+      </navLabel>
+      <content src="63-1JN.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_63" playOrder="63">
+      <navLabel>
+        <text>約翰二書</text>
+      </navLabel>
+      <content src="64-2JN.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_64" playOrder="64">
+      <navLabel>
+        <text>約翰三書</text>
+      </navLabel>
+      <content src="65-3JN.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_65" playOrder="65">
+      <navLabel>
+        <text>猶大書</text>
+      </navLabel>
+      <content src="66-JUD.html#toc_1"/>
+    </navPoint>
+    <navPoint id="num_66" playOrder="66">
+      <navLabel>
+        <text>啟示錄</text>
+      </navLabel>
+      <content src="67-REV.html#toc_1"/>
+    </navPoint>
+  </navMap>
+</ncx>

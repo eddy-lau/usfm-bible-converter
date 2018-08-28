@@ -29,7 +29,7 @@ span.book-nav-link {
 }
 
 /* chapter */
-span.c {
+h2.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;

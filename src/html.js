@@ -11,7 +11,7 @@ const PAIRED_MARKERS = [
 const HTML_TAGS = {
   'b': 'p',
   'bk': 'span',
-  'c': 'span',
+  'c': 'h2',
   'd': 'h4',
   'f': 'a',
   'ft': 'span',
@@ -25,7 +25,7 @@ const HTML_TAGS = {
   'is2': 'h3',
   'li1': 'p',
   'm': 'p',
-  'ms': 'p',
+  'ms': 'h2',
   'mt1': 'h2',
   'nb': 'p',
   'p': 'p',
