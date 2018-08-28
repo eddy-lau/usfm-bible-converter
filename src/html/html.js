@@ -2,7 +2,7 @@
 var parser;
 
 var path = require('path');
-var fs = require('fs');
+var fs = require('fs-extra');
 
 const PAIRED_MARKERS = [
   'bk', 'f', 'fv', 'pn', 'qs'
@@ -54,9 +54,7 @@ const PARAGRAPH_BREAKS = [
 function convertBook(shortName, opts) {
 
   opts = opts || {};
-  var outputPath = opts.outputFileName ||
-    path.join(__dirname, '..', 'output', shortName + '.html');
-
+  var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
   var isParagraphOpened = false;
   var book;
   var chapterCount;
@@ -300,27 +298,13 @@ function convertBook(shortName, opts) {
   return parser.getBook(shortName).then( result => {
 
     book = result;
-    var filename = book.index + '-' + shortName.toUpperCase() + '.html';
-    var outputPath = opts.outputFileName ||
-      path.join(__dirname, '..', 'output', filename);
-
-    var outputDir = path.dirname(outputPath);
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdir( outputDir, (err) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve();
-        }
-      });
-    }
-
-    return outputPath;
+    return fs.ensureDir(outputDir);
 
   }).then( result => {
 
-    outputPath = result;
-    writer = fs.createWriteStream(outputPath);
+    var filename = book.index + '-' + shortName.toUpperCase() + '.html';
+    var outputFilePath = path.join(outputDir, filename);
+    writer = fs.createWriteStream(outputFilePath);
     return parser.getBook(shortName);
 
   }).then( result => {
@@ -407,13 +391,13 @@ function convertBook(shortName, opts) {
 
 }
 
-function convertAll() {
+function convertAll(opts) {
 
   return parser.getBooks().then( books => {
 
     return Promise.all(
       books.map( book => {
-        convertBook(book.shortName);
+        convertBook(book.shortName, opts);
       })
     );
 
