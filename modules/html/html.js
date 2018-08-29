@@ -1,6 +1,4 @@
 /*jshint esversion: 6 */
-var parser;
-
 var path = require('path');
 var fs = require('fs-extra');
 
@@ -53,7 +51,10 @@ const PARAGRAPH_BREAKS = [
 
 function convertBook(shortName, opts) {
 
-  opts = opts || {};
+  if (!opts || !opts.inputDir) {
+    throw new Error('Missing inputDir option');
+  }
+  var parser = require('usfm-bible-parser')(opts.inputDir);
   var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
   var isParagraphOpened = false;
   var book;
@@ -305,11 +306,6 @@ function convertBook(shortName, opts) {
     var filename = book.index + '-' + shortName.toUpperCase() + '.html';
     var outputFilePath = path.join(outputDir, filename);
     writer = fs.createWriteStream(outputFilePath);
-    return parser.getBook(shortName);
-
-  }).then( result => {
-
-    book = result;
     return book.getChapterCount();
 
   }).then( result => {
@@ -393,23 +389,22 @@ function convertBook(shortName, opts) {
 
 function convertAll(opts) {
 
+  if (!opts || !opts.inputDir) {
+    throw new Error('Missing inputDir option');
+  }
+  var parser = require('usfm-bible-parser')(opts.inputDir);
   return parser.getBooks().then( books => {
 
-    return Promise.all(
-      books.map( book => {
-        convertBook(book.shortName, opts);
-      })
-    );
+    return Promise.all( books.map( book => {
+      return convertBook(book.shortName, opts);
+    }));
 
   });
 
 }
 
 
-module.exports = function(path) {
-  parser = require('usfm-bible-parser')(path);
-  return {
-    convertBook: convertBook,
-    convertAll: convertAll
-  };
+module.exports = {
+  convertBook: convertBook,
+  convertAll: convertAll
 };
