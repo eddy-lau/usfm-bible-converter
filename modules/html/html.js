@@ -54,7 +54,7 @@ function convertBook(shortName, opts) {
   if (!opts || !opts.inputDir) {
     throw new Error('Missing inputDir option');
   }
-  var parser = require('usfm-bible-parser')(opts.inputDir);
+  var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
   var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
   var isParagraphOpened = false;
   var book;
@@ -73,7 +73,7 @@ function convertBook(shortName, opts) {
     result += '';
     result += '<head>\n';
     result += '<meta charset="UTF-8">\n';
-    result += '<title>' + shortName.toUpperCase() + '</title>\n';
+    result += '<title>' + book.localizedName + '</title>\n';
     result += css() + '\n';
     result += '</head>\n';
     result += '<body>';
@@ -392,7 +392,7 @@ function convertAll(opts) {
   if (!opts || !opts.inputDir) {
     throw new Error('Missing inputDir option');
   }
-  var parser = require('usfm-bible-parser')(opts.inputDir);
+  var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
   return parser.getBooks().then( books => {
 
     return Promise.all( books.map( book => {
