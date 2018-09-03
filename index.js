@@ -27,7 +27,8 @@ if (program.epub) {
   var converter  = require('./modules/epub');
   converter.convert( {
     inputDir: program.inputDir,
-    outputDir: outputDir
+    outputDir: outputDir,
+    lang: program.language
   });
 
 } else {

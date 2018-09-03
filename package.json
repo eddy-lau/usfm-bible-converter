@@ -12,7 +12,9 @@
     "archiver": "^3.0.0",
     "commander": "^2.17.1",
     "fs-extra": "^7.0.0",
-    "usfm-bible-parser": "file:../usfm-bible-parser"
+    "moment": "^2.22.2",
+    "usfm-bible-parser": "file:../usfm-bible-parser",
+    "xml2js": "^0.4.19"
   },
   "engines": {
     "node": ">=6.0.0"

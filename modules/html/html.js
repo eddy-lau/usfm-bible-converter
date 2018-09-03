@@ -63,6 +63,7 @@ function convertBook(shortName, opts) {
   var chapter;
   var verse;
   var footnotes = [];
+  var filename;
 
   //
   // Methods
@@ -303,7 +304,7 @@ function convertBook(shortName, opts) {
 
   }).then( result => {
 
-    var filename = book.index + '-' + shortName.toUpperCase() + '.html';
+    filename = book.index + '-' + shortName.toUpperCase() + '.html';
     var outputFilePath = path.join(outputDir, filename);
     writer = fs.createWriteStream(outputFilePath);
     return book.getChapterCount();
@@ -374,6 +375,11 @@ function convertBook(shortName, opts) {
   }).then( () => {
 
     writer.end();
+    return {
+      book: book,
+      filename: filename,
+      mediaType: 'application/xhtml+xml'
+    };
 
   }).catch( error => {
 
@@ -398,6 +404,18 @@ function convertAll(opts) {
     return Promise.all( books.map( book => {
       return convertBook(book.shortName, opts);
     }));
+
+  }).then( result => {
+
+    return result.sort( (lhs, rhs) => {
+      if (lhs.book.index < rhs.book.index) {
+        return -1;
+      } else if (lhs.book.index > rhs.book.index) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
 
   });
 

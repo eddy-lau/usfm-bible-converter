@@ -4,151 +4,20 @@
     <dc:title>聖經．和合本修訂版</dc:title>
     <dc:creator opf:role="aut" opf:file-as="香港聖經公會">香港聖經公會</dc:creator>
     <dc:identifier opf:scheme="uuid" id="uuid_id">3b6a7c23-ca3f-45b7-913b-660c742f8a74</dc:identifier>
-    <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.30.0) [https://calibre-ebook.com]</dc:contributor>
     <dc:date>2018-08-26T16:00:00+00:00</dc:date>
     <dc:language>zh</dc:language>
-    <dc:identifier opf:scheme="calibre">4e08bddd-5cdd-44dd-b38e-9eda494280d0</dc:identifier>
     <meta content="{&quot;香港聖經公會&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
-    <meta name="calibre:title_sort" content="聖經．和合本修訂版"/>
     <meta name="cover" content="cover"/>
   </metadata>
   <manifest>
-    <item href="01-GEN.html" id="id" media-type="application/xhtml+xml"/>
-    <item href="02-EXO.html" id="id1" media-type="application/xhtml+xml"/>
-    <item href="03-LEV.html" id="id2" media-type="application/xhtml+xml"/>
-    <item href="04-NUM.html" id="id3" media-type="application/xhtml+xml"/>
-    <item href="05-DEU.html" id="id4" media-type="application/xhtml+xml"/>
-    <item href="06-JOS.html" id="id5" media-type="application/xhtml+xml"/>
-    <item href="07-JDG.html" id="id6" media-type="application/xhtml+xml"/>
-    <item href="08-RUT.html" id="id7" media-type="application/xhtml+xml"/>
-    <item href="09-1SA.html" id="id8" media-type="application/xhtml+xml"/>
-    <item href="10-2SA.html" id="id9" media-type="application/xhtml+xml"/>
-    <item href="11-1KI.html" id="id10" media-type="application/xhtml+xml"/>
-    <item href="12-2KI.html" id="id11" media-type="application/xhtml+xml"/>
-    <item href="13-1CH.html" id="id12" media-type="application/xhtml+xml"/>
-    <item href="14-2CH.html" id="id13" media-type="application/xhtml+xml"/>
-    <item href="15-EZR.html" id="id14" media-type="application/xhtml+xml"/>
-    <item href="16-NEH.html" id="id15" media-type="application/xhtml+xml"/>
-    <item href="17-EST.html" id="id16" media-type="application/xhtml+xml"/>
-    <item href="18-JOB.html" id="id17" media-type="application/xhtml+xml"/>
-    <item href="19-PSA.html" id="id18" media-type="application/xhtml+xml"/>
-    <item href="20-PRO.html" id="id19" media-type="application/xhtml+xml"/>
-    <item href="21-ECC.html" id="id20" media-type="application/xhtml+xml"/>
-    <item href="22-SNG.html" id="id21" media-type="application/xhtml+xml"/>
-    <item href="23-ISA.html" id="id22" media-type="application/xhtml+xml"/>
-    <item href="24-JER.html" id="id23" media-type="application/xhtml+xml"/>
-    <item href="25-LAM.html" id="id24" media-type="application/xhtml+xml"/>
-    <item href="26-EZK.html" id="id25" media-type="application/xhtml+xml"/>
-    <item href="27-DAN.html" id="id26" media-type="application/xhtml+xml"/>
-    <item href="28-HOS.html" id="id27" media-type="application/xhtml+xml"/>
-    <item href="29-JOL.html" id="id28" media-type="application/xhtml+xml"/>
-    <item href="30-AMO.html" id="id29" media-type="application/xhtml+xml"/>
-    <item href="31-OBA.html" id="id30" media-type="application/xhtml+xml"/>
-    <item href="32-JON.html" id="id31" media-type="application/xhtml+xml"/>
-    <item href="33-MIC.html" id="id32" media-type="application/xhtml+xml"/>
-    <item href="34-NAM.html" id="id33" media-type="application/xhtml+xml"/>
-    <item href="35-HAB.html" id="id34" media-type="application/xhtml+xml"/>
-    <item href="36-ZEP.html" id="id35" media-type="application/xhtml+xml"/>
-    <item href="37-HAG.html" id="id36" media-type="application/xhtml+xml"/>
-    <item href="38-ZEC.html" id="id37" media-type="application/xhtml+xml"/>
-    <item href="39-MAL.html" id="id38" media-type="application/xhtml+xml"/>
-    <item href="41-MAT.html" id="id39" media-type="application/xhtml+xml"/>
-    <item href="42-MRK.html" id="id40" media-type="application/xhtml+xml"/>
-    <item href="43-LUK.html" id="id41" media-type="application/xhtml+xml"/>
-    <item href="44-JHN.html" id="id42" media-type="application/xhtml+xml"/>
-    <item href="45-ACT.html" id="id43" media-type="application/xhtml+xml"/>
-    <item href="46-ROM.html" id="id44" media-type="application/xhtml+xml"/>
-    <item href="47-1CO.html" id="id45" media-type="application/xhtml+xml"/>
-    <item href="48-2CO.html" id="id46" media-type="application/xhtml+xml"/>
-    <item href="49-GAL.html" id="id47" media-type="application/xhtml+xml"/>
-    <item href="50-EPH.html" id="id48" media-type="application/xhtml+xml"/>
-    <item href="51-PHP.html" id="id49" media-type="application/xhtml+xml"/>
-    <item href="52-COL.html" id="id50" media-type="application/xhtml+xml"/>
-    <item href="53-1TH.html" id="id51" media-type="application/xhtml+xml"/>
-    <item href="54-2TH.html" id="id52" media-type="application/xhtml+xml"/>
-    <item href="55-1TI.html" id="id53" media-type="application/xhtml+xml"/>
-    <item href="56-2TI.html" id="id54" media-type="application/xhtml+xml"/>
-    <item href="57-TIT.html" id="id55" media-type="application/xhtml+xml"/>
-    <item href="58-PHM.html" id="id56" media-type="application/xhtml+xml"/>
-    <item href="59-HEB.html" id="id57" media-type="application/xhtml+xml"/>
-    <item href="60-JAS.html" id="id58" media-type="application/xhtml+xml"/>
-    <item href="61-1PE.html" id="id59" media-type="application/xhtml+xml"/>
-    <item href="62-2PE.html" id="id60" media-type="application/xhtml+xml"/>
-    <item href="63-1JN.html" id="id61" media-type="application/xhtml+xml"/>
-    <item href="64-2JN.html" id="id62" media-type="application/xhtml+xml"/>
-    <item href="65-3JN.html" id="id63" media-type="application/xhtml+xml"/>
-    <item href="66-JUD.html" id="id64" media-type="application/xhtml+xml"/>
-    <item href="67-REV.html" id="id65" media-type="application/xhtml+xml"/>
-    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
-    <item href="cover.jpg" id="cover" media-type="image/jpeg"/>
+    <item href="dummy1.html" id="id1" media-type="application/xhtml+xml"/>
+    <item href="dummy2.html" id="id2" media-type="application/xhtml+xml"/>
+    <item href="dummy3.html" id="id3" media-type="application/xhtml+xml"/>
   </manifest>
   <spine toc="ncx">
-    <itemref idref="id"/>
     <itemref idref="id1"/>
     <itemref idref="id2"/>
     <itemref idref="id3"/>
-    <itemref idref="id4"/>
-    <itemref idref="id5"/>
-    <itemref idref="id6"/>
-    <itemref idref="id7"/>
-    <itemref idref="id8"/>
-    <itemref idref="id9"/>
-    <itemref idref="id10"/>
-    <itemref idref="id11"/>
-    <itemref idref="id12"/>
-    <itemref idref="id13"/>
-    <itemref idref="id14"/>
-    <itemref idref="id15"/>
-    <itemref idref="id16"/>
-    <itemref idref="id17"/>
-    <itemref idref="id18"/>
-    <itemref idref="id19"/>
-    <itemref idref="id20"/>
-    <itemref idref="id21"/>
-    <itemref idref="id22"/>
-    <itemref idref="id23"/>
-    <itemref idref="id24"/>
-    <itemref idref="id25"/>
-    <itemref idref="id26"/>
-    <itemref idref="id27"/>
-    <itemref idref="id28"/>
-    <itemref idref="id29"/>
-    <itemref idref="id30"/>
-    <itemref idref="id31"/>
-    <itemref idref="id32"/>
-    <itemref idref="id33"/>
-    <itemref idref="id34"/>
-    <itemref idref="id35"/>
-    <itemref idref="id36"/>
-    <itemref idref="id37"/>
-    <itemref idref="id38"/>
-    <itemref idref="id39"/>
-    <itemref idref="id40"/>
-    <itemref idref="id41"/>
-    <itemref idref="id42"/>
-    <itemref idref="id43"/>
-    <itemref idref="id44"/>
-    <itemref idref="id45"/>
-    <itemref idref="id46"/>
-    <itemref idref="id47"/>
-    <itemref idref="id48"/>
-    <itemref idref="id49"/>
-    <itemref idref="id50"/>
-    <itemref idref="id51"/>
-    <itemref idref="id52"/>
-    <itemref idref="id53"/>
-    <itemref idref="id54"/>
-    <itemref idref="id55"/>
-    <itemref idref="id56"/>
-    <itemref idref="id57"/>
-    <itemref idref="id58"/>
-    <itemref idref="id59"/>
-    <itemref idref="id60"/>
-    <itemref idref="id61"/>
-    <itemref idref="id62"/>
-    <itemref idref="id63"/>
-    <itemref idref="id64"/>
-    <itemref idref="id65"/>
   </spine>
   <guide/>
 </package>
