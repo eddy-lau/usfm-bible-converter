@@ -91,7 +91,7 @@ function convertBook(shortName, opts) {
     result += '<html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">\n';
     result += '';
     result += '<head>\n';
-    result += '<meta charset="UTF-8" />\n';
+    result += '<meta charset="UTF-8" ></meta>\n';
     result += '<title>' + book.localizedName + '</title>\n';
     result += css() + '\n';
     result += '</head>\n';
@@ -193,7 +193,7 @@ function convertBook(shortName, opts) {
 
   function generateFootnotes() {
 
-    var result = '<div class="page-break"/>\n';
+    var result = '<div class="page-break"></div>\n';
     result += '<div class="chap-nav">\n';
     result += '&lt; <a class="prev-chap-link" href="#' + (chapter) + '">上一章</a> ';
     result += '<a class="chapter" id="' + (chapter + 1) + '">\n';
@@ -218,6 +218,87 @@ function convertBook(shortName, opts) {
     return result;
 
 
+  }
+
+  function parseReference(reference) {
+
+    var targetBook;
+    var matches = reference.match( /^\D+/ );
+    if (matches && matches.length > 0) {
+      var bookname = matches[0];
+      targetBook = books.find( book => {
+        return book.localizedAbbreviation === bookname;
+      });
+    }
+
+    var chapter;
+    matches = reference.match( /\d+?[．|‧]/);
+    if (matches && matches.length > 0) {
+      chapter = matches[0].slice(0,-1);
+    } else {
+      matches = reference.match( /\d+$/);
+      if (matches && matches.length > 0) {
+        chapter = matches[0];
+      }
+    }
+
+    var verse = 1;
+    matches = reference.match( /[．|‧]\d*/ );
+    if (matches && matches.length > 0) {
+      verse = matches[0].substring(1);
+    }
+
+    return {
+      book: targetBook,
+      chapter: chapter,
+      verse: verse,
+      text: reference
+    };
+  }
+
+  function referenceLinks(referenceString) {
+
+    if (!referenceString.match( /^（.+）$/ )) {
+      throw new Error('Invalid reference: ' + referenceString);
+    }
+    var references = referenceString.substring(1, referenceString.length-1).split('；');
+
+    var result = '<span class="r">（';
+
+    // Parse the links
+    var links = references.map( reference => {
+      return parseReference(reference);
+    });
+
+    // Fix the links
+    for (var i = 0; i<links.length; i++) {
+      var link = links[i];
+      if (!link.book) {
+        if (!links[i-1]) {
+          link.book = book;
+        } else {
+          link.book = links[i-1].book;
+        }
+      }
+      if (!link.chapter) {
+        link.chapter = links[i-1].chapter;
+      }
+    }
+
+
+    result += links.reduce( (accumulator, link, index, links) => {
+
+      var text = '<a href="' + getFilename(link.book) + '#' + link.chapter + ':' + link.verse + '">' + link.text + '</a>';
+      if (links[links.length-1].text !== link.text) {
+        text += '；';
+      }
+      return accumulator + text;
+
+    }, '');
+
+    result += '）</span>';
+
+    return result;
   }
 
   function convertMarker(marker, text) {
@@ -264,7 +345,7 @@ function convertBook(shortName, opts) {
     } else if (marker == 'c') {
 
       result += closeParagraphIfOpened() + '\n';
-      result += '<div class="page-break"/>\n';
+      result += '<div class="page-break"></div>\n';
       result += '<div class="chap-nav">\n';
       result += '&lt; <a class="prev-chap-link" href="#' + (chapter - 1) + '">上一章</a> ';
       result += '<a class="chapter" id="' + chapter + '">\n';
@@ -283,6 +364,11 @@ function convertBook(shortName, opts) {
 
       result += closeParagraphIfOpened(marker);
       result += startHtmlTag(marker, {}, text);
+
+    } else if (marker == 'r') {
+
+      var referenceHtml = referenceLinks(text);
+      result += referenceHtml;
 
     } else if (marker == 'f') {
 
