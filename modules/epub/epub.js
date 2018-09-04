@@ -58,7 +58,7 @@ function updateManifest(metadataPath, htmlFiles) {
         return {
           $: {
             href: htmlFile.filename,
-            id: ('id' + index++),
+            id: htmlFile.id,
             'media-type': htmlFile.mediaType
           }
         };
@@ -75,11 +75,11 @@ function updateManifest(metadataPath, htmlFiles) {
 
     });
 
-    index = 1;
+    htmlFiles.pop();
     json.package.spine[0].itemref = htmlFiles.map( htmlFile => {
       return {
         $: {
-          idref: 'id' + index++
+          idref: htmlFile.id
         }
       };
     });
@@ -135,6 +135,7 @@ function updateTOC(tocPath, htmlFiles) {
         id: 'toc',
       },
       filename: path.basename(tocPath),
+      id: 'ncx',
       mediaType: 'application/x-dtbncx+xml'
     };
 
