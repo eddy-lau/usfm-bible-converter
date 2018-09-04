@@ -176,13 +176,13 @@ function convertBook(shortName, opts) {
   function generateFootnotes() {
 
     var result = '<div class="page-break"/>\n';
-    result += '<a class="chapter" id="' + (chapter + 1) + '">\n';
     result += '<div class="chap-nav">\n';
     result += '&lt; <a class="prev-chap-link" href="#' + (chapter) + '">上一章</a> ';
+    result += '<a class="chapter" id="' + (chapter + 1) + '">\n';
     result += '<h2 class="footnote-title">註釋</h2>\n';
+    result += '</a>\n';
     result += ' <a class="next-chap-link" href="#' + (chapter + 2) + '">下一章</a> &gt;\n';
     result += '</div>\n';
-    result += '</a>\n';
 
     footnotes.forEach( footnote => {
 
