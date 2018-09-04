@@ -73,7 +73,7 @@ function convertBook(shortName, opts) {
     result += '<html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">\n';
     result += '';
     result += '<head>\n';
-    result += '<meta charset="UTF-8">\n';
+    result += '<meta charset="UTF-8" />\n';
     result += '<title>' + book.localizedName + '</title>\n';
     result += css() + '\n';
     result += '</head>\n';
