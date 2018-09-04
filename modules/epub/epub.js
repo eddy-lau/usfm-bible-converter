@@ -6,6 +6,7 @@ var archiver = require('archiver');
 var parseString = require('xml2js').parseString;
 var moment = require('moment');
 var xml2js = require('xml2js');
+var uuidv1 = require('uuid/v1');
 
 
 function parseXML(data) {
@@ -22,7 +23,7 @@ function parseXML(data) {
 
 }
 
-function updateMetadata(metadataPath, lang) {
+function updateMetadata(metadataPath, opts) {
 
   return fs.readFile(metadataPath).then( data=> {
 
@@ -31,7 +32,8 @@ function updateMetadata(metadataPath, lang) {
   }).then( json => {
 
     json.package.metadata[0]['dc:date'][0] = moment().toISOString();
-    json.package.metadata[0]['dc:language'][0] = lang || 'en';
+    json.package.metadata[0]['dc:language'][0] = opts.lang || 'en';
+    json.package.metadata[0]['dc:identifier'][0]._ = opts.uuid;
 
     var builder = new xml2js.Builder();
     var xml = builder.buildObject(json);
@@ -90,7 +92,7 @@ function updateManifest(metadataPath, htmlFiles) {
   });
 }
 
-function updateTOC(tocPath, htmlFiles) {
+function updateTOC(tocPath, htmlFiles, uuid) {
 
   return fs.readFile(tocPath).then( data=> {
 
@@ -99,6 +101,8 @@ function updateTOC(tocPath, htmlFiles) {
   }).then( json => {
 
     var builder = new xml2js.Builder();
+
+    json.ncx.head[0].meta[0].$.content = uuid;
 
     var index = 1;
     json.ncx.navMap[0].navPoint = htmlFiles.map( htmlFile => {
@@ -160,6 +164,7 @@ function convert(opts) {
   var metadataPath = path.join(templateDir, 'metadata.opf');
   var tocPath = path.join(templateDir, 'toc.ncx');
   var conversionResult;
+  var uuid = uuidv1();
 
   return fs.remove(templateDir).then( ()=> {
 
@@ -180,12 +185,15 @@ function convert(opts) {
   }).then( result => {
 
     conversionResult = result;
-    return updateTOC(tocPath, conversionResult);
+    return updateTOC(tocPath, conversionResult, uuid);
 
   }).then( toc => {
 
     conversionResult.push(toc);
-    return updateMetadata(metadataPath, opts.lang);
+    return updateMetadata(metadataPath, {
+      lang: opts.lang,
+      uuid: uuid
+    });
 
   }).then( ()=> {
 
