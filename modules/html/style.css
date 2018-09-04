@@ -28,6 +28,11 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
 h2.c {
   text-align: center;
@@ -38,6 +43,9 @@ h2.c {
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+}
+h2.ms {
+  text-align: center;
 }
 
 span.c a sup {
@@ -95,7 +103,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -108,6 +116,13 @@ p.footnote {
 }
 h2.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -115,7 +130,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -2em;
   margin-bottom: 2em;
 }
 

@@ -175,8 +175,13 @@ function convertBook(shortName, opts) {
 
   function generateFootnotes() {
 
-    var result = '<a class="chapter" id="' + (chapter + 1) + '">\n';
+    var result = '<div class="page-break"/>\n';
+    result += '<a class="chapter" id="' + (chapter + 1) + '">\n';
+    result += '<div class="chap-nav">\n';
+    result += '&lt; <a class="prev-chap-link" href="#' + (chapter) + '">上一章</a> ';
     result += '<h2 class="footnote-title">註釋</h2>\n';
+    result += ' <a class="next-chap-link" href="#' + (chapter + 2) + '">下一章</a> &gt;\n';
+    result += '</div>\n';
     result += '</a>\n';
 
     footnotes.forEach( footnote => {
@@ -241,13 +246,15 @@ function convertBook(shortName, opts) {
     } else if (marker == 'c') {
 
       result += closeParagraphIfOpened() + '\n';
-      result += '<a class="chapter" id="' + chapter + '">\n';
+      result += '<div class="page-break"/>\n';
       result += '<div class="chap-nav">\n';
       result += '&lt; <a class="prev-chap-link" href="#' + (chapter - 1) + '">上一章</a> ';
+      result += '<a class="chapter" id="' + chapter + '">\n';
       result += htmlElement(marker, text);
+      result += '</a>\n';
       result += ' <a class="next-chap-link" href="#' + (chapter + 1) + '">下一章</a> &gt;\n';
       result += '</div>\n';
-      result += '</a>\n';
+      //result += '</a>\n';
 
     } else if (marker == 's' || marker == 's1') {
 
@@ -378,6 +385,7 @@ function convertBook(shortName, opts) {
     return {
       book: book,
       filename: filename,
+      id: 'id' + book.index,
       mediaType: 'application/xhtml+xml'
     };
 
