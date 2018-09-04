@@ -57,6 +57,7 @@ function convertBook(shortName, opts) {
   var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
   var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
   var isParagraphOpened = false;
+  var books = opts.books;
   var book;
   var chapterCount;
   var writer;
@@ -68,6 +69,23 @@ function convertBook(shortName, opts) {
   //
   // Methods
   //
+  function getNextBook() {
+
+    var index = opts.books.map( book => {
+      return book.index;
+    }).indexOf(book.index);
+
+    return books[index+1] || books[0];
+  }
+
+  function getFilename(book) {
+    if (book) {
+      return book.index + '-' + book.id.toUpperCase() + '.html';
+    } else {
+      return undefined;
+    }
+  }
+
   function startDoc() {
     var result = '<!DOCTYPE html>\n';
     result += '<html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">\n';
@@ -181,7 +199,7 @@ function convertBook(shortName, opts) {
     result += '<a class="chapter" id="' + (chapter + 1) + '">\n';
     result += '<h2 class="footnote-title">註釋</h2>\n';
     result += '</a>\n';
-    result += ' <a class="next-chap-link" href="#' + (chapter + 2) + '">下一章</a> &gt;\n';
+    result += ' <a class="next-chap-link" href="' + getFilename(getNextBook())  + '#0">下一章</a> &gt;\n';
     result += '</div>\n';
 
     footnotes.forEach( footnote => {
@@ -304,101 +322,106 @@ function convertBook(shortName, opts) {
     return '<pre>' + err + '</pre>';
   }
 
-  return parser.getBook(shortName).then( result => {
+  function run() {
 
-    book = result;
-    return fs.ensureDir(outputDir);
+    return parser.getBook(shortName).then( result => {
 
-  }).then( result => {
+      book = result;
+      return fs.ensureDir(outputDir);
 
-    filename = book.index + '-' + shortName.toUpperCase() + '.html';
-    var outputFilePath = path.join(outputDir, filename);
-    writer = fs.createWriteStream(outputFilePath);
-    return book.getChapterCount();
+    }).then( result => {
 
-  }).then( result => {
+      filename = getFilename(book);
+      var outputFilePath = path.join(outputDir, filename);
+      writer = fs.createWriteStream(outputFilePath);
+      return book.getChapterCount();
 
-    chapterCount = result;
-    var markers = [];
-    var texts = [];
+    }).then( result => {
 
-    var currentLine;
-    return book.parse({
-      onStartBook: function() {
-        writer.write(startDoc() + '\n');
-      },
-      onStartLine: function(line, c, v) {
-        chapter = c || chapter;
-        verse = v || verse;
-        currentLine = line;
-        markers = [];
-        texts = [];
-      },
-      onText: function(text) {
-        if (texts.length == 0) {
-          texts.push(text);
-        } else {
-          texts[texts.length-1] += text;
-        }
-      },
-      onStartMarker: function(marker) {
-        markers.push(marker);
-        texts.push('');
-      },
-      onEndMarker: function(marker) {
-        if (PAIRED_MARKERS.indexOf(marker) == -1) {
-          throw new Error('Invalid Marker: ' + "'" + marker + "' " + errorLocation());
-        }
+      chapterCount = result;
+      var markers = [];
+      var texts = [];
 
-        var html;
-        while (markers[markers.length-1] !== marker) {
-          let prevMarker = markers.pop();
-          html = convertMarker(prevMarker, texts.pop());
+      var currentLine;
+      return book.parse({
+        onStartBook: function() {
+          writer.write(startDoc() + '\n');
+        },
+        onStartLine: function(line, c, v) {
+          chapter = c || chapter;
+          verse = v || verse;
+          currentLine = line;
+          markers = [];
+          texts = [];
+        },
+        onText: function(text) {
+          if (texts.length == 0) {
+            texts.push(text);
+          } else {
+            texts[texts.length-1] += text;
+          }
+        },
+        onStartMarker: function(marker) {
+          markers.push(marker);
+          texts.push('');
+        },
+        onEndMarker: function(marker) {
+          if (PAIRED_MARKERS.indexOf(marker) == -1) {
+            throw new Error('Invalid Marker: ' + "'" + marker + "' " + errorLocation());
+          }
+
+          var html;
+          while (markers[markers.length-1] !== marker) {
+            let prevMarker = markers.pop();
+            html = convertMarker(prevMarker, texts.pop());
+            texts[texts.length-1] += html;
+            //throw new Error('Marker mismatched: ' + marker + '. ' + errorLocation());
+          }
+          if (texts.length == 0) {
+            throw new Error('Invalid content: ' + line);
+          }
+          markers.pop();
+          html  = convertMarker(marker, texts.pop());
           texts[texts.length-1] += html;
-          //throw new Error('Marker mismatched: ' + marker + '. ' + errorLocation());
-        }
-        if (texts.length == 0) {
-          throw new Error('Invalid content: ' + line);
-        }
-        markers.pop();
-        html  = convertMarker(marker, texts.pop());
-        texts[texts.length-1] += html;
-      },
-      onEndLine: function(line) {
+        },
+        onEndLine: function(line) {
 
-        //writer.write( '<!-- ' + line + ' -->\n');
-        while(markers.length > 0) {
-          writer.write( convertMarker(markers.pop(), texts.pop()) + '\n');
-        }
+          //writer.write( '<!-- ' + line + ' -->\n');
+          while(markers.length > 0) {
+            writer.write( convertMarker(markers.pop(), texts.pop()) + '\n');
+          }
 
-      },
-      onEndBook: function() {
-        writer.write( closeParagraphIfOpened() + '\n');
-        writer.write( generateFootnotes() + '\n');
-        writer.write( endDoc() + '\n');
+        },
+        onEndBook: function() {
+          writer.write( closeParagraphIfOpened() + '\n');
+          writer.write( generateFootnotes() + '\n');
+          writer.write( endDoc() + '\n');
+        }
+      });
+
+    }).then( () => {
+
+      writer.end();
+      return {
+        book: book,
+        filename: filename,
+        id: 'id' + book.index,
+        mediaType: 'application/xhtml+xml'
+      };
+
+    }).catch( error => {
+
+      if (writer) {
+        writer.write( errorMessage(error) + '\n');
+        writer.end();
       }
+      return Promise.reject(error);
+
     });
 
-  }).then( () => {
+  }
 
-    writer.end();
-    return {
-      book: book,
-      filename: filename,
-      id: 'id' + book.index,
-      mediaType: 'application/xhtml+xml'
-    };
-
-  }).catch( error => {
-
-    if (writer) {
-      writer.write( errorMessage(error) + '\n');
-      writer.end();
-    }
-    return Promise.reject(error);
-
-  });
-
+  return run();
 }
 
 function convertAll(opts) {
@@ -409,6 +432,7 @@ function convertAll(opts) {
   var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
   return parser.getBooks().then( books => {
 
+    opts.books = books;
     return Promise.all( books.map( book => {
       return convertBook(book.shortName, opts);
     }));
