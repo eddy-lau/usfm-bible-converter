@@ -105,8 +105,8 @@ p.q, p.q1, p.q2 {
 
 /* underline */
 span.pn {
-  /*border-bottom: 1px solid #000;*/
-  text-decoration: underline;
+  border-bottom: 1px solid #000;
+  /*text-decoration: underline;*/
   /*white-space: nowrap;*/
 }
 
