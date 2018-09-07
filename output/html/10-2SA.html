@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>撒母耳記下</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -167,11 +186,13 @@ span.r {
 </p><p class="q2">4. <span class="pn">大衛</span>的勇士（23．8—39）
 </p><p class="q2">5. <span class="pn">大衛</span>的罪帶來懲罰（24．1—25）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛為掃羅和約拿單悲泣</h3>
 <p class="p">
@@ -241,11 +262,13 @@ span.r {
 <a class="verse" id="1:27"><sup class="v">27&#160;</sup></a>英雄竟然仆倒！
 </p><p class="q1">兵器竟然廢棄！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛受膏為猶大王</h3>
 <p class="p">
@@ -289,11 +312,13 @@ span.r {
 <a class="verse" id="2:31"><sup class="v">31&#160;</sup></a>但<span class="pn">大衛</span>的僕人殺了<span class="pn">押尼珥</span>的人，<span class="pn">便雅憫</span>人三百六十名。
 <a class="verse" id="2:32"><sup class="v">32&#160;</sup></a>他們把<span class="pn">亞撒黑</span>送到<span class="pn">伯利恆</span>，葬在他父親的墳墓裏。<span class="pn">約押</span>和他的人走了一整夜，天亮的時候他們才到<span class="pn">希伯崙</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="3:1"><sup class="v">1&#160;</sup></a><span class="pn">掃羅</span>家和<span class="pn">大衛</span>家爭戰許久。<span class="pn">大衛</span>家日見強盛，<span class="pn">掃羅</span>家卻日見衰弱。
@@ -351,11 +376,13 @@ span.r {
 <a class="verse" id="3:38"><sup class="v">38&#160;</sup></a>王對臣僕說：「你們豈不知今日在<span class="pn">以色列</span>中倒了一個作元帥的大人物嗎？
 <a class="verse" id="3:39"><sup class="v">39&#160;</sup></a>我雖然受膏為王，今日還是軟弱。<span class="pn">洗魯雅</span>的兩個兒子，這些人比我強硬。願耶和華照著惡人所行的惡報應他。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">伊施．波設被殺</h3>
 <p class="p">
@@ -374,14 +401,16 @@ span.r {
 <a class="verse" id="4:11"><sup class="v">11&#160;</sup></a>更何況惡人把義人殺在他家的床上，我豈不從你們手中追討他的血，從地上除滅你們嗎？」
 <a class="verse" id="4:12"><sup class="v">12&#160;</sup></a>於是<span class="pn">大衛</span>吩咐僕人把他們殺了，砍斷他們的手腳，掛在<span class="pn">希伯崙</span>的池旁。然後，他們把<span class="pn">伊施．波設</span>的首級葬在<span class="pn">希伯崙押尼珥</span>的墳墓裏。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛作全以色列的王</h3>
-<span class="r">（代上11‧1－9；14‧1－7）</span>
+<span class="r">（<a href="13-1CH.html#11:1">代上11‧1－9</a>；<a href="13-1CH.html#14:1">14‧1－7</a>）</span>
 <p class="p">
 <a class="verse" id="5:1"><sup class="v">1&#160;</sup></a><span class="pn">以色列</span>眾支派來到<span class="pn">希伯崙</span>見<span class="pn">大衛</span>，說：「看哪，我們是你的骨肉。
 <a class="verse" id="5:2"><sup class="v">2&#160;</sup></a>從前<span class="pn">掃羅</span>作我們王的時候，率領<span class="pn">以色列</span>人出入的是你。耶和華也曾對你說：『你必牧養我的百姓<span class="pn">以色列</span>，你必作<span class="pn">以色列</span>的君王。』」
@@ -404,7 +433,7 @@ span.r {
 <a class="verse" id="5:15"><sup class="v">15&#160;</sup></a><span class="pn">益轄</span>、<span class="pn">以利書亞</span>、<span class="pn">尼斐</span>、<span class="pn">雅非亞</span>、
 <a class="verse" id="5:16"><sup class="v">16&#160;</sup></a><span class="pn">以利沙瑪</span>、<span class="pn">以利雅大</span>、<span class="pn">以利法列</span>。
 </p><h3 class="s">戰勝非利士人</h3>
-<span class="r">（代上14‧8－17）</span>
+<span class="r">（<a href="13-1CH.html#14:8">代上14‧8－17</a>）</span>
 <p class="p">
 <a class="verse" id="5:17"><sup class="v">17&#160;</sup></a><span class="pn">非利士</span>人聽見<span class="pn">大衛</span>受膏作<span class="pn">以色列</span>王，<span class="pn">非利士</span>眾人就上來尋索<span class="pn">大衛</span>。<span class="pn">大衛</span>聽見了，就下到堡壘去。
 <a class="verse" id="5:18"><sup class="v">18&#160;</sup></a><span class="pn">非利士</span>人來了，散佈在<span class="pn">利乏音谷</span>。
@@ -418,14 +447,16 @@ span.r {
 <a class="verse" id="5:24"><sup class="v">24&#160;</sup></a>你聽見桑樹梢上有腳步的聲音，就要急速前去，因為那時耶和華已經出去，在你前頭攻打<span class="pn">非利士</span>人的軍隊了。」
 <a class="verse" id="5:25"><sup class="v">25&#160;</sup></a><span class="pn">大衛</span>就遵照耶和華所吩咐的去做，攻打<span class="pn">非利士</span>人，從<span class="pn">迦巴</span>直到<span class="pn">基色</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h3 class="s">接約櫃到耶路撒冷</h3>
-<span class="r">（代上13‧1－14；15‧25－16‧6，43）</span>
+<span class="r">（<a href="13-1CH.html#13:1">代上13‧1－14</a>；<a href="13-1CH.html#15:25">15‧25－16‧6，43</a>）</span>
 <p class="p">
 <a class="verse" id="6:1"><sup class="v">1&#160;</sup></a><span class="pn">大衛</span>又聚集<span class="pn">以色列</span>中所有挑選的人，共三萬名。
 <a class="verse" id="6:2"><sup class="v">2&#160;</sup></a><span class="pn">大衛</span>起身，和跟隨他的眾百姓前往，要從<span class="pn">巴拉‧猶大</span>那裏將上帝的約櫃接上來；這約櫃是以坐在二基路伯上萬軍之耶和華的名所命名的。
@@ -455,14 +486,16 @@ span.r {
 <a class="verse" id="6:22"><sup class="v">22&#160;</sup></a>我也必更加卑微，自己看為低賤<a class="f" id="footnote-19-ref"  href="#footnote-19"  epub:type="noteref" ><sup>[註]</sup></a>。至於你所說的那些使女，她們反而尊重我。」
 <a class="verse" id="6:23"><sup class="v">23&#160;</sup></a><span class="pn">掃羅</span>的女兒<span class="pn">米甲</span>，直到死的那日沒有孩子。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h3 class="s">拿單傳信息給大衛</h3>
-<span class="r">（代上17‧1－15）</span>
+<span class="r">（<a href="13-1CH.html#17:1">代上17‧1－15</a>）</span>
 <p class="p">
 <a class="verse" id="7:1"><sup class="v">1&#160;</sup></a>王住在自己宮中，耶和華使他平靜，不被四圍的仇敵擾亂。
 <a class="verse" id="7:2"><sup class="v">2&#160;</sup></a>王對<span class="pn">拿單</span>先知說：「你看，我住在香柏木的宮中，上帝的約櫃卻停在幔子裏。」
@@ -482,7 +515,7 @@ span.r {
 <a class="verse" id="7:16"><sup class="v">16&#160;</sup></a>你的家和你的國必在你<a class="f" id="footnote-21-ref"  href="#footnote-21"  epub:type="noteref" ><sup>[註]</sup></a>面前永遠堅立，你的王位也必堅定，直到永遠。』」
 <a class="verse" id="7:17"><sup class="v">17&#160;</sup></a><span class="pn">拿單</span>就按這一切話，照這一切異象告訴<span class="pn">大衛</span>。
 </p><h3 class="s">大衛的祈禱和感恩</h3>
-<span class="r">（代上17‧16－27）</span>
+<span class="r">（<a href="13-1CH.html#17:16">代上17‧16－27</a>）</span>
 <p class="p">
 <a class="verse" id="7:18"><sup class="v">18&#160;</sup></a>於是<span class="pn">大衛</span>王進去，坐在耶和華面前，說：「主耶和華啊，我是誰，我的家算甚麼，你竟帶領我到這地步呢？
 <a class="verse" id="7:19"><sup class="v">19&#160;</sup></a>主耶和華啊，這在你眼中還看為小，你又說到你僕人的家將來的情況。主耶和華啊，這豈是人的常理嗎？
@@ -497,14 +530,16 @@ span.r {
 <a class="verse" id="7:28"><sup class="v">28&#160;</sup></a>現在，主耶和華啊，惟有你是上帝！你的話是真實的，你也應許將這福氣賜給僕人。
 <a class="verse" id="7:29"><sup class="v">29&#160;</sup></a>現在，求你賜福給你僕人的家，可以永存在你面前。主耶和華啊，因為這是你所應許的。願你的福分永遠賜給你僕人的家，使之蒙福！」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華使大衛得勝</h3>
-<span class="r">（代上18‧1－17）</span>
+<span class="r">（<a href="13-1CH.html#18:1">代上18‧1－17</a>）</span>
 <p class="p">
 <a class="verse" id="8:1"><sup class="v">1&#160;</sup></a>此後，<span class="pn">大衛</span>攻打<span class="pn">非利士</span>人，制伏了他們。<span class="pn">大衛</span>從<span class="pn">非利士</span>人手中奪取了京城的治理權<a class="f" id="footnote-24-ref"  href="#footnote-24"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p><p class="p">
@@ -530,11 +565,13 @@ span.r {
 <a class="verse" id="8:17"><sup class="v">17&#160;</sup></a><span class="pn">亞希突</span>的兒子<span class="pn">撒督</span>和<span class="pn">亞比亞他</span>的兒子<span class="pn">亞希米勒</span>作祭司；<span class="pn">西萊雅</span>作書記；
 <a class="verse" id="8:18"><sup class="v">18&#160;</sup></a><span class="pn">耶何耶大</span>的兒子<span class="pn">比拿雅</span>管轄<a class="f" id="footnote-28-ref"  href="#footnote-28"  epub:type="noteref" ><sup>[註]</sup></a><span class="pn">基利提</span>人和<span class="pn">比利提</span>人。<span class="pn">大衛</span>的眾子都作祭司。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛和米非波設</h3>
 <p class="p">
@@ -553,14 +590,16 @@ span.r {
 <a class="verse" id="9:12"><sup class="v">12&#160;</sup></a><span class="pn">米非波設</span>有一個小兒子，名叫<span class="pn">米迦</span>。凡住在<span class="pn">洗巴</span>家裏的人都作了<span class="pn">米非波設</span>的僕人。
 <a class="verse" id="9:13"><sup class="v">13&#160;</sup></a><span class="pn">米非波設</span>住在<span class="pn">耶路撒冷</span>，常與王同席吃飯。他兩腿都是瘸的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">擊敗亞捫人和亞蘭人</h3>
-<span class="r">（代上19‧1－19）</span>
+<span class="r">（<a href="13-1CH.html#19:1">代上19‧1－19</a>）</span>
 <p class="p">
 <a class="verse" id="10:1"><sup class="v">1&#160;</sup></a>此後，<span class="pn">亞捫</span>人的王死了，他兒子<span class="pn">哈嫩</span>接續他作王。
 <a class="verse" id="10:2"><sup class="v">2&#160;</sup></a><span class="pn">大衛</span>說：「<span class="pn">哈嫩</span>的父親<span class="pn">拿轄</span>怎樣向我施恩，我也要怎樣向<span class="pn">哈嫩</span>施恩。」於是<span class="pn">大衛</span>派臣僕為他的父親安慰他。當<span class="pn">大衛</span>的臣僕到了<span class="pn">亞捫</span>人的境內，
@@ -586,11 +625,13 @@ span.r {
 <a class="verse" id="10:18"><sup class="v">18&#160;</sup></a><span class="pn">亞蘭</span>人在<span class="pn">以色列</span>人面前逃跑。<span class="pn">大衛</span>殺了<span class="pn">亞蘭</span>七百輛戰車的士兵，四萬騎兵<a class="f" id="footnote-30-ref"  href="#footnote-30"  epub:type="noteref" ><sup>[註]</sup></a>，又擊殺<span class="pn">亞蘭</span>的將軍<span class="pn">朔法</span>，他就死在那裏。
 <a class="verse" id="10:19"><sup class="v">19&#160;</sup></a><span class="pn">哈大底謝</span>屬下的諸王見自己被<span class="pn">以色列</span>打敗，就與<span class="pn">以色列</span>講和，臣服他們。於是<span class="pn">亞蘭</span>人害怕，不再幫助<span class="pn">亞捫</span>人了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛和拔示巴</h3>
 <p class="p">
@@ -630,11 +671,13 @@ span.r {
 <a class="verse" id="11:26"><sup class="v">26&#160;</sup></a><span class="pn">烏利亞</span>的妻聽見丈夫<span class="pn">烏利亞</span>死了，就為丈夫哀哭。
 <a class="verse" id="11:27"><sup class="v">27&#160;</sup></a>居喪的日子過了，<span class="pn">大衛</span>派人把她接到宮裏，她就作了<span class="pn">大衛</span>的妻子，給<span class="pn">大衛</span>生了一個兒子。但<span class="pn">大衛</span>做的這事，耶和華的眼中看為惡。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <h3 class="s">拿單的信息和大衛的悔改</h3>
 <p class="p">
@@ -669,7 +712,7 @@ span.r {
 <a class="verse" id="12:24"><sup class="v">24&#160;</sup></a><span class="pn">大衛</span>安慰他的妻子<span class="pn">拔示巴</span>，與她同房，她就生了兒子，給他起名叫<span class="pn">所羅門</span>。耶和華喜愛他，
 <a class="verse" id="12:25"><sup class="v">25&#160;</sup></a>就藉<span class="pn">拿單</span>先知賜他一個名字，叫<span class="pn">耶底底亞</span><a class="f" id="footnote-34-ref"  href="#footnote-34"  epub:type="noteref" ><sup>[註]</sup></a>；這是為了耶和華的緣故。
 </p><h3 class="s">大衛攻取拉巴</h3>
-<span class="r">（代上20‧1－3）</span>
+<span class="r">（<a href="13-1CH.html#20:1">代上20‧1－3</a>）</span>
 <p class="p">
 <a class="verse" id="12:26"><sup class="v">26&#160;</sup></a><span class="pn">約押</span>攻打<span class="pn">亞捫</span>人的<span class="pn">拉巴</span>，攻佔了京城。
 <a class="verse" id="12:27"><sup class="v">27&#160;</sup></a><span class="pn">約押</span>派使者到<span class="pn">大衛</span>那裏，說：「我攻打<span class="pn">拉巴</span>， 也攻佔了水城。
@@ -678,11 +721,13 @@ span.r {
 <a class="verse" id="12:30"><sup class="v">30&#160;</sup></a>他也奪了<span class="pn">米勒公</span><a class="f" id="footnote-35-ref"  href="#footnote-35"  epub:type="noteref" ><sup>[註]</sup></a>頭上所戴的冠冕，其上的金子重一他連得，又嵌著寶石。這冠冕就戴在<span class="pn">大衛</span>頭上。<span class="pn">大衛</span>又從城裏奪了許多財物，
 <a class="verse" id="12:31"><sup class="v">31&#160;</sup></a>把城裏的百姓拉出來，叫他們用鋸，用鐵耙，用鐵斧做工，派他們在磚窯中服役；<span class="pn">大衛</span>待<span class="pn">亞捫</span>各城的居民都是如此。於是，<span class="pn">大衛</span>和全軍都回<span class="pn">耶路撒冷</span>去了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <h3 class="s">暗嫩和她瑪</h3>
 <p class="p">
@@ -735,11 +780,13 @@ span.r {
 <a class="verse" id="13:38"><sup class="v">38&#160;</sup></a><span class="pn">押沙龍</span>逃到<span class="pn">基述</span>去了，在那裏住了三年。
 <a class="verse" id="13:39"><sup class="v">39&#160;</sup></a>王想要出去對付<span class="pn">押沙龍</span>的心化解了<a class="f" id="footnote-38-ref"  href="#footnote-38"  epub:type="noteref" ><sup>[註]</sup></a>，因為王對<span class="pn">暗嫩</span>之死這事已經得了安慰。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <h3 class="s">約押設計讓押沙龍返回</h3>
 <p class="p">
@@ -782,11 +829,13 @@ span.r {
 <a class="verse" id="14:32"><sup class="v">32&#160;</sup></a><span class="pn">押沙龍</span>對<span class="pn">約押</span>說：「看哪，我派人去請你來，好託你到王那裏去，說：『我為何從<span class="pn">基述</span>回來呢？我仍在那裏比較好。』現在讓我去見王的面；我若有罪孽，就任憑王殺了我吧。」
 <a class="verse" id="14:33"><sup class="v">33&#160;</sup></a>於是<span class="pn">約押</span>到王那裏，奏告王，王就叫<span class="pn">押沙龍</span>來。<span class="pn">押沙龍</span>到王那裏，在王面前臉伏於地，王就親吻<span class="pn">押沙龍</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="15">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#14">上一章</a> <h2 class="c">15</h2> <a class="next-chap-link" href="#16">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <span class="c">15</span> <a class="next-chap-link" href="#16">下一章</a> &gt;
+</div>
 
 <h3 class="s">押沙龍陰謀造反</h3>
 <p class="p">
@@ -834,11 +883,13 @@ span.r {
 <a class="verse" id="15:36"><sup class="v">36&#160;</sup></a>看哪，<span class="pn">撒督</span>的兒子<span class="pn">亞希瑪斯</span>，<span class="pn">亞比亞他</span>的兒子<span class="pn">約拿單</span>，也跟二位祭司在那裏。凡你們所聽見的事，可以託這二人來向我報告。」
 <a class="verse" id="15:37"><sup class="v">37&#160;</sup></a>於是，<span class="pn">大衛</span>的朋友<span class="pn">戶篩</span>進了城，<span class="pn">押沙龍</span>也進了<span class="pn">耶路撒冷</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="16">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#15">上一章</a> <h2 class="c">16</h2> <a class="next-chap-link" href="#17">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#15">上一章</a> <span class="c">16</span> <a class="next-chap-link" href="#17">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛和洗巴</h3>
 <p class="p">
@@ -872,11 +923,13 @@ span.r {
 <a class="verse" id="16:22"><sup class="v">22&#160;</sup></a>於是他們為<span class="pn">押沙龍</span>在屋頂上支搭帳棚，<span class="pn">押沙龍</span>就在<span class="pn">以色列</span>眾人眼前，與他父親的妃嬪親近。
 <a class="verse" id="16:23"><sup class="v">23&#160;</sup></a>那時<span class="pn">亞希多弗</span>所出的主意好像人從上帝求問得來的話一樣；他給<span class="pn">大衛</span>，給<span class="pn">押沙龍</span>所出的一切主意，都是這樣。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="17">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#16">上一章</a> <h2 class="c">17</h2> <a class="next-chap-link" href="#18">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#16">上一章</a> <span class="c">17</span> <a class="next-chap-link" href="#18">下一章</a> &gt;
+</div>
 
 <h3 class="s">戶篩破壞亞希多弗的計謀</h3>
 <p class="p">
@@ -916,11 +969,13 @@ span.r {
 <a class="verse" id="17:28"><sup class="v">28&#160;</sup></a>帶著被褥、盆、瓦器，還有小麥、大麥、麥麵、烤熟的穀穗、豆子、紅豆、炒豆、
 <a class="verse" id="17:29"><sup class="v">29&#160;</sup></a>蜂蜜、奶油、綿羊、奶餅，供給<span class="pn">大衛</span>和跟隨他的人吃，因為他們想：「百姓在曠野中，必定又飢渴又疲乏。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="18">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#17">上一章</a> <h2 class="c">18</h2> <a class="next-chap-link" href="#19">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#17">上一章</a> <span class="c">18</span> <a class="next-chap-link" href="#19">下一章</a> &gt;
+</div>
 
 <h3 class="s">押沙龍敗亡</h3>
 <p class="p">
@@ -966,11 +1021,13 @@ span.r {
 <a class="verse" id="18:32"><sup class="v">32&#160;</sup></a>王對<span class="pn">古實</span>人說：「年輕人<span class="pn">押沙龍</span>平安嗎？」<span class="pn">古實</span>人說：「願我主我王的仇敵，和一切起來惡意要害你的人，都像那年輕人一樣。」
 <a class="verse" id="18:33"><sup class="v">33&#160;</sup></a>王戰抖，就上城門的樓房去痛哭，一面走一面說：「我兒<span class="pn">押沙龍</span>啊！我兒，我兒<span class="pn">押沙龍</span>啊！我恨不得替你死，<span class="pn">押沙龍</span>啊，我兒！我兒！」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="19">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#18">上一章</a> <h2 class="c">19</h2> <a class="next-chap-link" href="#20">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#18">上一章</a> <span class="c">19</span> <a class="next-chap-link" href="#20">下一章</a> &gt;
+</div>
 
 <h3 class="s">約押勸諫王</h3>
 <p class="p">
@@ -1030,11 +1087,13 @@ span.r {
 <a class="verse" id="19:42"><sup class="v">42&#160;</sup></a><span class="pn">猶大</span>眾人回答<span class="pn">以色列</span>人說：「因為王與我們是親屬，你們為何因這事發怒呢？我們靠王吃了甚麼呢？王真正給了我們甚麼賞賜呢？」
 <a class="verse" id="19:43"><sup class="v">43&#160;</sup></a><span class="pn">以色列</span>人回答<span class="pn">猶大</span>人說：「我們與王有十倍的關係，就是在<span class="pn">大衛</span>身上，我們也比你們更有權利<a class="f" id="footnote-63-ref"  href="#footnote-63"  epub:type="noteref" ><sup>[註]</sup></a>。你們為何藐視我們呢？我們不是最先提議請王回來的嗎？」但<span class="pn">猶大</span>人的話比<span class="pn">以色列</span>人的話更強硬。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="20">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#19">上一章</a> <h2 class="c">20</h2> <a class="next-chap-link" href="#21">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#19">上一章</a> <span class="c">20</span> <a class="next-chap-link" href="#21">下一章</a> &gt;
+</div>
 
 <h3 class="s">示巴反叛</h3>
 <p class="p">
@@ -1074,11 +1133,13 @@ span.r {
 <a class="verse" id="20:25"><sup class="v">25&#160;</sup></a><span class="pn">示法</span>作書記；<span class="pn">撒督</span>和<span class="pn">亞比亞他</span>作祭司；
 <a class="verse" id="20:26"><sup class="v">26&#160;</sup></a><span class="pn">睚珥</span>人<span class="pn">以拉</span>也作<span class="pn">大衛</span>的祭司。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="21">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#20">上一章</a> <h2 class="c">21</h2> <a class="next-chap-link" href="#22">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#20">上一章</a> <span class="c">21</span> <a class="next-chap-link" href="#22">下一章</a> &gt;
+</div>
 
 <h3 class="s">掃羅的後代被處死</h3>
 <p class="p">
@@ -1099,7 +1160,7 @@ span.r {
 <a class="verse" id="21:13"><sup class="v">13&#160;</sup></a><span class="pn">大衛</span>把<span class="pn">掃羅</span>和他兒子<span class="pn">約拿單</span>的骸骨從那裏搬上來，又收殮了被懸掛的那些人的骸骨。
 <a class="verse" id="21:14"><sup class="v">14&#160;</sup></a>他們將<span class="pn">掃羅</span>和他兒子<span class="pn">約拿單</span>的骸骨葬在<span class="pn">便雅憫</span>的<span class="pn">洗拉</span>，在<span class="pn">掃羅</span>父親<span class="pn">基士</span>的墳墓裏。他們遵照王所吩咐的一切做了。此後上帝垂聽了為那地的祈求。
 </p><h3 class="s">攻打非利士巨人</h3>
-<span class="r">（代上20‧4－8）</span>
+<span class="r">（<a href="13-1CH.html#20:4">代上20‧4－8</a>）</span>
 <p class="p">
 <a class="verse" id="21:15"><sup class="v">15&#160;</sup></a><span class="pn">非利士</span>人與<span class="pn">以色列</span>人打仗。<span class="pn">大衛</span>帶領僕人下去，與<span class="pn">非利士</span>人交戰，<span class="pn">大衛</span>就疲乏了。
 <a class="verse" id="21:16"><sup class="v">16&#160;</sup></a>巨人族的後裔<span class="pn">以實‧比諾</span>說要殺<span class="pn">大衛</span>；他的銅槍重三百舍客勒，腰間又佩著新刀<a class="f" id="footnote-68-ref"  href="#footnote-68"  epub:type="noteref" ><sup>[註]</sup></a>。
@@ -1111,14 +1172,16 @@ span.r {
 <a class="verse" id="21:21"><sup class="v">21&#160;</sup></a>他向<span class="pn">以色列</span>罵陣，<span class="pn">大衛</span>的哥哥<span class="pn">示米亞</span>的兒子<span class="pn">約拿單</span>就殺了他。
 <a class="verse" id="21:22"><sup class="v">22&#160;</sup></a>這四個人是<span class="pn">迦特</span>巨人族的後裔，都仆倒在<span class="pn">大衛</span>和他僕人的手下。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="22">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#21">上一章</a> <h2 class="c">22</h2> <a class="next-chap-link" href="#23">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#21">上一章</a> <span class="c">22</span> <a class="next-chap-link" href="#23">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛的凱歌</h3>
-<span class="r">（詩18）</span>
+<span class="r">（<a href="19-PSA.html#18:1">詩18</a>）</span>
 <p class="p">
 <a class="verse" id="22:1"><sup class="v">1&#160;</sup></a>當耶和華救<span class="pn">大衛</span>脫離所有仇敵和<span class="pn">掃羅</span>之手的日子，他用這詩的歌詞向耶和華說話。
 <a class="verse" id="22:2"><sup class="v">2&#160;</sup></a>他說：
@@ -1291,11 +1354,13 @@ span.r {
 </p><p class="q1">施慈愛給他的受膏者，
 </p><p class="q1">就是給<span class="pn">大衛</span>和他的後裔，直到永遠！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="23">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#22">上一章</a> <h2 class="c">23</h2> <a class="next-chap-link" href="#24">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#22">上一章</a> <span class="c">23</span> <a class="next-chap-link" href="#24">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛的遺言</h3>
 <p class="p">
@@ -1330,7 +1395,7 @@ span.r {
 <a class="verse" id="23:7"><sup class="v">7&#160;</sup></a>碰它們的人必須用鐵器和槍桿，
 </p><p class="q1">它們必在那裏被火燒盡。」
 </p><h3 class="s">大衛的勇士</h3>
-<span class="r">（代上11‧10－47）</span>
+<span class="r">（<a href="13-1CH.html#11:10">代上11‧10－47</a>）</span>
 <p class="p">
 <a class="verse" id="23:8"><sup class="v">8&#160;</sup></a><span class="pn">大衛</span>勇士的名字如下：<span class="pn">哈革摩尼</span>人<a class="f" id="footnote-72-ref"  href="#footnote-72"  epub:type="noteref" ><sup>[註]</sup></a><span class="pn">約設‧巴設</span>，他是三勇士之首；他又名叫<span class="pn">伊斯尼</span>人<span class="pn">亞底挪</span>，曾一次就殺了八百人<a class="f" id="footnote-73-ref"  href="#footnote-73"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p><p class="p">
@@ -1371,14 +1436,16 @@ span.r {
 <a class="verse" id="23:38"><sup class="v">38&#160;</sup></a><span class="pn">以帖</span>人<span class="pn">以拉</span>，<span class="pn">以帖</span>人<span class="pn">迦立</span>，
 <a class="verse" id="23:39"><sup class="v">39&#160;</sup></a><span class="pn">赫</span>人<span class="pn">烏利亞</span>，共三十七人。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="24">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#23">上一章</a> <h2 class="c">24</h2> <a class="next-chap-link" href="#25">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒母耳記下</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#23">上一章</a> <span class="c">24</span> <a class="next-chap-link" href="#25">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛調查人口</h3>
-<span class="r">（代上21‧1－27）</span>
+<span class="r">（<a href="13-1CH.html#21:1">代上21‧1－27</a>）</span>
 <p class="p">
 <a class="verse" id="24:1"><sup class="v">1&#160;</sup></a>耶和華的怒氣又向<span class="pn">以色列</span>發作，激起<span class="pn">大衛</span>來對付他們，說：「去，數點<span class="pn">以色列</span>人和<span class="pn">猶大</span>人。」
 <a class="verse" id="24:2"><sup class="v">2&#160;</sup></a><span class="pn">大衛</span>對跟隨他的<span class="pn">約押</span>元帥說：「你來回走遍<span class="pn">以色列</span>眾支派，從<span class="pn">但</span>直到<span class="pn">別是巴</span>，數點百姓，我好知道百姓的數目。」
@@ -1411,9 +1478,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="25">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#24">上一章</a> <a class="chapter" id="25">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="11-1KI.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">2:8</a> 「伊施．波設」又名「伊施巴力」；參代上8．33，9．39；又名「亦施韋」，參撒上14．49；本卷書下同。</p>
 </aside>

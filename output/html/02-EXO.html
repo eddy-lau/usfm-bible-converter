@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>出埃及記</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -172,11 +191,13 @@ span.r {
 </p><p class="q2">3. 百姓背叛，但上帝滿有恩惠憐憫（32．1—33．23）
 </p><p class="q2">4. 上帝的信實（34．1—40．38）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">以色列人生養眾多</h3>
 <p class="p">
@@ -207,11 +228,13 @@ span.r {
 <a class="verse" id="1:21"><sup class="v">21&#160;</sup></a>接生婆因為敬畏上帝，上帝就叫她們成立家室。
 <a class="verse" id="1:22"><sup class="v">22&#160;</sup></a>法老吩咐他的眾百姓說：「把所生的<a class="f" id="footnote-2-ref"  href="#footnote-2"  epub:type="noteref" ><sup>[註]</sup></a>每一個男孩都丟到<span class="pn">尼羅河</span>裏去，讓所有的女孩存活。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">摩西的出生</h3>
 <p class="p">
@@ -246,11 +269,13 @@ span.r {
 <a class="verse" id="2:24"><sup class="v">24&#160;</sup></a>上帝聽見他們的哀聲，就記念他與<span class="pn">亞伯拉罕</span>、<span class="pn">以撒</span>、<span class="pn">雅各</span>所立的約。
 <a class="verse" id="2:25"><sup class="v">25&#160;</sup></a>上帝看顧<span class="pn">以色列</span>人，上帝是知道的<a class="f" id="footnote-3-ref"  href="#footnote-3"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝呼召摩西</h3>
 <p class="p">
@@ -280,11 +305,13 @@ span.r {
 <a class="verse" id="3:21"><sup class="v">21&#160;</sup></a>我必使<span class="pn">埃及</span>人看得起你們，你們離開的時候就不至於空手而去。
 <a class="verse" id="3:22"><sup class="v">22&#160;</sup></a>每一個婦女必向她的鄰舍，以及寄居在她家裏的女人，索取金器、銀器和衣裳，給你們的兒女穿戴。這樣你們就掠奪了<span class="pn">埃及</span>人。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">摩西行神蹟的權能</h3>
 <p class="p">
@@ -327,11 +354,13 @@ span.r {
 <a class="verse" id="4:30"><sup class="v">30&#160;</sup></a><span class="pn">亞倫</span>將耶和華對<span class="pn">摩西</span>所說的一切話述說了一遍，又在百姓眼前行了那些神蹟，
 <a class="verse" id="4:31"><sup class="v">31&#160;</sup></a>百姓就信了。他們聽見耶和華眷顧<span class="pn">以色列</span>人，鑒察他們的困苦，就低頭敬拜。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h3 class="s">摩西和亞倫見埃及法老</h3>
 <p class="p">
@@ -362,11 +391,13 @@ span.r {
 <a class="verse" id="5:22"><sup class="v">22&#160;</sup></a><span class="pn">摩西</span>回到耶和華那裏，說：「主啊，你為甚麼苦待這百姓呢？為甚麼差派我呢？
 <a class="verse" id="5:23"><sup class="v">23&#160;</sup></a>自從我到法老那裏，奉你的名說話，他就苦待這百姓，你卻一點也沒有拯救你的百姓。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝應許拯救以色列</h3>
 <p class="p">
@@ -406,11 +437,13 @@ span.r {
 <a class="verse" id="6:29"><sup class="v">29&#160;</sup></a>耶和華對<span class="pn">摩西</span>說：「我是耶和華；我對你所說的一切話，你都要告訴<span class="pn">埃及</span>王法老。」
 <a class="verse" id="6:30"><sup class="v">30&#160;</sup></a><span class="pn">摩西</span>在耶和華面前說：「看哪，我是不會講話的人，法老怎麼會聽我呢？」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="7:1"><sup class="v">1&#160;</sup></a>耶和華對<span class="pn">摩西</span>說：「我使你在法老面前像上帝一樣，你的哥哥<span class="pn">亞倫</span>是你的代言人<a class="f" id="footnote-8-ref"  href="#footnote-8"  epub:type="noteref" ><sup>[註]</sup></a>。
@@ -445,11 +478,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="7:25"><sup class="v">25&#160;</sup></a>耶和華擊打<span class="pn">尼羅河</span>後，過了七天。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h3 class="s">第二災：蛙災</h3>
 <p class="p">
@@ -492,11 +527,13 @@ span.r {
 <a class="verse" id="8:31"><sup class="v">31&#160;</sup></a>耶和華就照<span class="pn">摩西</span>的請求去做，使成群的蒼蠅離開法老、他的臣僕和他的百姓，一隻也沒有留下。
 <a class="verse" id="8:32"><sup class="v">32&#160;</sup></a>但這一次法老又硬著心，不放百姓走。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h3 class="s">第五災：瘟災</h3>
 <p class="p">
@@ -543,11 +580,13 @@ span.r {
 <a class="verse" id="9:34"><sup class="v">34&#160;</sup></a>法老見雨、雹、雷止住，又再犯罪；他和他的臣僕都硬著心。
 <a class="verse" id="9:35"><sup class="v">35&#160;</sup></a>法老的心剛硬，不放<span class="pn">以色列</span>人走，正如耶和華藉著<span class="pn">摩西</span>所說的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">第八災：蝗災</h3>
 <p class="p">
@@ -585,11 +624,13 @@ span.r {
 <a class="verse" id="10:28"><sup class="v">28&#160;</sup></a>法老對<span class="pn">摩西</span>說：「離開我去吧！你要小心，不要再見我的面，因為再見我面的那日，你就必死！」
 <a class="verse" id="10:29"><sup class="v">29&#160;</sup></a><span class="pn">摩西</span>說：「就照你說的，我也不要再見你的面了！」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">最後一災的警告</h3>
 <p class="p">
@@ -606,11 +647,13 @@ span.r {
 <a class="verse" id="11:9"><sup class="v">9&#160;</sup></a>耶和華對<span class="pn">摩西</span>說：「法老必不聽你們，為了要使我在<span class="pn">埃及</span>地多行奇事。」
 <a class="verse" id="11:10"><sup class="v">10&#160;</sup></a><span class="pn">摩西</span>和<span class="pn">亞倫</span>在法老面前行了這一切奇事，但耶和華任憑法老的心剛硬，不讓<span class="pn">以色列</span>人離開他的地。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華的逾越</h3>
 <p class="p">
@@ -678,11 +721,13 @@ span.r {
 <a class="verse" id="12:50"><sup class="v">50&#160;</sup></a><span class="pn">以色列</span>眾人就去做，他們照耶和華吩咐<span class="pn">摩西</span>和<span class="pn">亞倫</span>的去做了。
 <a class="verse" id="12:51"><sup class="v">51&#160;</sup></a>正當那日，耶和華將<span class="pn">以色列</span>人按著他們的隊伍從<span class="pn">埃及</span>地領了出來。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <h3 class="s">頭生的分別為聖</h3>
 <p class="p">
@@ -715,11 +760,13 @@ span.r {
 <a class="verse" id="13:21"><sup class="v">21&#160;</sup></a>耶和華走在他們前面，日間用雲柱引領他們的路，夜間用火柱照亮他們，使他們日夜都可以行走。
 <a class="verse" id="13:22"><sup class="v">22&#160;</sup></a>日間的雲柱，夜間的火柱，總不離開百姓的面前。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <h3 class="s">過紅海</h3>
 <p class="p">
@@ -762,11 +809,13 @@ span.r {
 <a class="verse" id="14:30"><sup class="v">30&#160;</sup></a>那一日，耶和華拯救<span class="pn">以色列</span>脫離<span class="pn">埃及</span>人的手。<span class="pn">以色列</span>人看見<span class="pn">埃及</span>人死在海邊。
 <a class="verse" id="14:31"><sup class="v">31&#160;</sup></a><span class="pn">以色列</span>人看見耶和華向<span class="pn">埃及</span>人所施展的大能，百姓就敬畏耶和華，並且信服耶和華和他的僕人<span class="pn">摩西</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="15">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#14">上一章</a> <h2 class="c">15</h2> <a class="next-chap-link" href="#16">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <span class="c">15</span> <a class="next-chap-link" href="#16">下一章</a> &gt;
+</div>
 
 <h3 class="s">摩西之歌</h3>
 <p class="p">
@@ -855,11 +904,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="15:27"><sup class="v">27&#160;</sup></a>他們到了<span class="pn">以琳</span>，在那裏有十二股水泉，七十棵棕樹；他們就在那裏的水邊安營。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="16">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#15">上一章</a> <h2 class="c">16</h2> <a class="next-chap-link" href="#17">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#15">上一章</a> <span class="c">16</span> <a class="next-chap-link" href="#17">下一章</a> &gt;
+</div>
 
 <h3 class="s">嗎哪和鵪鶉</h3>
 <p class="p">
@@ -906,14 +957,16 @@ span.r {
 <a class="verse" id="16:35"><sup class="v">35&#160;</sup></a><span class="pn">以色列</span>人吃嗎哪共四十年，直到進入有人居住的地方；他們吃嗎哪，直到<span class="pn">迦南</span>地的邊境。
 <a class="verse" id="16:36"><sup class="v">36&#160;</sup></a>一俄梅珥是一伊法的十分之一。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="17">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#16">上一章</a> <h2 class="c">17</h2> <a class="next-chap-link" href="#18">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#16">上一章</a> <span class="c">17</span> <a class="next-chap-link" href="#18">下一章</a> &gt;
+</div>
 
 <h3 class="s">磐石出水</h3>
-<span class="r">（民20‧1－13）</span>
+<span class="r">（<a href="04-NUM.html#20:1">民20‧1－13</a>）</span>
 <p class="p">
 <a class="verse" id="17:1"><sup class="v">1&#160;</sup></a><span class="pn">以色列</span>全會眾遵照耶和華的吩咐，從<span class="pn">汛</span>的曠野一段一段地往前行。他們在<span class="pn">利非訂</span>安營，但百姓沒有水喝。
 <a class="verse" id="17:2"><sup class="v">2&#160;</sup></a>百姓就與<span class="pn">摩西</span>爭鬧，說：「給我們水喝吧！」<span class="pn">摩西</span>對他們說：「你們為甚麼與我爭鬧呢？你們為甚麼試探耶和華呢？」
@@ -935,11 +988,13 @@ span.r {
 <a class="verse" id="17:15"><sup class="v">15&#160;</sup></a><span class="pn">摩西</span>築了一座壇，起名叫「耶和華尼西<a class="f" id="footnote-28-ref"  href="#footnote-28"  epub:type="noteref" ><sup>[註]</sup></a>」。
 <a class="verse" id="17:16"><sup class="v">16&#160;</sup></a>他說：「我指著耶和華的寶座發誓<a class="f" id="footnote-29-ref"  href="#footnote-29"  epub:type="noteref" ><sup>[註]</sup></a>，耶和華必世世代代和<span class="pn">亞瑪力</span>爭戰。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="18">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#17">上一章</a> <h2 class="c">18</h2> <a class="next-chap-link" href="#19">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#17">上一章</a> <span class="c">18</span> <a class="next-chap-link" href="#19">下一章</a> &gt;
+</div>
 
 <h3 class="s">葉特羅的探視</h3>
 <p class="p">
@@ -956,7 +1011,7 @@ span.r {
 <a class="verse" id="18:11"><sup class="v">11&#160;</sup></a>現在，從<span class="pn">埃及</span>人狂傲地對待<span class="pn">以色列</span>人這件事上，我知道耶和華比萬神更大。」
 <a class="verse" id="18:12"><sup class="v">12&#160;</sup></a><span class="pn">摩西</span>的岳父<span class="pn">葉特羅</span>把燔祭和祭物獻給上帝。<span class="pn">亞倫</span>和<span class="pn">以色列</span>的眾長老都來了，與<span class="pn">摩西</span>的岳父在上帝面前吃飯。
 </p><h3 class="s">選立百姓的官長</h3>
-<span class="r">（申1‧9－18）</span>
+<span class="r">（<a href="05-DEU.html#1:9">申1‧9－18</a>）</span>
 <p class="p">
 <a class="verse" id="18:13"><sup class="v">13&#160;</sup></a>第二天，<span class="pn">摩西</span>坐著審判百姓，百姓從早到晚站在<span class="pn">摩西</span>的旁邊。
 <a class="verse" id="18:14"><sup class="v">14&#160;</sup></a><span class="pn">摩西</span>的岳父看見他為百姓所做的一切事，就說：「你為百姓所做的，這是甚麼事呢？你為甚麼獨自一人坐著，而眾百姓從早到晚都站在你旁邊呢？」
@@ -975,11 +1030,13 @@ span.r {
 <a class="verse" id="18:26"><sup class="v">26&#160;</sup></a>他們隨時審判百姓：難斷的事就送到<span class="pn">摩西</span>那裏，各樣小事就由他們自行判決。
 <a class="verse" id="18:27"><sup class="v">27&#160;</sup></a>於是，<span class="pn">摩西</span>給他的岳父送行，他就回到本地去了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="19">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#18">上一章</a> <h2 class="c">19</h2> <a class="next-chap-link" href="#20">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#18">上一章</a> <span class="c">19</span> <a class="next-chap-link" href="#20">下一章</a> &gt;
+</div>
 
 <h3 class="s">以色列人在西奈山</h3>
 <p class="p">
@@ -1011,14 +1068,16 @@ span.r {
 <a class="verse" id="19:24"><sup class="v">24&#160;</sup></a>耶和華對他說：「下去吧，你要和<span class="pn">亞倫</span>一起上來；只是祭司和百姓不可闖上來到耶和華這裏，免得耶和華忽然出來擊殺他們。」
 <a class="verse" id="19:25"><sup class="v">25&#160;</sup></a>於是，<span class="pn">摩西</span>下到百姓那裏告訴他們。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="20">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#19">上一章</a> <h2 class="c">20</h2> <a class="next-chap-link" href="#21">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#19">上一章</a> <span class="c">20</span> <a class="next-chap-link" href="#21">下一章</a> &gt;
+</div>
 
 <h3 class="s">十誡</h3>
-<span class="r">（申5‧1－21）</span>
+<span class="r">（<a href="05-DEU.html#5:1">申5‧1－21</a>）</span>
 <p class="p">
 <a class="verse" id="20:1"><sup class="v">1&#160;</sup></a>上帝吩咐這一切的話，說：
 </p><p class="p">
@@ -1049,7 +1108,7 @@ span.r {
 </p><p class="p">
 <a class="verse" id="20:17"><sup class="v">17&#160;</sup></a>「不可貪戀你鄰舍的房屋；不可貪戀你鄰舍的妻子、奴僕、婢女、牛驢，以及他一切所有的。」
 </p><h3 class="s">眾民戰懼</h3>
-<span class="r">（申5‧22－23）</span>
+<span class="r">（<a href="05-DEU.html#5:22">申5‧22－23</a>）</span>
 <p class="p">
 <a class="verse" id="20:18"><sup class="v">18&#160;</sup></a>眾百姓見雷轟、閃電、角聲、山上冒煙，百姓看見<a class="f" id="footnote-34-ref"  href="#footnote-34"  epub:type="noteref" ><sup>[註]</sup></a>就都戰抖，遠遠站著。
 <a class="verse" id="20:19"><sup class="v">19&#160;</sup></a>他們對<span class="pn">摩西</span>說：「請你向我們說話，我們必聽；不要讓上帝向我們說話，免得我們死亡。」
@@ -1063,14 +1122,16 @@ span.r {
 <a class="verse" id="20:25"><sup class="v">25&#160;</sup></a>你若為我築一座石壇，不可用鑿過的石頭，因為你在石頭上動了工具，就使壇污穢了。
 <a class="verse" id="20:26"><sup class="v">26&#160;</sup></a>你不可用臺階上我的壇，免得露出你的下體來。』」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="21">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#20">上一章</a> <h2 class="c">21</h2> <a class="next-chap-link" href="#22">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#20">上一章</a> <span class="c">21</span> <a class="next-chap-link" href="#22">下一章</a> &gt;
+</div>
 
 <h3 class="s">奴婢的條例</h3>
-<span class="r">（申15‧12－18）</span>
+<span class="r">（<a href="05-DEU.html#15:12">申15‧12－18</a>）</span>
 <p class="p">
 <a class="verse" id="21:1"><sup class="v">1&#160;</sup></a>「你在百姓面前所要立的典章是這樣：
 </p><p class="p">
@@ -1124,11 +1185,13 @@ span.r {
 <a class="verse" id="21:35"><sup class="v">35&#160;</sup></a>「人的牛若牴死鄰舍的牛，他們就要賣了那活牛，平分價錢；也要平分死牛。
 <a class="verse" id="21:36"><sup class="v">36&#160;</sup></a>若這牛向來是以好牴人出名的，主人竟不把牛拴好，他必要以牛賠牛，死牛卻歸自己。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="22">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#21">上一章</a> <h2 class="c">22</h2> <a class="next-chap-link" href="#23">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#21">上一章</a> <span class="c">22</span> <a class="next-chap-link" href="#23">下一章</a> &gt;
+</div>
 
 <h3 class="s">賠償的條例</h3>
 <p class="p">
@@ -1181,11 +1244,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="22:31"><sup class="v">31&#160;</sup></a>「你們要分別為聖歸給我。因此，田間被野獸撕裂的肉，你們不可吃，要把它丟給狗。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="23">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#22">上一章</a> <h2 class="c">23</h2> <a class="next-chap-link" href="#24">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#22">上一章</a> <span class="c">23</span> <a class="next-chap-link" href="#24">下一章</a> &gt;
+</div>
 
 <h3 class="s">正義和公正</h3>
 <p class="p">
@@ -1210,7 +1275,7 @@ span.r {
 </p><p class="p">
 <a class="verse" id="23:13"><sup class="v">13&#160;</sup></a>「凡我對你們說的話，你們都要謹守。別神的名，你不可提，也不可用口說給人聽。」
 </p><h3 class="s">三大節期</h3>
-<span class="r">（出34‧18－26；申16‧1－17）</span>
+<span class="r">（<a href="02-EXO.html#34:18">出34‧18－26</a>；<a href="05-DEU.html#16:1">申16‧1－17</a>）</span>
 <p class="p">
 <a class="verse" id="23:14"><sup class="v">14&#160;</sup></a>「一年三次，你要向我守節。
 <a class="verse" id="23:15"><sup class="v">15&#160;</sup></a>你要守除酵節，照我所吩咐你的，在亞筆月內所定的日期吃無酵餅七天，因為你是在這月離開了<span class="pn">埃及</span>。誰也不可空手來朝見我。
@@ -1240,11 +1305,13 @@ span.r {
 <a class="verse" id="23:32"><sup class="v">32&#160;</sup></a>不可跟他們和他們的神明立約。
 <a class="verse" id="23:33"><sup class="v">33&#160;</sup></a>他們不可住在你的地上，免得他們使你得罪我。你若事奉他們的神明，必成為你的圈套。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="24">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#23">上一章</a> <h2 class="c">24</h2> <a class="next-chap-link" href="#25">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#23">上一章</a> <span class="c">24</span> <a class="next-chap-link" href="#25">下一章</a> &gt;
+</div>
 
 <h3 class="s">立約的血</h3>
 <p class="p">
@@ -1273,14 +1340,16 @@ span.r {
 <a class="verse" id="24:17"><sup class="v">17&#160;</sup></a>耶和華的榮耀在山頂上，在<span class="pn">以色列</span>人眼前，形狀如吞噬的火。
 <a class="verse" id="24:18"><sup class="v">18&#160;</sup></a><span class="pn">摩西</span>進入雲中，登上了山。<span class="pn">摩西</span>在山上四十晝夜。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="25">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#24">上一章</a> <h2 class="c">25</h2> <a class="next-chap-link" href="#26">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#24">上一章</a> <span class="c">25</span> <a class="next-chap-link" href="#26">下一章</a> &gt;
+</div>
 
 <h3 class="s">為聖所奉獻</h3>
-<span class="r">（出35‧4－9）</span>
+<span class="r">（<a href="02-EXO.html#35:4">出35‧4－9</a>）</span>
 <p class="p">
 <a class="verse" id="25:1"><sup class="v">1&#160;</sup></a>耶和華吩咐<span class="pn">摩西</span>說：
 <a class="verse" id="25:2"><sup class="v">2&#160;</sup></a>「你要吩咐<span class="pn">以色列</span>人獻禮物給我。凡甘心樂意獻給我的禮物，你們都可以收下。
@@ -1292,7 +1361,7 @@ span.r {
 <a class="verse" id="25:8"><sup class="v">8&#160;</sup></a>他們要為我造聖所，使我住在他們中間。
 <a class="verse" id="25:9"><sup class="v">9&#160;</sup></a>你們要按照我指示你的，帳幕和其中一切器具的樣式，照樣去做。」
 </p><h3 class="s">約櫃</h3>
-<span class="r">（出37‧1－9）</span>
+<span class="r">（<a href="02-EXO.html#37:1">出37‧1－9</a>）</span>
 <p class="p">
 <a class="verse" id="25:10"><sup class="v">10&#160;</sup></a>「他們要用金合歡木做一個櫃子，長二肘半，寬一肘半，高一肘半。
 <a class="verse" id="25:11"><sup class="v">11&#160;</sup></a>你要把它裏裏外外包上純金，四圍要鑲上金邊。
@@ -1308,7 +1377,7 @@ span.r {
 <a class="verse" id="25:21"><sup class="v">21&#160;</sup></a>要把櫃蓋安在櫃的上邊，又要把我所要賜給你的法版放在櫃裏。
 <a class="verse" id="25:22"><sup class="v">22&#160;</sup></a>我要在那裏與你相會，並要從法版之櫃的櫃蓋上，兩個基路伯的中間，將我要吩咐<span class="pn">以色列</span>人的一切事告訴你。」
 </p><h3 class="s">供桌</h3>
-<span class="r">（出37‧10－16）</span>
+<span class="r">（<a href="02-EXO.html#37:10">出37‧10－16</a>）</span>
 <p class="p">
 <a class="verse" id="25:23"><sup class="v">23&#160;</sup></a>「你要用金合歡木做一張供桌，長二肘，寬一肘，高一肘半，
 <a class="verse" id="25:24"><sup class="v">24&#160;</sup></a>把它包上純金，四圍鑲上金邊。
@@ -1319,7 +1388,7 @@ span.r {
 <a class="verse" id="25:29"><sup class="v">29&#160;</sup></a>要用純金做桌上的盤、碟，以及澆酒祭的壺和杯。
 <a class="verse" id="25:30"><sup class="v">30&#160;</sup></a>要把供餅擺在桌上，常在我面前。」
 </p><h3 class="s">燈臺</h3>
-<span class="r">（出37‧17－24）</span>
+<span class="r">（<a href="02-EXO.html#37:17">出37‧17－24</a>）</span>
 <p class="p">
 <a class="verse" id="25:31"><sup class="v">31&#160;</sup></a>「要造一座用純金錘出的燈臺。燈臺的座、幹、杯、花萼和花瓣，都要和燈臺接連一塊。
 <a class="verse" id="25:32"><sup class="v">32&#160;</sup></a>燈臺兩旁要伸出六根枝子：這邊三根，那邊三根。
@@ -1332,14 +1401,16 @@ span.r {
 <a class="verse" id="25:39"><sup class="v">39&#160;</sup></a>做燈臺和這一切的器具要用一他連得純金。
 <a class="verse" id="25:40"><sup class="v">40&#160;</sup></a>要謹慎，照著在山上指示你的樣式去做。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="26">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#25">上一章</a> <h2 class="c">26</h2> <a class="next-chap-link" href="#27">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#25">上一章</a> <span class="c">26</span> <a class="next-chap-link" href="#27">下一章</a> &gt;
+</div>
 
 <h3 class="s">帳幕</h3>
-<span class="r">（出36‧8－38）</span>
+<span class="r">（<a href="02-EXO.html#36:8">出36‧8－38</a>）</span>
 <p class="p">
 <a class="verse" id="26:1"><sup class="v">1&#160;</sup></a>「你要用十幅幔子做帳幕。這些幔子要用搓的細麻和藍色、紫色、朱紅色紗織成，並且以刺繡的手藝繡上基路伯。
 <a class="verse" id="26:2"><sup class="v">2&#160;</sup></a>每幅幔子要長二十八肘，每幅幔子寬四肘，全部的幔子尺寸都要一樣。
@@ -1384,14 +1455,16 @@ span.r {
 <a class="verse" id="26:36"><sup class="v">36&#160;</sup></a>「你要用藍色、紫色、朱紅色紗，和搓的細麻，以刺繡的手藝為帳幕織門簾。
 <a class="verse" id="26:37"><sup class="v">37&#160;</sup></a>要用金合歡木為簾子做五根柱子，包上金子。柱子有金鉤，又為柱子鑄造五個帶卯眼的銅座。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="27">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#26">上一章</a> <h2 class="c">27</h2> <a class="next-chap-link" href="#28">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#26">上一章</a> <span class="c">27</span> <a class="next-chap-link" href="#28">下一章</a> &gt;
+</div>
 
 <h3 class="s">祭壇</h3>
-<span class="r">（出38‧1－7）</span>
+<span class="r">（<a href="02-EXO.html#38:1">出38‧1－7</a>）</span>
 <p class="p">
 <a class="verse" id="27:1"><sup class="v">1&#160;</sup></a>「你要用金合歡木做祭壇，長五肘，寬五肘，這壇是正方形的，高三肘。
 <a class="verse" id="27:2"><sup class="v">2&#160;</sup></a>要在壇的四角做四個翹角，與壇接連一塊；要把壇包上銅。
@@ -1402,7 +1475,7 @@ span.r {
 <a class="verse" id="27:7"><sup class="v">7&#160;</sup></a>這槓要穿過壇兩旁的環子，用來抬壇。
 <a class="verse" id="27:8"><sup class="v">8&#160;</sup></a>要用板做壇，壇的中心是空的，都照著在山上所指示你的樣式做。」
 </p><h3 class="s">院子</h3>
-<span class="r">（出38‧9－20）</span>
+<span class="r">（<a href="02-EXO.html#38:9">出38‧9－20</a>）</span>
 <p class="p">
 <a class="verse" id="27:9"><sup class="v">9&#160;</sup></a>「你要做帳幕的院子。南面，就是面向南方的那一邊，要用搓的細麻做院子的帷幔，長一百肘，
 <a class="verse" id="27:10"><sup class="v">10&#160;</sup></a>院子要有二十根柱子，二十個帶卯眼的銅座。要用銀做柱子的鉤和箍。
@@ -1416,19 +1489,21 @@ span.r {
 <a class="verse" id="27:18"><sup class="v">18&#160;</sup></a>院子要長一百肘，寬五十肘<a class="f" id="footnote-48-ref"  href="#footnote-48"  epub:type="noteref" ><sup>[註]</sup></a>，高五肘。要用搓的細麻做帷幔，用銅做帶卯眼的座。
 <a class="verse" id="27:19"><sup class="v">19&#160;</sup></a>帳幕中各樣用途的器具，以及帳幕一切的橛子和院子裏一切的橛子，都要用銅做。」
 </p><h3 class="s">燃燈的條例</h3>
-<span class="r">（利24‧1－4）</span>
+<span class="r">（<a href="03-LEV.html#24:1">利24‧1－4</a>）</span>
 <p class="p">
 <a class="verse" id="27:20"><sup class="v">20&#160;</sup></a>「你要吩咐<span class="pn">以色列</span>人，把搗成的純橄欖油拿來給你，用以點燈，使燈經常點著；
 <a class="verse" id="27:21"><sup class="v">21&#160;</sup></a>在會幕中法櫃前的幔子外，<span class="pn">亞倫</span>和他的兒子要從晚上到早晨，在耶和華面前照管這燈。這要成為<span class="pn">以色列</span>人世世代代永遠的定例。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="28">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#27">上一章</a> <h2 class="c">28</h2> <a class="next-chap-link" href="#29">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#27">上一章</a> <span class="c">28</span> <a class="next-chap-link" href="#29">下一章</a> &gt;
+</div>
 
 <h3 class="s">祭司的聖服</h3>
-<span class="r">（出39‧1－7）</span>
+<span class="r">（<a href="02-EXO.html#39:1">出39‧1－7</a>）</span>
 <p class="p">
 <a class="verse" id="28:1"><sup class="v">1&#160;</sup></a>「你要從<span class="pn">以色列</span>人中，叫你的哥哥<span class="pn">亞倫</span>和他的兒子<span class="pn">拿答</span>、<span class="pn">亞比戶</span>、<span class="pn">以利亞撒</span>、<span class="pn">以他瑪</span>一同親近你，作事奉我的祭司。
 <a class="verse" id="28:2"><sup class="v">2&#160;</sup></a>你要為你哥哥<span class="pn">亞倫</span>做聖衣，以示尊嚴和華美。
@@ -1447,7 +1522,7 @@ span.r {
 <a class="verse" id="28:13"><sup class="v">13&#160;</sup></a>要用金子做兩個槽，
 <a class="verse" id="28:14"><sup class="v">14&#160;</sup></a>再用純金打兩條鏈子，像編成的繩子一樣，把這編成的金鏈扣在槽上。」
 </p><h3 class="s">胸袋</h3>
-<span class="r">（出39‧8－21）</span>
+<span class="r">（<a href="02-EXO.html#39:8">出39‧8－21</a>）</span>
 <p class="p">
 <a class="verse" id="28:15"><sup class="v">15&#160;</sup></a>「你要以刺繡的手藝做一個決斷的胸袋，和做以弗得的方法一樣，用金色、藍色、紫色、朱紅色紗，和搓的細麻縫製。
 <a class="verse" id="28:16"><sup class="v">16&#160;</sup></a>胸袋是正方形的，疊成兩層，長一虎口，寬一虎口。
@@ -1466,7 +1541,7 @@ span.r {
 <a class="verse" id="28:29"><sup class="v">29&#160;</sup></a><span class="pn">亞倫</span>進聖所的時候，要把刻著<span class="pn">以色列</span>兒子名字的決斷胸袋帶著，放在心上，在耶和華面前常作紀念。
 <a class="verse" id="28:30"><sup class="v">30&#160;</sup></a>又要將烏陵和土明<a class="f" id="footnote-49-ref"  href="#footnote-49"  epub:type="noteref" ><sup>[註]</sup></a>放在決斷胸袋裏；<span class="pn">亞倫</span>進到耶和華面前的時候，要放在心上。這樣，<span class="pn">亞倫</span>在耶和華面前要把<span class="pn">以色列</span>人的決斷胸袋常常帶著，放在心上。」
 </p><h3 class="s">祭司的其他聖服</h3>
-<span class="r">（出39‧22－31）</span>
+<span class="r">（<a href="02-EXO.html#39:22">出39‧22－31</a>）</span>
 <p class="p">
 <a class="verse" id="28:31"><sup class="v">31&#160;</sup></a>「你要做以弗得的外袍，顏色全是藍的。
 <a class="verse" id="28:32"><sup class="v">32&#160;</sup></a>袍上方的中間要留一個領口，領口周圍的領邊要以手藝編織而成，好像鎧甲的領口，免得破裂。
@@ -1484,14 +1559,16 @@ span.r {
 <a class="verse" id="28:42"><sup class="v">42&#160;</sup></a>要用細麻布給他們做褲子來遮掩下體，從腰間直到大腿。
 <a class="verse" id="28:43"><sup class="v">43&#160;</sup></a><span class="pn">亞倫</span>和他兒子進入會幕，或接近祭壇，在聖所供職的時候要穿上褲子，免得擔當罪孽而死。這要成為<span class="pn">亞倫</span>和他後裔永遠的定例。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="29">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#28">上一章</a> <h2 class="c">29</h2> <a class="next-chap-link" href="#30">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#28">上一章</a> <span class="c">29</span> <a class="next-chap-link" href="#30">下一章</a> &gt;
+</div>
 
 <h3 class="s">祭司的聖職禮</h3>
-<span class="r">（利8‧1－36）</span>
+<span class="r">（<a href="03-LEV.html#8:1">利8‧1－36</a>）</span>
 <p class="p">
 <a class="verse" id="29:1"><sup class="v">1&#160;</sup></a>「這是你使他們分別為聖，作事奉我的祭司時要做的事：取一頭公牛犢，兩隻無殘疾的公綿羊，
 <a class="verse" id="29:2"><sup class="v">2&#160;</sup></a>無酵餅、用油調和的無酵餅，和抹油的無酵薄餅；這些餅都要用細麥麵做成。
@@ -1539,7 +1616,7 @@ span.r {
 <a class="verse" id="29:36"><sup class="v">36&#160;</sup></a>為了贖罪，每天要獻一頭公牛為贖罪祭。你要為祭壇贖罪，使壇潔淨，並要用膏抹壇，使壇成為聖。
 <a class="verse" id="29:37"><sup class="v">37&#160;</sup></a>要為壇贖罪七天，使壇成為聖，壇就成為至聖。凡觸摸壇的都成為聖。」
 </p><h3 class="s">每天當獻的祭</h3>
-<span class="r">（民28‧1－8）</span>
+<span class="r">（<a href="04-NUM.html#28:1">民28‧1－8</a>）</span>
 <p class="p">
 <a class="verse" id="29:38"><sup class="v">38&#160;</sup></a>「這是你要獻在壇上的：每天不可間斷地獻兩隻一歲的羔羊；
 <a class="verse" id="29:39"><sup class="v">39&#160;</sup></a>早晨獻第一隻羔羊，黃昏獻第二隻羔羊。
@@ -1551,14 +1628,16 @@ span.r {
 <a class="verse" id="29:45"><sup class="v">45&#160;</sup></a>我要住在<span class="pn">以色列</span>人中，作他們的上帝。
 <a class="verse" id="29:46"><sup class="v">46&#160;</sup></a>他們必知道我是耶和華－他們的上帝，是將他們從<span class="pn">埃及</span>地領出來的，為要住在他們中間。我是耶和華－他們的上帝 。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="30">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#29">上一章</a> <h2 class="c">30</h2> <a class="next-chap-link" href="#31">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#29">上一章</a> <span class="c">30</span> <a class="next-chap-link" href="#31">下一章</a> &gt;
+</div>
 
 <h3 class="s">香壇</h3>
-<span class="r">（出37‧25－28）</span>
+<span class="r">（<a href="02-EXO.html#37:25">出37‧25－28</a>）</span>
 <p class="p">
 <a class="verse" id="30:1"><sup class="v">1&#160;</sup></a>「你要用金合歡木做一座燒香的壇，
 <a class="verse" id="30:2"><sup class="v">2&#160;</sup></a>長一肘，寬一肘，這壇是正方形的，高二肘。壇的四個翹角與壇接連一塊。
@@ -1607,14 +1686,16 @@ span.r {
 <a class="verse" id="30:37"><sup class="v">37&#160;</sup></a>你們不可用這配製的方法為自己做香；要以這香為聖，歸於耶和華。
 <a class="verse" id="30:38"><sup class="v">38&#160;</sup></a>為要聞香味而配製同樣的香的，這人要從百姓中剪除。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="31">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#30">上一章</a> <h2 class="c">31</h2> <a class="next-chap-link" href="#32">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#30">上一章</a> <span class="c">31</span> <a class="next-chap-link" href="#32">下一章</a> &gt;
+</div>
 
 <h3 class="s">會幕的技工</h3>
-<span class="r">（出35‧30－36‧1）</span>
+<span class="r">（<a href="02-EXO.html#35:30">出35‧30－36‧1</a>）</span>
 <p class="p">
 <a class="verse" id="31:1"><sup class="v">1&#160;</sup></a>耶和華吩咐<span class="pn">摩西</span>說：
 <a class="verse" id="31:2"><sup class="v">2&#160;</sup></a>「你看，我已經題名召<span class="pn">猶大</span>支派中<span class="pn">戶珥</span>的孫子，<span class="pn">烏利</span>的兒子<span class="pn">比撒列</span>。
@@ -1638,14 +1719,16 @@ span.r {
 </p><p class="p">
 <a class="verse" id="31:18"><sup class="v">18&#160;</sup></a>耶和華在<span class="pn">西奈山</span>和<span class="pn">摩西</span>說完了話，就把兩塊法版交給他，是上帝用指頭寫的石版。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="32">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#31">上一章</a> <h2 class="c">32</h2> <a class="next-chap-link" href="#33">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#31">上一章</a> <span class="c">32</span> <a class="next-chap-link" href="#33">下一章</a> &gt;
+</div>
 
 <h3 class="s">金牛犢</h3>
-<span class="r">（申9‧6－29）</span>
+<span class="r">（<a href="05-DEU.html#9:6">申9‧6－29</a>）</span>
 <p class="p">
 <a class="verse" id="32:1"><sup class="v">1&#160;</sup></a>百姓見<span class="pn">摩西</span>遲遲不下山，就聚集到<span class="pn">亞倫</span>那裏，對他說：「起來！為我們造神明，在我們前面引路，因為領我們出<span class="pn">埃及</span>地的那個<span class="pn">摩西</span>，我們不知道他遭遇了甚麼事。」
 <a class="verse" id="32:2"><sup class="v">2&#160;</sup></a><span class="pn">亞倫</span>對他們說：「你們去摘下你們妻子、兒女耳上的金環，拿來給我。」
@@ -1690,11 +1773,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="32:35"><sup class="v">35&#160;</sup></a>耶和華降災與百姓，因為他們和<span class="pn">亞倫</span>一起造了牛犢。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="33">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#32">上一章</a> <h2 class="c">33</h2> <a class="next-chap-link" href="#34">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#32">上一章</a> <span class="c">33</span> <a class="next-chap-link" href="#34">下一章</a> &gt;
+</div>
 
 <h3 class="s">起程的吩咐</h3>
 <p class="p">
@@ -1727,14 +1812,16 @@ span.r {
 <a class="verse" id="33:22"><sup class="v">22&#160;</sup></a>當我的榮耀經過的時候，我必將你放在磐石縫裏，用我的手掌遮掩你，等我過去，
 <a class="verse" id="33:23"><sup class="v">23&#160;</sup></a>然後我要將我的手掌收回，你就可以看見我的背，卻看不到我的面。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="34">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#33">上一章</a> <h2 class="c">34</h2> <a class="next-chap-link" href="#35">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#33">上一章</a> <span class="c">34</span> <a class="next-chap-link" href="#35">下一章</a> &gt;
+</div>
 
 <h3 class="s">復造法版</h3>
-<span class="r">（申10‧1－5）</span>
+<span class="r">（<a href="05-DEU.html#10:1">申10‧1－5</a>）</span>
 <p class="p">
 <a class="verse" id="34:1"><sup class="v">1&#160;</sup></a>耶和華對<span class="pn">摩西</span>說：「你要鑿出兩塊石版，和先前的一樣；我要把你摔碎的那版上先前所寫的字，寫在這版上。
 <a class="verse" id="34:2"><sup class="v">2&#160;</sup></a>明日早晨，你要預備好了，上<span class="pn">西奈山</span>，在山頂那裏站在我面前。
@@ -1756,7 +1843,7 @@ span.r {
 <a class="verse" id="34:8"><sup class="v">8&#160;</sup></a><span class="pn">摩西</span>急忙俯伏在地敬拜，
 <a class="verse" id="34:9"><sup class="v">9&#160;</sup></a>說：「主啊，我若在你眼前蒙恩，求主在我們中間同行。雖然這是硬著頸項的百姓，求你赦免我們的罪孽和罪惡，接納我們為你的產業。」
 </p><h3 class="s">重新立約</h3>
-<span class="r">（出23‧14－19；申7‧1－5；16‧1－17）</span>
+<span class="r">（<a href="02-EXO.html#23:14">出23‧14－19</a>；<a href="05-DEU.html#7:1">申7‧1－5</a>；<a href="05-DEU.html#16:1">16‧1－17</a>）</span>
 <p class="p">
 <a class="verse" id="34:10"><sup class="v">10&#160;</sup></a>耶和華說：「看哪，我要立約，要在你眾百姓面前行奇妙的事，是在全地萬國中未曾做過的。你周圍的萬民要看見我藉著你所行，耶和華可畏懼的作為。
 </p><p class="p">
@@ -1794,11 +1881,13 @@ span.r {
 <a class="verse" id="34:34"><sup class="v">34&#160;</sup></a>但<span class="pn">摩西</span>進到耶和華面前與他說話的時候，就把面紗揭下，直到出來。<span class="pn">摩西</span>出來，將所吩咐他的話告訴<span class="pn">以色列</span>人。
 <a class="verse" id="34:35"><sup class="v">35&#160;</sup></a><span class="pn">以色列</span>人看見<span class="pn">摩西</span>的臉，他臉上的皮膚發光。<span class="pn">摩西</span>就用面紗蒙上臉，直到他進去與耶和華說話才揭下。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="35">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#34">上一章</a> <h2 class="c">35</h2> <a class="next-chap-link" href="#36">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#34">上一章</a> <span class="c">35</span> <a class="next-chap-link" href="#36">下一章</a> &gt;
+</div>
 
 <h3 class="s">安息日的條例</h3>
 <p class="p">
@@ -1806,7 +1895,7 @@ span.r {
 <a class="verse" id="35:2"><sup class="v">2&#160;</sup></a>六日要做工，第七日你們要奉為向耶和華守完全安息的安息聖日。凡在這日做工的，要被處死。
 <a class="verse" id="35:3"><sup class="v">3&#160;</sup></a>在安息日這一天，不可在你們一切的住處生火。」
 </p><h3 class="s">為會幕奉獻</h3>
-<span class="r">（出25‧1－9）</span>
+<span class="r">（<a href="02-EXO.html#25:1">出25‧1－9</a>）</span>
 <p class="p">
 <a class="verse" id="35:4"><sup class="v">4&#160;</sup></a><span class="pn">摩西</span>對<span class="pn">以色列</span>全會眾說：「這是耶和華所吩咐的話，說：
 <a class="verse" id="35:5"><sup class="v">5&#160;</sup></a>要從你們當中拿禮物獻給耶和華；凡甘心樂意的，可以把耶和華的禮物拿來，就是金、銀、銅，
@@ -1815,7 +1904,7 @@ span.r {
 <a class="verse" id="35:8"><sup class="v">8&#160;</sup></a>點燈的油，做膏油的香料、做香的香料，
 <a class="verse" id="35:9"><sup class="v">9&#160;</sup></a>紅瑪瑙與寶石，可以鑲嵌在以弗得和胸袋上。」
 </p><h3 class="s">會幕的器具</h3>
-<span class="r">（出39‧32－43）</span>
+<span class="r">（<a href="02-EXO.html#39:32">出39‧32－43</a>）</span>
 <p class="p">
 <a class="verse" id="35:10"><sup class="v">10&#160;</sup></a>「你們當中凡心裏有智慧的都要來，製造一切耶和華所吩咐的，
 <a class="verse" id="35:11"><sup class="v">11&#160;</sup></a>就是帳幕、帳幕的罩棚、帳幕的蓋、鉤子、豎板、橫木、柱子和帶卯眼的座，
@@ -1840,7 +1929,7 @@ span.r {
 <a class="verse" id="35:28"><sup class="v">28&#160;</sup></a>又拿做香，做膏油，和點燈所需的香料和油來。
 <a class="verse" id="35:29"><sup class="v">29&#160;</sup></a><span class="pn">以色列</span>人，無論男女，凡心裏受感動的，都帶甘心祭來獻給耶和華，為要做耶和華藉<span class="pn">摩西</span>所吩咐的一切工。
 </p><h3 class="s">造會幕的技工</h3>
-<span class="r">（出31‧1－11）</span>
+<span class="r">（<a href="02-EXO.html#31:1">出31‧1－11</a>）</span>
 <p class="p">
 <a class="verse" id="35:30"><sup class="v">30&#160;</sup></a><span class="pn">摩西</span>對<span class="pn">以色列</span>人說：「看，<span class="pn">猶大</span>支派中<span class="pn">戶珥</span>的孫子，<span class="pn">烏利</span>的兒子<span class="pn">比撒列</span>，耶和華已經題名召他，
 <a class="verse" id="35:31"><sup class="v">31&#160;</sup></a>又以上帝的靈充滿他，使他有智慧、聰明、知識，能做各樣的工，
@@ -1849,11 +1938,13 @@ span.r {
 <a class="verse" id="35:34"><sup class="v">34&#160;</sup></a>耶和華又賜給他和<span class="pn">但</span>支派中，<span class="pn">亞希撒抹</span>的兒子<span class="pn">亞何利亞伯</span>能教導人的心。
 <a class="verse" id="35:35"><sup class="v">35&#160;</sup></a>耶和華使他們的心滿有智慧，能做各樣的工，無論是雕刻的工，圖案設計的工，用藍色、紫色、朱紅色紗，和細麻作刺繡的工，以及編織的工，他們都能勝任，也能設計圖案。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="36">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#35">上一章</a> <h2 class="c">36</h2> <a class="next-chap-link" href="#37">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#35">上一章</a> <span class="c">36</span> <a class="next-chap-link" href="#37">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="36:1"><sup class="v">1&#160;</sup></a><span class="pn">比撒列</span>和<span class="pn">亞何利亞伯</span>，以及一切心裏有智慧，蒙耶和華賜智慧和聰明，懂得做聖所各樣用途之工的人，都照耶和華所吩咐的去做。
@@ -1866,7 +1957,7 @@ span.r {
 <a class="verse" id="36:6"><sup class="v">6&#160;</sup></a><span class="pn">摩西</span>吩咐，他們就在營中傳令說：「無論男女，不必再為聖所的禮物做任何的工。」這樣才使百姓停止，不再拿禮物來，
 <a class="verse" id="36:7"><sup class="v">7&#160;</sup></a>他們所有的材料已經足夠整個工程之用，而且有餘。
 </p><h3 class="s">造帳幕</h3>
-<span class="r">（出26‧1－37）</span>
+<span class="r">（<a href="02-EXO.html#26:1">出26‧1－37</a>）</span>
 <p class="p">
 <a class="verse" id="36:8"><sup class="v">8&#160;</sup></a>做工的人當中，凡心裏有智慧的，用十幅幔子做帳幕，幔子是用搓的細麻和藍色、紫色、朱紅色紗織成的，並且以刺繡的手藝繡上基路伯。
 <a class="verse" id="36:9"><sup class="v">9&#160;</sup></a>每幅幔子長二十八肘，每幅幔子寬四肘，全部的幔子都是一樣的尺寸。
@@ -1904,14 +1995,16 @@ span.r {
 <a class="verse" id="36:37"><sup class="v">37&#160;</sup></a>他用藍色、紫色、朱紅色紗，和搓的細麻，以刺繡的手藝為帳幕織門簾，
 <a class="verse" id="36:38"><sup class="v">38&#160;</sup></a>又為簾子做五根柱子和柱子的鉤子，把柱頂和柱子的箍包上金子。柱子有五個帶卯眼的銅座。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="37">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#36">上一章</a> <h2 class="c">37</h2> <a class="next-chap-link" href="#38">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#36">上一章</a> <span class="c">37</span> <a class="next-chap-link" href="#38">下一章</a> &gt;
+</div>
 
 <h3 class="s">造約櫃</h3>
-<span class="r">（出25‧10－22）</span>
+<span class="r">（<a href="02-EXO.html#25:10">出25‧10－22</a>）</span>
 <p class="p">
 <a class="verse" id="37:1"><sup class="v">1&#160;</sup></a><span class="pn">比撒列</span>用金合歡木做一個櫃子，長二肘半，寬一肘半，高一肘半。
 <a class="verse" id="37:2"><sup class="v">2&#160;</sup></a>裏裏外外包上金子，四圍鑲上金邊。
@@ -1923,7 +2016,7 @@ span.r {
 <a class="verse" id="37:8"><sup class="v">8&#160;</sup></a>這端一個基路伯，那端一個基路伯；從櫃蓋的兩端錘出兩個基路伯。
 <a class="verse" id="37:9"><sup class="v">9&#160;</sup></a>二基路伯的翅膀向上張開，用翅膀遮住櫃蓋，臉彼此相對；基路伯的臉朝向櫃蓋。
 </p><h3 class="s">造供桌</h3>
-<span class="r">（出25‧23－30）</span>
+<span class="r">（<a href="02-EXO.html#25:23">出25‧23－30</a>）</span>
 <p class="p">
 <a class="verse" id="37:10"><sup class="v">10&#160;</sup></a>他用金合歡木做了一張供桌，長二肘，寬一肘，高一肘半，
 <a class="verse" id="37:11"><sup class="v">11&#160;</sup></a>把它包上純金，四圍鑲上金邊。
@@ -1933,7 +2026,7 @@ span.r {
 <a class="verse" id="37:15"><sup class="v">15&#160;</sup></a>他用金合歡木做了兩根槓，包上金子，用來抬供桌。
 <a class="verse" id="37:16"><sup class="v">16&#160;</sup></a>他又用純金做了桌上的器具，就是盤、碟，以及澆酒祭的杯和壺。
 </p><h3 class="s">造燈臺</h3>
-<span class="r">（出25‧31－40）</span>
+<span class="r">（<a href="02-EXO.html#25:31">出25‧31－40</a>）</span>
 <p class="p">
 <a class="verse" id="37:17"><sup class="v">17&#160;</sup></a>他造一座用純金錘出的燈臺；燈臺的座、幹、杯、花萼和花瓣，都和燈臺接連一塊。
 <a class="verse" id="37:18"><sup class="v">18&#160;</sup></a>燈臺兩旁伸出六根枝子：這邊三根，那邊三根。
@@ -1944,25 +2037,27 @@ span.r {
 <a class="verse" id="37:23"><sup class="v">23&#160;</sup></a>他用純金做燈臺的七盞燈，以及燈剪和燈盤。
 <a class="verse" id="37:24"><sup class="v">24&#160;</sup></a>他用一他連得的純金做燈臺和燈臺的一切器具。
 </p><h3 class="s">造香壇</h3>
-<span class="r">（出30‧1－5）</span>
+<span class="r">（<a href="02-EXO.html#30:1">出30‧1－5</a>）</span>
 <p class="p">
 <a class="verse" id="37:25"><sup class="v">25&#160;</sup></a>他用金合歡木做香壇，長一肘，寬一肘，這壇是正方形的，高二肘。壇的四個翹角與壇接連一塊。
 <a class="verse" id="37:26"><sup class="v">26&#160;</sup></a>他把壇的上面與壇的四圍，以及壇的四個翹角包上純金，又在壇的四圍鑲上金邊。
 <a class="verse" id="37:27"><sup class="v">27&#160;</sup></a>他在壇的兩個對側，金邊下面做了兩個金環，用來穿槓抬壇。
 <a class="verse" id="37:28"><sup class="v">28&#160;</sup></a>他又用金合歡木做槓，包上金子。
 </p><h3 class="s">造聖膏油和香</h3>
-<span class="r">（出30‧22－38）</span>
+<span class="r">（<a href="02-EXO.html#30:22">出30‧22－38</a>）</span>
 <p class="p">
 <a class="verse" id="37:29"><sup class="v">29&#160;</sup></a>他按配製香料的方法製成聖膏油和芬芳的純香。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="38">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#37">上一章</a> <h2 class="c">38</h2> <a class="next-chap-link" href="#39">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#37">上一章</a> <span class="c">38</span> <a class="next-chap-link" href="#39">下一章</a> &gt;
+</div>
 
 <h3 class="s">造燔祭壇</h3>
-<span class="r">（出27‧1－8）</span>
+<span class="r">（<a href="02-EXO.html#27:1">出27‧1－8</a>）</span>
 <p class="p">
 <a class="verse" id="38:1"><sup class="v">1&#160;</sup></a>他用金合歡木做燔祭壇，長五肘，寬五肘，是正方形的，高三肘。
 <a class="verse" id="38:2"><sup class="v">2&#160;</sup></a>在壇的四角做四個翹角，與壇接連一塊，把壇包上銅。
@@ -1972,11 +2067,11 @@ span.r {
 <a class="verse" id="38:6"><sup class="v">6&#160;</sup></a>他用金合歡木做槓，包上銅，
 <a class="verse" id="38:7"><sup class="v">7&#160;</sup></a>把槓穿過壇兩旁的環子，用來抬壇。他用板做壇，壇的中心是空的。
 </p><h3 class="s">造洗濯盆</h3>
-<span class="r">（出30‧18）</span>
+<span class="r">（<a href="02-EXO.html#30:18">出30‧18</a>）</span>
 <p class="p">
 <a class="verse" id="38:8"><sup class="v">8&#160;</sup></a>他用銅做洗濯盆和盆座，是用會幕門前事奉之婦人的銅鏡做的。
 </p><h3 class="s">造院子</h3>
-<span class="r">（出27‧9－19）</span>
+<span class="r">（<a href="02-EXO.html#27:9">出27‧9－19</a>）</span>
 <p class="p">
 <a class="verse" id="38:9"><sup class="v">9&#160;</sup></a>他又做院子，在南面，就是面向南方的那一邊，用搓的細麻做院子的帷幔，一百肘。
 <a class="verse" id="38:10"><sup class="v">10&#160;</sup></a>帷幔有二十根柱子，二十個帶卯眼的銅座；柱子的鉤和箍都是銀的。
@@ -2005,14 +2100,16 @@ span.r {
 <a class="verse" id="38:30"><sup class="v">30&#160;</sup></a>這些銅是用來做會幕門口帶卯眼的座，銅壇、壇的銅網和壇的一切器具，
 <a class="verse" id="38:31"><sup class="v">31&#160;</sup></a>院子四圍帶卯眼的座和院子門口帶卯眼的座，以及帳幕一切的橛子和院子四圍所有的橛子。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="39">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#38">上一章</a> <h2 class="c">39</h2> <a class="next-chap-link" href="#40">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#38">上一章</a> <span class="c">39</span> <a class="next-chap-link" href="#40">下一章</a> &gt;
+</div>
 
 <h3 class="s">為祭司製聖服</h3>
-<span class="r">（出28‧1－14）</span>
+<span class="r">（<a href="02-EXO.html#28:1">出28‧1－14</a>）</span>
 <p class="p">
 <a class="verse" id="39:1"><sup class="v">1&#160;</sup></a>他們用藍色、紫色、朱紅色紗縫製精緻的禮服，在聖所用以供職；他們為<span class="pn">亞倫</span>做聖衣，是照耶和華所吩咐<span class="pn">摩西</span>的。
 </p><p class="p">
@@ -2050,7 +2147,7 @@ span.r {
 <a class="verse" id="39:30"><sup class="v">30&#160;</sup></a>他們用純金做一面聖冠上的牌，如同刻印章，在上面寫著「歸耶和華為聖」，
 <a class="verse" id="39:31"><sup class="v">31&#160;</sup></a>又用藍色的帶子把牌繫在禮冠上，是照耶和華所吩咐<span class="pn">摩西</span>的。
 </p><h3 class="s">會幕完工</h3>
-<span class="r">（出35‧10－19）</span>
+<span class="r">（<a href="02-EXO.html#35:10">出35‧10－19</a>）</span>
 <p class="p">
 <a class="verse" id="39:32"><sup class="v">32&#160;</sup></a>會幕的帳幕一切的工程就這樣做完了。凡耶和華所吩咐<span class="pn">摩西</span>的，<span class="pn">以色列</span>人都照樣做了。
 <a class="verse" id="39:33"><sup class="v">33&#160;</sup></a>他們把帳幕運到<span class="pn">摩西</span>那裏，帳幕和帳幕的一切器具，就是鉤、板、橫木、柱子、帶卯眼的座，
@@ -2065,11 +2162,13 @@ span.r {
 <a class="verse" id="39:42"><sup class="v">42&#160;</sup></a>這一切工作都是<span class="pn">以色列</span>人照耶和華所吩咐<span class="pn">摩西</span>做的。
 <a class="verse" id="39:43"><sup class="v">43&#160;</sup></a><span class="pn">摩西</span>看見這一切的工，看哪，耶和華怎樣吩咐，他們就照樣做了，<span class="pn">摩西</span>就為他們祝福。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="40">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#39">上一章</a> <h2 class="c">40</h2> <a class="next-chap-link" href="#41">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">出埃及記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#39">上一章</a> <span class="c">40</span> <a class="next-chap-link" href="#41">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華會幕的建立和奉獻</h3>
 <p class="p">
@@ -2108,7 +2207,7 @@ span.r {
 <a class="verse" id="40:32"><sup class="v">32&#160;</sup></a>他們進會幕或走近壇的時候，就都洗濯，是照耶和華所吩咐<span class="pn">摩西</span>的。
 <a class="verse" id="40:33"><sup class="v">33&#160;</sup></a>他在帳幕和祭壇的四圍支起院子的帷幔，把院子的門簾掛上。這樣，<span class="pn">摩西</span>就做完了工。
 </p><h3 class="s">雲彩和榮光</h3>
-<span class="r">（民9‧15－23）</span>
+<span class="r">（<a href="04-NUM.html#9:15">民9‧15－23</a>）</span>
 <p class="p">
 <a class="verse" id="40:34"><sup class="v">34&#160;</sup></a>那時，雲彩遮蓋會幕，耶和華的榮光充滿了帳幕。
 <a class="verse" id="40:35"><sup class="v">35&#160;</sup></a><span class="pn">摩西</span>不能進會幕，因為雲彩停在其上，耶和華的榮光充滿了帳幕。
@@ -2118,9 +2217,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="41">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#40">上一章</a> <a class="chapter" id="41">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="03-LEV.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:16</a> 「臨盆的時候要注意」：原文直譯「要注意那石凳」或「要注意那兩顆石頭」。</p>
 </aside>

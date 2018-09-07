@@ -34,7 +34,7 @@ div.page-break {
 }
 
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -50,6 +50,10 @@ h2.ms {
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -114,7 +118,7 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
   display: inline;
   /*font-size: 2.5em;*/

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>申命記</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -173,11 +192,13 @@ span.r {
 </p><p class="q2">3. <span class="pn">摩西</span>之歌和祝福（31．30—33．29）
 </p><p class="q2">4. <span class="pn">摩西</span>離世（34．1—12）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">摩西的回憶</h3>
 <p class="p">
@@ -190,7 +211,7 @@ span.r {
 <a class="verse" id="1:7"><sup class="v">7&#160;</sup></a>要起行，轉到<span class="pn">亞摩利</span>人的山區和附近的地區，就是<span class="pn">亞拉巴</span>、山區、<span class="pn">謝非拉</span><a class="f" id="footnote-1-ref"  href="#footnote-1"  epub:type="noteref" ><sup>[註]</sup></a>、<span class="pn">尼革夫</span><a class="f" id="footnote-2-ref"  href="#footnote-2"  epub:type="noteref" ><sup>[註]</sup></a>、沿海一帶，<span class="pn">迦南</span>人的地和<span class="pn">黎巴嫩</span>，直到<span class="pn">大河</span>，就是<span class="pn">幼發拉底河</span>。
 <a class="verse" id="1:8"><sup class="v">8&#160;</sup></a>看，我將這地擺在你們面前。你們要進去得這地，就是耶和華向你們列祖<span class="pn">亞伯拉罕</span>、<span class="pn">以撒</span>、<span class="pn">雅各</span>起誓要賜給他們和他們後裔為業之地。」
 </p><h3 class="s">選立審判官</h3>
-<span class="r">（出18‧13－27）</span>
+<span class="r">（<a href="02-EXO.html#18:13">出18‧13－27</a>）</span>
 <p class="p">
 <a class="verse" id="1:9"><sup class="v">9&#160;</sup></a>「那時，我對你們說：『我獨自一人無法承擔你們的事。
 <a class="verse" id="1:10"><sup class="v">10&#160;</sup></a>耶和華－你們的上帝使你們增多。看哪，你們今日好像天上的星那樣多。
@@ -204,7 +225,7 @@ span.r {
 <a class="verse" id="1:17"><sup class="v">17&#160;</sup></a>審判的時候不可看人的情面；無論大小，你們都要聽訟。不可因人而懼怕，因為審判是上帝的事。你們當中若有難斷的案件，可以呈到我這裏，讓我來聽訟。』
 <a class="verse" id="1:18"><sup class="v">18&#160;</sup></a>那時，我已經把你們所當做的事都吩咐你們了。」
 </p><h3 class="s">以色列人拒進迦南</h3>
-<span class="r">（民13‧1－33）</span>
+<span class="r">（<a href="04-NUM.html#13:1">民13‧1－33</a>）</span>
 <p class="p">
 <a class="verse" id="1:19"><sup class="v">19&#160;</sup></a>「我們照著耶和華－我們上帝所吩咐的，從<span class="pn">何烈山</span>起行，經過你們所看見那一切大而可怕的曠野，往<span class="pn">亞摩利</span>人的山區去，到了<span class="pn">加低斯‧巴尼亞</span>。
 <a class="verse" id="1:20"><sup class="v">20&#160;</sup></a>我對你們說：『你們已經到了耶和華－我們上帝所賜給我們的<span class="pn">亞摩利</span>人之山區。
@@ -223,7 +244,7 @@ span.r {
 <a class="verse" id="1:32"><sup class="v">32&#160;</sup></a>你們在這事上卻不信耶和華─你們的上帝。
 <a class="verse" id="1:33"><sup class="v">33&#160;</sup></a>他一路行在你們前面，為你們尋找安營的地方；他夜間在火中，日間在雲中，指示你們當走的路。」
 </p><h3 class="s">以色列人受懲罰</h3>
-<span class="r">（民14‧20－45）</span>
+<span class="r">（<a href="04-NUM.html#14:20">民14‧20－45</a>）</span>
 <p class="p">
 <a class="verse" id="1:34"><sup class="v">34&#160;</sup></a>「耶和華聽見你們的怨言，就發怒，起誓說：
 <a class="verse" id="1:35"><sup class="v">35&#160;</sup></a>『這邪惡世代的人，一個也不得看見我起誓要賜給你們列祖的美地；
@@ -240,11 +261,13 @@ span.r {
 <a class="verse" id="1:45"><sup class="v">45&#160;</sup></a>你們就回來，在耶和華面前哭泣；耶和華卻不聽你們的聲音，也不向你們側耳。
 <a class="verse" id="1:46"><sup class="v">46&#160;</sup></a>你們照著所停留的日子，在<span class="pn">加低斯</span>停留了許多日子。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">在曠野流浪</h3>
 <p class="p">
@@ -276,7 +299,7 @@ span.r {
 <a class="verse" id="2:24"><sup class="v">24&#160;</sup></a>你們起來往前去，過<span class="pn">亞嫩谷</span>。看哪，我已將<span class="pn">亞摩利</span>人<span class="pn">希實本</span>王<span class="pn">西宏</span>和他的地交在你手中，你要開始去得他的地為業，向他挑戰。
 <a class="verse" id="2:25"><sup class="v">25&#160;</sup></a>從今日起，我要讓天下萬民因你驚慌懼怕，聽見你的名聲，就因你發顫傷慟。」
 </p><h3 class="s">打敗希實本王西宏</h3>
-<span class="r">（民21‧21－30）</span>
+<span class="r">（<a href="04-NUM.html#21:21">民21‧21－30</a>）</span>
 <p class="p">
 <a class="verse" id="2:26"><sup class="v">26&#160;</sup></a>「我從<span class="pn">基底莫</span>的曠野派遣使者到<span class="pn">希實本</span>王<span class="pn">西宏</span>那裏，用和平的話說：
 <a class="verse" id="2:27"><sup class="v">27&#160;</sup></a>『求你讓我穿越你的地，我走路的時候，只走大路，不偏左右。
@@ -292,14 +315,16 @@ span.r {
 <a class="verse" id="2:36"><sup class="v">36&#160;</sup></a>從<span class="pn">亞嫩谷</span>旁的<span class="pn">亞羅珥</span>和谷中的城，直到<span class="pn">基列</span>，沒有一座城是高得我們不能攻取的；耶和華－我們的上帝把它們全都交給我們了。
 <a class="verse" id="2:37"><sup class="v">37&#160;</sup></a>只有<span class="pn">亞捫</span>人之地，<span class="pn">雅博河</span>沿岸，以及山區的城鎮，你沒有挨近，這全是耶和華－我們上帝所吩咐的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">打敗巴珊王噩</h3>
-<span class="r">（民21‧31－35）</span>
+<span class="r">（<a href="04-NUM.html#21:31">民21‧31－35</a>）</span>
 <p class="p">
 <a class="verse" id="3:1"><sup class="v">1&#160;</sup></a>「我們又轉回，朝<span class="pn">巴珊</span>的路上去。<span class="pn">巴珊</span>王<span class="pn">噩</span>和他的眾百姓出來迎擊我們，在<span class="pn">以得來</span>與我們交戰。
 <a class="verse" id="3:2"><sup class="v">2&#160;</sup></a>耶和華對我說：『不要怕他！因我已把他和他的眾百姓，以及他的地，都交在你手中；你要待他像從前待住在<span class="pn">希實本</span>的<span class="pn">亞摩利</span>王<span class="pn">西宏</span>一樣。』
@@ -313,7 +338,7 @@ span.r {
 <a class="verse" id="3:10"><sup class="v">10&#160;</sup></a>我們奪了平原的各城、<span class="pn">基列</span>全地、<span class="pn">巴珊</span>全地，直到<span class="pn">撒迦</span>和<span class="pn">以得來</span>，都是<span class="pn">巴珊</span>王<span class="pn">噩</span>國內的城鎮。
 <a class="verse" id="3:11"><sup class="v">11&#160;</sup></a><span class="pn">利乏音</span>人所剩下的只有<span class="pn">巴珊</span>王<span class="pn">噩</span>。看哪，他的床是鐵床，按照人肘的度量，長九肘，寬四肘，現今不是在<span class="pn">亞捫</span>人的<span class="pn">拉巴</span>嗎？」
 </p><h3 class="s">約旦河東土地的分配</h3>
-<span class="r">（民32‧1－42）</span>
+<span class="r">（<a href="04-NUM.html#32:1">民32‧1－42</a>）</span>
 <p class="p">
 <a class="verse" id="3:12"><sup class="v">12&#160;</sup></a>「那時，我們得了這地。從<span class="pn">亞嫩谷</span>旁的<span class="pn">亞羅珥</span>起，連同<span class="pn">基列</span>山區的一半和境內的城鎮，我都給了<span class="pn">呂便</span>人和<span class="pn">迦得</span>人。
 <a class="verse" id="3:13"><sup class="v">13&#160;</sup></a><span class="pn">基列</span>其餘的地和<span class="pn">巴珊</span>全地，就是<span class="pn">噩</span>的國度，我給了<span class="pn">瑪拿西</span>半支派。<span class="pn">亞珥歌伯</span>全境就是<span class="pn">巴珊</span>全地，也稱為<span class="pn">利乏音</span>人之地。
@@ -337,11 +362,13 @@ span.r {
 <a class="verse" id="3:28"><sup class="v">28&#160;</sup></a>你卻要吩咐<span class="pn">約書亞</span>，勉勵他，使他壯膽，因為他必在這百姓前面過去，使他們承受你所要觀看之地。』
 <a class="verse" id="3:29"><sup class="v">29&#160;</sup></a>於是我們停留在<span class="pn">伯‧毗珥</span>對面的谷中。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">摩西勸以色列人遵守律法</h3>
 <p class="p">
@@ -405,14 +432,16 @@ span.r {
 <a class="verse" id="4:48"><sup class="v">48&#160;</sup></a>從<span class="pn">亞嫩谷</span>旁的<span class="pn">亞羅珥</span>，直到<span class="pn">西雲山</span>，就是<span class="pn">黑門山</span>，
 <a class="verse" id="4:49"><sup class="v">49&#160;</sup></a>還有<span class="pn">約旦河</span>東的整個<span class="pn">亞拉巴</span>，向日出方向，直到<span class="pn">亞拉巴海</span>，靠近<span class="pn">毗斯迦山</span>斜坡的山腳。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h3 class="s">十誡</h3>
-<span class="r">（出20‧1－17）</span>
+<span class="r">（<a href="02-EXO.html#20:1">出20‧1－17</a>）</span>
 <p class="p">
 <a class="verse" id="5:1"><sup class="v">1&#160;</sup></a><span class="pn">摩西</span>召集<span class="pn">以色列</span>眾人，對他們說：「<span class="pn">以色列</span>啊，要聽我今日在你們耳中所吩咐的律例典章，要學習，謹守遵行。
 <a class="verse" id="5:2"><sup class="v">2&#160;</sup></a>耶和華－我們的上帝在<span class="pn">何烈山</span>與我們立約。
@@ -447,7 +476,7 @@ span.r {
 </p><p class="p">
 <a class="verse" id="5:21"><sup class="v">21&#160;</sup></a>「『不可貪戀你鄰舍的妻子；也不可貪圖你鄰舍的房屋、田地、僕婢、牛驢，以及他一切所有的。』
 </p><h3 class="s">摩西傳達律法</h3>
-<span class="r">（出20‧18－21）</span>
+<span class="r">（<a href="02-EXO.html#20:18">出20‧18－21</a>）</span>
 <p class="p">
 <a class="verse" id="5:22"><sup class="v">22&#160;</sup></a>「這些話是耶和華在山上，從火焰、密雲、幽暗中，大聲吩咐你們全會眾的，再沒有加添別的話了。他把這些話寫在兩塊石版上，交給我。
 <a class="verse" id="5:23"><sup class="v">23&#160;</sup></a>山被火焰燒著，你們聽見從黑暗中發出的聲音，那時，你們各支派的領袖和長老都挨近我。
@@ -463,11 +492,13 @@ span.r {
 <a class="verse" id="5:32"><sup class="v">32&#160;</sup></a>所以，你們要照耶和華－你們上帝所吩咐的謹守遵行，不可偏離左右。
 <a class="verse" id="5:33"><sup class="v">33&#160;</sup></a>你們要走耶和華－你們的上帝所吩咐的一切道路，使你們可以存活得福，並使你們的日子在所要承受的地上得以長久。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="6:1"><sup class="v">1&#160;</sup></a>「這是耶和華－你們的上帝所吩咐要教導你們的誡命、律例、典章，叫你們在所要過去得為業的地上遵行，
@@ -500,14 +531,16 @@ span.r {
 <a class="verse" id="6:24"><sup class="v">24&#160;</sup></a>耶和華又吩咐我們遵行這一切的律例，敬畏耶和華－我們的上帝，使我們一生得福，得以存活，像今日一樣。
 <a class="verse" id="6:25"><sup class="v">25&#160;</sup></a>我們若照耶和華－我們上帝所吩咐的，在他面前謹守遵行這一切誡命，這就是我們的義了。』」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h3 class="s">選民</h3>
-<span class="r">（出34‧11－16）</span>
+<span class="r">（<a href="02-EXO.html#34:11">出34‧11－16</a>）</span>
 <p class="p">
 <a class="verse" id="7:1"><sup class="v">1&#160;</sup></a>「耶和華－你的上帝領你進入你要得為業之地，從你面前趕出許多國家，就是比你更強大的七個國家：<span class="pn">赫</span>人、<span class="pn">革迦撒</span>人、<span class="pn">亞摩利</span>人、<span class="pn">迦南</span>人、<span class="pn">比利洗</span>人、<span class="pn">希未</span>人、<span class="pn">耶布斯</span>人。
 <a class="verse" id="7:2"><sup class="v">2&#160;</sup></a>當耶和華－你的上帝把他們交給你，你擊殺他們的時候，你要完全消滅他們，不可與他們立約，也不可憐惜他們。
@@ -522,7 +555,7 @@ span.r {
 <a class="verse" id="7:10"><sup class="v">10&#160;</sup></a>向恨他的人，他必當面報應，消滅他們。凡恨他的，他必當面報應，絕不遲延。
 <a class="verse" id="7:11"><sup class="v">11&#160;</sup></a>所以，你要謹守我今日所吩咐你的誡命、律例、典章，遵行它們。」
 </p><h3 class="s">遵行誡命必蒙福</h3>
-<span class="r">（申28‧1－14）</span>
+<span class="r">（<a href="05-DEU.html#28:1">申28‧1－14</a>）</span>
 <p class="p">
 <a class="verse" id="7:12"><sup class="v">12&#160;</sup></a>「你們若聽從這些典章，謹守遵行，耶和華－你的上帝必照他向你列祖所起的誓，對你守約，施慈愛。
 <a class="verse" id="7:13"><sup class="v">13&#160;</sup></a>他必愛你，賜福給你，使你人數增多，也必在他向你列祖起誓要給你的地上賜福給你身所生的，你地所產的，你的五穀、新酒和新的油，以及你的牛犢、羔羊。
@@ -541,11 +574,13 @@ span.r {
 <a class="verse" id="7:25"><sup class="v">25&#160;</sup></a>你們要用火焚燒他們神明的雕刻偶像；不可貪愛偶像上的金銀，也不可私自收起來，免得你因此陷入圈套，因為這是耶和華－你上帝所憎惡的。
 <a class="verse" id="7:26"><sup class="v">26&#160;</sup></a>你不可把可憎之物帶進你的家，否則，你就像它一樣成為當毀滅的。你要徹底憎恨它，極其厭惡它，因為這是當毀滅的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h3 class="s">將得美地</h3>
 <p class="p">
@@ -573,11 +608,13 @@ span.r {
 <a class="verse" id="8:19"><sup class="v">19&#160;</sup></a>你若忘記耶和華─你的上帝，隨從別神，事奉它們，敬拜它們，我今日警告你們，你們必定滅亡。
 <a class="verse" id="8:20"><sup class="v">20&#160;</sup></a>耶和華在你們面前怎樣使列國滅亡，你們也必照樣滅亡，因為你們不聽從耶和華─你們上帝的話。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h3 class="s">百姓悖逆</h3>
 <p class="p">
@@ -588,7 +625,7 @@ span.r {
 <a class="verse" id="9:4"><sup class="v">4&#160;</sup></a>「耶和華─你的上帝將他們從你面前趕出以後，你心裏不可說：『耶和華領我得這地是因我的義。』其實，耶和華將這些國家從你面前趕出去是因他們的惡。
 <a class="verse" id="9:5"><sup class="v">5&#160;</sup></a>你能進去得他們的地，並不是因你的義，也不是因你心裏正直，而是因這些國家的惡，耶和華─你的上帝才把他們從你面前趕出去，為了應驗耶和華向你列祖<span class="pn">亞伯拉罕</span>、<span class="pn">以撒</span>、<span class="pn">雅各</span>起誓應許的話。
 </p><h3 class="s">金牛犢</h3>
-<span class="r">（出32‧1－35）</span>
+<span class="r">（<a href="02-EXO.html#32:1">出32‧1－35</a>）</span>
 <p class="p">
 <a class="verse" id="9:6"><sup class="v">6&#160;</sup></a>「你當知道，耶和華─你的上帝將這美地賜你為業，並不是因你的義；你本是硬著頸項的百姓。
 <a class="verse" id="9:7"><sup class="v">7&#160;</sup></a>你要記得，不要忘記，你在曠野怎樣惹耶和華－你的上帝發怒。自從你出了<span class="pn">埃及</span>地的那日，直到你們來到這地方，你們常常悖逆耶和華。
@@ -618,14 +655,16 @@ span.r {
 <a class="verse" id="9:28"><sup class="v">28&#160;</sup></a>免得你領我們出來的那地之人說：耶和華因為不能將這百姓領進他所應許之地，又因恨他們，所以領他們出去，要在曠野殺他們。
 <a class="verse" id="9:29"><sup class="v">29&#160;</sup></a>其實他們是你的百姓，你的產業，是你用大能和伸出的膀臂領出來的。』」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">摩西重新接受誡命</h3>
-<span class="r">（出34‧1－10）</span>
+<span class="r">（<a href="02-EXO.html#34:1">出34‧1－10</a>）</span>
 <p class="p">
 <a class="verse" id="10:1"><sup class="v">1&#160;</sup></a>「那時，耶和華對我說：『你要鑿出兩塊石版，和先前的一樣，上山到我這裏來。你也要造一個木櫃。
 <a class="verse" id="10:2"><sup class="v">2&#160;</sup></a>我要把你先前摔碎的版上所寫的字，寫在這版上；你要把這版放在櫃裏。』
@@ -654,11 +693,13 @@ span.r {
 <a class="verse" id="10:21"><sup class="v">21&#160;</sup></a>他是你當讚美的，是你的上帝，為你做了大而可畏的事，這些是你親眼見過的。
 <a class="verse" id="10:22"><sup class="v">22&#160;</sup></a>你的列祖七十人下<span class="pn">埃及</span>，現在耶和華－你的上帝卻使你如同天上的星那樣多。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝的偉大</h3>
 <p class="p">
@@ -700,11 +741,13 @@ span.r {
 <a class="verse" id="11:31"><sup class="v">31&#160;</sup></a>你們過<span class="pn">約旦河</span>，進去得耶和華－你們的上帝所賜你們為業之地；當你們佔領它，在那地居住的時候，
 <a class="verse" id="11:32"><sup class="v">32&#160;</sup></a>你們要謹守遵行我今日在你們面前頒佈的一切律例典章。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <h3 class="s">惟一的敬拜場所</h3>
 <p class="p">
@@ -746,11 +789,13 @@ span.r {
 <a class="verse" id="12:31"><sup class="v">31&#160;</sup></a>你不可向耶和華－你的上帝這樣做，因為他們向他們的神明做了耶和華所憎恨、所厭惡的一切事，甚至將自己的兒女用火焚燒，獻給他們的神明。
 <a class="verse" id="12:32"><sup class="v">32&#160;</sup></a>凡我所吩咐你們的事，你們都要謹守遵行，不可加添，也不可刪減。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="13:1"><sup class="v">1&#160;</sup></a>「你中間若有先知或是做夢的人起來，向你顯神蹟奇事，
@@ -774,18 +819,20 @@ span.r {
 <a class="verse" id="13:17"><sup class="v">17&#160;</sup></a>那當毀滅的物一點都不可黏你的手，好讓耶和華轉回，不向你發烈怒，卻恩待你，憐憫你，照他向你列祖所起的誓使你人數增多；
 <a class="verse" id="13:18"><sup class="v">18&#160;</sup></a>因為你聽從耶和華－你上帝的話，遵守我今日所吩咐你的一切誡命，行耶和華－你上帝眼中看為正的事。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <h3 class="s">舉哀時的禁例</h3>
 <p class="p">
 <a class="verse" id="14:1"><sup class="v">1&#160;</sup></a>「你們是耶和華─你們上帝的兒女。不可為了死人割劃自己，也不可使額上<a class="f" id="footnote-19-ref"  href="#footnote-19"  epub:type="noteref" ><sup>[註]</sup></a>光禿；
 <a class="verse" id="14:2"><sup class="v">2&#160;</sup></a>因為你是屬於耶和華－你上帝神聖的子民，耶和華從地面上的萬民中揀選了你，作自己寶貴的子民。」
 </p><h3 class="s">潔淨和不潔淨的食物</h3>
-<span class="r">（利11‧1－21）</span>
+<span class="r">（<a href="03-LEV.html#11:1">利11‧1－21</a>）</span>
 <p class="p">
 <a class="verse" id="14:3"><sup class="v">3&#160;</sup></a>「凡可憎的物， 你都不可吃。
 <a class="verse" id="14:4"><sup class="v">4&#160;</sup></a>可吃的牲畜是：牛、綿羊、山羊、
@@ -822,11 +869,13 @@ span.r {
 <a class="verse" id="14:28"><sup class="v">28&#160;</sup></a>每三年的最後一年，你要把那一年收成的十分之一取出來，積存在你的城中；
 <a class="verse" id="14:29"><sup class="v">29&#160;</sup></a>那沒有與你一起分得產業的<span class="pn">利未</span>人，和城裏的寄居者，以及孤兒寡婦，都可以前來，吃得飽足，好讓耶和華－你的上帝在你手裏所做的一切事上賜福給你。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="15">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#14">上一章</a> <h2 class="c">15</h2> <a class="next-chap-link" href="#16">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <span class="c">15</span> <a class="next-chap-link" href="#16">下一章</a> &gt;
+</div>
 
 <h3 class="s">安息年的條例</h3>
 <p class="p">
@@ -843,7 +892,7 @@ span.r {
 <a class="verse" id="15:10"><sup class="v">10&#160;</sup></a>你要慷慨解囊，給他的時候不要心疼，因為耶和華－你的上帝必為這事，在你一切的工作上和你手所做的一切賜福給你。
 <a class="verse" id="15:11"><sup class="v">11&#160;</sup></a>因為地上的貧窮人永遠不會斷絕，所以我吩咐你說：『總要伸手幫助你地上困苦貧窮的弟兄。』」
 </p><h3 class="s">奴婢的條例</h3>
-<span class="r">（出21‧1－11）</span>
+<span class="r">（<a href="02-EXO.html#21:1">出21‧1－11</a>）</span>
 <p class="p">
 <a class="verse" id="15:12"><sup class="v">12&#160;</sup></a>「你弟兄中，若有一個<span class="pn">希伯來</span>男人或<span class="pn">希伯來</span>女人賣給你，已服事你六年，到了第七年就要讓他自由離開你。
 <a class="verse" id="15:13"><sup class="v">13&#160;</sup></a>你讓他自由離開的時候，不可讓他空手而去，
@@ -860,14 +909,16 @@ span.r {
 <a class="verse" id="15:22"><sup class="v">22&#160;</sup></a>你們可以在城裏吃，潔淨的人和不潔淨的人都可以吃，就如吃羚羊和鹿一樣。
 <a class="verse" id="15:23"><sup class="v">23&#160;</sup></a>只是牠的血，你不可吃，要倒在地上，如同倒水一樣。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="16">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#15">上一章</a> <h2 class="c">16</h2> <a class="next-chap-link" href="#17">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#15">上一章</a> <span class="c">16</span> <a class="next-chap-link" href="#17">下一章</a> &gt;
+</div>
 
 <h3 class="s">逾越節</h3>
-<span class="r">（出12‧1－20；利23‧5－8；民28‧16－25）</span>
+<span class="r">（<a href="02-EXO.html#12:1">出12‧1－20</a>；<a href="03-LEV.html#23:5">利23‧5－8</a>；<a href="04-NUM.html#28:16">民28‧16－25</a>）</span>
 <p class="p">
 <a class="verse" id="16:1"><sup class="v">1&#160;</sup></a>「你要守亞筆月，向耶和華－你的上帝守逾越節，因為在亞筆月，耶和華－你的上帝在夜間領你出<span class="pn">埃及</span>。
 <a class="verse" id="16:2"><sup class="v">2&#160;</sup></a>你當在那裏，耶和華選擇作為他名居所的地方，從羊群牛群中，將逾越節的祭牲獻給耶和華－你的上帝。
@@ -878,14 +929,14 @@ span.r {
 <a class="verse" id="16:7"><sup class="v">7&#160;</sup></a>你要在耶和華－你上帝所選擇的地方把肉烤來吃，次日早晨就回到你的帳棚去。
 <a class="verse" id="16:8"><sup class="v">8&#160;</sup></a>你要吃無酵餅六日，第七日要向耶和華－你的上帝守嚴肅會，不可做工。」
 </p><h3 class="s">七七收穫節</h3>
-<span class="r">（出34‧22；利23‧15－21；民28‧26－31）</span>
+<span class="r">（<a href="02-EXO.html#34:22">出34‧22</a>；<a href="03-LEV.html#23:15">利23‧15－21</a>；<a href="04-NUM.html#28:26">民28‧26－31</a>）</span>
 <p class="p">
 <a class="verse" id="16:9"><sup class="v">9&#160;</sup></a>「你要計算七個七日：從你用鐮刀開始收割莊稼時算起，一共七個七日。
 <a class="verse" id="16:10"><sup class="v">10&#160;</sup></a>你要向耶和華－你的上帝守七七節，按照耶和華－你上帝所賜你的福，獻上你手裏的甘心祭。
 <a class="verse" id="16:11"><sup class="v">11&#160;</sup></a>你和你的兒女、僕婢，以及住在你城裏的<span class="pn">利未</span>人、在你中間寄居的和孤兒寡婦，都要在那裏，耶和華－你上帝選擇作為他名居所的地方，在耶和華－你上帝面前歡樂。
 <a class="verse" id="16:12"><sup class="v">12&#160;</sup></a>你要記得你在<span class="pn">埃及</span>作過奴僕，也要謹守遵行這些律例。」
 </p><h3 class="s">住棚節</h3>
-<span class="r">（利23‧33－43；民29‧12－39）</span>
+<span class="r">（<a href="03-LEV.html#23:33">利23‧33－43</a>；<a href="04-NUM.html#29:12">民29‧12－39</a>）</span>
 <p class="p">
 <a class="verse" id="16:13"><sup class="v">13&#160;</sup></a>「你收藏了禾場和壓酒池的出產以後，就要守住棚節七日。
 <a class="verse" id="16:14"><sup class="v">14&#160;</sup></a>在節期中，你和你的兒女、僕婢，以及住在你城裏的<span class="pn">利未</span>人、寄居的和孤兒寡婦，都要歡樂。
@@ -903,11 +954,13 @@ span.r {
 <a class="verse" id="16:21"><sup class="v">21&#160;</sup></a>「你為耶和華－你的上帝築壇，不可在壇旁栽種任何樹木作<span class="pn">亞舍拉</span>，
 <a class="verse" id="16:22"><sup class="v">22&#160;</sup></a>也不可為自己設立柱像，這是耶和華－你的上帝所憎恨的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="17">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#16">上一章</a> <h2 class="c">17</h2> <a class="next-chap-link" href="#18">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#16">上一章</a> <span class="c">17</span> <a class="next-chap-link" href="#18">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="17:1"><sup class="v">1&#160;</sup></a>「凡有殘疾，有任何惡疾的牛羊，你都不可獻給耶和華－你的上帝，因為這是耶和華－你上帝所憎惡的。
@@ -935,11 +988,13 @@ span.r {
 <a class="verse" id="17:19"><sup class="v">19&#160;</sup></a>這書要存在他那裏，他一生的年日要誦讀，好使他學習敬畏耶和華－他的上帝，謹守遵行這律法書上的一切話和這些律例，
 <a class="verse" id="17:20"><sup class="v">20&#160;</sup></a>免得他的心向弟兄高傲，偏離了這誡命，或向右或向左。這樣，他和他的子孫就可以長久作王治理<span class="pn">以色列</span>。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="18">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#17">上一章</a> <h2 class="c">18</h2> <a class="next-chap-link" href="#19">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#17">上一章</a> <span class="c">18</span> <a class="next-chap-link" href="#19">下一章</a> &gt;
+</div>
 
 <h3 class="s">祭司和利未人應得的份</h3>
 <p class="p">
@@ -971,14 +1026,16 @@ span.r {
 <a class="verse" id="18:21"><sup class="v">21&#160;</sup></a>你心裏若說：『我們怎能知道那話是耶和華未曾吩咐的呢？』
 <a class="verse" id="18:22"><sup class="v">22&#160;</sup></a>先知奉耶和華的名說話，所說的若沒有實現，或不應驗，這話就是耶和華未曾吩咐的，而是那先知擅自說的，你不必怕他。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="19">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#18">上一章</a> <h2 class="c">19</h2> <a class="next-chap-link" href="#20">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#18">上一章</a> <span class="c">19</span> <a class="next-chap-link" href="#20">下一章</a> &gt;
+</div>
 
 <h3 class="s">逃城的設立</h3>
-<span class="r">（民35‧9－28；書20‧1－9）</span>
+<span class="r">（<a href="04-NUM.html#35:9">民35‧9－28</a>；<a href="06-JOS.html#20:1">書20‧1－9</a>）</span>
 <p class="p">
 <a class="verse" id="19:1"><sup class="v">1&#160;</sup></a>「耶和華－你的上帝將列國剪除，他們的地耶和華－你上帝已賜給你，你又趕出他們，並且住在他們的城鎮和房屋，
 <a class="verse" id="19:2"><sup class="v">2&#160;</sup></a>那時，你要在耶和華－你上帝所賜你為業的地上，為自己指定三座城。
@@ -1008,11 +1065,13 @@ span.r {
 <a class="verse" id="19:20"><sup class="v">20&#160;</sup></a>其他的人聽見就害怕，不敢在你中間再行這樣的惡事了。
 <a class="verse" id="19:21"><sup class="v">21&#160;</sup></a>你的眼不可顧惜，要以命償命，以眼還眼，以牙還牙，以手還手，以腳還腳。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="20">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#19">上一章</a> <h2 class="c">20</h2> <a class="next-chap-link" href="#21">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#19">上一章</a> <span class="c">20</span> <a class="next-chap-link" href="#21">下一章</a> &gt;
+</div>
 
 <h3 class="s">戰爭的條例</h3>
 <p class="p">
@@ -1039,11 +1098,13 @@ span.r {
 <a class="verse" id="20:19"><sup class="v">19&#160;</sup></a>「你若圍困一座城，需要攻打許多日子才能奪取，就不可用斧頭砍壞樹木。你可以吃樹上的果子，卻不可把樹砍下來。田間的樹木豈是人，讓你去圍攻的嗎？
 <a class="verse" id="20:20"><sup class="v">20&#160;</sup></a>只有那些你知道不能生產食物的樹才可以毀壞；你可以把它們砍下來造攻城的工具，攻打那與你打仗的城，直到把城攻下。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="21">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#20">上一章</a> <h2 class="c">21</h2> <a class="next-chap-link" href="#22">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#20">上一章</a> <span class="c">21</span> <a class="next-chap-link" href="#22">下一章</a> &gt;
+</div>
 
 <h3 class="s">未結案的謀殺案件</h3>
 <p class="p">
@@ -1079,11 +1140,13 @@ span.r {
 <a class="verse" id="21:22"><sup class="v">22&#160;</sup></a>「人若犯了死罪被處死，你把他掛在木頭上，
 <a class="verse" id="21:23"><sup class="v">23&#160;</sup></a>不可讓屍體留在木頭上過夜，一定要當日把他埋葬，因為被掛的人是上帝所詛咒的。你不可玷污耶和華－你上帝所賜你為業的地。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="22">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#21">上一章</a> <h2 class="c">22</h2> <a class="next-chap-link" href="#23">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#21">上一章</a> <span class="c">22</span> <a class="next-chap-link" href="#23">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="22:1"><sup class="v">1&#160;</sup></a>「你若看見弟兄的牛或羊迷了路，不可避開牠們，總要把牠們牽回來交給你的弟兄。
@@ -1129,11 +1192,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="22:30"><sup class="v">30&#160;</sup></a>「人不可娶繼母為妻，不可掀開父親衣服的下邊<a class="f" id="footnote-24-ref"  href="#footnote-24"  epub:type="noteref" ><sup>[註]</sup></a>。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="23">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#22">上一章</a> <h2 class="c">23</h2> <a class="next-chap-link" href="#24">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#22">上一章</a> <span class="c">23</span> <a class="next-chap-link" href="#24">下一章</a> &gt;
+</div>
 
 <h3 class="s">不可進入聖會的人</h3>
 <p class="p">
@@ -1176,11 +1241,13 @@ span.r {
 <a class="verse" id="23:24"><sup class="v">24&#160;</sup></a>「你進入鄰舍的葡萄園，可以隨意吃葡萄，直到飽足，卻不可裝在器皿中。
 <a class="verse" id="23:25"><sup class="v">25&#160;</sup></a>你進入鄰舍的莊稼中，可以用手摘麥穗，卻不可用鐮刀割取莊稼。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="24">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#23">上一章</a> <h2 class="c">24</h2> <a class="next-chap-link" href="#25">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#23">上一章</a> <span class="c">24</span> <a class="next-chap-link" href="#25">下一章</a> &gt;
+</div>
 
 <h3 class="s">休妻和再婚的條例</h3>
 <p class="p">
@@ -1217,11 +1284,13 @@ span.r {
 <a class="verse" id="24:21"><sup class="v">21&#160;</sup></a>你摘葡萄園的葡萄，掉落的不可拾取，要留給寄居的、孤兒和寡婦。
 <a class="verse" id="24:22"><sup class="v">22&#160;</sup></a>你要記得你曾在<span class="pn">埃及</span>地作過奴僕，所以我吩咐你遵行這事。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="25">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#24">上一章</a> <h2 class="c">25</h2> <a class="next-chap-link" href="#26">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#24">上一章</a> <span class="c">25</span> <a class="next-chap-link" href="#26">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="25:1"><sup class="v">1&#160;</sup></a>「人與人若有爭訟，要求審判，當宣判義人為義，惡人有罪的時候，
@@ -1252,11 +1321,13 @@ span.r {
 <a class="verse" id="25:18"><sup class="v">18&#160;</sup></a>在路上迎擊你，趁你疲乏困倦時擊殺所有在你後面軟弱的人；並不敬畏上帝。
 <a class="verse" id="25:19"><sup class="v">19&#160;</sup></a>所以，當耶和華－你的上帝使你不被四圍一切仇敵擾亂，在耶和華－你上帝賜你為業的地上得享平靜的時候，你要把<span class="pn">亞瑪力</span>的名從天下塗去；你不可忘記這事。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="26">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#25">上一章</a> <h2 class="c">26</h2> <a class="next-chap-link" href="#27">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#25">上一章</a> <span class="c">26</span> <a class="next-chap-link" href="#27">下一章</a> &gt;
+</div>
 
 <h3 class="s">奉獻初熟的土產</h3>
 <p class="p">
@@ -1283,11 +1354,13 @@ span.r {
 <a class="verse" id="26:18"><sup class="v">18&#160;</sup></a>耶和華今日照他所應許你的，也認你為他寶貴的子民，叫你謹守他的一切誡命，
 <a class="verse" id="26:19"><sup class="v">19&#160;</sup></a>要使你得稱讚、美名、尊榮，超乎他所造的萬國之上，並且照他所應許的，使你歸耶和華－你的上帝為神聖的子民。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="27">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#26">上一章</a> <h2 class="c">27</h2> <a class="next-chap-link" href="#28">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#26">上一章</a> <span class="c">27</span> <a class="next-chap-link" href="#28">下一章</a> &gt;
+</div>
 
 <h3 class="s">寫在石頭上的律法和石壇</h3>
 <p class="p">
@@ -1333,14 +1406,16 @@ span.r {
 </p><p class="p">
 <a class="verse" id="27:26"><sup class="v">26&#160;</sup></a>「『不堅守遵行這律法之話的，必受詛咒！』眾百姓要說：『阿們！』」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="28">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#27">上一章</a> <h2 class="c">28</h2> <a class="next-chap-link" href="#29">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#27">上一章</a> <span class="c">28</span> <a class="next-chap-link" href="#29">下一章</a> &gt;
+</div>
 
 <h3 class="s">遵行誡命蒙福</h3>
-<span class="r">（利26‧3－13；申7‧12－24）</span>
+<span class="r">（<a href="03-LEV.html#26:3">利26‧3－13</a>；<a href="05-DEU.html#7:12">申7‧12－24</a>）</span>
 <p class="p">
 <a class="verse" id="28:1"><sup class="v">1&#160;</sup></a>「你若留心聽從耶和華－你上帝的話，謹守遵行他的一切誡命，就是我今日所吩咐你的，他必使你超乎地上的萬國之上。
 <a class="verse" id="28:2"><sup class="v">2&#160;</sup></a>你若聽從耶和華－你上帝的話，這一切的福氣必臨到你身上，追隨你：
@@ -1358,7 +1433,7 @@ span.r {
 <a class="verse" id="28:13"><sup class="v">13&#160;</sup></a>你若聽從耶和華－你上帝的誡命，就是我今日所吩咐你的，謹守遵行，耶和華就必使你作首不作尾，居上不居下，
 <a class="verse" id="28:14"><sup class="v">14&#160;</sup></a>只要你不偏左右，不背離我今日所吩咐你的一切話，也不隨從別神，事奉它們。」
 </p><h3 class="s">違反誡命遭禍</h3>
-<span class="r">（利26‧14－46）</span>
+<span class="r">（<a href="03-LEV.html#26:14">利26‧14－46</a>）</span>
 <p class="p">
 <a class="verse" id="28:15"><sup class="v">15&#160;</sup></a>「你若不聽從耶和華－你上帝的話，不謹守遵行他的一切誡命律例，就是我今日所吩咐你的，這一切的詛咒必臨到你身上，追隨你：
 <a class="verse" id="28:16"><sup class="v">16&#160;</sup></a>你在城裏必受詛咒，在田間也必受詛咒。
@@ -1418,11 +1493,13 @@ span.r {
 <a class="verse" id="28:67"><sup class="v">67&#160;</sup></a>你因心中的恐懼，眼睛所見的景象，早晨必說：『但願現在是晚上！』晚上必說：『但願現在是早晨！』
 <a class="verse" id="28:68"><sup class="v">68&#160;</sup></a>耶和華要用船把你送回<span class="pn">埃及</span>去，走那我曾告訴你不再看見的路；在那裏你們必賣身給你的仇敵作奴婢，卻沒有人要買。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="29">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#28">上一章</a> <h2 class="c">29</h2> <a class="next-chap-link" href="#30">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#28">上一章</a> <span class="c">29</span> <a class="next-chap-link" href="#30">下一章</a> &gt;
+</div>
 
 <h3 class="s">在摩押重新立約</h3>
 <p class="p">
@@ -1459,11 +1536,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="29:29"><sup class="v">29&#160;</sup></a>「隱祕的事是屬耶和華─我們上帝的，但明顯的事是永遠屬我們和我們子孫的，為要叫我們遵行這律法上的一切話。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="30">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#29">上一章</a> <h2 class="c">30</h2> <a class="next-chap-link" href="#31">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#29">上一章</a> <span class="c">30</span> <a class="next-chap-link" href="#31">下一章</a> &gt;
+</div>
 
 <h3 class="s">回轉和蒙福</h3>
 <p class="p">
@@ -1491,11 +1570,13 @@ span.r {
 <a class="verse" id="30:19"><sup class="v">19&#160;</sup></a>我今日呼天喚地向你作見證：我已經將生與死，祝福與詛咒，擺在你面前。所以你要揀選生命，好使你和你的後裔都得存活。
 <a class="verse" id="30:20"><sup class="v">20&#160;</sup></a>要愛耶和華－你的上帝，聽從他的話，緊緊跟隨他，因為他是你的生命，必使你的日子得以長久，可以在耶和華向你列祖<span class="pn">亞伯拉罕</span>、<span class="pn">以撒</span>、<span class="pn">雅各</span>起誓要給他們的地上居住。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="31">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#30">上一章</a> <h2 class="c">31</h2> <a class="next-chap-link" href="#32">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#30">上一章</a> <span class="c">31</span> <a class="next-chap-link" href="#32">下一章</a> &gt;
+</div>
 
 <h3 class="s">約書亞繼承摩西</h3>
 <p class="p">
@@ -1539,11 +1620,13 @@ span.r {
 <p class="p">
 <a class="verse" id="31:30"><sup class="v">30&#160;</sup></a><span class="pn">摩西</span>把這首歌的話，從頭到尾吟誦給<span class="pn">以色列</span>全會眾聽。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="32">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#31">上一章</a> <h2 class="c">32</h2> <a class="next-chap-link" href="#33">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#31">上一章</a> <span class="c">32</span> <a class="next-chap-link" href="#33">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="32:1"><sup class="v">1&#160;</sup></a>「諸天哪，要側耳聽我說話；
@@ -1746,7 +1829,7 @@ span.r {
 <a class="verse" id="32:46"><sup class="v">46&#160;</sup></a>對他們說：「我今日以這一切話警戒你們，你們都要記在心中，要吩咐你們的子孫謹守遵行這律法上一切的話。
 <a class="verse" id="32:47"><sup class="v">47&#160;</sup></a>因為這不是與你們無關的空話，而是你們的生命；因遵行這話，你們的日子必在你們過<span class="pn">約旦河</span>得為業的地上得以長久。」
 </p><h3 class="s">預告摩西的死</h3>
-<span class="r">（民27‧11－14）</span>
+<span class="r">（<a href="04-NUM.html#27:11">民27‧11－14</a>）</span>
 <p class="p">
 <a class="verse" id="32:48"><sup class="v">48&#160;</sup></a>就在那日，耶和華吩咐<span class="pn">摩西</span>說：
 <a class="verse" id="32:49"><sup class="v">49&#160;</sup></a>「你上<span class="pn">摩押</span>地的<span class="pn">亞巴琳山脈</span>，到面對<span class="pn">耶利哥</span>的<span class="pn">尼波山</span>去，看我所要賜給<span class="pn">以色列</span>人為業的<span class="pn">迦南</span>地。
@@ -1754,11 +1837,13 @@ span.r {
 <a class="verse" id="32:51"><sup class="v">51&#160;</sup></a>因為你們在<span class="pn">以色列</span>人中得罪了我，在<span class="pn">尋</span>的曠野，<span class="pn">加低斯</span>的<span class="pn">米利巴</span>水那裏，在<span class="pn">以色列</span>人中沒有尊我為聖。
 <a class="verse" id="32:52"><sup class="v">52&#160;</sup></a>我所賜給<span class="pn">以色列</span>人的地，你只可從對面觀看，卻不得進到那裏去。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="33">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#32">上一章</a> <h2 class="c">33</h2> <a class="next-chap-link" href="#34">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#32">上一章</a> <span class="c">33</span> <a class="next-chap-link" href="#34">下一章</a> &gt;
+</div>
 
 <h3 class="s">摩西祝福以色列眾支派</h3>
 <p class="p">
@@ -1906,11 +1991,13 @@ span.r {
 </p><p class="q1">你的仇敵要屈身就你；
 </p><p class="q1">你卻要踐踏他們的背脊<a class="f" id="footnote-59-ref"  href="#footnote-59"  epub:type="noteref" ><sup>[註]</sup></a>。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="34">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#33">上一章</a> <h2 class="c">34</h2> <a class="next-chap-link" href="#35">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">申命記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#33">上一章</a> <span class="c">34</span> <a class="next-chap-link" href="#35">下一章</a> &gt;
+</div>
 
 <h3 class="s">摩西的死</h3>
 <p class="p">
@@ -1930,9 +2017,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="35">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#34">上一章</a> <a class="chapter" id="35">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="06-JOS.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:7</a> 「謝非拉」是音譯，意思是「低地」。</p>
 </aside>

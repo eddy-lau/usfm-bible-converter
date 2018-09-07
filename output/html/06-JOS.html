@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>約書亞記</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -163,11 +182,13 @@ span.r {
 </p><p class="q2">2. 在<span class="pn">示劍</span>重新立約（24．1—28）
 </p><p class="q2">3. 埋葬<span class="pn">約書亞</span>、<span class="pn">以利亞撒</span>及<span class="pn">約瑟</span>的骸骨（24．29—33）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝命令約書亞征服迦南</h3>
 <p class="p">
@@ -194,11 +215,13 @@ span.r {
 <a class="verse" id="1:17"><sup class="v">17&#160;</sup></a>我們在一切事上怎樣聽從<span class="pn">摩西</span>，也必照樣聽從你。惟願耶和華－你的上帝與你同在，像與<span class="pn">摩西</span>同在一樣。
 <a class="verse" id="1:18"><sup class="v">18&#160;</sup></a>無論甚麼人違背你的命令，不聽從你所吩咐他的一切話，就必處死。你只要剛強壯膽！」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">派探子進耶利哥</h3>
 <p class="p">
@@ -230,11 +253,13 @@ span.r {
 <a class="verse" id="2:23"><sup class="v">23&#160;</sup></a>二人回來，下了山，過了河，來到<span class="pn">嫩</span>的兒子<span class="pn">約書亞</span>那裏，向他報告他們所遭遇的一切事。
 <a class="verse" id="2:24"><sup class="v">24&#160;</sup></a>他們對<span class="pn">約書亞</span>說：「耶和華果然將那全地交在我們手中了，並且那地所有的居民在我們面前都融化了。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">以色列人過約旦河</h3>
 <p class="p">
@@ -258,11 +283,13 @@ span.r {
 <a class="verse" id="3:16"><sup class="v">16&#160;</sup></a>那從上往下流的水就在很遠的地方，在<span class="pn">撒拉但</span>旁邊的<span class="pn">亞當城</span>那裏停住，豎立成壘；那往<span class="pn">亞拉巴海</span>，就是<span class="pn">鹽海</span>下流的水全然中斷。於是，百姓在<span class="pn">耶利哥</span>的對面過了河。
 <a class="verse" id="3:17"><sup class="v">17&#160;</sup></a>抬耶和華約櫃的祭司在<span class="pn">約旦河</span>中的乾地上穩穩站著，<span class="pn">以色列</span>眾人都從乾地上過去，直到全國都過了<span class="pn">約旦河</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">立石為記</h3>
 <p class="p">
@@ -295,11 +322,13 @@ span.r {
 <a class="verse" id="4:23"><sup class="v">23&#160;</sup></a>因為耶和華－你們的上帝在你們前面使<span class="pn">約旦河</span>的水乾了，直到你們過來，就如耶和華－你們的上帝從前在我們前面使<span class="pn">紅海</span>乾了，直到我們過來一樣，
 <a class="verse" id="4:24"><sup class="v">24&#160;</sup></a>要使地上萬民都知道，耶和華的手大有能力，也要使你們天天敬畏耶和華－你們的上帝。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="5:1"><sup class="v">1&#160;</sup></a><span class="pn">約旦河</span>西<span class="pn">亞摩利</span>人的眾王和靠海<span class="pn">迦南</span>人的眾王，聽見耶和華在<span class="pn">以色列</span>人前面使<span class="pn">約旦河</span>的水乾了，直到他們過了河<a class="f" id="footnote-6-ref"  href="#footnote-6"  epub:type="noteref" ><sup>[註]</sup></a>，眾王因<span class="pn">以色列</span>人的緣故都膽戰心驚，勇氣全失。
@@ -327,11 +356,13 @@ span.r {
 <a class="verse" id="5:14"><sup class="v">14&#160;</sup></a>他說：「不，我現在來是要作耶和華軍隊的元帥。」<span class="pn">約書亞</span>就臉伏於地下拜，說：「我主有甚麼話，請吩咐僕人吧！」
 <a class="verse" id="5:15"><sup class="v">15&#160;</sup></a>耶和華軍隊的元帥對<span class="pn">約書亞</span>說：「把你腳上的鞋脫下來，因為你所站的地方是聖的。」<span class="pn">約書亞</span>就照著做了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利哥城陷落</h3>
 <p class="p">
@@ -371,11 +402,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="6:27"><sup class="v">27&#160;</sup></a>耶和華與<span class="pn">約書亞</span>同在，<span class="pn">約書亞</span>的名聲傳遍全地。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞干犯罪</h3>
 <p class="p">
@@ -411,11 +444,13 @@ span.r {
 <a class="verse" id="7:25"><sup class="v">25&#160;</sup></a><span class="pn">約書亞</span>說：「你為甚麼給我們招惹災禍呢？今日耶和華必使你遭受災禍。」於是<span class="pn">以色列</span>眾人用石頭打死他，用火焚燒他們，把石頭扔在其上。
 <a class="verse" id="7:26"><sup class="v">26&#160;</sup></a>眾人在<span class="pn">亞干</span>身上堆了一大堆石頭，直存到今日。於是耶和華轉意，不發他的烈怒。因此，那地方名叫<span class="pn">亞割谷</span>，直到今日。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h3 class="s">攻取艾城</h3>
 <p class="p">
@@ -461,11 +496,13 @@ span.r {
 <a class="verse" id="8:34"><sup class="v">34&#160;</sup></a>隨後，<span class="pn">約書亞</span>將律法上祝福和詛咒的話，照著律法書上一切所寫的，宣讀一遍。
 <a class="verse" id="8:35"><sup class="v">35&#160;</sup></a><span class="pn">摩西</span>所吩咐的一切話，<span class="pn">約書亞</span>在<span class="pn">以色列</span>全會眾和婦女、孩童，以及住在他們中間的外人面前，沒有一句不宣讀的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h3 class="s">基遍人欺騙約書亞</h3>
 <p class="p">
@@ -500,11 +537,13 @@ span.r {
 <a class="verse" id="9:26"><sup class="v">26&#160;</sup></a>於是<span class="pn">約書亞</span>就這樣對待他們，他救了他們脫離<span class="pn">以色列</span>人的手，<span class="pn">以色列</span>人沒有殺他們。
 <a class="verse" id="9:27"><sup class="v">27&#160;</sup></a>那日，<span class="pn">約書亞</span>分派他們到耶和華選擇的地方，為會眾和耶和華的壇劈柴挑水，直到今日。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">擊敗亞摩利人</h3>
 <p class="p">
@@ -569,11 +608,13 @@ span.r {
 <a class="verse" id="10:42"><sup class="v">42&#160;</sup></a><span class="pn">約書亞</span>一舉擊敗了這些王，奪了他們的地，因為耶和華－<span class="pn">以色列</span>的上帝為<span class="pn">以色列</span>作戰。
 <a class="verse" id="10:43"><sup class="v">43&#160;</sup></a>於是<span class="pn">約書亞</span>和跟他一起的<span class="pn">以色列</span>眾人回到<span class="pn">吉甲</span>的營中。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">擊敗眾王的聯軍</h3>
 <p class="p">
@@ -606,11 +647,13 @@ span.r {
 <a class="verse" id="11:22"><sup class="v">22&#160;</sup></a><span class="pn">以色列</span>人的地中沒有留下一個<span class="pn">亞衲</span>族人，只有一些還留在<span class="pn">迦薩</span>、<span class="pn">迦特</span>和<span class="pn">亞實突</span>。
 <a class="verse" id="11:23"><sup class="v">23&#160;</sup></a>這樣，<span class="pn">約書亞</span>照著耶和華所吩咐<span class="pn">摩西</span>的一切話奪了那全地，就按著<span class="pn">以色列</span>支派所得的份把地分給他們為業。於是國中太平，沒有戰爭了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <h3 class="s">摩西擊敗的諸王</h3>
 <p class="p">
@@ -674,11 +717,13 @@ span.r {
 <a class="verse" id="12:24"><sup class="v">24&#160;</sup></a><span class="pn">得撒</span>王一人，
 <p class="tr">共三十一個王。</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <h3 class="s">未得之地</h3>
 <p class="p">
@@ -726,11 +771,13 @@ span.r {
 <a class="verse" id="13:32"><sup class="v">32&#160;</sup></a>以上是<span class="pn">摩西</span>在<span class="pn">約旦河</span>東，<span class="pn">耶利哥</span>對面的<span class="pn">摩押</span>平原所分配的產業。
 <a class="verse" id="13:33"><sup class="v">33&#160;</sup></a>只是<span class="pn">利未</span>支派，<span class="pn">摩西</span>沒有把產業分給他們。耶和華－<span class="pn">以色列</span>的上帝是他們的產業，正如耶和華對他們說的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <h3 class="s">約旦河西之地的分配</h3>
 <p class="p">
@@ -753,11 +800,13 @@ span.r {
 <a class="verse" id="14:14"><sup class="v">14&#160;</sup></a>所以<span class="pn">希伯崙</span>成了<span class="pn">基尼洗</span>族<span class="pn">耶孚尼</span>的兒子<span class="pn">迦勒</span>的產業，直到今日，因為他專心跟從耶和華－<span class="pn">以色列</span>的上帝。
 <a class="verse" id="14:15"><sup class="v">15&#160;</sup></a><span class="pn">希伯崙</span>從前名叫<span class="pn">基列‧亞巴</span>；<span class="pn">亞巴</span><a class="f" id="footnote-29-ref"  href="#footnote-29"  epub:type="noteref" ><sup>[註]</sup></a>是<span class="pn">亞衲</span>族最尊貴的人。於是國中太平，沒有戰爭了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="15">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#14">上一章</a> <h2 class="c">15</h2> <a class="next-chap-link" href="#16">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <span class="c">15</span> <a class="next-chap-link" href="#16">下一章</a> &gt;
+</div>
 
 <h3 class="s">分給猶大的土地</h3>
 <p class="p">
@@ -775,7 +824,7 @@ span.r {
 <a class="verse" id="15:12"><sup class="v">12&#160;</sup></a>西邊的地界就是<span class="pn">大海</span>和沿海一帶之地。這是<span class="pn">猶大</span>人按著宗族所得之地四圍的邊界。
 </p><p class="p">
 </p><h3 class="s">迦勒攻佔的土地</h3>
-<span class="r">（士1‧11－15）</span>
+<span class="r">（<a href="07-JDG.html#1:11">士1‧11－15</a>）</span>
 <p class="p">
 <a class="verse" id="15:13"><sup class="v">13&#160;</sup></a><span class="pn">約書亞</span>照耶和華所指示的，把<span class="pn">猶大</span>人中的一份土地，就是<span class="pn">基列‧亞巴</span>，分給<span class="pn">耶孚尼</span>的兒子<span class="pn">迦勒</span>。<span class="pn">亞巴</span>是<span class="pn">亞衲</span>族的祖先，<span class="pn">基列‧亞巴</span>就是<span class="pn">希伯崙</span>。
 <a class="verse" id="15:14"><sup class="v">14&#160;</sup></a><span class="pn">迦勒</span>從那裏趕出<span class="pn">亞衲</span>的三族，就是<span class="pn">亞衲</span>族的<span class="pn">示篩</span>人、<span class="pn">亞希幔</span>人和<span class="pn">撻買</span>人。
@@ -843,11 +892,13 @@ span.r {
 <a class="verse" id="15:63"><sup class="v">63&#160;</sup></a>至於住<span class="pn">耶路撒冷</span>的<span class="pn">耶布斯</span>人，<span class="pn">猶大</span>人不能把他們趕出去。於是，<span class="pn">耶布斯</span>人與<span class="pn">猶大</span>人同住在<span class="pn">耶路撒冷</span>，直到今日。
 </p><p class="p">
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="16">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#15">上一章</a> <h2 class="c">16</h2> <a class="next-chap-link" href="#17">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#15">上一章</a> <span class="c">16</span> <a class="next-chap-link" href="#17">下一章</a> &gt;
+</div>
 
 <h3 class="s">分給約瑟子孫的土地</h3>
 <p class="p">
@@ -864,11 +915,13 @@ span.r {
 <a class="verse" id="16:9"><sup class="v">9&#160;</sup></a>在<span class="pn">瑪拿西</span>人地業的一切城鎮和所屬的村莊中，也保留一些城鎮給<span class="pn">以法蓮</span>的子孫。
 <a class="verse" id="16:10"><sup class="v">10&#160;</sup></a>他們卻沒有趕出住在<span class="pn">基色</span>的<span class="pn">迦南</span>人。<span class="pn">迦南</span>人就住在<span class="pn">以法蓮</span>人中，成為服勞役的僕人，直到今日。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="17">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#16">上一章</a> <h2 class="c">17</h2> <a class="next-chap-link" href="#18">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#16">上一章</a> <span class="c">17</span> <a class="next-chap-link" href="#18">下一章</a> &gt;
+</div>
 
 <h3 class="s">分給西瑪拿西半支派的土地</h3>
 <p class="p">
@@ -896,11 +949,13 @@ span.r {
 <a class="verse" id="17:17"><sup class="v">17&#160;</sup></a><span class="pn">約書亞</span>對<span class="pn">約瑟</span>家，就是<span class="pn">以法蓮</span>和<span class="pn">瑪拿西</span>人，說：「你百姓眾多，並且強大，不可只有一籤而已。
 <a class="verse" id="17:18"><sup class="v">18&#160;</sup></a>那山區也要歸你，雖然是樹林，你可以去開墾，邊緣之地也必歸你。<span class="pn">迦南</span>人縱然強盛，有鐵的戰車，你也能把他們趕出去。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="18">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#17">上一章</a> <h2 class="c">18</h2> <a class="next-chap-link" href="#19">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#17">上一章</a> <span class="c">18</span> <a class="next-chap-link" href="#19">下一章</a> &gt;
+</div>
 
 <h3 class="s">其餘支派的土地分配</h3>
 <p class="p">
@@ -937,11 +992,13 @@ span.r {
 <a class="verse" id="18:27"><sup class="v">27&#160;</sup></a><span class="pn">利堅</span>、<span class="pn">伊利毗勒</span>、<span class="pn">他拉拉</span>、
 <a class="verse" id="18:28"><sup class="v">28&#160;</sup></a><span class="pn">洗拉</span>、<span class="pn">以利弗</span>、<span class="pn">耶布斯</span>，<span class="pn">耶布斯</span>就是<span class="pn">耶路撒冷</span>，<span class="pn">基比亞</span>、<span class="pn">基列</span>，共十四座城，以及所屬的村莊。這是<span class="pn">便雅憫</span>人按著宗族所得的地業。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="19">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#18">上一章</a> <h2 class="c">19</h2> <a class="next-chap-link" href="#20">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#18">上一章</a> <span class="c">19</span> <a class="next-chap-link" href="#20">下一章</a> &gt;
+</div>
 
 <h3 class="s">分給西緬的土地</h3>
 <p class="p">
@@ -1009,14 +1066,16 @@ span.r {
 <a class="verse" id="19:50"><sup class="v">50&#160;</sup></a>他們照著耶和華的指示，把<span class="pn">約書亞</span>所要的城，就是<span class="pn">以法蓮</span>山區的<span class="pn">亭拿‧西拉</span>給了他。<span class="pn">約書亞</span>修建那城，住在城中。
 <a class="verse" id="19:51"><sup class="v">51&#160;</sup></a>這就是<span class="pn">以利亞撒</span>祭司和<span class="pn">嫩</span>的兒子<span class="pn">約書亞</span>，以及<span class="pn">以色列</span>人各支派父系的領袖，在<span class="pn">示羅</span>會幕的門口，耶和華面前抽籤所分的地業。這樣， 他們就完成了分地的事。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="20">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#19">上一章</a> <h2 class="c">20</h2> <a class="next-chap-link" href="#21">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#19">上一章</a> <span class="c">20</span> <a class="next-chap-link" href="#21">下一章</a> &gt;
+</div>
 
 <h3 class="s">設立逃城</h3>
-<span class="r">（民35‧9－28；申19‧1－13）</span>
+<span class="r">（<a href="04-NUM.html#35:9">民35‧9－28</a>；<a href="05-DEU.html#19:1">申19‧1－13</a>）</span>
 <p class="p">
 <a class="verse" id="20:1"><sup class="v">1&#160;</sup></a>耶和華吩咐<span class="pn">約書亞</span>說：
 <a class="verse" id="20:2"><sup class="v">2&#160;</sup></a>「你吩咐<span class="pn">以色列</span>人說：『你們要照我藉<span class="pn">摩西</span>所吩咐你們的，為自己設立逃城，
@@ -1029,11 +1088,13 @@ span.r {
 <a class="verse" id="20:8"><sup class="v">8&#160;</sup></a>他們在<span class="pn">約旦河</span>的另一邊，就是<span class="pn">耶利哥</span>的東邊，從<span class="pn">呂便</span>支派中，在曠野的平原設立<span class="pn">比悉</span>，從<span class="pn">迦得</span>支派中設立<span class="pn">基列</span>的<span class="pn">拉末</span>，從<span class="pn">瑪拿西</span>支派中設立<span class="pn">巴珊</span>的<span class="pn">哥蘭</span>。
 <a class="verse" id="20:9"><sup class="v">9&#160;</sup></a>這都是為<span class="pn">以色列</span>眾人和在他們中間寄居的外人所指定的城鎮，使凡誤殺人者可以逃到那裏，不至於死在報血仇者的手中，直到他站在會眾面前受審判<a class="f" id="footnote-39-ref"  href="#footnote-39"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="21">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#20">上一章</a> <h2 class="c">21</h2> <a class="next-chap-link" href="#22">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#20">上一章</a> <span class="c">21</span> <a class="next-chap-link" href="#22">下一章</a> &gt;
+</div>
 
 <h3 class="s">利未人的城</h3>
 <p class="p">
@@ -1092,11 +1153,13 @@ span.r {
 <a class="verse" id="21:44"><sup class="v">44&#160;</sup></a>耶和華照著向他們列祖起誓所應許的一切，賜給他們全境安寧。他們所有的仇敵，沒有一個能在他們面前站立得住。耶和華把所有仇敵都交在他們手中。
 <a class="verse" id="21:45"><sup class="v">45&#160;</sup></a>耶和華應許賜福給<span class="pn">以色列</span>家的話，一句都沒有落空，全都應驗了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="22">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#21">上一章</a> <h2 class="c">22</h2> <a class="next-chap-link" href="#23">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#21">上一章</a> <span class="c">22</span> <a class="next-chap-link" href="#23">下一章</a> &gt;
+</div>
 
 <h3 class="s">東岸的支派回去</h3>
 <p class="p">
@@ -1142,11 +1205,13 @@ span.r {
 <a class="verse" id="22:33"><sup class="v">33&#160;</sup></a><span class="pn">以色列</span>人看這事為美；<span class="pn">以色列</span>人就稱頌上帝，不再說要上去攻打<span class="pn">呂便</span>人和<span class="pn">迦得</span>人，毀壞他們所住的地了。
 <a class="verse" id="22:34"><sup class="v">34&#160;</sup></a><span class="pn">呂便</span>人和<span class="pn">迦得</span>人給這壇起了名，因為這壇在我們之間見證耶和華是上帝。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="23">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#22">上一章</a> <h2 class="c">23</h2> <a class="next-chap-link" href="#24">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#22">上一章</a> <span class="c">23</span> <a class="next-chap-link" href="#24">下一章</a> &gt;
+</div>
 
 <h3 class="s">約書亞的遺言</h3>
 <p class="p">
@@ -1168,11 +1233,13 @@ span.r {
 <a class="verse" id="23:15"><sup class="v">15&#160;</sup></a>耶和華－你們的上帝所應許的一切福氣怎樣臨到你們身上，耶和華也必照樣使各樣災禍臨到你們身上，直到他把你們從耶和華－你們上帝所賜給你們的這美地上除滅。
 <a class="verse" id="23:16"><sup class="v">16&#160;</sup></a>你們若違背耶和華－你們上帝吩咐你們所守的約，去事奉別神，敬拜它們，耶和華的怒氣必向你們發作，使你們在他所賜給你們的美地上迅速滅亡。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="24">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#23">上一章</a> <h2 class="c">24</h2> <a class="next-chap-link" href="#25">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約書亞記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#23">上一章</a> <span class="c">24</span> <a class="next-chap-link" href="#25">下一章</a> &gt;
+</div>
 
 <h3 class="s">約書亞在示劍最後的講話</h3>
 <p class="p">
@@ -1219,9 +1286,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="25">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#24">上一章</a> <a class="chapter" id="25">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="07-JDG.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:8</a> 「思想」或譯「默念」。</p>
 </aside>

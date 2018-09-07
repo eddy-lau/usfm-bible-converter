@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>約伯記</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -163,11 +182,13 @@ span.r {
 <p class="ip">四．上帝向<span class="pn">約伯</span>說話，以及約伯的回應（38．1—42．6）</p>
 <p class="ip">五．結語：<span class="pn">約伯</span>的故事結束（42．7—17）</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">撒但試探約伯</h3>
 <p class="p">
@@ -199,11 +220,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="1:22"><sup class="v">22&#160;</sup></a>在這一切的事上，<span class="pn">約伯</span>並沒有犯罪，也不以上帝為狂妄。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">撒但再試探約伯</h3>
 <p class="p">
@@ -225,11 +248,13 @@ span.r {
 <a class="verse" id="2:12"><sup class="v">12&#160;</sup></a>他們遠遠地舉目觀看，認不出他來，就放聲大哭。各人撕裂外袍，向空中撒塵土，落在自己的頭上。
 <a class="verse" id="2:13"><sup class="v">13&#160;</sup></a>他們同他七天七夜坐在地上，一句話也不對他說，因為他們見到了極大的痛苦。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">約伯詛咒自己</h3>
 <p class="p">
@@ -314,14 +339,16 @@ span.r {
 <a class="verse" id="3:26"><sup class="v">26&#160;</sup></a>我不得安逸，不得平靜，
 </p><p class="q1">也不得安息，卻有患難來到。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">第一次對話</h3>
-<span class="r">（4‧1－14‧22）</span>
+<span class="r">（<a href="18-JOB.html#4:1">4‧1－14‧22</a>）</span>
 <p class="q1">
 <a class="verse" id="4:1"><sup class="v">1&#160;</sup></a><span class="pn">提幔</span>人<span class="pn">以利法</span>回答說：
 </p><p class="q1">
@@ -391,11 +418,13 @@ span.r {
 </p><p class="q1">他們死，且是無智慧而死。』」
 </p><p class="b">
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="5:1"><sup class="v">1&#160;</sup></a>「你呼求吧，有誰回答你呢？
@@ -483,11 +512,13 @@ span.r {
 </p><p class="q1">你須要聽，要親自明白。」
 </p><p class="b">
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="6:1"><sup class="v">1&#160;</sup></a><span class="pn">約伯</span>回答說：
@@ -586,11 +617,13 @@ span.r {
 </p><p class="q1">我的上膛豈不辨奸惡嗎？」
 </p><p class="b">
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="7:1"><sup class="v">1&#160;</sup></a>「人在世上豈無勞役呢？
@@ -663,11 +696,13 @@ span.r {
 </p><p class="q1">我現今要躺臥在塵土中；
 </p><p class="q1">你要切切尋找我，我卻不在了。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="8:1"><sup class="v">1&#160;</sup></a><span class="pn">書亞</span>人<span class="pn">比勒達</span>回答說：
@@ -738,11 +773,13 @@ span.r {
 <a class="verse" id="8:22"><sup class="v">22&#160;</sup></a>恨惡你的要披戴羞愧，
 </p><p class="q1">惡人的帳棚必歸於無有。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="9:1"><sup class="v">1&#160;</sup></a><span class="pn">約伯</span>回答說：
@@ -852,11 +889,13 @@ span.r {
 <a class="verse" id="9:35"><sup class="v">35&#160;</sup></a>我就說話，不懼怕他；
 </p><p class="q1">但對我來說，我卻不是這樣。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="10:1"><sup class="v">1&#160;</sup></a>「我厭惡自己的性命，
@@ -933,11 +972,13 @@ span.r {
 </p><p class="q1">毫無秩序；
 </p><p class="q1">發出的光輝也像幽暗。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="11:1"><sup class="v">1&#160;</sup></a><span class="pn">拿瑪</span>人<span class="pn">瑣法</span>回答說：
@@ -1002,11 +1043,13 @@ span.r {
 </p><p class="q1">他們無路可逃，
 </p><p class="q1">他們的指望就是氣絕身亡。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="12:1"><sup class="v">1&#160;</sup></a><span class="pn">約伯</span>回答說：
@@ -1088,11 +1131,13 @@ span.r {
 <a class="verse" id="12:25"><sup class="v">25&#160;</sup></a>他們在無光的黑暗中摸索；
 </p><p class="q1">他使他們搖晃像醉酒的人一樣。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="13:1"><sup class="v">1&#160;</sup></a>「看哪，這一切，我眼都見過；
@@ -1182,11 +1227,13 @@ span.r {
 </p><p class="q1">像蟲蛀的衣裳。」
 </p><p class="b">
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="14:1"><sup class="v">1&#160;</sup></a>「人為婦人所生，
@@ -1264,14 +1311,16 @@ span.r {
 </p><p class="q1">心中為自己悲哀。」
 </p><p class="b">
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="15">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#14">上一章</a> <h2 class="c">15</h2> <a class="next-chap-link" href="#16">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <span class="c">15</span> <a class="next-chap-link" href="#16">下一章</a> &gt;
+</div>
 
 <h3 class="s">第二次對話</h3>
-<span class="r">（15‧1－21‧34）</span>
+<span class="r">（<a href="18-JOB.html#15:1">15‧1－21‧34</a>）</span>
 <p class="q1">
 <a class="verse" id="15:1"><sup class="v">1&#160;</sup></a><span class="pn">提幔</span>人<span class="pn">以利法</span>回答說：
 </p><p class="q1">
@@ -1382,11 +1431,13 @@ span.r {
 <a class="verse" id="15:35"><sup class="v">35&#160;</sup></a>他們所懷的是毒害，所生的是罪孽，
 </p><p class="q1">肚腹裏所預備的是詭詐。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="16">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#15">上一章</a> <h2 class="c">16</h2> <a class="next-chap-link" href="#17">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#15">上一章</a> <span class="c">16</span> <a class="next-chap-link" href="#17">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="16:1"><sup class="v">1&#160;</sup></a><span class="pn">約伯</span>回答說：
@@ -1463,11 +1514,13 @@ span.r {
 <a class="verse" id="16:22"><sup class="v">22&#160;</sup></a>因為再過幾年，
 </p><p class="q1">我必走那往而不返之路。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="17">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#16">上一章</a> <h2 class="c">17</h2> <a class="next-chap-link" href="#18">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#16">上一章</a> <span class="c">17</span> <a class="next-chap-link" href="#18">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="17:1"><sup class="v">1&#160;</sup></a>「我的靈耗盡，我的日子消逝；
@@ -1521,11 +1574,13 @@ span.r {
 </p><p class="q1">要一起在塵土中安息嗎<a class="f" id="footnote-32-ref"  href="#footnote-32"  epub:type="noteref" ><sup>[註]</sup></a>？」
 </p><p class="b">
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="18">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#17">上一章</a> <h2 class="c">18</h2> <a class="next-chap-link" href="#19">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#17">上一章</a> <span class="c">18</span> <a class="next-chap-link" href="#19">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="18:1"><sup class="v">1&#160;</sup></a><span class="pn">書亞</span>人<span class="pn">比勒達</span>回答說：
@@ -1592,11 +1647,13 @@ span.r {
 <a class="verse" id="18:21"><sup class="v">21&#160;</sup></a>不義之人的住處總是這樣，
 </p><p class="q1">這就是不認識上帝之人的下場。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="19">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#18">上一章</a> <h2 class="c">19</h2> <a class="next-chap-link" href="#20">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#18">上一章</a> <span class="c">19</span> <a class="next-chap-link" href="#20">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="19:1"><sup class="v">1&#160;</sup></a><span class="pn">約伯</span>回答說：
@@ -1691,11 +1748,13 @@ span.r {
 </p><p class="q1">因為憤怒帶來刀劍的刑罰。
 </p><p class="q1">這樣，你們就知道有審判。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="20">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#19">上一章</a> <h2 class="c">20</h2> <a class="next-chap-link" href="#21">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#19">上一章</a> <span class="c">20</span> <a class="next-chap-link" href="#21">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="20:1"><sup class="v">1&#160;</sup></a><span class="pn">拿瑪</span>人<span class="pn">瑣法</span>回答說：
@@ -1790,11 +1849,13 @@ span.r {
 <a class="verse" id="20:29"><sup class="v">29&#160;</sup></a>這是惡人從上帝所得的份，
 </p><p class="q1">是上帝為他所定的產業。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="21">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#20">上一章</a> <h2 class="c">21</h2> <a class="next-chap-link" href="#22">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#20">上一章</a> <span class="c">21</span> <a class="next-chap-link" href="#22">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="21:1"><sup class="v">1&#160;</sup></a><span class="pn">約伯</span>回答說：
@@ -1902,14 +1963,16 @@ span.r {
 <a class="verse" id="21:34"><sup class="v">34&#160;</sup></a>你們怎能以空話安慰我呢？
 </p><p class="q1">你們的對答全都錯謬！」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="22">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#21">上一章</a> <h2 class="c">22</h2> <a class="next-chap-link" href="#23">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#21">上一章</a> <span class="c">22</span> <a class="next-chap-link" href="#23">下一章</a> &gt;
+</div>
 
 <h3 class="s">第三次對話</h3>
-<span class="r">（22‧1－27‧23）</span>
+<span class="r">（<a href="18-JOB.html#22:1">22‧1－27‧23</a>）</span>
 <p class="q1">
 <a class="verse" id="22:1"><sup class="v">1&#160;</sup></a><span class="pn">提幔</span>人<span class="pn">以利法</span>回答說：
 </p><p class="q1">
@@ -2002,11 +2065,13 @@ span.r {
 <a class="verse" id="22:30"><sup class="v">30&#160;</sup></a>不是無辜的人，上帝尚且要搭救他<a class="f" id="footnote-51-ref"  href="#footnote-51"  epub:type="noteref" ><sup>[註]</sup></a>；
 </p><p class="q1">他必因你手中的清潔得蒙拯救。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="23">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#22">上一章</a> <h2 class="c">23</h2> <a class="next-chap-link" href="#24">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#22">上一章</a> <span class="c">23</span> <a class="next-chap-link" href="#24">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="23:1"><sup class="v">1&#160;</sup></a><span class="pn">約伯</span>回答說：
@@ -2060,11 +2125,13 @@ span.r {
 <a class="verse" id="23:17"><sup class="v">17&#160;</sup></a>但我並非被黑暗剪除，
 </p><p class="q1">只是幽暗遮蓋了我的臉。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="24">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#23">上一章</a> <h2 class="c">24</h2> <a class="next-chap-link" href="#25">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#23">上一章</a> <span class="c">24</span> <a class="next-chap-link" href="#25">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="24:1"><sup class="v">1&#160;</sup></a>「為何全能者不定下期限？
@@ -2154,11 +2221,13 @@ span.r {
 <a class="verse" id="24:25"><sup class="v">25&#160;</sup></a>若不是這樣，誰能指證我是說謊的，
 </p><p class="q1">以我的言語為毫無根據呢？」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="25">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#24">上一章</a> <h2 class="c">25</h2> <a class="next-chap-link" href="#26">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#24">上一章</a> <span class="c">25</span> <a class="next-chap-link" href="#26">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="25:1"><sup class="v">1&#160;</sup></a><span class="pn">書亞</span>人<span class="pn">比勒達</span>回答說：
@@ -2178,11 +2247,13 @@ span.r {
 <a class="verse" id="25:6"><sup class="v">6&#160;</sup></a>更何況是如蟲的人，
 </p><p class="q1">如蛆的世人呢！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="26">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#25">上一章</a> <h2 class="c">26</h2> <a class="next-chap-link" href="#27">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#25">上一章</a> <span class="c">26</span> <a class="next-chap-link" href="#27">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="26:1"><sup class="v">1&#160;</sup></a><span class="pn">約伯</span>回答說：
@@ -2227,11 +2298,13 @@ span.r {
 </p><p class="q1">我們聽見他的話，是何等細微的聲音！
 </p><p class="q1">他大能的雷聲誰能明白呢？」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="27">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#26">上一章</a> <h2 class="c">27</h2> <a class="next-chap-link" href="#28">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#26">上一章</a> <span class="c">27</span> <a class="next-chap-link" href="#28">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="27:1"><sup class="v">1&#160;</sup></a><span class="pn">約伯</span>繼續發表他的言論說：
@@ -2304,11 +2377,13 @@ span.r {
 <a class="verse" id="27:23"><sup class="v">23&#160;</sup></a>風要因他拍掌，
 </p><p class="q1">並要發叱聲，使他離開原地。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="28">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#27">上一章</a> <h2 class="c">28</h2> <a class="next-chap-link" href="#29">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#27">上一章</a> <span class="c">28</span> <a class="next-chap-link" href="#29">下一章</a> &gt;
+</div>
 
 <h3 class="s">歌頌智慧</h3>
 <p class="q1">
@@ -2402,11 +2477,13 @@ span.r {
 <a class="verse" id="28:28"><sup class="v">28&#160;</sup></a>他對人說：『看哪，敬畏主就是智慧；
 </p><p class="q1">遠離惡事就是聰明。』」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="29">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#28">上一章</a> <h2 class="c">29</h2> <a class="next-chap-link" href="#30">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#28">上一章</a> <span class="c">29</span> <a class="next-chap-link" href="#30">下一章</a> &gt;
+</div>
 
 <h3 class="s">約伯最後的申訴</h3>
 <p class="q1">
@@ -2486,11 +2563,13 @@ span.r {
 </p><p class="q1">我如君王在軍隊中居住，
 </p><p class="q1">又如人安慰哀傷的人。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="30">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#29">上一章</a> <h2 class="c">30</h2> <a class="next-chap-link" href="#31">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#29">上一章</a> <span class="c">30</span> <a class="next-chap-link" href="#31">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="30:1"><sup class="v">1&#160;</sup></a>「但如今，比我年輕的人譏笑我；
@@ -2593,11 +2672,13 @@ span.r {
 <a class="verse" id="30:31"><sup class="v">31&#160;</sup></a>我的琴音變為哀泣；
 </p><p class="q1">我的簫聲變為哭聲。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="31">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#30">上一章</a> <h2 class="c">31</h2> <a class="next-chap-link" href="#32">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#30">上一章</a> <span class="c">31</span> <a class="next-chap-link" href="#32">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="31:1"><sup class="v">1&#160;</sup></a>「我與眼睛立約，
@@ -2731,14 +2812,16 @@ span.r {
 </p><p class="q1">惡臭的草代替大麥。」
 </p><p class="q1"><span class="pn">約伯</span>的話說完了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="32">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#31">上一章</a> <h2 class="c">32</h2> <a class="next-chap-link" href="#33">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#31">上一章</a> <span class="c">32</span> <a class="next-chap-link" href="#33">下一章</a> &gt;
+</div>
 
 <h3 class="s">以利戶的話</h3>
-<span class="r">（32‧1－37‧24）</span>
+<span class="r">（<a href="18-JOB.html#32:1">32‧1－37‧24</a>）</span>
 <p class="p">
 <a class="verse" id="32:1"><sup class="v">1&#160;</sup></a>於是這三個人因<span class="pn">約伯</span>看自己為義就停止，不再回答他。
 <a class="verse" id="32:2"><sup class="v">2&#160;</sup></a>那時<span class="pn">布西</span>人，<span class="pn">蘭</span>族<span class="pn">巴拉迦</span>的兒子<span class="pn">以利戶</span>發怒了。他向<span class="pn">約伯</span>發怒，因<span class="pn">約伯</span>自以為義，不以上帝為義。
@@ -2802,11 +2885,13 @@ span.r {
 <a class="verse" id="32:22"><sup class="v">22&#160;</sup></a>我不懂得奉承；
 </p><p class="q1">不然，造我的主必快快除滅我。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="33">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#32">上一章</a> <h2 class="c">33</h2> <a class="next-chap-link" href="#34">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#32">上一章</a> <span class="c">33</span> <a class="next-chap-link" href="#34">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="33:1"><sup class="v">1&#160;</sup></a>「但是，<span class="pn">約伯</span>啊，請聽我的言語，
@@ -2916,11 +3001,13 @@ span.r {
 <a class="verse" id="33:33"><sup class="v">33&#160;</sup></a>若不然，你當聽我；
 </p><p class="q1">不要作聲，我要把智慧教導你。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="34">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#33">上一章</a> <h2 class="c">34</h2> <a class="next-chap-link" href="#35">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#33">上一章</a> <span class="c">34</span> <a class="next-chap-link" href="#35">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="34:1"><sup class="v">1&#160;</sup></a><span class="pn">以利戶</span>繼續說：
@@ -3044,11 +3131,13 @@ span.r {
 </p><p class="q1">在我們中間引起疑惑 <a class="f" id="footnote-86-ref"  href="#footnote-86"  epub:type="noteref" ><sup>[註]</sup></a>，
 </p><p class="q1">用許多言語輕慢上帝。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="35">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#34">上一章</a> <h2 class="c">35</h2> <a class="next-chap-link" href="#36">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#34">上一章</a> <span class="c">35</span> <a class="next-chap-link" href="#36">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="35:1"><sup class="v">1&#160;</sup></a><span class="pn">以利戶</span>繼續說：
@@ -3099,11 +3188,13 @@ span.r {
 <a class="verse" id="35:16"><sup class="v">16&#160;</sup></a>所以<span class="pn">約伯</span>開口說虛妄的話，
 </p><p class="q1">多多發表無知識的言語。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="36">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#35">上一章</a> <h2 class="c">36</h2> <a class="next-chap-link" href="#37">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#35">上一章</a> <span class="c">36</span> <a class="next-chap-link" href="#37">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="36:1"><sup class="v">1&#160;</sup></a><span class="pn">以利戶</span>繼續說：
@@ -3211,11 +3302,13 @@ span.r {
 <a class="verse" id="36:33"><sup class="v">33&#160;</sup></a>所發的雷聲將他顯明，
 </p><p class="q1">牲畜也指明要起暴風<a class="f" id="footnote-91-ref"  href="#footnote-91"  epub:type="noteref" ><sup>[註]</sup></a>。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="37">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#36">上一章</a> <h2 class="c">37</h2> <a class="next-chap-link" href="#38">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#36">上一章</a> <span class="c">37</span> <a class="next-chap-link" href="#38">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="37:1"><sup class="v">1&#160;</sup></a>「因此我心戰兢，
@@ -3295,11 +3388,13 @@ span.r {
 <a class="verse" id="37:24"><sup class="v">24&#160;</sup></a>所以，世人敬畏他；
 </p><p class="q1">凡自以為<a class="f" id="footnote-92-ref"  href="#footnote-92"  epub:type="noteref" ><sup>[註]</sup></a>有智慧的，他都不看顧。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="38">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#37">上一章</a> <h2 class="c">38</h2> <a class="next-chap-link" href="#39">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#37">上一章</a> <span class="c">38</span> <a class="next-chap-link" href="#39">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華回答約伯</h3>
 <p class="p">
@@ -3436,11 +3531,13 @@ span.r {
 </p><p class="q1">那時，烏鴉之雛哀求上帝，
 </p><p class="q1">因無食物飛來飛去。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="39">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#38">上一章</a> <h2 class="c">39</h2> <a class="next-chap-link" href="#40">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#38">上一章</a> <span class="c">39</span> <a class="next-chap-link" href="#40">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="39:1"><sup class="v">1&#160;</sup></a>「你知道巖石間的野山羊幾時生產嗎？
@@ -3539,11 +3636,13 @@ span.r {
 <a class="verse" id="39:30"><sup class="v">30&#160;</sup></a>牠的雛吸血；
 </p><p class="q1">被殺的人在哪裏，牠也在哪裏。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="40">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#39">上一章</a> <h2 class="c">40</h2> <a class="next-chap-link" href="#41">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#39">上一章</a> <span class="c">40</span> <a class="next-chap-link" href="#41">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="40:1"><sup class="v">1&#160;</sup></a>耶和華繼續對<span class="pn">約伯</span>說：
@@ -3621,11 +3720,13 @@ span.r {
 <a class="verse" id="40:24"><sup class="v">24&#160;</sup></a>誰能在牠眼前捉拿牠呢？
 </p><p class="q1">誰能以圈套穿牠鼻子呢？」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="41">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#40">上一章</a> <h2 class="c">41</h2> <a class="next-chap-link" href="#42">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#40">上一章</a> <span class="c">41</span> <a class="next-chap-link" href="#42">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="41:1"><sup class="v">1&#160;</sup></a>「你能用魚鉤釣上<span class="pn">力威亞探</span><a class="f" id="footnote-104-ref"  href="#footnote-104"  epub:type="noteref" ><sup>[註]</sup></a>嗎？
@@ -3731,11 +3832,13 @@ span.r {
 <a class="verse" id="41:34"><sup class="v">34&#160;</sup></a>凡高大的，牠盯著看；
 </p><p class="q1">牠在一切狂傲的野獸中作王。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="42">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#41">上一章</a> <h2 class="c">42</h2> <a class="next-chap-link" href="#43">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約伯記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#41">上一章</a> <span class="c">42</span> <a class="next-chap-link" href="#43">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="42:1"><sup class="v">1&#160;</sup></a><span class="pn">約伯</span>回答耶和華說：
@@ -3772,9 +3875,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="43">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#42">上一章</a> <a class="chapter" id="43">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="19-PSA.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:5</a> 「背棄」：原文是「詛咒」；11節同。</p>
 </aside>

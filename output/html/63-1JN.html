@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>約翰一書</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -154,11 +173,13 @@ span.r {
 <p class="ip">五．愛的責任（4．7－21）</p>
 <p class="ip">六．得勝的信心（5．1－21）</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約翰一書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">生命之道</h3>
 <p class="p">
@@ -177,11 +198,13 @@ span.r {
 <a class="verse" id="1:10"><sup class="v">10&#160;</sup></a>我們若說自己沒有犯過罪，就是把上帝當作說謊的，他的道就不在我們裏面了。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約翰一書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">我們的中保基督</h3>
 <p class="p">
@@ -241,11 +264,13 @@ span.r {
 <a class="verse" id="2:29"><sup class="v">29&#160;</sup></a>你們若知道他是公義的，就知道凡行公義的人都是他所生的。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約翰一書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="3:1"><sup class="v">1&#160;</sup></a>你們看父賜給我們的是何等的慈愛，讓我們得以稱為上帝的兒女；我們也真是他的兒女。世人不認識我們<a class="f" id="footnote-4-ref"  href="#footnote-4"  epub:type="noteref" ><sup>[註]</sup></a>的理由，是因他們未曾認識父。
@@ -282,11 +307,13 @@ span.r {
 <a class="verse" id="3:24"><sup class="v">24&#160;</sup></a>遵守上帝命令的，住在上帝裏面，而上帝也住在他裏面。從這一點，我們知道上帝住在我們裏面，這是由於他所賜給我們的聖靈。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約翰一書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝的靈和敵基督者的靈</h3>
 <p class="p">
@@ -318,11 +345,13 @@ span.r {
 <a class="verse" id="4:21"><sup class="v">21&#160;</sup></a>愛上帝的，也要愛弟兄；這是我們從上帝所受的命令。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">約翰一書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h3 class="s">信心使我們勝過世界</h3>
 <p class="p">
@@ -363,9 +392,13 @@ span.r {
 <p class="restore">02-Aug-2010@11:51, Backup Description=02-Aug-2010@11:26, Loretta -</p>
 <p class="restore">24-Aug-2010@10:54, Backup Description=24-Aug-2010@10:52, janet -</p>
 
-<a class="chapter" id="6">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <a class="chapter" id="6">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="64-2JN.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:4</a> 「我們」：有古卷是「你們」。</p>
 </aside>

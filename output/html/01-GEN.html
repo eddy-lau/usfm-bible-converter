@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>創世記</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -169,11 +188,13 @@ span.r {
 </p><p class="q2">4. <span class="pn">雅各</span>的兒子<span class="pn">約瑟</span>和他的兄弟們（37．1—45．28）
 </p><p class="q2">5. <span class="pn">以色列</span>人寄居<span class="pn">埃及</span>（46．1—50．26）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝的創造</h3>
 <p class="p">
@@ -215,11 +236,13 @@ span.r {
 <a class="verse" id="1:30"><sup class="v">30&#160;</sup></a>至於地上一切的走獸、天空一切的飛鳥，並一切在地上爬行的，有生命的動物，我把綠色植物賜給牠們作食物。」事就這樣成了。
 <a class="verse" id="1:31"><sup class="v">31&#160;</sup></a>上帝看一切所造的，看哪，都非常好。有晚上，有早晨，這是第六日。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="2:1"><sup class="v">1&#160;</sup></a>天和地，以及萬象都完成了。
@@ -258,11 +281,13 @@ span.r {
 <a class="verse" id="2:24"><sup class="v">24&#160;</sup></a>因此，人要離開父母，與妻子結合，二人成為一體。
 <a class="verse" id="2:25"><sup class="v">25&#160;</sup></a>當時夫妻二人赤身露體，並不覺得羞恥。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">人違背命令</h3>
 <p class="p">
@@ -322,11 +347,13 @@ span.r {
 <a class="verse" id="3:23"><sup class="v">23&#160;</sup></a>耶和華上帝就驅逐他出<span class="pn">伊甸園</span>，使他耕種土地，他原是從土地裏被取出來的。
 <a class="verse" id="3:24"><sup class="v">24&#160;</sup></a>耶和華上帝把那人趕出去，就在<span class="pn">伊甸園</span>東邊安設基路伯和發出火焰轉動的劍，把守生命樹的道路。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">該隱和亞伯</h3>
 <p class="p">
@@ -368,14 +395,16 @@ span.r {
 <a class="verse" id="4:25"><sup class="v">25&#160;</sup></a><span class="pn">亞當</span>又與妻子同房，她就生了一個兒子，給他起名叫<span class="pn">塞特</span>，說：「上帝給我立了另一個子嗣代替<span class="pn">亞伯</span>，因為<span class="pn">該隱</span>殺了他。」
 <a class="verse" id="4:26"><sup class="v">26&#160;</sup></a><span class="pn">塞特</span>也生了一個兒子，起名叫<span class="pn">以挪士</span>。那時候，人開始求告耶和華的名。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞當的後代</h3>
-<span class="r">（代上1‧1－4）</span>
+<span class="r">（<a href="13-1CH.html#1:1">代上1‧1－4</a>）</span>
 <p class="p">
 <a class="verse" id="5:1"><sup class="v">1&#160;</sup></a>這是<span class="pn">亞當</span>後代的家譜。當上帝造人的日子，他照著自己的樣式造人。
 <a class="verse" id="5:2"><sup class="v">2&#160;</sup></a>他造男造女。在他們被造的日子，上帝賜福給他們，稱他們為人。
@@ -420,11 +449,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="5:32"><sup class="v">32&#160;</sup></a><span class="pn">挪亞</span>活到五百歲，生了<span class="pn">閃</span>、<span class="pn">含</span>和<span class="pn">雅弗</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h3 class="s">人類的邪惡</h3>
 <p class="p">
@@ -455,11 +486,13 @@ span.r {
 <a class="verse" id="6:21"><sup class="v">21&#160;</sup></a>你要拿各樣可吃的食物，儲存在你那裏，作你和牠們的糧食。」
 <a class="verse" id="6:22"><sup class="v">22&#160;</sup></a><span class="pn">挪亞</span>就去做了；凡上帝吩咐他的，他都照樣去做。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h3 class="s">洪水</h3>
 <p class="p">
@@ -491,11 +524,13 @@ span.r {
 <a class="verse" id="7:23"><sup class="v">23&#160;</sup></a>耶和華除滅了地面上各類的生物，包括人和牲畜、爬行動物，以及天空的飛鳥；他們就都從地上除滅了，只剩下<span class="pn">挪亞</span>和那些與他同在方舟裏的。
 <a class="verse" id="7:24"><sup class="v">24&#160;</sup></a>水勢洶湧，在地上共一百五十天。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h3 class="s">洪水消退</h3>
 <p class="p">
@@ -526,11 +561,13 @@ span.r {
 <a class="verse" id="8:21"><sup class="v">21&#160;</sup></a>耶和華聞了那馨香之氣，耶和華心裏說：「我不再因人的緣故詛咒土地，因為人從幼年就心裏懷著惡念；我也不再照我曾做的毀滅一切生物了。
 <a class="verse" id="8:22"><sup class="v">22&#160;</sup></a>地還存在的時候，撒種、收割、寒暑、冬夏、晝夜都永不止息。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝與挪亞立約</h3>
 <p class="p">
@@ -576,14 +613,16 @@ span.r {
 <a class="verse" id="9:28"><sup class="v">28&#160;</sup></a>洪水以後，<span class="pn">挪亞</span>又活了三百五十年。
 <a class="verse" id="9:29"><sup class="v">29&#160;</sup></a><span class="pn">挪亞</span>共活了九百五十年，就死了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">閃、含、雅弗的後代</h3>
-<span class="r">（代上1‧5－23）</span>
+<span class="r">（<a href="13-1CH.html#1:5">代上1‧5－23</a>）</span>
 <p class="p">
 <a class="verse" id="10:1"><sup class="v">1&#160;</sup></a>這是<span class="pn">挪亞</span>的兒子<span class="pn">閃</span>、<span class="pn">含</span>、<span class="pn">雅弗</span>的後代。洪水以後，他們都生了兒子。
 <a class="verse" id="10:2"><sup class="v">2&#160;</sup></a><span class="pn">雅弗</span>的兒子是<span class="pn">歌篾</span>、<span class="pn">瑪各</span>、<span class="pn">瑪代</span>、<span class="pn">雅完</span>、<span class="pn">土巴</span>、<span class="pn">米設</span>、<span class="pn">提拉</span>。
@@ -621,11 +660,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="10:32"><sup class="v">32&#160;</sup></a>這些是<span class="pn">挪亞</span>兒子的宗族，按著他們的後代立國。洪水以後，邦國就從他們散佈在地上。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">巴別塔</h3>
 <p class="p">
@@ -639,7 +680,7 @@ span.r {
 <a class="verse" id="11:8"><sup class="v">8&#160;</sup></a>於是耶和華使他們從那裏分散在全地面上；他們就停止建造那城了。
 <a class="verse" id="11:9"><sup class="v">9&#160;</sup></a>因為耶和華在那裏變亂了全地的語言，把人從那裏分散在全地面上，所以那城名叫<span class="pn">巴別</span> <a class="f" id="footnote-19-ref"  href="#footnote-19"  epub:type="noteref" ><sup>[註]</sup></a> 。
 </p><h3 class="s">閃的後代</h3>
-<span class="r">（代上1‧24－27）</span>
+<span class="r">（<a href="13-1CH.html#1:24">代上1‧24－27</a>）</span>
 <p class="p">
 <a class="verse" id="11:10"><sup class="v">10&#160;</sup></a>這是<span class="pn">閃</span>的後代。洪水以後二年，<span class="pn">閃</span>一百歲生了<span class="pn">亞法撒</span>。
 <a class="verse" id="11:11"><sup class="v">11&#160;</sup></a><span class="pn">閃</span>生<span class="pn">亞法撒</span>之後又活了五百年，並且生兒育女。
@@ -676,11 +717,13 @@ span.r {
 <a class="verse" id="11:31"><sup class="v">31&#160;</sup></a><span class="pn">他拉</span>帶著他兒子<span class="pn">亞伯蘭</span>和他孫子，<span class="pn">哈蘭</span>的兒子<span class="pn">羅得</span>，以及他的媳婦，<span class="pn">亞伯蘭</span>的妻子<span class="pn">撒萊</span>，一同出了<span class="pn">迦勒底</span>的<span class="pn">吾珥</span>，要往<span class="pn">迦南</span>地去；他們來到<span class="pn">哈蘭</span>，就住在那裏。
 <a class="verse" id="11:32"><sup class="v">32&#160;</sup></a><span class="pn">他拉</span>共活了二百零五年，就死在<span class="pn">哈蘭</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝呼召亞伯蘭</h3>
 <p class="p">
@@ -709,11 +752,13 @@ span.r {
 <a class="verse" id="12:19"><sup class="v">19&#160;</sup></a>為甚麼說『她是我的妹妹』，以致我把她接來要作我的妻子呢？現在 ，看哪，你的妻子在這裏，帶她走吧！」
 <a class="verse" id="12:20"><sup class="v">20&#160;</sup></a>於是法老吩咐人把<span class="pn">亞伯蘭</span>和他妻子，以及他一切所有的都送走了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞伯蘭跟羅得分手</h3>
 <p class="p">
@@ -739,11 +784,13 @@ span.r {
 <a class="verse" id="13:17"><sup class="v">17&#160;</sup></a>你起來，縱橫走遍這地，因為我必把這地賜給你。」
 <a class="verse" id="13:18"><sup class="v">18&#160;</sup></a><span class="pn">亞伯蘭</span>就遷移帳棚，來到<span class="pn">希伯崙</span>，<span class="pn">幔利</span>的橡樹那裏居住，在那裏為耶和華築了一座壇。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞伯蘭搶救羅得</h3>
 <p class="p">
@@ -780,11 +827,13 @@ span.r {
 <a class="verse" id="14:23"><sup class="v">23&#160;</sup></a>凡是你的東西，就是一根線、一條鞋帶，我都不拿，免得你說：『是我使<span class="pn">亞伯蘭</span>富足！』
 <a class="verse" id="14:24"><sup class="v">24&#160;</sup></a>我甚麼都不要，只是僕人所吃的，以及與我同去的<span class="pn">亞乃</span>、<span class="pn">以實各</span>、<span class="pn">幔利</span>所應得的份，讓他們拿去吧！」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="15">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#14">上一章</a> <h2 class="c">15</h2> <a class="next-chap-link" href="#16">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <span class="c">15</span> <a class="next-chap-link" href="#16">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝與亞伯蘭立約</h3>
 <p class="p">
@@ -813,11 +862,13 @@ span.r {
 <a class="verse" id="15:20"><sup class="v">20&#160;</sup></a><span class="pn">赫</span>人、<span class="pn">比利洗</span>人、<span class="pn">利乏音</span>人、
 <a class="verse" id="15:21"><sup class="v">21&#160;</sup></a><span class="pn">亞摩利</span>人、<span class="pn">迦南</span>人、<span class="pn">革迦撒</span>人、<span class="pn">耶布斯</span>人的地。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="16">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#15">上一章</a> <h2 class="c">16</h2> <a class="next-chap-link" href="#17">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#15">上一章</a> <span class="c">16</span> <a class="next-chap-link" href="#17">下一章</a> &gt;
+</div>
 
 <h3 class="s">夏甲與以實瑪利</h3>
 <p class="p">
@@ -852,11 +903,13 @@ span.r {
 <a class="verse" id="16:15"><sup class="v">15&#160;</sup></a>後來<span class="pn">夏甲</span>為<span class="pn">亞伯蘭</span>生了一個兒子；<span class="pn">亞伯蘭</span>給<span class="pn">夏甲</span>生的兒子起名叫<span class="pn">以實瑪利</span>。
 <a class="verse" id="16:16"><sup class="v">16&#160;</sup></a><span class="pn">夏甲</span>為<span class="pn">亞伯蘭</span>生<span class="pn">以實瑪利</span>的時候，<span class="pn">亞伯蘭</span>年八十六歲。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="17">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#16">上一章</a> <h2 class="c">17</h2> <a class="next-chap-link" href="#18">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#16">上一章</a> <span class="c">17</span> <a class="next-chap-link" href="#18">下一章</a> &gt;
+</div>
 
 <h3 class="s">割禮為立約的記號</h3>
 <p class="p">
@@ -891,11 +944,13 @@ span.r {
 <a class="verse" id="17:26"><sup class="v">26&#160;</sup></a>在那一天，<span class="pn">亞伯拉罕</span>和他兒子<span class="pn">以實瑪利</span>一同受了割禮。
 <a class="verse" id="17:27"><sup class="v">27&#160;</sup></a>家裏所有的男人，無論是在家裏生的，或是用銀子從外人買來的，也都一同受了割禮。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="18">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#17">上一章</a> <h2 class="c">18</h2> <a class="next-chap-link" href="#19">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#17">上一章</a> <span class="c">18</span> <a class="next-chap-link" href="#19">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞伯拉罕得兒子的應許</h3>
 <p class="p">
@@ -937,11 +992,13 @@ span.r {
 <a class="verse" id="18:32"><sup class="v">32&#160;</sup></a><span class="pn">亞伯拉罕</span>說：「求主不要生氣，我再說一次，假若在那裏找到十個呢？」他說：「為這十個的緣故，我也不毀滅。」
 <a class="verse" id="18:33"><sup class="v">33&#160;</sup></a>耶和華與<span class="pn">亞伯拉罕</span>說完了話就走了；<span class="pn">亞伯拉罕</span>也回到自己的地方去了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="19">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#18">上一章</a> <h2 class="c">19</h2> <a class="next-chap-link" href="#20">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#18">上一章</a> <span class="c">19</span> <a class="next-chap-link" href="#20">下一章</a> &gt;
+</div>
 
 <h3 class="s">所多瑪的罪惡</h3>
 <p class="p">
@@ -994,11 +1051,13 @@ span.r {
 <a class="verse" id="19:37"><sup class="v">37&#160;</sup></a>大女兒生了兒子，給他起名叫<span class="pn">摩押</span>，就是現今<span class="pn">摩押</span>人的始祖。
 <a class="verse" id="19:38"><sup class="v">38&#160;</sup></a>小女兒也生了兒子，給他起名叫<span class="pn">便‧亞米</span>，就是現今<span class="pn">亞捫</span>人的始祖。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="20">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#19">上一章</a> <h2 class="c">20</h2> <a class="next-chap-link" href="#21">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#19">上一章</a> <span class="c">20</span> <a class="next-chap-link" href="#21">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞伯拉罕和亞比米勒</h3>
 <p class="p">
@@ -1022,11 +1081,13 @@ span.r {
 <a class="verse" id="20:17"><sup class="v">17&#160;</sup></a><span class="pn">亞伯拉罕</span>向上帝禱告，上帝就醫好<span class="pn">亞比米勒</span>和他的妻子，以及他的使女們，他們就能生育。
 <a class="verse" id="20:18"><sup class="v">18&#160;</sup></a>因耶和華為<span class="pn">亞伯拉罕</span>的妻子<span class="pn">撒拉</span>的緣故，已經使<span class="pn">亞比米勒</span>家中的婦人不能懷孕。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="21">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#20">上一章</a> <h2 class="c">21</h2> <a class="next-chap-link" href="#22">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#20">上一章</a> <span class="c">21</span> <a class="next-chap-link" href="#22">下一章</a> &gt;
+</div>
 
 <h3 class="s">以撒出生</h3>
 <p class="p">
@@ -1073,11 +1134,13 @@ span.r {
 <a class="verse" id="21:33"><sup class="v">33&#160;</sup></a><span class="pn">亞伯拉罕</span>就在<span class="pn">別是巴</span>種了一棵柳樹，在那裏求告耶和華—永恆上帝的名。
 <a class="verse" id="21:34"><sup class="v">34&#160;</sup></a><span class="pn">亞伯拉罕</span>在<span class="pn">非利士</span>人的地寄居了許多日子。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="22">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#21">上一章</a> <h2 class="c">22</h2> <a class="next-chap-link" href="#23">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#21">上一章</a> <span class="c">22</span> <a class="next-chap-link" href="#23">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞伯拉罕獻以撒</h3>
 <p class="p">
@@ -1110,11 +1173,13 @@ span.r {
 <a class="verse" id="22:23"><sup class="v">23&#160;</sup></a><span class="pn">彼土利</span>生<span class="pn">利百加</span>。這八個人都是<span class="pn">密迦</span>為<span class="pn">亞伯拉罕</span>的兄弟<span class="pn">拿鶴</span>生的。
 <a class="verse" id="22:24"><sup class="v">24&#160;</sup></a><span class="pn">拿鶴</span>的妾名叫<span class="pn">流瑪</span>，她也生了<span class="pn">提八</span>、<span class="pn">迦含</span>、<span class="pn">他轄</span>和<span class="pn">瑪迦</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="23">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#22">上一章</a> <h2 class="c">23</h2> <a class="next-chap-link" href="#24">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#22">上一章</a> <span class="c">23</span> <a class="next-chap-link" href="#24">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞伯拉罕買墳地葬撒拉</h3>
 <p class="p">
@@ -1140,11 +1205,13 @@ span.r {
 <a class="verse" id="23:19"><sup class="v">19&#160;</sup></a>後來，<span class="pn">亞伯拉罕</span>把他妻子<span class="pn">撒拉</span>安葬在<span class="pn">迦南</span>地<span class="pn">幔利</span>對面的<span class="pn">麥比拉</span>田間的洞裏，<span class="pn">幔利</span>就是<span class="pn">希伯崙</span>。
 <a class="verse" id="23:20"><sup class="v">20&#160;</sup></a>從此，那塊田和田間的洞就從<span class="pn">赫</span>人移交給<span class="pn">亞伯拉罕</span>作墳地的產業。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="24">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#23">上一章</a> <h2 class="c">24</h2> <a class="next-chap-link" href="#25">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#23">上一章</a> <span class="c">24</span> <a class="next-chap-link" href="#25">下一章</a> &gt;
+</div>
 
 <h3 class="s">以撒娶妻</h3>
 <p class="p">
@@ -1230,14 +1297,16 @@ span.r {
 <a class="verse" id="24:66"><sup class="v">66&#160;</sup></a>僕人把他所做的一切事都告訴<span class="pn">以撒</span>。
 <a class="verse" id="24:67"><sup class="v">67&#160;</sup></a><span class="pn">以撒</span>就領<span class="pn">利百加</span>進了母親<span class="pn">撒拉</span>的帳棚，娶了她為妻，並且愛她。<span class="pn">以撒</span>自從母親離世以後，這才得了安慰。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="25">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#24">上一章</a> <h2 class="c">25</h2> <a class="next-chap-link" href="#26">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#24">上一章</a> <span class="c">25</span> <a class="next-chap-link" href="#26">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞伯拉罕的其他後代</h3>
-<span class="r">（代上1‧32－33）</span>
+<span class="r">（<a href="13-1CH.html#1:32">代上1‧32－33</a>）</span>
 <p class="p">
 <a class="verse" id="25:1"><sup class="v">1&#160;</sup></a><span class="pn">亞伯拉罕</span>再娶了一個妻子，名叫<span class="pn">基土拉</span>。
 <a class="verse" id="25:2"><sup class="v">2&#160;</sup></a>她為他生了<span class="pn">心蘭</span>、<span class="pn">約珊</span>、<span class="pn">米但</span>、<span class="pn">米甸</span>、<span class="pn">伊施巴</span>和<span class="pn">書亞</span>。
@@ -1253,7 +1322,7 @@ span.r {
 <a class="verse" id="25:10"><sup class="v">10&#160;</sup></a>就是<span class="pn">亞伯拉罕</span>向<span class="pn">赫</span>人買的那塊田。<span class="pn">亞伯拉罕</span>和他妻子<span class="pn">撒拉</span>都葬在那裏。
 <a class="verse" id="25:11"><sup class="v">11&#160;</sup></a><span class="pn">亞伯拉罕</span>死了以後，上帝賜福給他的兒子<span class="pn">以撒</span>。<span class="pn">以撒</span>住在<span class="pn">庇耳‧拉海‧萊</span>附近。
 </p><h3 class="s">以實瑪利的後代</h3>
-<span class="r">（代上1‧28－31）</span>
+<span class="r">（<a href="13-1CH.html#1:28">代上1‧28－31</a>）</span>
 <p class="p">
 <a class="verse" id="25:12"><sup class="v">12&#160;</sup></a>這是<span class="pn">撒拉</span>的婢女、<span class="pn">埃及</span>人<span class="pn">夏甲</span>為<span class="pn">亞伯拉罕</span>生的兒子<span class="pn">以實瑪利</span>的後代。
 <a class="verse" id="25:13"><sup class="v">13&#160;</sup></a><span class="pn">以實瑪利</span>兒子們的名字，按著他們後代的名字如下：<span class="pn">以實瑪利</span>的長子<span class="pn">尼拜約</span>，又有<span class="pn">基達</span>、<span class="pn">亞德別</span>、<span class="pn">米比衫</span>、
@@ -1289,11 +1358,13 @@ span.r {
 <a class="verse" id="25:33"><sup class="v">33&#160;</sup></a><span class="pn">雅各</span>說：「你今日對我起誓吧。」<span class="pn">以掃</span>就向他起誓，把長子的名分賣給了<span class="pn">雅各</span>。
 <a class="verse" id="25:34"><sup class="v">34&#160;</sup></a>於是<span class="pn">雅各</span>把餅和豆湯給了<span class="pn">以掃</span>，<span class="pn">以掃</span>吃喝以後，起來走了。這樣，<span class="pn">以掃</span>輕看他長子的名分。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="26">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#25">上一章</a> <h2 class="c">26</h2> <a class="next-chap-link" href="#27">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#25">上一章</a> <span class="c">26</span> <a class="next-chap-link" href="#27">下一章</a> &gt;
+</div>
 
 <h3 class="s">以撒住在基拉耳</h3>
 <p class="p">
@@ -1341,11 +1412,13 @@ span.r {
 <a class="verse" id="26:34"><sup class="v">34&#160;</sup></a><span class="pn">以掃</span>四十歲的時候娶了<span class="pn">赫</span>人<span class="pn">比利</span>的女兒<span class="pn">猶滴</span>，和<span class="pn">赫</span>人<span class="pn">以倫</span>的女兒<span class="pn">巴實抹</span>為妻。
 <a class="verse" id="26:35"><sup class="v">35&#160;</sup></a>她們使<span class="pn">以撒</span>和<span class="pn">利百加</span>心裏愁煩。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="27">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#26">上一章</a> <h2 class="c">27</h2> <a class="next-chap-link" href="#28">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#26">上一章</a> <span class="c">27</span> <a class="next-chap-link" href="#28">下一章</a> &gt;
+</div>
 
 <h3 class="s">以撒祝福雅各</h3>
 <p class="p">
@@ -1420,11 +1493,13 @@ span.r {
 <p class="p">
 <a class="verse" id="27:46"><sup class="v">46&#160;</sup></a><span class="pn">利百加</span>對<span class="pn">以撒</span>說：「我因這<span class="pn">赫</span>人的女子活得不耐煩了；倘若<span class="pn">雅各</span>也從本地女子中娶像這樣的<span class="pn">赫</span>人女子為妻，我為甚麼要活著呢？」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="28">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#27">上一章</a> <h2 class="c">28</h2> <a class="next-chap-link" href="#29">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#27">上一章</a> <span class="c">28</span> <a class="next-chap-link" href="#29">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="28:1"><sup class="v">1&#160;</sup></a><span class="pn">以撒</span>叫了<span class="pn">雅各</span>來，為他祝福，並吩咐他說：「你不要娶<span class="pn">迦南</span>的女子為妻。
@@ -1455,11 +1530,13 @@ span.r {
 <a class="verse" id="28:21"><sup class="v">21&#160;</sup></a>使我平平安安回到我父親的家，我就必以耶和華為我的上帝。
 <a class="verse" id="28:22"><sup class="v">22&#160;</sup></a>我所立為柱子的這塊石頭必作上帝的殿；凡你所賜給我的，我必將十分之一獻給你。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="29">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#28">上一章</a> <h2 class="c">29</h2> <a class="next-chap-link" href="#30">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#28">上一章</a> <span class="c">29</span> <a class="next-chap-link" href="#30">下一章</a> &gt;
+</div>
 
 <h3 class="s">雅各到拉班的家</h3>
 <p class="p">
@@ -1507,11 +1584,13 @@ span.r {
 <a class="verse" id="29:34"><sup class="v">34&#160;</sup></a>她又懷孕生子，說：「我給丈夫生了三個兒子，現在，這次他必親近我了。」因此，<span class="pn">雅各</span>給他起名叫<span class="pn">利未</span><a class="f" id="footnote-60-ref"  href="#footnote-60"  epub:type="noteref" ><sup>[註]</sup></a>。
 <a class="verse" id="29:35"><sup class="v">35&#160;</sup></a>她又懷孕生子，說：「這次我要讚美耶和華。」因此給他起名叫<span class="pn">猶大</span><a class="f" id="footnote-61-ref"  href="#footnote-61"  epub:type="noteref" ><sup>[註]</sup></a>。於是她停了生育。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="30">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#29">上一章</a> <h2 class="c">30</h2> <a class="next-chap-link" href="#31">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#29">上一章</a> <span class="c">30</span> <a class="next-chap-link" href="#31">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="30:1"><sup class="v">1&#160;</sup></a><span class="pn">拉結</span>見自己不給<span class="pn">雅各</span>生孩子，就嫉妒她姊姊，對<span class="pn">雅各</span>說：「你給我孩子，不然，讓我死了吧。」
@@ -1564,11 +1643,13 @@ span.r {
 <a class="verse" id="30:42"><sup class="v">42&#160;</sup></a>可是當瘦弱的羊交配的時候，他就不插枝子。這樣，瘦弱的就歸<span class="pn">拉班</span>，肥壯的就歸<span class="pn">雅各</span>。
 <a class="verse" id="30:43"><sup class="v">43&#160;</sup></a>於是這人極其發達，擁有許多的羊群、奴僕、婢女、駱駝和驢。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="31">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#30">上一章</a> <h2 class="c">31</h2> <a class="next-chap-link" href="#32">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#30">上一章</a> <span class="c">31</span> <a class="next-chap-link" href="#32">下一章</a> &gt;
+</div>
 
 <h3 class="s">雅各逃離拉班</h3>
 <p class="p">
@@ -1638,11 +1719,13 @@ span.r {
 <a class="verse" id="31:54"><sup class="v">54&#160;</sup></a>又在山上獻祭，請弟兄們來吃飯。他們吃了飯，就在山上過夜。
 <a class="verse" id="31:55"><sup class="v">55&#160;</sup></a><span class="pn">拉班</span>清早起來，與他外孫和女兒親吻，為他們祝福，就回到自己的地方去了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="32">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#31">上一章</a> <h2 class="c">32</h2> <a class="next-chap-link" href="#33">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#31">上一章</a> <span class="c">32</span> <a class="next-chap-link" href="#33">下一章</a> &gt;
+</div>
 
 <h3 class="s">雅各準備迎見以掃</h3>
 <p class="p">
@@ -1684,11 +1767,13 @@ span.r {
 <a class="verse" id="32:31"><sup class="v">31&#160;</sup></a>太陽剛出來的時候，<span class="pn">雅各</span>經過<span class="pn">毗努伊勒</span>，他的大腿就瘸了。
 <a class="verse" id="32:32"><sup class="v">32&#160;</sup></a>因此，<span class="pn">以色列</span>人不吃大腿窩的筋，直到今日，因為那人摸了<span class="pn">雅各</span>大腿窩的筋。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="33">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#32">上一章</a> <h2 class="c">33</h2> <a class="next-chap-link" href="#34">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#32">上一章</a> <span class="c">33</span> <a class="next-chap-link" href="#34">下一章</a> &gt;
+</div>
 
 <h3 class="s">雅各和以掃相見</h3>
 <p class="p">
@@ -1716,11 +1801,13 @@ span.r {
 <a class="verse" id="33:19"><sup class="v">19&#160;</sup></a>他用一百可錫塔<a class="f" id="footnote-80-ref"  href="#footnote-80"  epub:type="noteref" ><sup>[註]</sup></a>從<span class="pn">示劍</span>的父親<span class="pn">哈抹</span>的眾子手中買了搭帳棚的那塊地。
 <a class="verse" id="33:20"><sup class="v">20&#160;</sup></a><span class="pn">雅各</span>在那裏築了一座壇，起名叫<span class="pn">伊利‧伊羅伊‧以色列</span><a class="f" id="footnote-81-ref"  href="#footnote-81"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="34">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#33">上一章</a> <h2 class="c">34</h2> <a class="next-chap-link" href="#35">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#33">上一章</a> <span class="c">34</span> <a class="next-chap-link" href="#35">下一章</a> &gt;
+</div>
 
 <h3 class="s">底拿受辱</h3>
 <p class="p">
@@ -1761,11 +1848,13 @@ span.r {
 <a class="verse" id="34:30"><sup class="v">30&#160;</sup></a><span class="pn">雅各</span>對<span class="pn">西緬</span>和<span class="pn">利未</span>說：「你們連累了我，使我在這地的居民中，就是在<span class="pn">迦南</span>人和<span class="pn">比利洗</span>人中壞了名聲。我的人丁稀少，他們必聚集來擊殺我，我和全家的人都要被滅絕。」
 <a class="verse" id="34:31"><sup class="v">31&#160;</sup></a>他們卻說：「他豈可待我們的妹妹如同妓女呢？」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="35">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#34">上一章</a> <h2 class="c">35</h2> <a class="next-chap-link" href="#36">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#34">上一章</a> <span class="c">35</span> <a class="next-chap-link" href="#36">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝在伯特利賜福雅各</h3>
 <p class="p">
@@ -1795,7 +1884,7 @@ span.r {
 <a class="verse" id="35:20"><sup class="v">20&#160;</sup></a><span class="pn">雅各</span>在她的墳上立了一塊碑，就是<span class="pn">拉結</span>的墓碑，到今日還在。
 <a class="verse" id="35:21"><sup class="v">21&#160;</sup></a><span class="pn">以色列</span>起行，在<span class="pn">以得臺</span>的那一邊支搭帳棚。
 </p><h3 class="s">雅各的兒子們</h3>
-<span class="r">（代上2‧1－2）</span>
+<span class="r">（<a href="13-1CH.html#2:1">代上2‧1－2</a>）</span>
 <p class="p">
 <a class="verse" id="35:22"><sup class="v">22&#160;</sup></a><span class="pn">以色列</span>住在那地的時候，<span class="pn">呂便</span>去與他父親的妾<span class="pn">辟拉</span>同寢，<span class="pn">以色列</span>也聽見了這件事<a class="f" id="footnote-86-ref"  href="#footnote-86"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p><p class="p"><span class="pn">雅各</span>共有十二個兒子。
@@ -1809,14 +1898,16 @@ span.r {
 <a class="verse" id="35:28"><sup class="v">28&#160;</sup></a><span class="pn">以撒</span>共活了一百八十年。
 <a class="verse" id="35:29"><sup class="v">29&#160;</sup></a><span class="pn">以撒</span>年紀老邁，安享天年，息勞而終，歸到他祖先<a class="f" id="footnote-87-ref"  href="#footnote-87"  epub:type="noteref" ><sup>[註]</sup></a>那裏。他兩個兒子<span class="pn">以掃</span>和<span class="pn">雅各</span>把他安葬了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="36">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#35">上一章</a> <h2 class="c">36</h2> <a class="next-chap-link" href="#37">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#35">上一章</a> <span class="c">36</span> <a class="next-chap-link" href="#37">下一章</a> &gt;
+</div>
 
 <h3 class="s">以掃的後代</h3>
-<span class="r">（代上1‧34－37）</span>
+<span class="r">（<a href="13-1CH.html#1:34">代上1‧34－37</a>）</span>
 <p class="p">
 <a class="verse" id="36:1"><sup class="v">1&#160;</sup></a>這是<span class="pn">以掃</span>的後代，<span class="pn">以掃</span>就是<span class="pn">以東</span>。
 <a class="verse" id="36:2"><sup class="v">2&#160;</sup></a><span class="pn">以掃</span>娶<span class="pn">迦南</span>的女子為妻，就是<span class="pn">赫</span>人<span class="pn">以倫</span>的女兒<span class="pn">亞大</span>和<span class="pn">希未</span>人<span class="pn">祭便</span>的孫女，<span class="pn">亞拿</span>的女兒<span class="pn">阿何利巴瑪</span>，
@@ -1841,7 +1932,7 @@ span.r {
 <a class="verse" id="36:18"><sup class="v">18&#160;</sup></a><span class="pn">以掃</span>的妻子<span class="pn">阿何利巴瑪</span>的子孫中，有<span class="pn">耶烏施</span>族長、<span class="pn">雅蘭</span>族長、<span class="pn">可拉</span>族長。這是從<span class="pn">以掃</span>的妻子，<span class="pn">亞拿</span>的女兒<span class="pn">阿何利巴瑪</span>的子孫中所出的族長。
 <a class="verse" id="36:19"><sup class="v">19&#160;</sup></a>以上的族長都是<span class="pn">以掃</span>的子孫；<span class="pn">以掃</span>就是<span class="pn">以東</span>。
 </p><h3 class="s">西珥的子孫</h3>
-<span class="r">（代上1‧38－42）</span>
+<span class="r">（<a href="13-1CH.html#1:38">代上1‧38－42</a>）</span>
 <p class="p">
 <a class="verse" id="36:20"><sup class="v">20&#160;</sup></a>這是那地原來的居民，<span class="pn">何利</span>人<span class="pn">西珥</span>的子孫：<span class="pn">羅坍</span>、<span class="pn">朔巴</span>、<span class="pn">祭便</span>、<span class="pn">亞拿</span>、
 <a class="verse" id="36:21"><sup class="v">21&#160;</sup></a><span class="pn">底順</span>、<span class="pn">以察</span>、<span class="pn">底珊</span>。這是在<span class="pn">以東</span>地，從<span class="pn">何利</span>人<span class="pn">西珥</span>子孫中所出的族長。
@@ -1855,7 +1946,7 @@ span.r {
 <a class="verse" id="36:29"><sup class="v">29&#160;</sup></a>這是從<span class="pn">何利</span>人所出的族長：<span class="pn">羅坍</span>族長、<span class="pn">朔巴</span>族長、<span class="pn">祭便</span>族長、<span class="pn">亞拿</span>族長、
 <a class="verse" id="36:30"><sup class="v">30&#160;</sup></a><span class="pn">底順</span>族長、<span class="pn">以察</span>族長、<span class="pn">底珊</span>族長。這是從<span class="pn">何利</span>人所出的族長，都在<span class="pn">西珥</span>地，按著族長<a class="f" id="footnote-88-ref"  href="#footnote-88"  epub:type="noteref" ><sup>[註]</sup></a>來分。
 </p><h3 class="s">以東諸王</h3>
-<span class="r">（代上1‧43－54）</span>
+<span class="r">（<a href="13-1CH.html#1:43">代上1‧43－54</a>）</span>
 <p class="p">
 <a class="verse" id="36:31"><sup class="v">31&#160;</sup></a><span class="pn">以色列</span>未有君王治理之前，這些是在<span class="pn">以東</span>地作王的。
 <a class="verse" id="36:32"><sup class="v">32&#160;</sup></a><span class="pn">比珥</span>的兒子<span class="pn">比拉</span>在<span class="pn">以東</span>作王，他的城名叫<span class="pn">亭哈巴</span>。
@@ -1872,11 +1963,13 @@ span.r {
 <a class="verse" id="36:42"><sup class="v">42&#160;</sup></a><span class="pn">基納斯</span>族長、<span class="pn">提幔</span>族長、<span class="pn">米比薩</span>族長、
 <a class="verse" id="36:43"><sup class="v">43&#160;</sup></a><span class="pn">瑪基疊</span>族長、<span class="pn">以蘭</span>族長。這些是<span class="pn">以東</span>人在所得為業的地上，按著他們住處的族長。<span class="pn">以掃</span>是<span class="pn">以東</span>人的始祖。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="37">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#36">上一章</a> <h2 class="c">37</h2> <a class="next-chap-link" href="#38">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#36">上一章</a> <span class="c">37</span> <a class="next-chap-link" href="#38">下一章</a> &gt;
+</div>
 
 <h3 class="s">約瑟和他的兄弟</h3>
 <p class="p">
@@ -1925,11 +2018,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="37:36"><sup class="v">36&#160;</sup></a><span class="pn">米甸</span>人把<span class="pn">約瑟</span>賣到<span class="pn">埃及</span>，給法老的官員，就是護衛長<span class="pn">波提乏</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="38">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#37">上一章</a> <h2 class="c">38</h2> <a class="next-chap-link" href="#39">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#37">上一章</a> <span class="c">38</span> <a class="next-chap-link" href="#39">下一章</a> &gt;
+</div>
 
 <h3 class="s">猶大和她瑪</h3>
 <p class="p">
@@ -1968,11 +2063,13 @@ span.r {
 <a class="verse" id="38:29"><sup class="v">29&#160;</sup></a>這孩子把手收回去，看哪，他哥哥生出來了；接生婆說：「你竟然為自己衝出一個裂縫！」於是，他的名字叫<span class="pn">法勒斯</span><a class="f" id="footnote-92-ref"  href="#footnote-92"  epub:type="noteref" ><sup>[註]</sup></a>。
 <a class="verse" id="38:30"><sup class="v">30&#160;</sup></a>後來，那手上有紅線的兄弟也生出來，他的名字叫<span class="pn">謝拉</span><a class="f" id="footnote-93-ref"  href="#footnote-93"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="39">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#38">上一章</a> <h2 class="c">39</h2> <a class="next-chap-link" href="#40">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#38">上一章</a> <span class="c">39</span> <a class="next-chap-link" href="#40">下一章</a> &gt;
+</div>
 
 <h3 class="s">約瑟和波提乏之妻</h3>
 <p class="p">
@@ -2003,11 +2100,13 @@ span.r {
 <a class="verse" id="39:22"><sup class="v">22&#160;</sup></a>監獄長就把監獄裏所有的囚犯都交在<span class="pn">約瑟</span>手下；在那裏的一切事都由他處理。
 <a class="verse" id="39:23"><sup class="v">23&#160;</sup></a>任何交在<span class="pn">約瑟</span>手中的事，監獄長一概不察，因為耶和華與<span class="pn">約瑟</span>同在，耶和華使他所做的都順利。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="40">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#39">上一章</a> <h2 class="c">40</h2> <a class="next-chap-link" href="#41">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#39">上一章</a> <span class="c">40</span> <a class="next-chap-link" href="#41">下一章</a> &gt;
+</div>
 
 <h3 class="s">約瑟為囚犯解夢</h3>
 <p class="p">
@@ -2038,11 +2137,13 @@ span.r {
 <a class="verse" id="40:22"><sup class="v">22&#160;</sup></a>卻把司膳長掛起來，正如<span class="pn">約瑟</span>向他們所講解的。
 <a class="verse" id="40:23"><sup class="v">23&#160;</sup></a>然而，司酒長不記得<span class="pn">約瑟</span>，竟忘了他。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="41">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#40">上一章</a> <h2 class="c">41</h2> <a class="next-chap-link" href="#42">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#40">上一章</a> <span class="c">41</span> <a class="next-chap-link" href="#42">下一章</a> &gt;
+</div>
 
 <h3 class="s">約瑟為法老解夢</h3>
 <p class="p">
@@ -2112,11 +2213,13 @@ span.r {
 <a class="verse" id="41:56"><sup class="v">56&#160;</sup></a>當時饑荒遍滿了全地，<span class="pn">約瑟</span>就開了各處的糧倉<a class="f" id="footnote-99-ref"  href="#footnote-99"  epub:type="noteref" ><sup>[註]</sup></a>，賣糧食給<span class="pn">埃及</span>人。<span class="pn">埃及</span>地的饑荒非常嚴重。
 <a class="verse" id="41:57"><sup class="v">57&#160;</sup></a>各地的人都去<span class="pn">埃及</span>，到<span class="pn">約瑟</span>那裏買糧食，因為全地的饑荒非常嚴重。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="42">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#41">上一章</a> <h2 class="c">42</h2> <a class="next-chap-link" href="#43">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#41">上一章</a> <span class="c">42</span> <a class="next-chap-link" href="#43">下一章</a> &gt;
+</div>
 
 <h3 class="s">約瑟的哥哥到埃及買糧</h3>
 <p class="p">
@@ -2165,11 +2268,13 @@ span.r {
 <a class="verse" id="42:37"><sup class="v">37&#160;</sup></a><span class="pn">呂便</span>對他父親說：「我若不帶他回來給你，你可以殺我的兩個兒子。只管把他交在我手裏，我必帶他回來給你。」
 <a class="verse" id="42:38"><sup class="v">38&#160;</sup></a><span class="pn">雅各</span>說：「我的兒子不可與你們一同下去。他哥哥死了，只剩下他。他若在你們行走的路上遭難，你們就害我白髮蒼蒼、悲悲慘慘下陰間去了。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="43">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#42">上一章</a> <h2 class="c">43</h2> <a class="next-chap-link" href="#44">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#42">上一章</a> <span class="c">43</span> <a class="next-chap-link" href="#44">下一章</a> &gt;
+</div>
 
 <h3 class="s">約瑟的哥哥帶便雅憫到埃及</h3>
 <p class="p">
@@ -2211,11 +2316,13 @@ span.r {
 <a class="verse" id="43:33"><sup class="v">33&#160;</sup></a>兄弟們被安排在<span class="pn">約瑟</span>面前坐席，都按著長幼的次序，這些人彼此感到詫異。
 <a class="verse" id="43:34"><sup class="v">34&#160;</sup></a><span class="pn">約瑟</span>把他面前的食物分給他們，但<span class="pn">便雅憫</span>所得的比別人多五倍。他們就喝酒，和<span class="pn">約瑟</span>一同暢飲。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="44">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#43">上一章</a> <h2 class="c">44</h2> <a class="next-chap-link" href="#45">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#43">上一章</a> <span class="c">44</span> <a class="next-chap-link" href="#45">下一章</a> &gt;
+</div>
 
 <h3 class="s">約瑟用計留住便雅憫</h3>
 <p class="p">
@@ -2258,11 +2365,13 @@ span.r {
 <a class="verse" id="44:33"><sup class="v">33&#160;</sup></a>現在，求你把僕人留下，代替這年輕人作我主的奴隸，讓這年輕人和他哥哥們一同上去。
 <a class="verse" id="44:34"><sup class="v">34&#160;</sup></a>若這年輕人不和我一起，我怎能上到我父親那裏呢？恐怕我要看到災禍臨到我父親了。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="45">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#44">上一章</a> <h2 class="c">45</h2> <a class="next-chap-link" href="#46">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#44">上一章</a> <span class="c">45</span> <a class="next-chap-link" href="#46">下一章</a> &gt;
+</div>
 
 <h3 class="s">約瑟和兄弟相認</h3>
 <p class="p">
@@ -2299,11 +2408,13 @@ span.r {
 <a class="verse" id="45:27"><sup class="v">27&#160;</sup></a>他們就把<span class="pn">約瑟</span>對他們所說一切的話都告訴了他。他看見<span class="pn">約瑟</span>派來接他的車輛，他們父親<span class="pn">雅各</span>的靈就甦醒了。
 <a class="verse" id="45:28"><sup class="v">28&#160;</sup></a><span class="pn">以色列</span>說：「夠了！我的兒子<span class="pn">約瑟</span>還活著，我要趁我未死之前去見他。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="46">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#45">上一章</a> <h2 class="c">46</h2> <a class="next-chap-link" href="#47">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#45">上一章</a> <span class="c">46</span> <a class="next-chap-link" href="#47">下一章</a> &gt;
+</div>
 
 <h3 class="s">雅各帶家屬到埃及</h3>
 <p class="p">
@@ -2346,11 +2457,13 @@ span.r {
 <a class="verse" id="46:33"><sup class="v">33&#160;</sup></a>等到法老召見你們，說：『你們是做甚麼的？』
 <a class="verse" id="46:34"><sup class="v">34&#160;</sup></a>你們就說：『你的僕人，從幼年直到現在，都是牧放牲畜的人，我們和我們的祖宗都是這樣。』如此，你們就可以住在<span class="pn">歌珊</span>地，因為凡牧羊的都被<span class="pn">埃及</span>人厭惡。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="47">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#46">上一章</a> <h2 class="c">47</h2> <a class="next-chap-link" href="#48">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#46">上一章</a> <span class="c">47</span> <a class="next-chap-link" href="#48">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="47:1"><sup class="v">1&#160;</sup></a><span class="pn">約瑟</span>進去告訴法老說：「我的父親和我的兄弟帶著羊群牛群，以及他們一切所有的，從<span class="pn">迦南</span>地來了。看哪，他們正在<span class="pn">歌珊</span>地。」
@@ -2393,11 +2506,13 @@ span.r {
 <a class="verse" id="47:30"><sup class="v">30&#160;</sup></a>我與我祖先同睡的時候，你要將我帶出<span class="pn">埃及</span>，把我葬在他們所葬的地方。」<span class="pn">約瑟</span>說：「我必遵照你的吩咐去做。」
 <a class="verse" id="47:31"><sup class="v">31&#160;</sup></a><span class="pn">雅各</span>說：「你向我起誓吧！」<span class="pn">約瑟</span>就向他起了誓。於是<span class="pn">以色列</span>在床頭<a class="f" id="footnote-101-ref"  href="#footnote-101"  epub:type="noteref" ><sup>[註]</sup></a>敬拜。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="48">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#47">上一章</a> <h2 class="c">48</h2> <a class="next-chap-link" href="#49">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#47">上一章</a> <span class="c">48</span> <a class="next-chap-link" href="#49">下一章</a> &gt;
+</div>
 
 <h3 class="s">雅各祝福約瑟的兩個兒子</h3>
 <p class="p">
@@ -2431,11 +2546,13 @@ span.r {
 <a class="verse" id="48:21"><sup class="v">21&#160;</sup></a><span class="pn">以色列</span>又對<span class="pn">約瑟</span>說：「看哪，我快要死了，但上帝必與你們同在，領你們回到你們祖先之地。
 <a class="verse" id="48:22"><sup class="v">22&#160;</sup></a>從前我用刀用弓從<span class="pn">亞摩利</span>人手下奪取的那一份，我要把它賜給你，使你比你的兄弟多得一份<a class="f" id="footnote-102-ref"  href="#footnote-102"  epub:type="noteref" ><sup>[註]</sup></a>。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="49">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#48">上一章</a> <h2 class="c">49</h2> <a class="next-chap-link" href="#50">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#48">上一章</a> <span class="c">49</span> <a class="next-chap-link" href="#50">下一章</a> &gt;
+</div>
 
 <h3 class="s">雅各的遺言</h3>
 <p class="p">
@@ -2568,11 +2685,13 @@ span.r {
 <a class="verse" id="49:32"><sup class="v">32&#160;</sup></a>那塊田和田間的洞是向<span class="pn">赫</span>人買的。」
 <a class="verse" id="49:33"><sup class="v">33&#160;</sup></a><span class="pn">雅各</span>囑咐眾子完畢後，就把腳收在床上斷了氣，歸到他祖先<a class="f" id="footnote-113-ref"  href="#footnote-113"  epub:type="noteref" ><sup>[註]</sup></a>那裏去了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="50">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#49">上一章</a> <h2 class="c">50</h2> <a class="next-chap-link" href="#51">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">創世記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#49">上一章</a> <span class="c">50</span> <a class="next-chap-link" href="#51">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="50:1"><sup class="v">1&#160;</sup></a><span class="pn">約瑟</span>伏在他父親的臉上，在他臉上哭，又親他。
@@ -2609,9 +2728,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="51">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#50">上一章</a> <a class="chapter" id="51">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="02-EXO.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:1</a> 本節或譯「起初，上帝創造天地的時候，」</p>
 </aside>

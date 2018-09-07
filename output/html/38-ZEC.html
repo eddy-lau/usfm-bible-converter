@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>撒迦利亞書</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -158,11 +177,13 @@ span.r {
 <p class="q2">1. 審判鄰國及和平之軍凱旋而來（9．1—11．17）
 </p><p class="q2">2. 上帝在<span class="pn">耶路撒冷</span>作王（12．1—14．21）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華呼喚子民歸向他</h3>
 <p class="p">
@@ -193,11 +214,13 @@ span.r {
 <a class="verse" id="1:20"><sup class="v">20&#160;</sup></a>耶和華又把四個匠人指給我看。
 <a class="verse" id="1:21"><sup class="v">21&#160;</sup></a>我問：「這些人來做甚麼呢？」他說：「那是擊散<span class="pn">猶大</span>的角，使人不敢抬頭；但這些匠人前來威嚇列國，打掉列國的角，因為他們舉起角來擊散<span class="pn">猶大</span>地。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">丈量繩的異象</h3>
 <p class="p">
@@ -217,11 +240,13 @@ span.r {
 <a class="verse" id="2:12"><sup class="v">12&#160;</sup></a>耶和華必收回<span class="pn">猶大</span>，作為他聖地的產業，他必再度揀選<span class="pn">耶路撒冷</span>。
 <a class="verse" id="2:13"><sup class="v">13&#160;</sup></a>凡血肉之軀都當在耶和華面前靜默無聲，因為他從他的聖所奮起了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">大祭司的異象</h3>
 <p class="p">
@@ -237,11 +262,13 @@ span.r {
 <a class="verse" id="3:9"><sup class="v">9&#160;</sup></a>看哪，這是我在<span class="pn">約書亞</span>面前所立的石頭，這一塊石頭上有七眼。看哪，我要親自雕刻這石頭，並在一日之間除掉這地的罪孽。這是萬軍之耶和華說的。
 <a class="verse" id="3:10"><sup class="v">10&#160;</sup></a>在那日，你們各人要請鄰舍坐在葡萄樹和無花果樹下。這是萬軍之耶和華說的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">金燈臺的異象</h3>
 <p class="p">
@@ -263,11 +290,13 @@ span.r {
 <a class="verse" id="4:13"><sup class="v">13&#160;</sup></a>他對我說：「你不知道這是甚麼意思嗎？」我說：「主啊，我不知道。」
 <a class="verse" id="4:14"><sup class="v">14&#160;</sup></a>他說：「這是兩位受膏者，侍立在全地之主的旁邊。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h3 class="s">飛卷的異象</h3>
 <p class="p">
@@ -285,11 +314,13 @@ span.r {
 <a class="verse" id="5:10"><sup class="v">10&#160;</sup></a>我問那與我說話的天使：「她們要把量器抬到哪裏去呢？」
 <a class="verse" id="5:11"><sup class="v">11&#160;</sup></a>他對我說：「要抬到<span class="pn">示拿</span>地去，為它建造房屋；等預備妥當，就把它安放在自己的臺座上。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h3 class="s">馬車的異象</h3>
 <p class="p">
@@ -312,11 +343,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="6:15"><sup class="v">15&#160;</sup></a>遠方的人要來建造耶和華的殿，你們因此就知道，萬軍之耶和華差遣我到你們這裏來。你們若留意聽從耶和華－你們上帝的話，這事必然成就。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h3 class="s">譴責不誠懇的禁食</h3>
 <p class="p">
@@ -337,11 +370,13 @@ span.r {
 <a class="verse" id="7:13"><sup class="v">13&#160;</sup></a>萬軍之耶和華說：我曾呼喚他們，他們不聽；將來他們呼求我，我也不聽！
 <a class="verse" id="7:14"><sup class="v">14&#160;</sup></a>我必以旋風將他們吹散到素不認識的萬國中。他們離開以後，地就荒涼，無人來往經過；他們使美好之地荒涼了。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華應許復興耶路撒冷</h3>
 <p class="p">
@@ -373,11 +408,13 @@ span.r {
 <a class="verse" id="8:22"><sup class="v">22&#160;</sup></a>必有許多民族和強盛的國家來到<span class="pn">耶路撒冷</span>尋求萬軍之耶和華，懇求耶和華的恩。
 <a class="verse" id="8:23"><sup class="v">23&#160;</sup></a>萬軍之耶和華如此說：在那些日子，列國中說各種語言的人，必有十個人強拉住一個<span class="pn">猶大</span>人衣服的邊，說：『我們要與你們同去，因為我們聽見上帝與你們同在了。』」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h3 class="s">審判鄰國</h3>
 <p class="p">
@@ -469,11 +506,13 @@ span.r {
 </p><p class="q1">五穀使少男強壯，
 </p><p class="q1">新酒使少女健美。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華應許解救</h3>
 <p class="q1">
@@ -544,11 +583,13 @@ span.r {
 </p><p class="q1">他們必奉他的名而行<a class="f" id="footnote-30-ref"  href="#footnote-30"  epub:type="noteref" ><sup>[註]</sup></a>；
 </p><p class="q1">這是耶和華說的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">暴君的沒落</h3>
 <p class="q1">
@@ -587,11 +628,13 @@ span.r {
 </p><p class="q1">他的膀臂必全然枯乾，
 </p><p class="q1">他的右眼也必昏暗失明。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶路撒冷將蒙拯救</h3>
 <p class="p">
@@ -615,11 +658,13 @@ span.r {
 <a class="verse" id="12:13"><sup class="v">13&#160;</sup></a><span class="pn">利未</span>家的家族聚在一處，他們的婦女聚在一處；<span class="pn">示每</span>家的家族聚在一處，他們的婦女聚在一處。
 <a class="verse" id="12:14"><sup class="v">14&#160;</sup></a>其餘的各家，每一家的家族聚在一處，他們的婦女聚在一處。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="13:1"><sup class="v">1&#160;</sup></a>「在那日，因罪惡與污穢的緣故，必有一泉源為<span class="pn">大衛</span>家和<span class="pn">耶路撒冷</span>的居民而開。」
@@ -650,11 +695,13 @@ span.r {
 </p><p class="q1">我說：「這是我的子民。」
 </p><p class="q1">他們要說：「耶和華是我的上帝。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">撒迦利亞書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶路撒冷和列國</h3>
 <p class="p">
@@ -688,9 +735,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="15">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <a class="chapter" id="15">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="39-MAL.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">2:3</a> 「出去」：七十士譯本是「站著」。</p>
 </aside>

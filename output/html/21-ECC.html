@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>傳道書</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -155,11 +174,13 @@ span.r {
 <p class="ip">三．勸告年輕人：享受人生並在年輕時記念上帝（11．7—12．8）</p>
 <p class="ip">四．結語（12．9—14）</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">人生的虛空</h3>
 <p class="p">
@@ -212,11 +233,13 @@ span.r {
 <a class="verse" id="1:18"><sup class="v">18&#160;</sup></a>因為多有智慧，就多有愁煩；
 </p><p class="q1">增加知識，就增加憂傷。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="2:1"><sup class="v">1&#160;</sup></a>我心裏說：「來吧，讓我用喜樂試試你，使你享福！」看哪，這也是虛空。
@@ -252,11 +275,13 @@ span.r {
 <a class="verse" id="2:25"><sup class="v">25&#160;</sup></a>論到吃用、享福，誰能勝過我呢？
 <a class="verse" id="2:26"><sup class="v">26&#160;</sup></a>上帝喜愛誰，就給誰智慧、知識和喜樂；惟有罪人，上帝使他勞苦，將他所儲藏、所堆積的歸給上帝所喜愛的人。這也是虛空，也是捕風。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">萬事都有定時</h3>
 <p class="q1">
@@ -303,11 +328,13 @@ span.r {
 <a class="verse" id="3:21"><sup class="v">21&#160;</sup></a>誰知道人的氣息是往上升，走獸的氣息是下入地呢？<a class="f" id="footnote-5-ref"  href="#footnote-5"  epub:type="noteref" ><sup>[註]</sup></a>
 <a class="verse" id="3:22"><sup class="v">22&#160;</sup></a>總而言之，人能夠在他經營的事上喜樂，是最好不過了，因為這是他應得的報償。他身後的事誰能領他回來看呢？
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="4:1"><sup class="v">1&#160;</sup></a>我轉而觀看日光之下所發生的一切欺壓之事。看哪，受欺壓的流淚，無人安慰；欺壓他們的有權勢，也無人安慰。
@@ -336,11 +363,13 @@ span.r {
 <a class="verse" id="4:15"><sup class="v">15&#160;</sup></a>我見日光之下所有行走的活人，都跟隨那年輕人，就是接續作王的那位。
 <a class="verse" id="4:16"><sup class="v">16&#160;</sup></a>他的百姓，就是他所治理的眾人，多得無數；但後來的人還是不喜歡他。這也是虛空，也是捕風。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h3 class="s">不可隨便許願</h3>
 <p class="p">
@@ -375,11 +404,13 @@ span.r {
 <a class="verse" id="5:19"><sup class="v">19&#160;</sup></a>而且，一個人蒙上帝賞賜財富與資產，又使他能享用，能獲取自己當有的報償<a class="f" id="footnote-10-ref"  href="#footnote-10"  epub:type="noteref" ><sup>[註]</sup></a>，在他的勞碌中喜樂，這是上帝的賞賜。
 <a class="verse" id="5:20"><sup class="v">20&#160;</sup></a>他不多思念自己一生的日子，因為上帝使他的心充滿喜樂。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="6:1"><sup class="v">1&#160;</sup></a>我見日光之下有一件禍患重壓在人身上，
@@ -397,11 +428,13 @@ span.r {
 <a class="verse" id="6:11"><sup class="v">11&#160;</sup></a>話語多，虛空也增多，這對人有甚麼益處呢？
 <a class="verse" id="6:12"><sup class="v">12&#160;</sup></a>人一生虛度的日子，如影兒經過，誰知道甚麼才是對他有益呢？誰能告訴他身後在日光之下會發生甚麼事呢？
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h3 class="s">智愚之別</h3>
 <p class="q1">
@@ -473,11 +506,13 @@ span.r {
 <a class="verse" id="7:28"><sup class="v">28&#160;</sup></a>我繼續尋找，卻未找到；一千當中，我找到一個男的，但在這一切當中，卻找不到一個女的。
 <a class="verse" id="7:29"><sup class="v">29&#160;</sup></a>你看，我所找到的只有一件，就是上帝造的人是正直的，但他們卻尋出許多詭計。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="8:1"><sup class="v">1&#160;</sup></a>誰如<a class="f" id="footnote-11-ref"  href="#footnote-11"  epub:type="noteref" ><sup>[註]</sup></a>智慧人呢？
@@ -507,11 +542,13 @@ span.r {
 <a class="verse" id="8:16"><sup class="v">16&#160;</sup></a>我專心想要明白智慧，要觀看世上所發生的事。有人晝夜不得闔眼睡覺。
 <a class="verse" id="8:17"><sup class="v">17&#160;</sup></a>我觀看上帝一切的作為，知道人不能探求日光之下所發生的事；任憑他費多少力探索，都找不出來，智慧人雖說他明白，仍不能找出來。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="9:1"><sup class="v">1&#160;</sup></a>我將這一切事放在心上，詳細研究這些，就知道義人和智慧人，並他們的作為都在上帝手中；或是愛，或是恨，都在他們面前，但人不能知道。
@@ -540,11 +577,13 @@ span.r {
 <a class="verse" id="9:17"><sup class="v">17&#160;</sup></a>寧可聽智慧人安靜的話語，不聽掌權者在愚昧人中的喊聲。
 <a class="verse" id="9:18"><sup class="v">18&#160;</sup></a>智慧勝過打仗的兵器；但一個罪人能敗壞許多善事。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="10:1"><sup class="v">1&#160;</sup></a>死蒼蠅使做香的膏油散發臭氣；
@@ -618,11 +657,13 @@ span.r {
 </p><p class="q1">因為空中的飛鳥必傳揚這聲音，
 </p><p class="q1">有翅膀的必述說這事。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">智慧人的作為</h3>
 <p class="q1">
@@ -653,11 +694,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="11:10"><sup class="v">10&#160;</sup></a>所以，當從心中除掉愁煩，從肉體除去痛苦；因為年少和年輕之時，全是虛空。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">傳道書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="12:1"><sup class="v">1&#160;</sup></a>你趁著年輕、衰老的日子尚未來到，就是你所說，我毫無喜悅的那些歲月來臨之前，當記念造你的主。
@@ -681,9 +724,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="13">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <a class="chapter" id="13">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="22-SNG.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">2:10</a> 「報償」或譯「福分」；3．22，5．18，9．9同</p>
 </aside>

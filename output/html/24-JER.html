@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>耶利米書</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -169,11 +188,13 @@ span.r {
 </p><p class="ip">六．上帝對列國的審判（45．1—51．64）</p>
 <p class="ip">七．<span class="pn">耶路撒冷</span>陷落和聖殿被毀（52．1—34）</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="1:1"><sup class="v">1&#160;</sup></a>這些是<span class="pn">便雅憫</span>地<span class="pn">亞拿突城</span>的祭司，<span class="pn">希勒家</span>的兒子<span class="pn">耶利米</span>的話。
@@ -219,11 +240,13 @@ span.r {
 <a class="verse" id="1:18"><sup class="v">18&#160;</sup></a>看哪，我今日使你成為堅城、鐵柱、銅牆，對抗全地和<span class="pn">猶大</span>的君王、官長、祭司，並這地的百姓。
 <a class="verse" id="1:19"><sup class="v">19&#160;</sup></a>他們要攻擊你，卻不能勝過你，因為我與你同在，要拯救你。這是耶和華說的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝眷顧以色列</h3>
 <p class="p">
@@ -406,11 +429,13 @@ span.r {
 </p><p class="q1">因為耶和華已經棄絕你所倚靠的，
 </p><p class="q1">你不能因他們而得順利。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">不忠的以色列</h3>
 <p class="q1">
@@ -504,11 +529,13 @@ span.r {
 <a class="verse" id="3:24"><sup class="v">24&#160;</sup></a>「從我們幼年以來，那可恥之物<a class="f" id="footnote-14-ref"  href="#footnote-14"  epub:type="noteref" ><sup>[註]</sup></a>吞吃了我們祖先勞碌得來的，就是他們的羊群、牛群和他們的兒女。
 <a class="verse" id="3:25"><sup class="v">25&#160;</sup></a>我們在羞恥中躺臥吧！願慚愧將我們遮蓋！因為從我們幼年以來，我們和我們的祖先都得罪了耶和華－我們的上帝，沒有聽從耶和華－我們上帝的話。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">呼召以色列悔改</h3>
 <p class="q1">
@@ -655,11 +682,13 @@ span.r {
 </p><p class="q1">「我有禍了！
 </p><p class="q1">在殺人者跟前，我的心靈發昏。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶路撒冷的罪</h3>
 <p class="q1">
@@ -813,11 +842,13 @@ span.r {
 </p><p class="q1">我的百姓也喜愛這樣，
 </p><p class="q1">到了結局你們要怎麼辦呢？」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶路撒冷遭圍攻</h3>
 <p class="q1">
@@ -970,11 +1001,13 @@ span.r {
 <a class="verse" id="6:30"><sup class="v">30&#160;</sup></a>人必稱他們為被拋棄的銀子，
 </p><p class="q1">因為耶和華已經拋棄了他們。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米在聖殿講道</h3>
 <p class="p">
@@ -1025,11 +1058,13 @@ span.r {
 <a class="verse" id="7:33"><sup class="v">33&#160;</sup></a>並且這百姓的屍首要給空中的飛鳥和地上的走獸作食物，無人嚇走牠們。
 <a class="verse" id="7:34"><sup class="v">34&#160;</sup></a>那時，我必止息<span class="pn">猶大</span>城鎮和<span class="pn">耶路撒冷</span>街上歡喜和快樂的聲音、新郎和新娘的聲音，因為這地必然荒蕪。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="8:1"><sup class="v">1&#160;</sup></a>耶和華說：「那時，人必將<span class="pn">猶大</span>諸王和領袖的骸骨、祭司和先知的骸骨，以及<span class="pn">耶路撒冷</span>居民的骸骨，都從墳墓中取出來，
@@ -1137,11 +1172,13 @@ span.r {
 </p><p class="q1">在那裏豈沒有醫生呢？
 </p><p class="q1">我百姓<a class="f" id="footnote-35-ref"  href="#footnote-35"  epub:type="noteref" ><sup>[註]</sup></a>為何得不著醫治呢？
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="9:1"><sup class="v">1&#160;</sup></a>但願我的頭為水，
@@ -1244,11 +1281,13 @@ span.r {
 <a class="verse" id="9:25"><sup class="v">25&#160;</sup></a>「看哪，日子將到，這是耶和華說的，我要懲罰只在肉身受割禮的人，
 <a class="verse" id="9:26"><sup class="v">26&#160;</sup></a>就是<span class="pn">埃及</span>、<span class="pn">猶大</span>、<span class="pn">以東</span>、<span class="pn">亞捫</span>人、<span class="pn">摩押</span>人，和住曠野所有剃鬢髮的人；因為列國都未受割禮，<span class="pn">以色列</span>全家心中也未受割禮。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">拜偶像和真敬拜</h3>
 <p class="p">
@@ -1370,11 +1409,13 @@ span.r {
 </p><p class="q1">因為他們吞了<span class="pn">雅各</span>，不但吞吃，而且滅絕，
 </p><p class="q1">使他的住處變為荒涼。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米宣告上帝的約</h3>
 <p class="p">
@@ -1418,11 +1459,13 @@ span.r {
 <a class="verse" id="11:22"><sup class="v">22&#160;</sup></a>所以萬軍之耶和華如此說：看哪，我必懲罰他們；他們的壯丁必被刀劍殺死，他們的兒女必因饑荒而死，
 <a class="verse" id="11:23"><sup class="v">23&#160;</sup></a>他們當中必無任何倖存者；因為在他們受罰之年，我必使災禍臨到<span class="pn">亞拿突</span>人。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米詢問耶和華</h3>
 <p class="q1">
@@ -1501,11 +1544,13 @@ span.r {
 <a class="verse" id="12:16"><sup class="v">16&#160;</sup></a>他們若殷勤學習我百姓的道，指著我的名起誓：『我指著永生的耶和華起誓』，正如他們從前教我百姓指著<span class="pn">巴力</span>起誓，他們必在我百姓中得以建立。
 <a class="verse" id="12:17"><sup class="v">17&#160;</sup></a>他們若是不聽，我必拔出那國，不但拔出，還要毀滅。這是耶和華說的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <h3 class="s">腰帶的比喻</h3>
 <p class="p">
@@ -1596,11 +1641,13 @@ span.r {
 </p><p class="q1"><span class="pn">耶路撒冷</span>啊，你有禍了！
 </p><p class="q1">你不肯潔淨<a class="f" id="footnote-55-ref"  href="#footnote-55"  epub:type="noteref" ><sup>[註]</sup></a>還要等到幾時呢？
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <h3 class="s">可怕的旱災</h3>
 <p class="p">
@@ -1691,11 +1738,13 @@ span.r {
 </p><p class="q1">我們要等候你，
 </p><p class="q1">因為這一切都是你所造的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="15">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#14">上一章</a> <h2 class="c">15</h2> <a class="next-chap-link" href="#16">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <span class="c">15</span> <a class="next-chap-link" href="#16">下一章</a> &gt;
+</div>
 
 <h3 class="s">猶大百姓的厄運</h3>
 <p class="p">
@@ -1782,11 +1831,13 @@ span.r {
 <a class="verse" id="15:21"><sup class="v">21&#160;</sup></a>我必搭救你脫離惡人的手，
 </p><p class="q1">救贖你脫離殘暴之人的手。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="16">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#15">上一章</a> <h2 class="c">16</h2> <a class="next-chap-link" href="#17">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#15">上一章</a> <span class="c">16</span> <a class="next-chap-link" href="#17">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華要耶利米獨身</h3>
 <p class="p">
@@ -1831,11 +1882,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="16:21"><sup class="v">21&#160;</sup></a>「所以，看哪，我要使他們知道，就是這一次使他們知道我的手和我的能力。他們就知道我的名是耶和華了。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="17">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#16">上一章</a> <h2 class="c">17</h2> <a class="next-chap-link" href="#18">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#16">上一章</a> <span class="c">17</span> <a class="next-chap-link" href="#18">下一章</a> &gt;
+</div>
 
 <h3 class="s">猶大的罪和懲罰</h3>
 <p class="p">
@@ -1928,11 +1981,13 @@ span.r {
 <a class="verse" id="17:26"><sup class="v">26&#160;</sup></a>也必有人從<span class="pn">猶大</span>城鎮和<span class="pn">耶路撒冷</span>四圍的各處，從<span class="pn">便雅憫</span>地、<span class="pn">謝非拉</span><a class="f" id="footnote-65-ref"  href="#footnote-65"  epub:type="noteref" ><sup>[註]</sup></a>、山區，並<span class="pn">尼革夫</span>而來，都帶燔祭和祭物，素祭和乳香，並感謝祭，到耶和華的殿去。
 <a class="verse" id="17:27"><sup class="v">27&#160;</sup></a>你們若不聽從我，不以安息日為聖日，仍在安息日挑擔子進入<span class="pn">耶路撒冷</span>的各城門，我必在城門中點火；這火必燒燬<span class="pn">耶路撒冷</span>的宮殿，不會熄滅。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="18">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#17">上一章</a> <h2 class="c">18</h2> <a class="next-chap-link" href="#19">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#17">上一章</a> <span class="c">18</span> <a class="next-chap-link" href="#19">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米在陶匠的家</h3>
 <p class="p">
@@ -2004,11 +2059,13 @@ span.r {
 </p><p class="q1">願他們在你面前跌倒，
 </p><p class="q1">願你在發怒的時候對付他們。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="19">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#18">上一章</a> <h2 class="c">19</h2> <a class="next-chap-link" href="#20">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#18">上一章</a> <span class="c">19</span> <a class="next-chap-link" href="#20">下一章</a> &gt;
+</div>
 
 <h3 class="s">破碎的瓶</h3>
 <p class="p">
@@ -2030,11 +2087,13 @@ span.r {
 <a class="verse" id="19:14"><sup class="v">14&#160;</sup></a><span class="pn">耶利米</span>從耶和華差他去說預言的<span class="pn">陀斐特</span>回來，站在耶和華殿的院中對眾百姓說：
 <a class="verse" id="19:15"><sup class="v">15&#160;</sup></a>「萬軍之耶和華－<span class="pn">以色列</span>的上帝如此說：『看哪，我必使我所說的一切災禍臨到這城和屬它的城鎮，因為他們硬著頸項不聽我的話。』」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="20">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#19">上一章</a> <h2 class="c">20</h2> <a class="next-chap-link" href="#21">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#19">上一章</a> <span class="c">20</span> <a class="next-chap-link" href="#21">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米跟巴施戶珥的衝突</h3>
 <p class="p">
@@ -2109,11 +2168,13 @@ span.r {
 <a class="verse" id="20:18"><sup class="v">18&#160;</sup></a>我為何出胎見勞碌愁苦，
 </p><p class="q1">在羞愧中度盡我的年日呢？
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="21">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#20">上一章</a> <h2 class="c">21</h2> <a class="next-chap-link" href="#22">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#20">上一章</a> <span class="c">21</span> <a class="next-chap-link" href="#22">下一章</a> &gt;
+</div>
 
 <h3 class="s">預言耶路撒冷滅亡</h3>
 <p class="p">
@@ -2151,11 +2212,13 @@ span.r {
 </p><p class="q1">將四圍所有的盡行燒滅。
 </p><p class="q1">這是耶和華說的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="22">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#21">上一章</a> <h2 class="c">22</h2> <a class="next-chap-link" href="#23">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#21">上一章</a> <span class="c">22</span> <a class="next-chap-link" href="#23">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米警告猶大王</h3>
 <p class="p">
@@ -2263,11 +2326,13 @@ span.r {
 </p><p class="q1">因為他後裔中再無一人得亨通，
 </p><p class="q1">能坐在<span class="pn">大衛</span>的寶座上治理<span class="pn">猶大</span>。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="23">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#22">上一章</a> <h2 class="c">23</h2> <a class="next-chap-link" href="#24">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#22">上一章</a> <span class="c">23</span> <a class="next-chap-link" href="#24">下一章</a> &gt;
+</div>
 
 <h3 class="s">對將來的希望</h3>
 <p class="p">
@@ -2372,11 +2437,13 @@ span.r {
 <a class="verse" id="23:39"><sup class="v">39&#160;</sup></a>所以，看哪，我必忘記你們<a class="f" id="footnote-81-ref"  href="#footnote-81"  epub:type="noteref" ><sup>[註]</sup></a>，將你們和我所賜給你們並你們祖先的城都撇棄了；
 <a class="verse" id="23:40"><sup class="v">40&#160;</sup></a>又必使永遠的凌辱和長久的羞恥臨到你們，是不能忘記的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="24">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#23">上一章</a> <h2 class="c">24</h2> <a class="next-chap-link" href="#25">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#23">上一章</a> <span class="c">24</span> <a class="next-chap-link" href="#25">下一章</a> &gt;
+</div>
 
 <h3 class="s">兩筐無花果</h3>
 <p class="p">
@@ -2393,11 +2460,13 @@ span.r {
 <a class="verse" id="24:9"><sup class="v">9&#160;</sup></a>我必使他們在地上萬國中成為恐懼，成為災禍，在我趕逐他們到的各處成為凌辱、笑柄、譏笑、詛咒的對象。
 <a class="verse" id="24:10"><sup class="v">10&#160;</sup></a>我必使刀劍、饑荒、瘟疫臨到他們，直到他們從我所賜給他們和他們祖先之地滅絕。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="25">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#24">上一章</a> <h2 class="c">25</h2> <a class="next-chap-link" href="#26">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#24">上一章</a> <span class="c">25</span> <a class="next-chap-link" href="#26">下一章</a> &gt;
+</div>
 
 <h3 class="s">從北方來的敵人</h3>
 <p class="p">
@@ -2477,11 +2546,13 @@ span.r {
 </p><p class="q1">他們的地因兇猛的怒氣<a class="f" id="footnote-86-ref"  href="#footnote-86"  epub:type="noteref" ><sup>[註]</sup></a>
 </p><p class="q1">和他強烈的怒氣，都變為荒涼。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="26">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#25">上一章</a> <h2 class="c">26</h2> <a class="next-chap-link" href="#27">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#25">上一章</a> <span class="c">26</span> <a class="next-chap-link" href="#27">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米受審</h3>
 <p class="p">
@@ -2521,11 +2592,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="26:24"><sup class="v">24&#160;</sup></a>然而，<span class="pn">沙番</span>的兒子<span class="pn">亞希甘</span>保護<span class="pn">耶利米</span>，不將他交在百姓手中，以免他們把他處死。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="27">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#26">上一章</a> <h2 class="c">27</h2> <a class="next-chap-link" href="#28">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#26">上一章</a> <span class="c">27</span> <a class="next-chap-link" href="#28">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米負軛</h3>
 <p class="p">
@@ -2555,11 +2628,13 @@ span.r {
 <a class="verse" id="27:21"><sup class="v">21&#160;</sup></a>論到那在耶和華殿中和<span class="pn">猶大</span>王宮內，並<span class="pn">耶路撒冷</span>剩下的器皿，萬軍之耶和華－<span class="pn">以色列</span>的上帝如此說：
 <a class="verse" id="27:22"><sup class="v">22&#160;</sup></a>它們必被帶到<span class="pn">巴比倫</span>，存放在那裏，直到我眷顧<span class="pn">以色列</span>人，將這些器皿帶回歸還此地的日子。這是耶和華說的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="28">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#27">上一章</a> <h2 class="c">28</h2> <a class="next-chap-link" href="#29">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#27">上一章</a> <span class="c">28</span> <a class="next-chap-link" href="#29">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米和哈拿尼雅</h3>
 <p class="p">
@@ -2585,11 +2660,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="28:17"><sup class="v">17&#160;</sup></a>這樣，<span class="pn">哈拿尼雅</span>先知當年七月間就死了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="29">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#28">上一章</a> <h2 class="c">29</h2> <a class="next-chap-link" href="#30">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#28">上一章</a> <span class="c">29</span> <a class="next-chap-link" href="#30">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米送信給巴比倫的猶大人</h3>
 <p class="p">
@@ -2632,11 +2709,13 @@ span.r {
 <a class="verse" id="29:31"><sup class="v">31&#160;</sup></a>「你當送信給所有被擄的人，說：『耶和華論到<span class="pn">尼希蘭</span>人<span class="pn">示瑪雅</span>說：因為<span class="pn">示瑪雅</span>向你們說預言，使你們倚靠謊言，而我並沒有差遣他，
 <a class="verse" id="29:32"><sup class="v">32&#160;</sup></a>所以耶和華如此說：看哪，我必懲罰<span class="pn">尼希蘭</span>人<span class="pn">示瑪雅</span>和他的後裔，他必無一人存留住在這民中，也看不見我所要賞賜給我百姓的福樂，因為他向耶和華說了叛逆的話。這是耶和華說的。』」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="30">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#29">上一章</a> <h2 class="c">30</h2> <a class="next-chap-link" href="#31">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#29">上一章</a> <span class="c">30</span> <a class="next-chap-link" href="#31">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華給他子民的應許</h3>
 <p class="p">
@@ -2745,11 +2824,13 @@ span.r {
 </p><p class="q1">直到他心中所定的成就了，實現了；
 </p><p class="q1">末後的日子你們就會明白。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="31">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#30">上一章</a> <h2 class="c">31</h2> <a class="next-chap-link" href="#32">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#30">上一章</a> <span class="c">31</span> <a class="next-chap-link" href="#32">下一章</a> &gt;
+</div>
 
 <h3 class="s">以色列人回鄉</h3>
 <p class="p">
@@ -2915,11 +2996,13 @@ span.r {
 <a class="verse" id="31:39"><sup class="v">39&#160;</sup></a>丈量的繩子要往外拉出，直到<span class="pn">迦立山</span>，又轉到<span class="pn">歌亞</span>；
 <a class="verse" id="31:40"><sup class="v">40&#160;</sup></a>拋屍的全谷和倒灰之處，並一切田地，直到<span class="pn">汲淪溪</span>，又到東邊<span class="pn">馬門</span>的角落，都要歸耶和華為聖；不再拔出，不再傾覆，直到永遠。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="32">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#31">上一章</a> <h2 class="c">32</h2> <a class="next-chap-link" href="#33">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#31">上一章</a> <span class="c">32</span> <a class="next-chap-link" href="#33">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米購置田地</h3>
 <p class="p">
@@ -2978,11 +3061,13 @@ span.r {
 <a class="verse" id="32:43"><sup class="v">43&#160;</sup></a>你們所說荒涼、無人、無牲畜，已交給<span class="pn">迦勒底</span>人手的這地，必有人購置田地。
 <a class="verse" id="32:44"><sup class="v">44&#160;</sup></a>在<span class="pn">便雅憫</span>地、<span class="pn">耶路撒冷</span>四圍的各處、<span class="pn">猶大</span>的城鎮、山區的城鎮、<span class="pn">謝非拉</span>的城鎮，並<span class="pn">尼革夫</span>的城鎮，人必用銀子買田地，在契上簽字，將契封緘，找人作證，因為我必使被擄的人歸回。這是耶和華說的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="33">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#32">上一章</a> <h2 class="c">33</h2> <a class="next-chap-link" href="#34">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#32">上一章</a> <span class="c">33</span> <a class="next-chap-link" href="#34">下一章</a> &gt;
+</div>
 
 <h3 class="s">重申復國的應許</h3>
 <p class="p">
@@ -3023,11 +3108,13 @@ span.r {
 <a class="verse" id="33:25"><sup class="v">25&#160;</sup></a>耶和華如此說：除非我沒有立白日黑夜之約，也未曾安排天和地的定例，
 <a class="verse" id="33:26"><sup class="v">26&#160;</sup></a>否則我不會棄絕<span class="pn">雅各</span>的後裔和我僕人<span class="pn">大衛</span>的後裔，使<span class="pn">大衛</span>的後裔不再治理<span class="pn">亞伯拉罕</span>、<span class="pn">以撒</span>、<span class="pn">雅各</span>的後裔。我必使他們被擄的人歸回，也必憐憫他們。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="34">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#33">上一章</a> <h2 class="c">34</h2> <a class="next-chap-link" href="#35">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#33">上一章</a> <span class="c">34</span> <a class="next-chap-link" href="#35">下一章</a> &gt;
+</div>
 
 <h3 class="s">給西底家的信息</h3>
 <p class="p">
@@ -3057,11 +3144,13 @@ span.r {
 <a class="verse" id="34:21"><sup class="v">21&#160;</sup></a>我必將<span class="pn">猶大</span>王<span class="pn">西底家</span>和他的眾領袖交在仇敵和尋索其命的人手中，與那暫時離你們而去的<span class="pn">巴比倫</span>王軍隊的手中。
 <a class="verse" id="34:22"><sup class="v">22&#160;</sup></a>看哪，我要吩咐他們回到這城，攻打這城，將城攻取，用火焚燒；我也要使<span class="pn">猶大</span>的城鎮變為廢墟，無人居住。這是耶和華說的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="35">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#34">上一章</a> <h2 class="c">35</h2> <a class="next-chap-link" href="#36">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#34">上一章</a> <span class="c">35</span> <a class="next-chap-link" href="#36">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米和利甲族</h3>
 <p class="p">
@@ -3087,11 +3176,13 @@ span.r {
 <a class="verse" id="35:18"><sup class="v">18&#160;</sup></a><span class="pn">耶利米</span>對<span class="pn">利甲</span>族的人說：「萬軍之耶和華－<span class="pn">以色列</span>的上帝如此說：因你們聽從你們祖先<span class="pn">約拿達</span>的吩咐，謹守他的一切命令，照他所吩咐的去做，
 <a class="verse" id="35:19"><sup class="v">19&#160;</sup></a>所以萬軍之耶和華－<span class="pn">以色列</span>的上帝如此說：<span class="pn">利甲</span>的兒子<span class="pn">約拿達</span>必永遠不斷有人侍立在我面前。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="36">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#35">上一章</a> <h2 class="c">36</h2> <a class="next-chap-link" href="#37">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#35">上一章</a> <span class="c">36</span> <a class="next-chap-link" href="#37">下一章</a> &gt;
+</div>
 
 <h3 class="s">巴錄在聖殿裏宣讀書卷</h3>
 <p class="p">
@@ -3140,11 +3231,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="36:32"><sup class="v">32&#160;</sup></a>於是，<span class="pn">耶利米</span>又取一書卷交給<span class="pn">尼利亞</span>的兒子<span class="pn">巴錄</span>文士，他就從<span class="pn">耶利米</span>的口中寫了<span class="pn">猶大</span>王<span class="pn">約雅敬</span>在火中所燒書卷上的一切話，另外又添了許多相仿的話。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="37">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#36">上一章</a> <h2 class="c">37</h2> <a class="next-chap-link" href="#38">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#36">上一章</a> <span class="c">37</span> <a class="next-chap-link" href="#38">下一章</a> &gt;
+</div>
 
 <h3 class="s">西底家求耶利米代禱</h3>
 <p class="p">
@@ -3177,11 +3270,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="37:21"><sup class="v">21&#160;</sup></a>於是<span class="pn">西底家</span>王下令，他們就把<span class="pn">耶利米</span>交在護衛兵的院中，每天從餅店街取一個餅給他，直到城中所有的餅都用盡了。這樣，<span class="pn">耶利米</span>仍拘留在護衛兵的院中。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="38">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#37">上一章</a> <h2 class="c">38</h2> <a class="next-chap-link" href="#39">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#37">上一章</a> <span class="c">38</span> <a class="next-chap-link" href="#39">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米在井裏</h3>
 <p class="p">
@@ -3225,11 +3320,13 @@ span.r {
 <a class="verse" id="38:27"><sup class="v">27&#160;</sup></a>隨後官長們到<span class="pn">耶利米</span>那裏，問他，他就照王所吩咐的一切話回答他們。他們就不再問他，因為事情沒有洩漏。
 <a class="verse" id="38:28"><sup class="v">28&#160;</sup></a>於是<span class="pn">耶利米</span>仍在護衛兵的院中，直到<span class="pn">耶路撒冷</span>被攻下的日子。當<span class="pn">耶路撒冷</span>被攻下時，他仍在那裏。 <a class="f" id="footnote-103-ref"  href="#footnote-103"  epub:type="noteref" ><sup>[註]</sup></a>
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="39">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#38">上一章</a> <h2 class="c">39</h2> <a class="next-chap-link" href="#40">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#38">上一章</a> <span class="c">39</span> <a class="next-chap-link" href="#40">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶路撒冷陷落</h3>
 <p class="p">
@@ -3258,11 +3355,13 @@ span.r {
 <a class="verse" id="39:17"><sup class="v">17&#160;</sup></a>到那日我必拯救你，你必不致交在你所怕的人手中。這是耶和華說的。
 <a class="verse" id="39:18"><sup class="v">18&#160;</sup></a>我定要搭救你，你必不致倒在刀下，卻要保全自己的性命，因你倚靠我。這是耶和華說的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="40">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#39">上一章</a> <h2 class="c">40</h2> <a class="next-chap-link" href="#41">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#39">上一章</a> <span class="c">40</span> <a class="next-chap-link" href="#41">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米跟基大利同住</h3>
 <p class="p">
@@ -3289,11 +3388,13 @@ span.r {
 <a class="verse" id="40:15"><sup class="v">15&#160;</sup></a><span class="pn">加利亞</span>的兒子<span class="pn">約哈難</span>在<span class="pn">米斯巴</span>私下對<span class="pn">基大利</span>說：「求你容我去殺<span class="pn">尼探雅</span>的兒子<span class="pn">以實瑪利</span>，必無人知道。何必讓他害你的命，使聚集到你這裏來的<span class="pn">猶大</span>人都分散，以致<span class="pn">猶大</span>剩餘的人都滅亡呢？」
 <a class="verse" id="40:16"><sup class="v">16&#160;</sup></a><span class="pn">亞希甘</span>的兒子<span class="pn">基大利</span>對<span class="pn">加利亞</span>的兒子<span class="pn">約哈難</span>說：「你不可做這事，你所論<span class="pn">以實瑪利</span>的話是假的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="41">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#40">上一章</a> <h2 class="c">41</h2> <a class="next-chap-link" href="#42">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#40">上一章</a> <span class="c">41</span> <a class="next-chap-link" href="#42">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="41:1"><sup class="v">1&#160;</sup></a>七月中，王的大臣，就是王室後裔<span class="pn">以利沙瑪</span>的孫子、<span class="pn">尼探雅</span>的兒子<span class="pn">以實瑪利</span>帶著十個人，來到<span class="pn">米斯巴</span>，<span class="pn">亞希甘</span>的兒子<span class="pn">基大利</span>那裏；他們在<span class="pn">米斯巴</span>一同吃飯。
@@ -3318,11 +3419,13 @@ span.r {
 <a class="verse" id="41:17"><sup class="v">17&#160;</sup></a>帶到靠近<span class="pn">伯利恆</span>的<span class="pn">基羅特金罕</span><a class="f" id="footnote-112-ref"  href="#footnote-112"  epub:type="noteref" ><sup>[註]</sup></a>住下，要到<span class="pn">埃及</span>去，
 <a class="verse" id="41:18"><sup class="v">18&#160;</sup></a>躲避<span class="pn">迦勒底</span>人。他們懼怕<span class="pn">迦勒底</span>人，因為<span class="pn">尼探雅</span>的兒子<span class="pn">以實瑪利</span>殺了<span class="pn">巴比倫</span>王所立管理那地的<span class="pn">亞希甘</span>的兒子<span class="pn">基大利</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="42">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#41">上一章</a> <h2 class="c">42</h2> <a class="next-chap-link" href="#43">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#41">上一章</a> <span class="c">42</span> <a class="next-chap-link" href="#43">下一章</a> &gt;
+</div>
 
 <h3 class="s">百姓求耶利米代禱</h3>
 <p class="p">
@@ -3353,11 +3456,13 @@ span.r {
 <a class="verse" id="42:21"><sup class="v">21&#160;</sup></a>我今日把這話告訴你們，你們卻不聽耶和華－你們上帝為這一切事差我到你們那裏所說的話。
 <a class="verse" id="42:22"><sup class="v">22&#160;</sup></a>現在你們要確實知道，你們在所要去的寄居之地必遭刀劍、饑荒、瘟疫而死。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="43">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#42">上一章</a> <h2 class="c">43</h2> <a class="next-chap-link" href="#44">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#42">上一章</a> <span class="c">43</span> <a class="next-chap-link" href="#44">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶利米被帶到埃及</h3>
 <p class="p">
@@ -3379,11 +3484,13 @@ span.r {
 <a class="verse" id="43:12"><sup class="v">12&#160;</sup></a>我要用火點燃<span class="pn">埃及</span>眾神明的廟宇，<span class="pn">巴比倫</span>王要焚燒廟宇，擄去神像；他要圍住<span class="pn">埃及</span>地，好像牧人披上外衣，從那裏安然而去。
 <a class="verse" id="43:13"><sup class="v">13&#160;</sup></a>他必打碎<span class="pn">埃及</span>地<span class="pn">伯‧示麥</span>的柱像，用火焚燒<span class="pn">埃及</span>眾神明的廟宇。』」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="44">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#43">上一章</a> <h2 class="c">44</h2> <a class="next-chap-link" href="#45">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#43">上一章</a> <span class="c">44</span> <a class="next-chap-link" href="#45">下一章</a> &gt;
+</div>
 
 <h3 class="s">給流亡埃及以色列人的信息</h3>
 <p class="p">
@@ -3422,11 +3529,13 @@ span.r {
 <a class="verse" id="44:29"><sup class="v">29&#160;</sup></a>我在這地方懲罰你們，必有預兆，使你們知道我降禍給你們的話必站得住。這是耶和華說的。
 <a class="verse" id="44:30"><sup class="v">30&#160;</sup></a>耶和華如此說：看哪，我必將<span class="pn">埃及</span>王<span class="pn">合弗拉</span>法老交在他仇敵和尋索其命的人手中，像我將<span class="pn">猶大</span>王<span class="pn">西底家</span>交在他仇敵和尋索其命的<span class="pn">巴比倫</span>王<span class="pn">尼布甲尼撒</span>手中一樣。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="45">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#44">上一章</a> <h2 class="c">45</h2> <a class="next-chap-link" href="#46">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#44">上一章</a> <span class="c">45</span> <a class="next-chap-link" href="#46">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華給巴錄的許諾</h3>
 <p class="p">
@@ -3436,11 +3545,13 @@ span.r {
 <a class="verse" id="45:4"><sup class="v">4&#160;</sup></a>你要這樣告訴他，耶和華如此說：看哪，我所建立的，我必拆毀；我所栽植的，我必拔出；在全地我都如此行。
 <a class="verse" id="45:5"><sup class="v">5&#160;</sup></a>你為自己圖謀大事嗎？不要圖謀！看哪，我必使災禍臨到凡有血肉之軀的。但你無論往哪裏去，我要保全你的性命。這是耶和華說的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="46">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#45">上一章</a> <h2 class="c">46</h2> <a class="next-chap-link" href="#47">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#45">上一章</a> <span class="c">46</span> <a class="next-chap-link" href="#47">下一章</a> &gt;
+</div>
 
 <h3 class="s">埃及在迦基米施受挫</h3>
 <p class="p">
@@ -3576,11 +3687,13 @@ span.r {
 </p><p class="q1">但絕不能不罰你。
 </p><p class="q1">這是耶和華說的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="47">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#46">上一章</a> <h2 class="c">47</h2> <a class="next-chap-link" href="#48">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#46">上一章</a> <span class="c">47</span> <a class="next-chap-link" href="#48">下一章</a> &gt;
+</div>
 
 <h3 class="s">有關非利士的話</h3>
 <p class="p">
@@ -3615,11 +3728,13 @@ span.r {
 <a class="verse" id="47:7"><sup class="v">7&#160;</sup></a>耶和華吩咐它攻擊<span class="pn">亞實基倫</span>和海邊之地，
 </p><p class="q1">既已派定它，你<a class="f" id="footnote-127-ref"  href="#footnote-127"  epub:type="noteref" ><sup>[註]</sup></a>怎能靜止不動呢？
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="48">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#47">上一章</a> <h2 class="c">48</h2> <a class="next-chap-link" href="#49">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#47">上一章</a> <span class="c">48</span> <a class="next-chap-link" href="#49">下一章</a> &gt;
+</div>
 
 <h3 class="s">有關摩押的話</h3>
 <p class="p">
@@ -3793,11 +3908,13 @@ span.r {
 </p><p class="q1"><span class="pn">摩押</span>受審判的話到此為止。
 </p><p class="q1">這是耶和華說的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="49">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#48">上一章</a> <h2 class="c">49</h2> <a class="next-chap-link" href="#50">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#48">上一章</a> <span class="c">49</span> <a class="next-chap-link" href="#50">下一章</a> &gt;
+</div>
 
 <h3 class="s">有關亞捫的話</h3>
 <p class="p">
@@ -3959,11 +4076,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="49:39"><sup class="v">39&#160;</sup></a>「到末後，我卻要使被擄的<span class="pn">以攔</span>人歸回。這是耶和華說的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="50">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#49">上一章</a> <h2 class="c">50</h2> <a class="next-chap-link" href="#51">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#49">上一章</a> <span class="c">50</span> <a class="next-chap-link" href="#51">下一章</a> &gt;
+</div>
 
 <h3 class="s">巴比倫被佔領</h3>
 <p class="p">
@@ -4128,11 +4247,13 @@ span.r {
 <a class="verse" id="50:45"><sup class="v">45&#160;</sup></a>你們要聽耶和華攻擊<span class="pn">巴比倫</span>所定的計劃和他攻擊<span class="pn">迦勒底</span>人之地所定的旨意。他們羊群當中微弱的定要被拖走，他們的草場定要變為荒涼。
 <a class="verse" id="50:46"><sup class="v">46&#160;</sup></a>因<span class="pn">巴比倫</span>被攻下的聲音，地就震動，人在列國都聽見呼喊的聲音。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="51">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#50">上一章</a> <h2 class="c">51</h2> <a class="next-chap-link" href="#52">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#50">上一章</a> <span class="c">51</span> <a class="next-chap-link" href="#52">下一章</a> &gt;
+</div>
 
 <h3 class="s">再審判巴比倫</h3>
 <p class="p">
@@ -4436,14 +4557,16 @@ span.r {
 <a class="verse" id="51:64"><sup class="v">64&#160;</sup></a>說：『<span class="pn">巴比倫</span>因耶和華所要降與它的災禍，必如此沉下去，不再浮起來，百姓也必困乏。』」
 </p><p class="q1"><span class="pn">耶利米</span>的話到此為止。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="52">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#51">上一章</a> <h2 class="c">52</h2> <a class="next-chap-link" href="#53">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">耶利米書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#51">上一章</a> <span class="c">52</span> <a class="next-chap-link" href="#53">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶路撒冷的陷落</h3>
-<span class="r">（王下24‧18－25‧7）</span>
+<span class="r">（<a href="12-2KI.html#24:18">王下24‧18－25‧7</a>）</span>
 <p class="p">
 <a class="verse" id="52:1"><sup class="v">1&#160;</sup></a><span class="pn">西底家</span>登基的時候年二十一歲，在<span class="pn">耶路撒冷</span>作王十一年。他母親名叫<span class="pn">哈慕她</span>，是<span class="pn">立拿</span>人<span class="pn">耶利米</span>的女兒。
 <a class="verse" id="52:2"><sup class="v">2&#160;</sup></a><span class="pn">西底家</span>行耶和華眼中看為惡的事，像<span class="pn">約雅敬</span>所做的一切。
@@ -4459,7 +4582,7 @@ span.r {
 <a class="verse" id="52:11"><sup class="v">11&#160;</sup></a>並且挖了<span class="pn">西底家</span>的眼睛，用銅鏈鎖著他，帶到<span class="pn">巴比倫</span>去，將他囚在監裏，直到他死的日子。
 </p><p class="b">
 </p><h3 class="s">聖殿毀滅</h3>
-<span class="r">（王下25‧8－17）</span>
+<span class="r">（<a href="12-2KI.html#25:8">王下25‧8－17</a>）</span>
 <p class="p">
 <a class="verse" id="52:12"><sup class="v">12&#160;</sup></a><span class="pn">巴比倫</span>王<span class="pn">尼布甲尼撒</span>十九年五月初十，在<span class="pn">巴比倫</span>王面前侍立的<span class="pn">尼布撒拉旦</span>護衛長進入<span class="pn">耶路撒冷</span>，
 <a class="verse" id="52:13"><sup class="v">13&#160;</sup></a>他焚燒了耶和華的殿、王宮和<span class="pn">耶路撒冷</span>的房屋；用火焚燒所有大戶人家的房屋。
@@ -4476,7 +4599,7 @@ span.r {
 <a class="verse" id="52:23"><sup class="v">23&#160;</sup></a>柱子四面有九十六個石榴，在網子周圍，總共有一百個石榴。
 </p><p class="b">
 </p><h3 class="s">猶大人被擄到巴比倫</h3>
-<span class="r">（王下25‧18－21）</span>
+<span class="r">（<a href="12-2KI.html#25:18">王下25‧18－21</a>）</span>
 <p class="p">
 <a class="verse" id="52:24"><sup class="v">24&#160;</sup></a>護衛長拿住<span class="pn">西萊雅</span>大祭司、<span class="pn">西番亞</span>副祭司和門口的三個守衛，
 <a class="verse" id="52:25"><sup class="v">25&#160;</sup></a>又從城中拿住一個管理士兵的官<a class="f" id="footnote-161-ref"  href="#footnote-161"  epub:type="noteref" ><sup>[註]</sup></a>，並在城裏找到王面前的七個親信，和召募當地百姓之將軍的書記官，以及在城中找到的六十個當地百姓。
@@ -4488,7 +4611,7 @@ span.r {
 <a class="verse" id="52:30"><sup class="v">30&#160;</sup></a><span class="pn">尼布甲尼撒</span>二十三年，<span class="pn">尼布撒拉旦</span>護衛長擄去<span class="pn">猶大</span>人七百四十五人；共有四千六百人。
 </p><p class="b">
 </p><h3 class="s">約雅斤被釋放</h3>
-<span class="r">（王下25‧27－30）</span>
+<span class="r">（<a href="12-2KI.html#25:27">王下25‧27－30</a>）</span>
 <p class="p">
 <a class="verse" id="52:31"><sup class="v">31&#160;</sup></a><span class="pn">巴比倫</span>王<span class="pn">以未‧米羅達</span>作王的元年，就是<span class="pn">猶大</span>王<span class="pn">約雅斤</span>被擄後三十七年十二月二十五日，他使<span class="pn">猶大</span>王<span class="pn">約雅斤</span>抬起頭來，提他出監，
 <a class="verse" id="52:32"><sup class="v">32&#160;</sup></a>對他說好話，使他的位高過與他一同被擄、在<span class="pn">巴比倫</span>眾王的位；
@@ -4497,9 +4620,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="53">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#52">上一章</a> <a class="chapter" id="53">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="25-LAM.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:12</a> 「看守」與「杏樹枝」的希伯來話發音相近。</p>
 </aside>

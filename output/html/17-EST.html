@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>以斯帖記</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -153,11 +172,13 @@ span.r {
 <p class="ip">5. <span class="pn">猶太</span>人除滅仇敵（8．1—9．17）</p>
 <p class="ip">6. 設立普珥日（9．18—10．3）</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">以斯帖記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞哈隨魯王廢瓦實提王后</h3>
 <p class="p">
@@ -186,11 +207,13 @@ span.r {
 <a class="verse" id="1:21"><sup class="v">21&#160;</sup></a>王和眾官長都以這話為美，王就照<span class="pn">米慕干</span>的建議去做。
 <a class="verse" id="1:22"><sup class="v">22&#160;</sup></a>王下詔書，用各省的文字、各族的語言通知各省，使凡作丈夫的在家中作主，各說本地的語言<a class="f" id="footnote-2-ref"  href="#footnote-2"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">以斯帖記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">以斯帖被立為王后</h3>
 <p class="p">
@@ -223,11 +246,13 @@ span.r {
 <a class="verse" id="2:22"><sup class="v">22&#160;</sup></a><span class="pn">末底改</span>知道了這件事，就告訴<span class="pn">以斯帖</span>王后。<span class="pn">以斯帖</span>以<span class="pn">末底改</span>的名向王報告。
 <a class="verse" id="2:23"><sup class="v">23&#160;</sup></a>這事經過查究後發現是真的，二人就被掛在木頭上。這事在王面前記錄在史籍上。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">以斯帖記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">哈曼陰謀除滅猶大人</h3>
 <p class="p">
@@ -249,11 +274,13 @@ span.r {
 <a class="verse" id="3:14"><sup class="v">14&#160;</sup></a>這諭旨的抄本以敕令的方式在各省頒佈，通知各族，預備等候那日。
 <a class="verse" id="3:15"><sup class="v">15&#160;</sup></a>信差奉王的命令急忙起行，敕令傳遍了<span class="pn">書珊</span>城堡。王同<span class="pn">哈曼</span>坐下飲酒，<span class="pn">書珊</span>城堡卻陷入慌亂中。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">以斯帖記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">末底改求以斯帖幫忙</h3>
 <p class="p">
@@ -276,11 +303,13 @@ span.r {
 <a class="verse" id="4:16"><sup class="v">16&#160;</sup></a>「你當去召集<span class="pn">書珊</span>所有的<span class="pn">猶太</span>人，為我禁食三晝三夜，不吃不喝；我和我的宮女也要這樣禁食。然後我違例去晉見王，我若死就死吧！」
 <a class="verse" id="4:17"><sup class="v">17&#160;</sup></a>於是<span class="pn">末底改</span>照<span class="pn">以斯帖</span>一切所吩咐的去做。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">以斯帖記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h3 class="s">以斯帖為王和哈曼設宴</h3>
 <p class="p">
@@ -301,11 +330,13 @@ span.r {
 <a class="verse" id="5:13"><sup class="v">13&#160;</sup></a>只是每當我看見<span class="pn">猶太</span>人<span class="pn">末底改</span>坐在朝門，這一切對我就都毫無意義了。」
 <a class="verse" id="5:14"><sup class="v">14&#160;</sup></a>他的妻子<span class="pn">細利斯</span>和他所有的朋友對他說：「叫人做一個五十肘高的木架，早晨求王把<span class="pn">末底改</span>掛在其上，然後你可以歡歡喜喜隨王赴席。」<span class="pn">哈曼</span>認為這話很好，就叫人做了木架。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">以斯帖記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h3 class="s">王賜末底改榮譽</h3>
 <p class="p">
@@ -326,11 +357,13 @@ span.r {
 </p><p class="p">
 <a class="verse" id="6:14"><sup class="v">14&#160;</sup></a>他們正跟<span class="pn">哈曼</span>說話的時候，王的幾位太監來了，催<span class="pn">哈曼</span>快去赴<span class="pn">以斯帖</span>所預備的宴席。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">以斯帖記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h3 class="s">哈曼被處死</h3>
 <p class="p">
@@ -345,11 +378,13 @@ span.r {
 <a class="verse" id="7:9"><sup class="v">9&#160;</sup></a>有一個伺候王名叫<span class="pn">哈波拿</span>的太監說：「看哪，<span class="pn">哈曼</span>還為那報告給王、救王有功的<span class="pn">末底改</span>做了一個五十肘高的木架，現今立在<span class="pn">哈曼</span>的家裏。」王說：「把<span class="pn">哈曼</span>掛在木架上。」
 <a class="verse" id="7:10"><sup class="v">10&#160;</sup></a>於是<span class="pn">哈曼</span>被掛在他為<span class="pn">末底改</span>所預備的木架上；王的憤怒才平息了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">以斯帖記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h3 class="s">猶太人的反擊</h3>
 <p class="p">
@@ -373,11 +408,13 @@ span.r {
 <a class="verse" id="8:16"><sup class="v">16&#160;</sup></a><span class="pn">猶太</span>人有光榮，歡喜快樂，得享尊貴。
 <a class="verse" id="8:17"><sup class="v">17&#160;</sup></a>王的諭旨和敕令所到的各省各城，<span class="pn">猶太</span>人都歡喜快樂，擺設宴席，以那日為吉日。國中許多民族的人因懼怕<span class="pn">猶太</span>人，就自稱為<span class="pn">猶太</span>人。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">以斯帖記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h3 class="s">猶太人除滅仇敵</h3>
 <p class="p">
@@ -419,11 +456,13 @@ span.r {
 <a class="verse" id="9:31"><sup class="v">31&#160;</sup></a>勸他們遵照<span class="pn">猶太</span>人<span class="pn">末底改</span>和<span class="pn">以斯帖</span>王后所規定的，按時守這普珥日，並照著<span class="pn">猶太</span>人為自己與後裔所規定的，禁食與哀求。
 <a class="verse" id="9:32"><sup class="v">32&#160;</sup></a><span class="pn">以斯帖</span>規定了守普珥日的條例，這事也記錄在書上。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">以斯帖記</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">亞哈隨魯和末底改的功績</h3>
 <p class="p">
@@ -433,9 +472,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="11">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <a class="chapter" id="11">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="18-JOB.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:8</a> 「飲酒有規定，不准勉強人」或譯「飲酒用大酒壺，沒有限制」。</p>
 </aside>

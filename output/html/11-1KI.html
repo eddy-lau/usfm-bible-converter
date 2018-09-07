@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>列王紀上</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -170,11 +189,13 @@ span.r {
 </p><p class="q2">4. <span class="pn">亞哈</span>王和<span class="pn">耶洗別</span>王后（20．1—22．40）
 </p><p class="q2">5. <span class="pn">猶大</span>王<span class="pn">約沙法</span>和<span class="pn">以色列</span>王<span class="pn">亞哈謝</span>（22．41—53）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛王的晚年</h3>
 <p class="p">
@@ -243,11 +264,13 @@ span.r {
 <a class="verse" id="1:52"><sup class="v">52&#160;</sup></a><span class="pn">所羅門</span>說：「他若作賢明的人，連一根頭髮也不致落在地上；他若作惡，必要死亡。」
 <a class="verse" id="1:53"><sup class="v">53&#160;</sup></a>於是<span class="pn">所羅門</span>王派人叫<span class="pn">亞多尼雅</span>從壇上下來，他就來向<span class="pn">所羅門</span>王下拜。<span class="pn">所羅門</span>對他說：「你回家去吧！」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">大衛給所羅門的遺訓</h3>
 <p class="p">
@@ -309,14 +332,16 @@ span.r {
 <a class="verse" id="2:45"><sup class="v">45&#160;</sup></a>但<span class="pn">所羅門</span>王必蒙福，<span class="pn">大衛</span>的王位必在耶和華面前堅立，直到永遠。」
 <a class="verse" id="2:46"><sup class="v">46&#160;</sup></a>於是王吩咐<span class="pn">耶何耶大</span>的兒子<span class="pn">比拿雅</span>，他就出去，擊殺<span class="pn">示每</span>，<span class="pn">示每</span>就死了。這樣，國度在<span class="pn">所羅門</span>的手中鞏固了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">所羅門的祈禱</h3>
-<span class="r">（代下1‧3－12）</span>
+<span class="r">（<a href="14-2CH.html#1:3">代下1‧3－12</a>）</span>
 <p class="p">
 <a class="verse" id="3:1"><sup class="v">1&#160;</sup></a><span class="pn">所羅門</span>與<span class="pn">埃及</span>王法老結親，娶了法老的女兒，接她進入<span class="pn">大衛城</span>，直等到建完了自己的宮和耶和華的殿，以及<span class="pn">耶路撒冷</span>周圍的城牆。
 <a class="verse" id="3:2"><sup class="v">2&#160;</sup></a>當那些日子，百姓仍在丘壇獻祭，因為還沒有為耶和華的名建殿。
@@ -352,11 +377,13 @@ span.r {
 <a class="verse" id="3:27"><sup class="v">27&#160;</sup></a>王回應說：「把活孩子給這婦人，萬不可殺死他，因為這婦人是他的母親。」
 <a class="verse" id="3:28"><sup class="v">28&#160;</sup></a>全<span class="pn">以色列</span>聽見王這樣判斷，就都敬畏王，因為他們看見他心中有上帝的智慧，能夠斷案。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">所羅門的臣僕</h3>
 <p class="p">
@@ -401,14 +428,16 @@ span.r {
 <a class="verse" id="4:33"><sup class="v">33&#160;</sup></a>他講論草木，從<span class="pn">黎巴嫩</span>的香柏樹直到牆上長的牛膝草，又講論飛禽、走獸、爬行動物和魚類。
 <a class="verse" id="4:34"><sup class="v">34&#160;</sup></a>地上凡曾聽過他智慧的君王，都派人來；萬民都有人來聽<span class="pn">所羅門</span>的智慧。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h3 class="s">所羅門準備建殿</h3>
-<span class="r">（代下2‧1－18）</span>
+<span class="r">（<a href="14-2CH.html#2:1">代下2‧1－18</a>）</span>
 <p class="p">
 <a class="verse" id="5:1"><sup class="v">1&#160;</sup></a><span class="pn">推羅</span>王<span class="pn">希蘭</span>是<span class="pn">大衛</span>平生的好友。<span class="pn">希蘭</span>聽見<span class="pn">以色列</span>人膏<span class="pn">所羅門</span>接續他父親作王，就派臣僕到他那裏。
 <a class="verse" id="5:2"><sup class="v">2&#160;</sup></a><span class="pn">所羅門</span>也派人到<span class="pn">希蘭</span>那裏，說：
@@ -431,11 +460,13 @@ span.r {
 <a class="verse" id="5:17"><sup class="v">17&#160;</sup></a>王下令，他們就鑿出又大又貴重的石頭來，用以立殿的根基。
 <a class="verse" id="5:18"><sup class="v">18&#160;</sup></a><span class="pn">所羅門</span>的工匠和<span class="pn">希蘭</span>的工匠，以及<span class="pn">迦巴勒</span>人，把石頭鑿好，預備了木料和石頭來建殿。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h3 class="s">所羅門建造聖殿</h3>
 <p class="p">
@@ -457,7 +488,7 @@ span.r {
 <a class="verse" id="6:12"><sup class="v">12&#160;</sup></a>「論到你所建的這殿，你若遵行我的律例，謹守我的典章，遵從我的一切誡命，行在其中，我必向你應驗我所應許你父親<span class="pn">大衛</span>的話。
 <a class="verse" id="6:13"><sup class="v">13&#160;</sup></a>我必住在<span class="pn">以色列</span>人中間，並不丟棄我的百姓<span class="pn">以色列</span>。」
 </p><h3 class="s">殿內的設備</h3>
-<span class="r">（代下3‧8－14）</span>
+<span class="r">（<a href="14-2CH.html#3:8">代下3‧8－14</a>）</span>
 <p class="p">
 <a class="verse" id="6:14"><sup class="v">14&#160;</sup></a><span class="pn">所羅門</span>完成殿的建造。
 <a class="verse" id="6:15"><sup class="v">15&#160;</sup></a>他用香柏木板建造殿的內牆，從殿的地到牆頂<a class="f" id="footnote-10-ref"  href="#footnote-10"  epub:type="noteref" ><sup>[註]</sup></a>都貼上木板，又用松木板鋪地。
@@ -492,11 +523,13 @@ span.r {
 <a class="verse" id="6:37"><sup class="v">37&#160;</sup></a><span class="pn">所羅門</span>在位第四年西弗月，立了耶和華殿的根基。
 <a class="verse" id="6:38"><sup class="v">38&#160;</sup></a>到十一年布勒月，就是八月，殿和一切屬殿的都按著樣式造成。他建殿共用了七年。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h3 class="s">所羅門的王宮</h3>
 <p class="p">
@@ -521,7 +554,7 @@ span.r {
 <a class="verse" id="7:13"><sup class="v">13&#160;</sup></a><span class="pn">所羅門</span>王派人從<span class="pn">推羅</span>把<span class="pn">戶蘭</span><a class="f" id="footnote-16-ref"  href="#footnote-16"  epub:type="noteref" ><sup>[註]</sup></a>接來。
 <a class="verse" id="7:14"><sup class="v">14&#160;</sup></a>他是<span class="pn">拿弗他利</span>支派中一個寡婦的兒子，父親是<span class="pn">推羅</span>人，是作銅匠的。<span class="pn">戶蘭</span>滿有智慧、聰明、技能，善作各樣的銅器。他來到<span class="pn">所羅門</span>王那裏，為王做一切的工。
 </p><h3 class="s">兩根銅柱</h3>
-<span class="r">（代下3‧15－17）</span>
+<span class="r">（<a href="14-2CH.html#3:15">代下3‧15－17</a>）</span>
 <p class="p">
 <a class="verse" id="7:15"><sup class="v">15&#160;</sup></a><span class="pn">戶蘭</span>製造兩根銅柱，一根高十八肘，第二根柱子用繩子量，周圍是十二肘<a class="f" id="footnote-17-ref"  href="#footnote-17"  epub:type="noteref" ><sup>[註]</sup></a>；
 <a class="verse" id="7:16"><sup class="v">16&#160;</sup></a>他做了兩個柱頂安在柱上，是用銅鑄造的，一個柱頂高五肘，第二個柱頂也高五肘。
@@ -532,7 +565,7 @@ span.r {
 <a class="verse" id="7:21"><sup class="v">21&#160;</sup></a>他把兩根柱子立在殿的走廊前：右邊立一根，起名叫<span class="pn">雅斤</span>；左邊立一根，起名叫<span class="pn">波阿斯</span>。
 <a class="verse" id="7:22"><sup class="v">22&#160;</sup></a>柱頂上刻著百合花。這樣，柱子的工程就完畢了。
 </p><h3 class="s">銅海</h3>
-<span class="r">（代下4‧2－5）</span>
+<span class="r">（<a href="14-2CH.html#4:2">代下4‧2－5</a>）</span>
 <p class="p">
 <a class="verse" id="7:23"><sup class="v">23&#160;</sup></a>他又鑄一個銅海，周圍是圓的，直徑十肘，高五肘，用繩子量周圍是三十肘。
 <a class="verse" id="7:24"><sup class="v">24&#160;</sup></a>銅海邊緣下面的周圍有野瓜的形狀，每肘十個，共兩行，繞著銅海，是造銅海的時候鑄上去的。
@@ -555,7 +588,7 @@ span.r {
 <a class="verse" id="7:38"><sup class="v">38&#160;</sup></a>他又造十個銅盆，每盆的容量四十罷特，直徑四肘。在十個座上，每座安設一盆。
 <a class="verse" id="7:39"><sup class="v">39&#160;</sup></a>他把五個安置在殿的右邊，五個安置在殿的左邊，又把銅海安置在殿的右旁，在東南邊。
 </p><h3 class="s">聖殿設備清單</h3>
-<span class="r">（代下4‧11－5‧1）</span>
+<span class="r">（<a href="14-2CH.html#4:11">代下4‧11－5‧1</a>）</span>
 <p class="p">
 <a class="verse" id="7:40"><sup class="v">40&#160;</sup></a><span class="pn">戶蘭</span>又造了盆、鏟子和盤子。這樣，<span class="pn">戶蘭</span>為<span class="pn">所羅門</span>王做完了耶和華殿一切的工：
 <a class="verse" id="7:41"><sup class="v">41&#160;</sup></a>兩根柱子和柱子頂上兩個如碗的柱頂，以及蓋著如碗柱頂的兩個網子；
@@ -573,14 +606,16 @@ span.r {
 <p class="p">
 <a class="verse" id="7:51"><sup class="v">51&#160;</sup></a><span class="pn">所羅門</span>王做完了耶和華殿一切的工，就把他父親<span class="pn">大衛</span>分別為聖的金銀和器皿都帶來，放在耶和華殿的庫房裏。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h3 class="s">接約櫃入殿</h3>
-<span class="r">（代下5‧2－6‧2）</span>
+<span class="r">（<a href="14-2CH.html#5:2">代下5‧2－6‧2</a>）</span>
 <p class="p">
 <a class="verse" id="8:1"><sup class="v">1&#160;</sup></a>那時，<span class="pn">所羅門</span>召集<span class="pn">以色列</span>的長老、各支派的領袖和<span class="pn">以色列</span>人的族長到<span class="pn">耶路撒冷</span>，<span class="pn">所羅門</span>王那裏，要把耶和華的約櫃從<span class="pn">大衛城</span>，就是<span class="pn">錫安</span>，接上來。
 <a class="verse" id="8:2"><sup class="v">2&#160;</sup></a>以他念月，就是七月，在節期時，所有的<span class="pn">以色列</span>人都聚集到<span class="pn">所羅門</span>王那裏。
@@ -599,7 +634,7 @@ span.r {
 <a class="verse" id="8:13"><sup class="v">13&#160;</sup></a>我的確為你建了一座雄偉的殿宇，
 </p><p class="q1">作為你永遠居住的地方。」
 </p><h3 class="s">所羅門向百姓講話</h3>
-<span class="r">（代下6‧3－11）</span>
+<span class="r">（<a href="14-2CH.html#6:3">代下6‧3－11</a>）</span>
 <p class="p">
 <a class="verse" id="8:14"><sup class="v">14&#160;</sup></a>王轉過臉來為<span class="pn">以色列</span>全會眾祝福，<span class="pn">以色列</span>全會眾都站立。
 <a class="verse" id="8:15"><sup class="v">15&#160;</sup></a><span class="pn">所羅門</span>說：「耶和華－<span class="pn">以色列</span>的上帝是應當稱頌的！因他親口向我父<span class="pn">大衛</span>應許的，也親手成就了；他曾說：
@@ -610,7 +645,7 @@ span.r {
 <a class="verse" id="8:20"><sup class="v">20&#160;</sup></a>現在耶和華實現了他所應許的話，使我接續我父<span class="pn">大衛</span>坐<span class="pn">以色列</span>的王位，正如耶和華所說的，我也為耶和華－<span class="pn">以色列</span>上帝的名建造了這殿。
 <a class="verse" id="8:21"><sup class="v">21&#160;</sup></a>我也在那裏為約櫃預備一處。約櫃那裏有耶和華的約，就是他領我們列祖出<span class="pn">埃及</span>地的時候，與他們所立的約。」
 </p><h3 class="s">所羅門的禱告</h3>
-<span class="r">（代下6‧12－42）</span>
+<span class="r">（<a href="14-2CH.html#6:12">代下6‧12－42</a>）</span>
 <p class="p">
 <a class="verse" id="8:22"><sup class="v">22&#160;</sup></a><span class="pn">所羅門</span>當著<span class="pn">以色列</span>全會眾，站在耶和華的壇前，向天舉手，
 <a class="verse" id="8:23"><sup class="v">23&#160;</sup></a>說：「耶和華－<span class="pn">以色列</span>的上帝啊，天上地下沒有神明可與你相比！你向那些盡心行在你面前的僕人守約施慈愛，
@@ -663,7 +698,7 @@ span.r {
 <a class="verse" id="8:60"><sup class="v">60&#160;</sup></a>使地上的萬民都知道惟獨耶和華是上帝，沒有別的了。
 <a class="verse" id="8:61"><sup class="v">61&#160;</sup></a>所以你們當向耶和華－我們的上帝存純正的心，遵行他的律例，謹守他的誡命，如同今日一樣。」
 </p><h3 class="s">奉獻聖殿</h3>
-<span class="r">（代下7‧4－10）</span>
+<span class="r">（<a href="14-2CH.html#7:4">代下7‧4－10</a>）</span>
 <p class="p">
 <a class="verse" id="8:62"><sup class="v">62&#160;</sup></a>王和全<span class="pn">以色列</span>一同在耶和華面前獻祭。
 <a class="verse" id="8:63"><sup class="v">63&#160;</sup></a><span class="pn">所羅門</span>向耶和華獻平安祭，二萬二千頭牛，十二萬隻羊。這樣，王和全<span class="pn">以色列</span>為耶和華的殿行了奉獻之禮。
@@ -672,14 +707,16 @@ span.r {
 <a class="verse" id="8:65"><sup class="v">65&#160;</sup></a>那時<span class="pn">所羅門</span>守節，從<span class="pn">哈馬口</span>直到<span class="pn">埃及</span>溪谷的<span class="pn">以色列</span>眾人都與他同在一起，成了一個盛大的會，在耶和華－我們的上帝面前七日又七日，共十四日。
 <a class="verse" id="8:66"><sup class="v">66&#160;</sup></a>第八日，王遣散百姓；他們都為王祝福。他們為耶和華向他僕人<span class="pn">大衛</span>和他百姓<span class="pn">以色列</span>所施的一切恩惠都心中喜樂，愉快地各回自己的帳棚去了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華再向所羅門顯現</h3>
-<span class="r">（代下7‧11－22）</span>
+<span class="r">（<a href="14-2CH.html#7:11">代下7‧11－22</a>）</span>
 <p class="p">
 <a class="verse" id="9:1"><sup class="v">1&#160;</sup></a><span class="pn">所羅門</span>建造耶和華的殿和王宮，以及一切所想要建造的都完畢了，
 <a class="verse" id="9:2"><sup class="v">2&#160;</sup></a>耶和華第二次向<span class="pn">所羅門</span>顯現，如先前在<span class="pn">基遍</span>向他顯現一樣。
@@ -691,7 +728,7 @@ span.r {
 <a class="verse" id="9:8"><sup class="v">8&#160;</sup></a>這殿雖然崇高<a class="f" id="footnote-23-ref"  href="#footnote-23"  epub:type="noteref" ><sup>[註]</sup></a>，將來凡經過的人必驚訝，嗤笑，說：『耶和華為何向這地和這殿如此行呢？』
 <a class="verse" id="9:9"><sup class="v">9&#160;</sup></a>人必說：『因為此地的人離棄領他們祖先出<span class="pn">埃及</span>地的耶和華－他們的上帝，去親近別神，敬拜事奉它們，所以耶和華使這一切災禍臨到他們。』」
 </p><h3 class="s">所羅門跟希蘭訂約</h3>
-<span class="r">（代下8‧1－2）</span>
+<span class="r">（<a href="14-2CH.html#8:1">代下8‧1－2</a>）</span>
 <p class="p">
 <a class="verse" id="9:10"><sup class="v">10&#160;</sup></a><span class="pn">所羅門</span>建造耶和華殿和王宮這兩座殿宇，用了二十年才完成。
 <a class="verse" id="9:11"><sup class="v">11&#160;</sup></a><span class="pn">推羅</span>王<span class="pn">希蘭</span>曾照<span class="pn">所羅門</span>所要的資助他香柏木、松木和金子，<span class="pn">所羅門</span>王就把<span class="pn">加利利</span>地的二十座城給了<span class="pn">希蘭</span>。
@@ -699,7 +736,7 @@ span.r {
 <a class="verse" id="9:13"><sup class="v">13&#160;</sup></a>就說：「我兄啊，你給我的是甚麼城鎮呢？」他就給這些城鎮起名叫<span class="pn">迦步勒</span><a class="f" id="footnote-24-ref"  href="#footnote-24"  epub:type="noteref" ><sup>[註]</sup></a>地，直到今日。
 <a class="verse" id="9:14"><sup class="v">14&#160;</sup></a><span class="pn">希蘭</span>曾給<span class="pn">所羅門</span>一百二十他連得金子。
 </p><h3 class="s">所羅門其他政績</h3>
-<span class="r">（代下8‧3－18）</span>
+<span class="r">（<a href="14-2CH.html#8:3">代下8‧3－18</a>）</span>
 <p class="p">
 <a class="verse" id="9:15"><sup class="v">15&#160;</sup></a><span class="pn">所羅門</span>王挑取服勞役的工人，為要建造耶和華的殿、自己的宮、<span class="pn">米羅</span><a class="f" id="footnote-25-ref"  href="#footnote-25"  epub:type="noteref" ><sup>[註]</sup></a>、<span class="pn">耶路撒冷</span>的城牆、<span class="pn">夏瑣</span>、<span class="pn">米吉多</span>和<span class="pn">基色</span>。
 <a class="verse" id="9:16"><sup class="v">16&#160;</sup></a>先前<span class="pn">埃及</span>王法老上來攻取<span class="pn">基色</span>，用火焚燒，殺了城內居住的<span class="pn">迦南</span>人，把城賜給他的女兒，就是<span class="pn">所羅門</span>的妻子，作為嫁妝。
@@ -720,14 +757,16 @@ span.r {
 <a class="verse" id="9:27"><sup class="v">27&#160;</sup></a><span class="pn">希蘭</span>派他的僕人，就是熟悉航海的船員，與<span class="pn">所羅門</span>的僕人一同坐船航海。
 <a class="verse" id="9:28"><sup class="v">28&#160;</sup></a>他們到了<span class="pn">俄斐</span>，從那裏得了四百二十他連得金子，運到<span class="pn">所羅門</span>王那裏。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">示巴女王拜訪所羅門</h3>
-<span class="r">（代下9‧1－12）</span>
+<span class="r">（<a href="14-2CH.html#9:1">代下9‧1－12</a>）</span>
 <p class="p">
 <a class="verse" id="10:1"><sup class="v">1&#160;</sup></a><span class="pn">示巴</span>女王聽見<span class="pn">所羅門</span>因耶和華的名所得的名聲，就來要用難題考問<span class="pn">所羅門</span>。
 <a class="verse" id="10:2"><sup class="v">2&#160;</sup></a>她帶著很多的隨從來到<span class="pn">耶路撒冷</span>，有駱駝馱著香料、極多金子和寶石。她來到<span class="pn">所羅門</span>那裏，向他提出心中所有的問題。
@@ -746,7 +785,7 @@ span.r {
 </p><p class="p">
 <a class="verse" id="10:13"><sup class="v">13&#160;</sup></a><span class="pn">所羅門</span>王除了照自己的厚意餽贈<span class="pn">示巴</span>女王之外，凡她所提出的一切要求，<span class="pn">所羅門</span>王都送給她。於是女王和她臣僕轉回，到本國去了。
 </p><h3 class="s">所羅門的財富</h3>
-<span class="r">（代下9‧13－28）</span>
+<span class="r">（<a href="14-2CH.html#9:13">代下9‧13－28</a>）</span>
 <p class="p">
 <a class="verse" id="10:14"><sup class="v">14&#160;</sup></a><span class="pn">所羅門</span>每年所得的金子，重六百六十六他連得；
 <a class="verse" id="10:15"><sup class="v">15&#160;</sup></a>另外還有來自商人<a class="f" id="footnote-28-ref"  href="#footnote-28"  epub:type="noteref" ><sup>[註]</sup></a>和做生意的商品，以及<span class="pn">阿拉伯</span>諸王和各地省長的。
@@ -762,18 +801,20 @@ span.r {
 <a class="verse" id="10:24"><sup class="v">24&#160;</sup></a>全地都求見<span class="pn">所羅門</span>的面，要聽上帝放在他心裏的智慧。
 <a class="verse" id="10:25"><sup class="v">25&#160;</sup></a>他們各帶貢物，就是銀器、金器、衣服、兵器、香料、馬、騾子，每年都有一定的數量。
 </p><h3 class="s">所羅門的兵力和財力</h3>
-<span class="r">（代下1‧13－17）</span>
+<span class="r">（<a href="14-2CH.html#1:13">代下1‧13－17</a>）</span>
 <p class="p">
 <a class="verse" id="10:26"><sup class="v">26&#160;</sup></a><span class="pn">所羅門</span>聚集戰車騎兵；他有一千四百輛戰車，一萬二千名騎兵，安置在屯車城，在<span class="pn">耶路撒冷</span>的王那裏。
 <a class="verse" id="10:27"><sup class="v">27&#160;</sup></a>王在<span class="pn">耶路撒冷</span>使銀子多如石頭，香柏木多如<span class="pn">謝非拉</span><a class="f" id="footnote-30-ref"  href="#footnote-30"  epub:type="noteref" ><sup>[註]</sup></a>的桑樹。
 <a class="verse" id="10:28"><sup class="v">28&#160;</sup></a><span class="pn">所羅門</span>的馬是從<span class="pn">埃及</span><a class="f" id="footnote-31-ref"  href="#footnote-31"  epub:type="noteref" ><sup>[註]</sup></a>和<span class="pn">科威</span><a class="f" id="footnote-32-ref"  href="#footnote-32"  epub:type="noteref" ><sup>[註]</sup></a>運來的，是王的商人按著定價從<span class="pn">科威</span>買來的。
 <a class="verse" id="10:29"><sup class="v">29&#160;</sup></a>從<span class="pn">埃及</span>進口的戰車，每輛六百舍客勒銀子，馬每匹一百五十舍客勒；<span class="pn">赫</span>人眾王和<span class="pn">亞蘭</span>諸王的戰車和馬，也是經由他們的手出口的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">所羅門離棄上帝</h3>
 <p class="p">
@@ -824,20 +865,22 @@ span.r {
 <a class="verse" id="11:39"><sup class="v">39&#160;</sup></a>我必因這事使<span class="pn">大衛</span>的後裔遭受患難，但不是永遠的。』」
 <a class="verse" id="11:40"><sup class="v">40&#160;</sup></a><span class="pn">所羅門</span>想要殺<span class="pn">耶羅波安</span>，<span class="pn">耶羅波安</span>起身逃往<span class="pn">埃及</span>。他到了<span class="pn">埃及</span>王<span class="pn">示撒</span>那裏，就住在<span class="pn">埃及</span>，直到<span class="pn">所羅門</span>死了。
 </p><h3 class="s">所羅門去世</h3>
-<span class="r">（代下9‧29－31）</span>
+<span class="r">（<a href="14-2CH.html#9:29">代下9‧29－31</a>）</span>
 <p class="p">
 <a class="verse" id="11:41"><sup class="v">41&#160;</sup></a><span class="pn">所羅門</span>其餘的事，凡他所做的和他的智慧，不都寫在《所羅門記》上嗎？
 <a class="verse" id="11:42"><sup class="v">42&#160;</sup></a><span class="pn">所羅門</span>在<span class="pn">耶路撒冷</span>作全<span class="pn">以色列</span>的王四十年。
 <a class="verse" id="11:43"><sup class="v">43&#160;</sup></a><span class="pn">所羅門</span>與他祖先同睡，葬在他父親<span class="pn">大衛</span>的城裏，他兒子<span class="pn">羅波安</span>接續他作王。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <h3 class="s">北方支派的反叛</h3>
-<span class="r">（代下10‧1－19）</span>
+<span class="r">（<a href="14-2CH.html#10:1">代下10‧1－19</a>）</span>
 <p class="p">
 <a class="verse" id="12:1"><sup class="v">1&#160;</sup></a><span class="pn">羅波安</span>往<span class="pn">示劍</span>去，因<span class="pn">以色列</span>眾人都到了<span class="pn">示劍</span>，要立他作王。
 <a class="verse" id="12:2"><sup class="v">2&#160;</sup></a><span class="pn">尼八</span>的兒子<span class="pn">耶羅波安</span>先前躲避<span class="pn">所羅門</span>王，逃往<span class="pn">埃及</span>，住在那裏。他還在<span class="pn">埃及</span>，聽見了這事<a class="f" id="footnote-34-ref"  href="#footnote-34"  epub:type="noteref" ><sup>[註]</sup></a>，
@@ -869,7 +912,7 @@ span.r {
 <a class="verse" id="12:19"><sup class="v">19&#160;</sup></a>這樣，<span class="pn">以色列</span>背叛<span class="pn">大衛</span>家，直到今日。
 <a class="verse" id="12:20"><sup class="v">20&#160;</sup></a><span class="pn">以色列</span>眾人聽見<span class="pn">耶羅波安</span>回來了，就派人去請他到會眾那裏，立他作全<span class="pn">以色列</span>的王。除了<span class="pn">猶大</span>支派，沒有跟從<span class="pn">大衛</span>家的。
 </p><h3 class="s">示瑪雅的預言</h3>
-<span class="r">（代下11‧1－4）</span>
+<span class="r">（<a href="14-2CH.html#11:1">代下11‧1－4</a>）</span>
 <p class="p">
 <a class="verse" id="12:21"><sup class="v">21&#160;</sup></a><span class="pn">羅波安</span>來到<span class="pn">耶路撒冷</span>，召集了<span class="pn">猶大</span>全家和<span class="pn">便雅憫</span>支派的人共十八萬，都是精選的戰士，要與<span class="pn">以色列</span>家打仗，好將王國奪回，歸<span class="pn">所羅門</span>的兒子<span class="pn">羅波安</span>。
 <a class="verse" id="12:22"><sup class="v">22&#160;</sup></a>但上帝的話臨到神人<span class="pn">示瑪雅</span>，說：
@@ -889,11 +932,13 @@ span.r {
 <a class="verse" id="12:32"><sup class="v">32&#160;</sup></a><span class="pn">耶羅波安</span>定八月十五日為節期，像在<span class="pn">猶大</span>的節期一樣，自己上壇獻祭。他在<span class="pn">伯特利</span>這樣做，向他所鑄的牛犢獻祭，又把他所立丘壇的祭司安置在<span class="pn">伯特利</span>。
 <a class="verse" id="12:33"><sup class="v">33&#160;</sup></a>他在八月十五日，就是他自己心中所定的月份，在<span class="pn">伯特利</span>上到自己所造的祭壇；他為<span class="pn">以色列</span>人定了一個節期，親自上壇燒香。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="13:1"><sup class="v">1&#160;</sup></a>看哪，有一個神人遵照耶和華的話從<span class="pn">猶大</span>來到<span class="pn">伯特利</span>。<span class="pn">耶羅波安</span>正站在壇旁燒香；
@@ -937,11 +982,13 @@ span.r {
 <a class="verse" id="13:33"><sup class="v">33&#160;</sup></a>這事以後，<span class="pn">耶羅波安</span>仍不離開他的惡道，立平民百姓為丘壇的祭司；凡願意的，他都分別為聖，立為丘壇的祭司。
 <a class="verse" id="13:34"><sup class="v">34&#160;</sup></a>這事使<span class="pn">耶羅波安</span>的家陷入罪裏，甚至他的家被剪除，從地面上消滅了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶羅波安的兒子去世</h3>
 <p class="p">
@@ -971,7 +1018,7 @@ span.r {
 <a class="verse" id="14:19"><sup class="v">19&#160;</sup></a><span class="pn">耶羅波安</span>其餘的事，他怎樣打仗，怎樣作王，看哪，都寫在《以色列諸王記》上。
 <a class="verse" id="14:20"><sup class="v">20&#160;</sup></a><span class="pn">耶羅波安</span>作王二十二年，就與他祖先同睡，他兒子<span class="pn">拿答</span>接續他作王。
 </p><h3 class="s">猶大王羅波安</h3>
-<span class="r">（代下11‧5－12‧15）</span>
+<span class="r">（<a href="14-2CH.html#11:5">代下11‧5－12‧15</a>）</span>
 <p class="p">
 <a class="verse" id="14:21"><sup class="v">21&#160;</sup></a><span class="pn">所羅門</span>的兒子<span class="pn">羅波安</span>作<span class="pn">猶大</span>王。他登基的時候年四十一歲，在<span class="pn">耶路撒冷</span>，就是耶和華從<span class="pn">以色列</span>眾支派中所選擇立他名的城，作王十七年。<span class="pn">羅波安</span>的母親名叫<span class="pn">拿瑪</span>，是<span class="pn">亞捫</span>人。
 <a class="verse" id="14:22"><sup class="v">22&#160;</sup></a><span class="pn">猶大</span>人行耶和華眼中看為惡的事，以所犯的罪惹動他的妒忌，比他們的祖先所犯的一切更嚴重。
@@ -987,14 +1034,16 @@ span.r {
 <a class="verse" id="14:30"><sup class="v">30&#160;</sup></a><span class="pn">羅波安</span>與<span class="pn">耶羅波安</span>時常交戰。
 <a class="verse" id="14:31"><sup class="v">31&#160;</sup></a><span class="pn">羅波安</span>與他祖先同睡，與他祖先同葬在<span class="pn">大衛城</span>。他母親名叫<span class="pn">拿瑪</span>，是<span class="pn">亞捫</span>人，他兒子<span class="pn">亞比央</span><a class="f" id="footnote-36-ref"  href="#footnote-36"  epub:type="noteref" ><sup>[註]</sup></a>接續他作王。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="15">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#14">上一章</a> <h2 class="c">15</h2> <a class="next-chap-link" href="#16">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <span class="c">15</span> <a class="next-chap-link" href="#16">下一章</a> &gt;
+</div>
 
 <h3 class="s">猶大王亞比央</h3>
-<span class="r">（代下13‧1－14‧1）</span>
+<span class="r">（<a href="14-2CH.html#13:1">代下13‧1－14‧1</a>）</span>
 <p class="p">
 <a class="verse" id="15:1"><sup class="v">1&#160;</sup></a><span class="pn">尼八</span>的兒子<span class="pn">耶羅波安</span>王十八年，<span class="pn">亞比央</span>登基作<span class="pn">猶大</span>王，
 <a class="verse" id="15:2"><sup class="v">2&#160;</sup></a>在<span class="pn">耶路撒冷</span>作王三年。他母親名叫<span class="pn">瑪迦</span>，是<span class="pn">押沙龍</span>的女兒。
@@ -1005,7 +1054,7 @@ span.r {
 <a class="verse" id="15:7"><sup class="v">7&#160;</sup></a><span class="pn">亞比央</span>其餘的事，凡他所做的，不都寫在《猶大列王記》上嗎？<span class="pn">亞比央</span>常與<span class="pn">耶羅波安</span>交戰。
 <a class="verse" id="15:8"><sup class="v">8&#160;</sup></a><span class="pn">亞比央</span>與他祖先同睡，葬在<span class="pn">大衛城</span>，他兒子<span class="pn">亞撒</span>接續他作王。
 </p><h3 class="s">猶大王亞撒</h3>
-<span class="r">（代下15‧16－16‧6）</span>
+<span class="r">（<a href="14-2CH.html#15:16">代下15‧16－16‧6</a>）</span>
 <p class="p">
 <a class="verse" id="15:9"><sup class="v">9&#160;</sup></a><span class="pn">以色列</span>王<span class="pn">耶羅波安</span>第二十年，<span class="pn">亞撒</span>登基作<span class="pn">猶大</span>王，
 <a class="verse" id="15:10"><sup class="v">10&#160;</sup></a>在<span class="pn">耶路撒冷</span>作王四十一年。他祖母名叫<span class="pn">瑪迦</span>，是<span class="pn">押沙龍</span>的女兒。
@@ -1041,11 +1090,13 @@ span.r {
 <a class="verse" id="15:33"><sup class="v">33&#160;</sup></a><span class="pn">猶大</span>王<span class="pn">亞撒</span>第三年，<span class="pn">亞希雅</span>的兒子<span class="pn">巴沙</span>在<span class="pn">得撒</span>登基，作全<span class="pn">以色列</span>的王二十四年。
 <a class="verse" id="15:34"><sup class="v">34&#160;</sup></a>他行耶和華眼中看為惡的事，行<span class="pn">耶羅波安</span>所行的道，犯他使<span class="pn">以色列</span>陷入罪裏的那罪。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="16">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#15">上一章</a> <h2 class="c">16</h2> <a class="next-chap-link" href="#17">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#15">上一章</a> <span class="c">16</span> <a class="next-chap-link" href="#17">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="16:1"><sup class="v">1&#160;</sup></a>耶和華的話臨到<span class="pn">哈拿尼</span>的兒子<span class="pn">耶戶</span>，責備<span class="pn">巴沙</span>說：
@@ -1094,11 +1145,13 @@ span.r {
 <a class="verse" id="16:33"><sup class="v">33&#160;</sup></a><span class="pn">亞哈</span>又造<span class="pn">亞舍拉</span>，他所做的惹耶和華－<span class="pn">以色列</span>的上帝發怒，比他以前所有的<span class="pn">以色列</span>王更嚴重。
 <a class="verse" id="16:34"><sup class="v">34&#160;</sup></a><span class="pn">亞哈</span>的日子，<span class="pn">伯特利</span>人<span class="pn">希伊勒</span>重修<span class="pn">耶利哥</span>。立根基的時候，他喪了長子<span class="pn">亞比蘭</span>；安門的時候，他喪了幼子<span class="pn">西割</span>，正如耶和華藉<span class="pn">嫩</span>的兒子<span class="pn">約書亞</span>所說的話。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="17">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#16">上一章</a> <h2 class="c">17</h2> <a class="next-chap-link" href="#18">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#16">上一章</a> <span class="c">17</span> <a class="next-chap-link" href="#18">下一章</a> &gt;
+</div>
 
 <h3 class="s">以利亞和旱災</h3>
 <p class="p">
@@ -1130,11 +1183,13 @@ span.r {
 <a class="verse" id="17:23"><sup class="v">23&#160;</sup></a><span class="pn">以利亞</span>把孩子從樓上抱下來，進了房間交給他母親，說：「看，你的兒子活了！」
 <a class="verse" id="17:24"><sup class="v">24&#160;</sup></a>婦人對<span class="pn">以利亞</span>說：「現在我知道你是神人，耶和華藉你口所說的話是真的。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="18">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#17">上一章</a> <h2 class="c">18</h2> <a class="next-chap-link" href="#19">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#17">上一章</a> <span class="c">18</span> <a class="next-chap-link" href="#19">下一章</a> &gt;
+</div>
 
 <h3 class="s">以利亞和巴力的先知</h3>
 <p class="p">
@@ -1192,11 +1247,13 @@ span.r {
 <a class="verse" id="18:45"><sup class="v">45&#160;</sup></a>霎時間，天因風雲黑暗，降下大雨。<span class="pn">亞哈</span>就坐上車，往<span class="pn">耶斯列</span>去了。
 <a class="verse" id="18:46"><sup class="v">46&#160;</sup></a>耶和華的手按在<span class="pn">以利亞</span>身上，他就束上腰，奔在<span class="pn">亞哈</span>前頭，一路到<span class="pn">耶斯列</span>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="19">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#18">上一章</a> <h2 class="c">19</h2> <a class="next-chap-link" href="#20">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#18">上一章</a> <span class="c">19</span> <a class="next-chap-link" href="#20">下一章</a> &gt;
+</div>
 
 <h3 class="s">以利亞在何烈山上</h3>
 <p class="p">
@@ -1226,11 +1283,13 @@ span.r {
 <a class="verse" id="19:20"><sup class="v">20&#160;</sup></a><span class="pn">以利沙</span>就離開牛，跑到<span class="pn">以利亞</span>那裏，說：「請你讓我先與父母吻別，然後我就跟隨你。」<span class="pn">以利亞</span>對他說：「因我對你所做的事，你去吧，然後回來。<a class="f" id="footnote-42-ref"  href="#footnote-42"  epub:type="noteref" ><sup>[註]</sup></a>」
 <a class="verse" id="19:21"><sup class="v">21&#160;</sup></a><span class="pn">以利沙</span>離開他回去，宰了一對牛，用套牛的器具煮肉給百姓吃，隨後就起身跟隨<span class="pn">以利亞</span>，服事他。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="20">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#19">上一章</a> <h2 class="c">20</h2> <a class="next-chap-link" href="#21">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#19">上一章</a> <span class="c">20</span> <a class="next-chap-link" href="#21">下一章</a> &gt;
+</div>
 
 <h3 class="s">與亞蘭人爭戰</h3>
 <p class="p">
@@ -1289,11 +1348,13 @@ span.r {
 <a class="verse" id="20:42"><sup class="v">42&#160;</sup></a>他對王說：「耶和華如此說：『因你把我決定要消滅的人從你手中放走，所以你的命必代替他的命，你的百姓必代替他的百姓。』」
 <a class="verse" id="20:43"><sup class="v">43&#160;</sup></a>於是<span class="pn">以色列</span>王生氣，憂悶地回<span class="pn">撒瑪利亞</span>，到自己的宮去了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="21">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#20">上一章</a> <h2 class="c">21</h2> <a class="next-chap-link" href="#22">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#20">上一章</a> <span class="c">21</span> <a class="next-chap-link" href="#22">下一章</a> &gt;
+</div>
 
 <h3 class="s">拿伯的葡萄園</h3>
 <p class="p">
@@ -1334,14 +1395,16 @@ span.r {
 <a class="verse" id="21:28"><sup class="v">28&#160;</sup></a>耶和華的話臨到<span class="pn">提斯比</span>人<span class="pn">以利亞</span>，說：
 <a class="verse" id="21:29"><sup class="v">29&#160;</sup></a>「<span class="pn">亞哈</span>在我面前這樣謙卑，你看見了嗎？因為他在我面前謙卑，所以在他的日子，我不降這禍；到他兒子的時候，我必降這禍於他的家。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="22">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#21">上一章</a> <h2 class="c">22</h2> <a class="next-chap-link" href="#23">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">列王紀上</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#21">上一章</a> <span class="c">22</span> <a class="next-chap-link" href="#23">下一章</a> &gt;
+</div>
 
 <h3 class="s">米該雅警告亞哈</h3>
-<span class="r">（代下18‧2－27）</span>
+<span class="r">（<a href="14-2CH.html#18:2">代下18‧2－27</a>）</span>
 <p class="p">
 <a class="verse" id="22:1"><sup class="v">1&#160;</sup></a><span class="pn">亞蘭</span>和<span class="pn">以色列</span>之間連續三年沒有戰爭。
 <a class="verse" id="22:2"><sup class="v">2&#160;</sup></a>到了第三年，<span class="pn">猶大</span>王<span class="pn">約沙法</span>下去見<span class="pn">以色列</span>王。
@@ -1375,7 +1438,7 @@ span.r {
 <a class="verse" id="22:27"><sup class="v">27&#160;</sup></a>你們要說：『王如此說，把這個人關在監獄裏，使他受苦，吃不飽喝不足，直等到我平安回來。』」
 <a class="verse" id="22:28"><sup class="v">28&#160;</sup></a><span class="pn">米該雅</span>說：「你若真的能平安回來，那就是耶和華沒有藉我說這話了。」他又說：「眾百姓啊，你們都要聽！」
 </p><h3 class="s">亞哈陣亡</h3>
-<span class="r">（代下18‧28－34）</span>
+<span class="r">（<a href="14-2CH.html#18:28">代下18‧28－34</a>）</span>
 <p class="p">
 <a class="verse" id="22:29"><sup class="v">29&#160;</sup></a><span class="pn">以色列</span>王和<span class="pn">猶大</span>王<span class="pn">約沙法</span>上<span class="pn">基列</span>的<span class="pn">拉末</span>去。
 <a class="verse" id="22:30"><sup class="v">30&#160;</sup></a><span class="pn">以色列</span>王對<span class="pn">約沙法</span>說：「我要改裝上陣，你可以仍穿王袍。」<span class="pn">以色列</span>王就改裝上陣去了。
@@ -1391,7 +1454,7 @@ span.r {
 <a class="verse" id="22:39"><sup class="v">39&#160;</sup></a><span class="pn">亞哈</span>其餘的事，凡他所做的、他所修造的象牙宮和所建築的一切城鎮，不都寫在《以色列諸王記》上嗎？
 <a class="verse" id="22:40"><sup class="v">40&#160;</sup></a><span class="pn">亞哈</span>與他祖先同睡，他兒子<span class="pn">亞哈謝</span>接續他作王。
 </p><h3 class="s">猶大王約沙法</h3>
-<span class="r">（代下20‧31－21‧1）</span>
+<span class="r">（<a href="14-2CH.html#20:31">代下20‧31－21‧1</a>）</span>
 <p class="p">
 <a class="verse" id="22:41"><sup class="v">41&#160;</sup></a><span class="pn">以色列</span>王<span class="pn">亞哈</span>第四年，<span class="pn">亞撒</span>的兒子<span class="pn">約沙法</span>登基作<span class="pn">猶大</span>王。
 <a class="verse" id="22:42"><sup class="v">42&#160;</sup></a><span class="pn">約沙法</span>登基的時候年三十五歲，在<span class="pn">耶路撒冷</span>作王二十五年。他母親名叫<span class="pn">阿蘇巴</span>，是<span class="pn">示利希</span>的女兒。
@@ -1413,9 +1476,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="23">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#22">上一章</a> <a class="chapter" id="23">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="12-2KI.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:8</a> 「利以，以及大衛自己的勇士」：原文另譯「他的同伴，大衛自己的勇士」。</p>
 </aside>

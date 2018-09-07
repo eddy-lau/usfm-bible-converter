@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>彌迦書</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -149,11 +168,13 @@ span.r {
 <p class="ip">3. 上帝追討<span class="pn">以色列</span>百姓的罪（6．1—7．7）</p>
 <p class="ip">4. 上帝饒恕那些承認罪過的人（7．8—20）</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">彌迦書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="1:1"><sup class="v">1&#160;</sup></a>當<span class="pn">猶大</span>王<span class="pn">約坦</span>、<span class="pn">亞哈斯</span>、<span class="pn">希西家</span>在位的時候，耶和華的話臨到<span class="pn">摩利沙</span>人<span class="pn">彌迦</span>，他見到有關<span class="pn">撒瑪利亞</span>和<span class="pn">耶路撒冷</span>的異象。
@@ -230,11 +251,13 @@ span.r {
 </p><p class="q1">要使你的頭光禿，如同禿鷹，
 </p><p class="q1">因為他們被擄去離開你了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">彌迦書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">欺壓者的命運</h3>
 <p class="q1">
@@ -301,11 +324,13 @@ span.r {
 </p><p class="q1">他們的王在前面行，
 </p><p class="q1">耶和華在他們的前頭。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">彌迦書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">斥責以色列的領袖</h3>
 <p class="q1">
@@ -371,14 +396,16 @@ span.r {
 </p><p class="q1"><span class="pn">耶路撒冷</span>要變為廢墟，
 </p><p class="q1">這殿的山必如叢林的高處。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">彌迦書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">永恆的和平</h3>
-<span class="r">（賽2‧2－4）</span>
+<span class="r">（<a href="23-ISA.html#2:2">賽2‧2－4</a>）</span>
 <p class="q1">
 <a class="verse" id="4:1"><sup class="v">1&#160;</sup></a>末後的日子，
 </p><p class="q1">耶和華殿的山必堅立，
@@ -458,11 +485,13 @@ span.r {
 </p><p class="q1">將他們的財寶獻給耶和華，
 </p><p class="q1">將他們的財富獻給全地的主。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">彌迦書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="5:1"><sup class="v">1&#160;</sup></a>成群的民<a class="f" id="footnote-17-ref"  href="#footnote-17"  epub:type="noteref" ><sup>[註]</sup></a>哪，現在要聚集成隊；
@@ -539,11 +568,13 @@ span.r {
 <a class="verse" id="5:15"><sup class="v">15&#160;</sup></a>我必在怒氣和憤怒中
 </p><p class="q1">報應那不聽從我的列國。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">彌迦書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華譴責以色列</h3>
 <p class="q1">
@@ -621,11 +652,13 @@ span.r {
 </p><p class="q1">使你的居民遭人嗤笑，
 </p><p class="q1">你們也必擔當我百姓的羞辱。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">彌迦書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h3 class="s">以色列人的腐敗</h3>
 <p class="q1">
@@ -730,9 +763,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="8">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <a class="chapter" id="8">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="34-NAM.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:10</a> 「宣揚」與「迦特」的希伯來話發音相近。</p>
 </aside>

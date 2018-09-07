@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>詩篇</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -183,11 +202,13 @@ span.r {
 <p class="ip">第四卷：90至106篇</p>
 <p class="ip">第五卷：107至150篇</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">真福</h3>
 <p class="q1">
@@ -213,11 +234,13 @@ span.r {
 <a class="verse" id="1:6"><sup class="v">6&#160;</sup></a>因為耶和華知道義人的道路，
 </p><p class="q2">惡人的道路卻必滅亡。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝所揀選的君王</h3>
 <p class="q1">
@@ -265,11 +288,13 @@ span.r {
 </p><p class="q2">因為他的怒氣快要發作。
 </p><p class="q1">凡投靠他的，都是有福的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛逃避他兒子押沙龍時所作的詩。</h4>
 <h3 class="s">求助的晨禱</h3>
@@ -302,11 +327,13 @@ span.r {
 <a class="verse" id="3:8"><sup class="v">8&#160;</sup></a>救恩屬於耶和華；
 </p><p class="q2">願你賜福給你的百姓。（細拉）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長，用絲弦的樂器。</h4>
 <h3 class="s">求助的晚禱</h3>
@@ -340,11 +367,13 @@ span.r {
 <a class="verse" id="4:8"><sup class="v">8&#160;</sup></a>我必平安地躺下睡覺，
 </p><p class="q2">因為獨有你－耶和華使我安然居住。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長，用吹奏的樂器。</h4>
 <h3 class="s">求主保護</h3>
@@ -394,11 +423,13 @@ span.r {
 <a class="verse" id="5:12"><sup class="v">12&#160;</sup></a>耶和華啊，因為你必賜福給義人，
 </p><p class="q2">你必用恩惠如同盾牌四面護衛他。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長，用絲弦的樂器，曲調用「第八」。</h4>
 <h3 class="s">患難中求助的祈禱</h3>
@@ -437,11 +468,13 @@ span.r {
 <a class="verse" id="6:10"><sup class="v">10&#160;</sup></a>我所有的仇敵都必羞愧，大大驚惶；
 </p><p class="q2">轉眼之間，他們要羞愧撤退。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛因便雅憫人古實的話，向耶和華唱的流離歌。</h4>
 <h3 class="s">為公義而祈禱</h3>
@@ -506,11 +539,13 @@ span.r {
 <a class="verse" id="7:17"><sup class="v">17&#160;</sup></a>我要照著耶和華的公義稱謝他，
 </p><p class="q2">要歌頌耶和華至高者的名。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長，用迦特樂器。</h4>
 <h3 class="s">上帝的榮耀和人的尊貴</h3>
@@ -544,11 +579,13 @@ span.r {
 <a class="verse" id="8:9"><sup class="v">9&#160;</sup></a>耶和華－我們的主啊，
 </p><p class="q2">你的名在全地何其美！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9 <a class="f" id="footnote-6-ref"  href="#footnote-6"  epub:type="noteref" ><sup>[註]</sup></a></h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9 <a class="f" id="footnote-6-ref"  href="#footnote-6"  epub:type="noteref" ><sup>[註]</sup></a></span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長，曲調用「慕拉便」。</h4>
 <h3 class="s">稱頌耶和華的公義</h3>
@@ -626,11 +663,13 @@ span.r {
 <a class="verse" id="9:20"><sup class="v">20&#160;</sup></a>耶和華啊，求你使他們恐懼，
 </p><p class="q2">願外邦人知道自己不過是人。（細拉）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10 <a class="f" id="footnote-10-ref"  href="#footnote-10"  epub:type="noteref" ><sup>[註]</sup></a></h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10 <a class="f" id="footnote-10-ref"  href="#footnote-10"  epub:type="noteref" ><sup>[註]</sup></a></span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">為公義而祈禱</h3>
 <p class="q1">
@@ -703,11 +742,13 @@ span.r {
 <a class="verse" id="10:18"><sup class="v">18&#160;</sup></a>為要給孤兒和受欺壓的人伸冤，
 </p><p class="q2">使世上的人不再威嚇他們。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">在主裏得安穩</h3>
@@ -735,11 +776,13 @@ span.r {
 <a class="verse" id="11:7"><sup class="v">7&#160;</sup></a>因為耶和華是公義的，他喜愛義行，
 </p><p class="q2">正直人必得見他的面。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長，曲調用「第八」。</h4>
 <h3 class="s">求助的祈禱</h3>
@@ -774,11 +817,13 @@ span.r {
 <a class="verse" id="12:8"><sup class="v">8&#160;</sup></a>卑鄙的人在世人中高升時，
 </p><p class="q2">就有惡人四處橫行。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">求耶和華看顧</h3>
@@ -803,15 +848,17 @@ span.r {
 <a class="verse" id="13:6"><sup class="v">6&#160;</sup></a>我要向耶和華歌唱，
 </p><p class="q2">因他厚厚地恩待我。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">人的邪惡</h3>
-<span class="r">（詩53）</span>
+<span class="r">（<a href="19-PSA.html#53:1">詩53</a>）</span>
 <p class="q1">
 <a class="verse" id="14:1"><sup class="v">1&#160;</sup></a>愚頑人心裏說：「沒有上帝。」
 </p><p class="q2">他們都敗壞，行了可憎惡的事，
@@ -844,11 +891,13 @@ span.r {
 </p><p class="q1">當耶和華救回他被擄子民的時候，
 </p><p class="q2"><span class="pn">雅各</span>要快樂，<span class="pn">以色列</span>要歡喜。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="15">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#14">上一章</a> <h2 class="c">15</h2> <a class="next-chap-link" href="#16">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <span class="c">15</span> <a class="next-chap-link" href="#16">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">得居聖山者的品行</h3>
@@ -873,11 +922,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">做這些事的人必永不動搖。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="16">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#15">上一章</a> <h2 class="c">16</h2> <a class="next-chap-link" href="#17">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#15">上一章</a> <span class="c">16</span> <a class="next-chap-link" href="#17">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的金詩。</h4>
 <h3 class="s">為信心穩固而祈禱</h3>
@@ -922,11 +973,13 @@ span.r {
 </p><p class="q1">在你面前有滿足的喜樂，
 </p><p class="q2">在你右手中有永遠的福樂。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="17">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#16">上一章</a> <h2 class="c">17</h2> <a class="next-chap-link" href="#18">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#16">上一章</a> <span class="c">17</span> <a class="next-chap-link" href="#18">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的祈禱。</h4>
 <h3 class="s">無辜的人的禱告</h3>
@@ -987,15 +1040,17 @@ span.r {
 <a class="verse" id="17:15"><sup class="v">15&#160;</sup></a>至於我，我必因公正得見你的面；
 </p><p class="q2">我醒了的時候，你的形像使我滿足。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="18">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#17">上一章</a> <h2 class="c">18</h2> <a class="next-chap-link" href="#19">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#17">上一章</a> <span class="c">18</span> <a class="next-chap-link" href="#19">下一章</a> &gt;
+</div>
 
 <h4 class="d">耶和華的僕人大衛的詩。交給聖詠團長。當耶和華救他脫離所有仇敵和掃羅之手的日子，他用這詩的歌詞向耶和華說話。</h4>
 <h3 class="s">大衛的勝利之歌</h3>
-<span class="r">（撒下22‧1－51）</span>
+<span class="r">（<a href="10-2SA.html#22:1">撒下22‧1－51</a>）</span>
 <p class="q1">
 <a class="verse" id="18:1"><sup class="v">1&#160;</sup></a>耶和華我的力量啊，我愛你！
 </p><p class="q1">
@@ -1166,11 +1221,13 @@ span.r {
 </p><p class="q2">施慈愛給他的受膏者，
 </p><p class="q2">就是給<span class="pn">大衛</span>和他的後裔，直到永遠。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="19">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#18">上一章</a> <h2 class="c">19</h2> <a class="next-chap-link" href="#20">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#18">上一章</a> <span class="c">19</span> <a class="next-chap-link" href="#20">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">造化的榮耀</h3>
@@ -1221,11 +1278,13 @@ span.r {
 <a class="verse" id="19:14"><sup class="v">14&#160;</sup></a>耶和華－我的磐石，我的救贖主啊，
 </p><p class="q2">願我口中的言語，心裏的意念在你面前蒙悅納。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="20">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#19">上一章</a> <h2 class="c">20</h2> <a class="next-chap-link" href="#21">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#19">上一章</a> <span class="c">20</span> <a class="next-chap-link" href="#21">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">祈求勝利</h3>
@@ -1261,11 +1320,13 @@ span.r {
 <a class="verse" id="20:9"><sup class="v">9&#160;</sup></a>耶和華啊，求你拯救；
 </p><p class="q2">我們呼求的時候，願王應允我們！<a class="f" id="footnote-23-ref"  href="#footnote-23"  epub:type="noteref" ><sup>[註]</sup></a>
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="21">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#20">上一章</a> <h2 class="c">21</h2> <a class="next-chap-link" href="#22">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#20">上一章</a> <span class="c">21</span> <a class="next-chap-link" href="#22">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">為勝利而歌頌</h3>
@@ -1312,11 +1373,13 @@ span.r {
 <a class="verse" id="21:13"><sup class="v">13&#160;</sup></a>耶和華啊，願你因自己的能力顯為至高！
 </p><p class="q2">這樣，我們就唱詩，歌頌你的大能。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="22">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#21">上一章</a> <h2 class="c">22</h2> <a class="next-chap-link" href="#23">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#21">上一章</a> <span class="c">22</span> <a class="next-chap-link" href="#23">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長，曲調用「黎明的小鹿」。</h4>
 <h3 class="s">痛苦中的禱告和讚美</h3>
@@ -1431,11 +1494,13 @@ span.r {
 <a class="verse" id="22:31"><sup class="v">31&#160;</sup></a>他們必來傳他的公義給尚未出生的子民，
 </p><p class="q2">這是他的作為。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="23">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#22">上一章</a> <h2 class="c">23</h2> <a class="next-chap-link" href="#24">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#22">上一章</a> <span class="c">23</span> <a class="next-chap-link" href="#24">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">耶和華是我牧者</h3>
@@ -1462,11 +1527,13 @@ span.r {
 <a class="verse" id="23:6"><sup class="v">6&#160;</sup></a>我一生一世必有恩惠慈愛隨著我；
 </p><p class="q2">我且要住在<a class="f" id="footnote-27-ref"  href="#footnote-27"  epub:type="noteref" ><sup>[註]</sup></a>耶和華的殿中，直到永遠。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="24">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#23">上一章</a> <h2 class="c">24</h2> <a class="next-chap-link" href="#25">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#23">上一章</a> <span class="c">24</span> <a class="next-chap-link" href="#25">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">偉大的君王</h3>
@@ -1506,11 +1573,13 @@ span.r {
 <a class="verse" id="24:10"><sup class="v">10&#160;</sup></a>這榮耀的王是誰呢？
 </p><p class="q2">萬軍之耶和華是榮耀的王！（細拉）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="25">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#24">上一章</a> <h2 class="c">25 <a class="f" id="footnote-28-ref"  href="#footnote-28"  epub:type="noteref" ><sup>[註]</sup></a></h2> <a class="next-chap-link" href="#26">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#24">上一章</a> <span class="c">25 <a class="f" id="footnote-28-ref"  href="#footnote-28"  epub:type="noteref" ><sup>[註]</sup></a></span> <a class="next-chap-link" href="#26">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">求主指引保護</h3>
@@ -1588,11 +1657,13 @@ span.r {
 </p><p class="q1">
 <a class="verse" id="25:22"><sup class="v">22&#160;</sup></a>上帝啊，求你救贖<span class="pn">以色列</span>脫離他一切的愁苦。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="26">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#25">上一章</a> <h2 class="c">26</h2> <a class="next-chap-link" href="#27">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#25">上一章</a> <span class="c">26</span> <a class="next-chap-link" href="#27">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">義人的祈禱</h3>
@@ -1638,11 +1709,13 @@ span.r {
 <a class="verse" id="26:12"><sup class="v">12&#160;</sup></a>我的腳站在平坦的地方，
 </p><p class="q2">在聚會中我要稱頌耶和華！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="27">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#26">上一章</a> <h2 class="c">27</h2> <a class="next-chap-link" href="#28">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#26">上一章</a> <span class="c">27</span> <a class="next-chap-link" href="#28">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">讚美的禱告</h3>
@@ -1705,11 +1778,13 @@ span.r {
 </p><p class="q2">當壯膽，堅固你的心，
 </p><p class="q2">要等候耶和華！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="28">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#27">上一章</a> <h2 class="c">28</h2> <a class="next-chap-link" href="#29">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#27">上一章</a> <span class="c">28</span> <a class="next-chap-link" href="#29">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">求主幫助</h3>
@@ -1751,11 +1826,13 @@ span.r {
 <a class="verse" id="28:9"><sup class="v">9&#160;</sup></a>求你拯救你的百姓，賜福給你的產業；
 </p><p class="q2">求你牧養他們，扶持他們，直到永遠。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="29">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#28">上一章</a> <h2 class="c">29</h2> <a class="next-chap-link" href="#30">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#28">上一章</a> <span class="c">29</span> <a class="next-chap-link" href="#30">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">耶和華威嚴的聲音</h3>
@@ -1799,11 +1876,13 @@ span.r {
 <a class="verse" id="29:11"><sup class="v">11&#160;</sup></a>耶和華必賜力量給他的百姓，
 </p><p class="q2">耶和華必賜平安的福給他的百姓。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="30">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#29">上一章</a> <h2 class="c">30</h2> <a class="next-chap-link" href="#31">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#29">上一章</a> <span class="c">30</span> <a class="next-chap-link" href="#31">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。獻殿之歌。</h4>
 <h3 class="s">感恩的禱告</h3>
@@ -1849,11 +1928,13 @@ span.r {
 <a class="verse" id="30:12"><sup class="v">12&#160;</sup></a>使我的靈<a class="f" id="footnote-32-ref"  href="#footnote-32"  epub:type="noteref" ><sup>[註]</sup></a>歌頌你，不致緘默。
 </p><p class="q2">耶和華－我的上帝啊，我要稱謝你，直到永遠！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="31">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#30">上一章</a> <h2 class="c">31</h2> <a class="next-chap-link" href="#32">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#30">上一章</a> <span class="c">31</span> <a class="next-chap-link" href="#32">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">信靠上帝的祈禱</h3>
@@ -1960,11 +2041,13 @@ span.r {
 <a class="verse" id="31:24"><sup class="v">24&#160;</sup></a>凡仰望耶和華的人，
 </p><p class="q2">你們都要壯膽，堅固你們的心！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="32">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#31">上一章</a> <h2 class="c">32</h2> <a class="next-chap-link" href="#33">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#31">上一章</a> <span class="c">32</span> <a class="next-chap-link" href="#33">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的訓誨詩。</h4>
 <h3 class="s">認罪與蒙赦</h3>
@@ -2011,11 +2094,13 @@ span.r {
 <a class="verse" id="32:11"><sup class="v">11&#160;</sup></a>義人哪，你們應當靠耶和華歡喜快樂，
 </p><p class="q2">心裏正直的人哪，你們都當歡呼。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="33">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#32">上一章</a> <h2 class="c">33</h2> <a class="next-chap-link" href="#34">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#32">上一章</a> <span class="c">33</span> <a class="next-chap-link" href="#34">下一章</a> &gt;
+</div>
 
 <h3 class="s">頌讚之歌</h3>
 <p class="q1">
@@ -2090,15 +2175,17 @@ span.r {
 <a class="verse" id="33:22"><sup class="v">22&#160;</sup></a>耶和華啊，求你照著我們所仰望你的，
 </p><p class="q2">向我們施行慈愛！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="34">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#33">上一章</a> <h2 class="c">34 <a class="f" id="footnote-39-ref"  href="#footnote-39"  epub:type="noteref" ><sup>[註]</sup></a></h2> <a class="next-chap-link" href="#35">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#33">上一章</a> <span class="c">34 <a class="f" id="footnote-39-ref"  href="#footnote-39"  epub:type="noteref" ><sup>[註]</sup></a></span> <a class="next-chap-link" href="#35">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛在亞比米勒面前裝瘋，被趕出去，就作這詩。</h4>
 <h3 class="s">頌讚上帝的美善</h3>
-<span class="r">（撒上21‧10－14）</span>
+<span class="r">（<a href="09-1SA.html#21:10">撒上21‧10－14</a>）</span>
 <p class="q1">
 <a class="verse" id="34:1"><sup class="v">1&#160;</sup></a>我要時時稱頌耶和華，
 </p><p class="q2">讚美他的話常在我口中。
@@ -2170,11 +2257,13 @@ span.r {
 <a class="verse" id="34:22"><sup class="v">22&#160;</sup></a>耶和華救贖他僕人的性命，
 </p><p class="q2">凡投靠他的，必不致定罪。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="35">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#34">上一章</a> <h2 class="c">35</h2> <a class="next-chap-link" href="#36">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#34">上一章</a> <span class="c">35</span> <a class="next-chap-link" href="#36">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">求助的禱告</h3>
@@ -2279,11 +2368,13 @@ span.r {
 <a class="verse" id="35:28"><sup class="v">28&#160;</sup></a>我的舌頭要論說你的公義，
 </p><p class="q2">要常常讚美你。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="36">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#35">上一章</a> <h2 class="c">36</h2> <a class="next-chap-link" href="#37">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#35">上一章</a> <span class="c">36</span> <a class="next-chap-link" href="#37">下一章</a> &gt;
+</div>
 
 <h4 class="d">耶和華的僕人大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">人的邪惡</h3>
@@ -2328,11 +2419,13 @@ span.r {
 </p><p class="q2">他們被推倒，不能再起來。
 </p><p class="b">
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="37">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#36">上一章</a> <h2 class="c">37 <a class="f" id="footnote-47-ref"  href="#footnote-47"  epub:type="noteref" ><sup>[註]</sup></a></h2> <a class="next-chap-link" href="#38">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#36">上一章</a> <span class="c">37 <a class="f" id="footnote-47-ref"  href="#footnote-47"  epub:type="noteref" ><sup>[註]</sup></a></span> <a class="next-chap-link" href="#38">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">義人和惡人的結局</h3>
@@ -2484,11 +2577,13 @@ span.r {
 </p><p class="q2">他解救他們脫離惡人，把他們救出來，
 </p><p class="q2">因為他們投靠他。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="38">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#37">上一章</a> <h2 class="c">38</h2> <a class="next-chap-link" href="#39">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#37">上一章</a> <span class="c">38</span> <a class="next-chap-link" href="#39">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的紀念詩。</h4>
 <h3 class="s">受苦者的祈禱</h3>
@@ -2567,11 +2662,13 @@ span.r {
 <a class="verse" id="38:22"><sup class="v">22&#160;</sup></a>拯救我的主啊，
 </p><p class="q2">求你快快幫助我！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="39">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#38">上一章</a> <h2 class="c">39</h2> <a class="next-chap-link" href="#40">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#38">上一章</a> <span class="c">39</span> <a class="next-chap-link" href="#40">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長耶杜頓。</h4>
 <h3 class="s">受苦者的認罪</h3>
@@ -2628,11 +2725,13 @@ span.r {
 <a class="verse" id="39:13"><sup class="v">13&#160;</sup></a>求你寬容我，
 </p><p class="q2">使我在去而不返之先可以喜樂。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="40">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#39">上一章</a> <h2 class="c">40</h2> <a class="next-chap-link" href="#41">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#39">上一章</a> <span class="c">40</span> <a class="next-chap-link" href="#41">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">頌讚之歌</h3>
@@ -2683,7 +2782,7 @@ span.r {
 <a class="verse" id="40:11"><sup class="v">11&#160;</sup></a>耶和華啊，求你不要向我止住你的憐憫！
 </p><p class="q2">願你的慈愛和信實常常保佑我！
 </p><h3 class="s">求助的禱告</h3>
-<span class="r">（詩70）</span>
+<span class="r">（<a href="19-PSA.html#70:1">詩70</a>）</span>
 <p class="q1">
 <a class="verse" id="40:12"><sup class="v">12&#160;</sup></a>因有無數的禍患圍困我，
 </p><p class="q2">我的罪孽追上了我，使我不能看見，
@@ -2707,11 +2806,13 @@ span.r {
 </p><p class="q2">你是幫助我的，搭救我的；
 </p><p class="q2">我的上帝啊，求你不要耽延！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="41">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#40">上一章</a> <h2 class="c">41</h2> <a class="next-chap-link" href="#42">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#40">上一章</a> <span class="c">41</span> <a class="next-chap-link" href="#42">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">病中祈禱</h3>
@@ -2762,11 +2863,13 @@ span.r {
 <h2 class="ms">第二卷（四十二至七十二篇）</h2>
 <h4 class="d">可拉後裔的詩。交給聖詠團長。</h4>
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="42">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#41">上一章</a> <h2 class="c">42</h2> <a class="next-chap-link" href="#43">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#41">上一章</a> <span class="c">42</span> <a class="next-chap-link" href="#43">下一章</a> &gt;
+</div>
 
 <h3 class="s">流亡異鄉者的禱告﹙一﹚</h3>
 <p class="q1">
@@ -2817,11 +2920,13 @@ span.r {
 </p><p class="q1">應當仰望上帝，
 </p><p class="q2">因我還要稱謝他，我當面的拯救，我的上帝。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="43">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#42">上一章</a> <h2 class="c">43</h2> <a class="next-chap-link" href="#44">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#42">上一章</a> <span class="c">43</span> <a class="next-chap-link" href="#44">下一章</a> &gt;
+</div>
 
 <h3 class="s">流亡異鄉者的禱告﹙二﹚</h3>
 <p class="q1">
@@ -2847,11 +2952,13 @@ span.r {
 </p><p class="q2">應當仰望上帝，
 </p><p class="q2">我還要稱謝他，我當面的拯救，我的上帝。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="44">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#43">上一章</a> <h2 class="c">44</h2> <a class="next-chap-link" href="#45">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#43">上一章</a> <span class="c">44</span> <a class="next-chap-link" href="#45">下一章</a> &gt;
+</div>
 
 <h4 class="d">可拉後裔的訓誨詩。交給聖詠團長。</h4>
 <h3 class="s">求主保護</h3>
@@ -2947,11 +3054,13 @@ span.r {
 <a class="verse" id="44:26"><sup class="v">26&#160;</sup></a>求你興起幫助我們！
 </p><p class="q2">因你的慈愛救贖我們！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="45">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#44">上一章</a> <h2 class="c">45</h2> <a class="next-chap-link" href="#46">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#44">上一章</a> <span class="c">45</span> <a class="next-chap-link" href="#46">下一章</a> &gt;
+</div>
 
 <h4 class="d">可拉後裔的訓誨詩，是愛慕歌。交給聖詠團長，曲調用「百合花」。</h4>
 <h3 class="s">皇家婚禮詩歌</h3>
@@ -3016,11 +3125,13 @@ span.r {
 <a class="verse" id="45:17"><sup class="v">17&#160;</sup></a>我必使萬代記念你的名，
 </p><p class="q2">萬民要永永遠遠稱謝你。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="46">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#45">上一章</a> <h2 class="c">46</h2> <a class="next-chap-link" href="#47">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#45">上一章</a> <span class="c">46</span> <a class="next-chap-link" href="#47">下一章</a> &gt;
+</div>
 
 <h4 class="d">可拉後裔的詩歌。交給聖詠團長，曲調用「少女」。</h4>
 <h3 class="s">上帝與我們同在</h3>
@@ -3061,11 +3172,13 @@ span.r {
 <a class="verse" id="46:11"><sup class="v">11&#160;</sup></a>萬軍之耶和華與我們同在，
 </p><p class="q2"><span class="pn">雅各</span>的上帝是我們的避難所！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="47">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#46">上一章</a> <h2 class="c">47</h2> <a class="next-chap-link" href="#48">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#46">上一章</a> <span class="c">47</span> <a class="next-chap-link" href="#48">下一章</a> &gt;
+</div>
 
 <h4 class="d">可拉後裔的詩。交給聖詠團長。</h4>
 <h3 class="s">至高的主宰</h3>
@@ -3101,11 +3214,13 @@ span.r {
 </p><p class="q1">因為地上的盾牌是屬上帝的，
 </p><p class="q2">他為至高！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="48">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#47">上一章</a> <h2 class="c">48</h2> <a class="next-chap-link" href="#49">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#47">上一章</a> <span class="c">48</span> <a class="next-chap-link" href="#49">下一章</a> &gt;
+</div>
 
 <h4 class="d">可拉後裔的詩歌。</h4>
 <h3 class="s">錫安－上帝的城</h3>
@@ -3160,11 +3275,13 @@ span.r {
 <a class="verse" id="48:14"><sup class="v">14&#160;</sup></a>因為這上帝永永遠遠為我們的上帝，
 </p><p class="q2">他必作我們引路的，直到死時<a class="f" id="footnote-56-ref"  href="#footnote-56"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="49">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#48">上一章</a> <h2 class="c">49</h2> <a class="next-chap-link" href="#50">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#48">上一章</a> <span class="c">49</span> <a class="next-chap-link" href="#50">下一章</a> &gt;
+</div>
 
 <h4 class="d">可拉後裔的詩。交給聖詠團長。</h4>
 <h3 class="s">恃財之愚</h3>
@@ -3234,11 +3351,13 @@ span.r {
 <a class="verse" id="49:20"><sup class="v">20&#160;</sup></a>人在尊貴中而不醒悟，
 </p><p class="q2">就如死亡的畜類一樣。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="50">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#49">上一章</a> <h2 class="c">50</h2> <a class="next-chap-link" href="#51">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#49">上一章</a> <span class="c">50</span> <a class="next-chap-link" href="#51">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的詩。</h4>
 <h3 class="s">真實的敬拜</h3>
@@ -3321,15 +3440,17 @@ span.r {
 <a class="verse" id="50:23"><sup class="v">23&#160;</sup></a>凡以感謝獻祭的就是榮耀我；
 </p><p class="q2">那按正路而行的，我必使他得著上帝的救恩。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="51">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#50">上一章</a> <h2 class="c">51</h2> <a class="next-chap-link" href="#52">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#50">上一章</a> <span class="c">51</span> <a class="next-chap-link" href="#52">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛與拔示巴同房以後，拿單先知來見他；他作這詩，交給聖詠團長。</h4>
 <h3 class="s">求主赦免</h3>
-<span class="r">（撒下12‧1－25）</span>
+<span class="r">（<a href="10-2SA.html#12:1">撒下12‧1－25</a>）</span>
 <p class="q1">
 <a class="verse" id="51:1"><sup class="v">1&#160;</sup></a>上帝啊，求你按你的慈愛恩待我！
 </p><p class="q2">按你豐盛的憐憫塗去我的過犯！
@@ -3398,15 +3519,17 @@ span.r {
 </p><p class="q2">和燔祭，全牲的燔祭；
 </p><p class="q1">那時，人必將公牛獻在你壇上。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="52">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#51">上一章</a> <h2 class="c">52</h2> <a class="next-chap-link" href="#53">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#51">上一章</a> <span class="c">52</span> <a class="next-chap-link" href="#53">下一章</a> &gt;
+</div>
 
 <h4 class="d">以東人多益來告訴掃羅說：「大衛到了亞希米勒的家。」那時，大衛作這訓誨詩。交給聖詠團長。</h4>
 <h3 class="s">上帝的審判和恩惠</h3>
-<span class="r">（撒上22‧6－23）</span>
+<span class="r">（<a href="09-1SA.html#22:6">撒上22‧6－23</a>）</span>
 <p class="q1">
 <a class="verse" id="52:1"><sup class="v">1&#160;</sup></a>勇士啊，你為何作惡自誇？
 </p><p class="q2">上帝的慈愛是常存的。
@@ -3440,15 +3563,17 @@ span.r {
 </p><p class="q1">我也要在你聖民面前仰望你的名，
 </p><p class="q2">這名本為美好。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="53">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#52">上一章</a> <h2 class="c">53</h2> <a class="next-chap-link" href="#54">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#52">上一章</a> <span class="c">53</span> <a class="next-chap-link" href="#54">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的訓誨詩。交給聖詠團長，曲調用「麻哈拉」。</h4>
 <h3 class="s">人的邪惡</h3>
-<span class="r">（詩14）</span>
+<span class="r">（<a href="19-PSA.html#14:1">詩14</a>）</span>
 <p class="q1">
 <a class="verse" id="53:1"><sup class="v">1&#160;</sup></a>愚頑人心裏說：「沒有上帝。」
 </p><p class="q2">他們都敗壞，行了可憎惡的罪孽，
@@ -3478,15 +3603,17 @@ span.r {
 </p><p class="q1">當上帝救回他被擄子民的時候，
 </p><p class="q2"><span class="pn">雅各</span>要快樂，<span class="pn">以色列</span>要歡喜。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="54">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#53">上一章</a> <h2 class="c">54</h2> <a class="next-chap-link" href="#55">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#53">上一章</a> <span class="c">54</span> <a class="next-chap-link" href="#55">下一章</a> &gt;
+</div>
 
 <h4 class="d">西弗人來對掃羅說：「大衛豈不是在我們那裏藏身嗎？」那時，大衛作這訓誨詩。交給聖詠團長，用絲弦的樂器。</h4>
 <h3 class="s">遭敵迫害求主保護</h3>
-<span class="r">（撒上23‧14－24）</span>
+<span class="r">（<a href="09-1SA.html#23:14">撒上23‧14－24</a>）</span>
 <p class="q1">
 <a class="verse" id="54:1"><sup class="v">1&#160;</sup></a>上帝啊，求你因你的名拯救我，
 </p><p class="q2">憑你的大能為我伸冤。
@@ -3512,11 +3639,13 @@ span.r {
 <a class="verse" id="54:7"><sup class="v">7&#160;</sup></a>他從一切的急難中把我救出來，
 </p><p class="q2">我的眼睛也看見了我的仇敵遭報。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="55">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#54">上一章</a> <h2 class="c">55</h2> <a class="next-chap-link" href="#56">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#54">上一章</a> <span class="c">55</span> <a class="next-chap-link" href="#56">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的訓誨詩。交給聖詠團長，用絲弦的樂器。</h4>
 <h3 class="s">被出賣者的禱告</h3>
@@ -3606,11 +3735,13 @@ span.r {
 </p><p class="q2">那好流人血、行詭詐的人必活不過半生，
 </p><p class="q1">但我要倚靠你。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="56">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#55">上一章</a> <h2 class="c">56</h2> <a class="next-chap-link" href="#57">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#55">上一章</a> <span class="c">56</span> <a class="next-chap-link" href="#57">下一章</a> &gt;
+</div>
 
 <h4 class="d">非利士人在迦特逮捕大衛；那時，他作這金詩。交給聖詠團長，曲調用「遠方無聲鴿」。</h4>
 <h3 class="s">信靠上帝的祈禱</h3>
@@ -3659,15 +3790,17 @@ span.r {
 </p><p class="q2">你保護我的腳不跌倒，
 </p><p class="q1">使我在生命的光中行在上帝面前。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="57">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#56">上一章</a> <h2 class="c">57</h2> <a class="next-chap-link" href="#58">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#56">上一章</a> <span class="c">57</span> <a class="next-chap-link" href="#58">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛逃避掃羅，藏在洞裏；那時，他作這金詩。交給聖詠團長，曲調用「休要毀壞」。</h4>
 <h3 class="s">求主拯救</h3>
-<span class="r">（撒上24‧1－22）</span>
+<span class="r">（<a href="09-1SA.html#24:1">撒上24‧1－22</a>）</span>
 <p class="q1">
 <a class="verse" id="57:1"><sup class="v">1&#160;</sup></a>上帝啊，求你憐憫我，憐憫我，
 </p><p class="q2">因為我的心投靠你。
@@ -3712,11 +3845,13 @@ span.r {
 <a class="verse" id="57:11"><sup class="v">11&#160;</sup></a>上帝啊，願你崇高過於諸天！
 </p><p class="q2">願你的榮耀高過全地！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="58">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#57">上一章</a> <h2 class="c">58</h2> <a class="next-chap-link" href="#59">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#57">上一章</a> <span class="c">58</span> <a class="next-chap-link" href="#59">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的金詩。交給聖詠團長，曲調用「休要毀壞」。</h4>
 <h3 class="s">求上帝罰惡</h3>
@@ -3757,15 +3892,17 @@ span.r {
 <a class="verse" id="58:11"><sup class="v">11&#160;</sup></a>因此，人必說：「義人誠然有善報，
 </p><p class="q2">在地上果然有施行審判的上帝！」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="59">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#58">上一章</a> <h2 class="c">59</h2> <a class="next-chap-link" href="#60">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#58">上一章</a> <span class="c">59</span> <a class="next-chap-link" href="#60">下一章</a> &gt;
+</div>
 
 <h4 class="d">掃羅差人把守大衛的房屋，意圖殺他；那時，大衛作這金詩。交給聖詠團長，曲調用「休要毀壞」。</h4>
 <h3 class="s">求主保護</h3>
-<span class="r">（撒上19‧11－17）</span>
+<span class="r">（<a href="09-1SA.html#19:11">撒上19‧11－17</a>）</span>
 <p class="q1">
 <a class="verse" id="59:1"><sup class="v">1&#160;</sup></a>我的上帝啊，求你救我脫離仇敵，
 </p><p class="q2">把我安置在高處，脫離那些起來攻擊我的人。
@@ -3836,15 +3973,17 @@ span.r {
 </p><p class="q2">因為上帝是我的庇護所，
 </p><p class="q2">是賜恩給我的上帝。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="60">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#59">上一章</a> <h2 class="c">60</h2> <a class="next-chap-link" href="#61">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#59">上一章</a> <span class="c">60</span> <a class="next-chap-link" href="#61">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛與美索不達米亞並瑣巴的亞蘭爭戰時，約押回師，在鹽谷攻擊以東，殺了一萬二千人。那時，大衛作這金詩教誨人。交給聖詠團長，曲調用「為證的百合花」。</h4>
 <h3 class="s">求主解救</h3>
-<span class="r">（撒下8‧13）</span>
+<span class="r">（<a href="10-2SA.html#8:13">撒下8‧13</a>）</span>
 <p class="q1">
 <a class="verse" id="60:1"><sup class="v">1&#160;</sup></a>上帝啊，你丟棄了我們，破壞了我們；
 </p><p class="q2">你曾發怒，求你使我們復興！
@@ -3890,11 +4029,13 @@ span.r {
 <a class="verse" id="60:12"><sup class="v">12&#160;</sup></a>我們倚靠上帝才得施展大能，
 </p><p class="q2">因為踐踏我們敵人的就是他。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="61">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#60">上一章</a> <h2 class="c">61</h2> <a class="next-chap-link" href="#62">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#60">上一章</a> <span class="c">61</span> <a class="next-chap-link" href="#62">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長，用絲弦的樂器。</h4>
 <h3 class="s">求主保佑</h3>
@@ -3927,11 +4068,13 @@ span.r {
 <a class="verse" id="61:8"><sup class="v">8&#160;</sup></a>這樣，我要歌頌你的名，直到永遠，
 </p><p class="q2">天天還我所許的願。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="62">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#61">上一章</a> <h2 class="c">62</h2> <a class="next-chap-link" href="#63">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#61">上一章</a> <span class="c">62</span> <a class="next-chap-link" href="#63">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。照耶杜頓的體裁，交給聖詠團長。</h4>
 <h3 class="s">在上帝保佑中安穩自在</h3>
@@ -3981,11 +4124,13 @@ span.r {
 <a class="verse" id="62:12"><sup class="v">12&#160;</sup></a>主啊，慈愛也是屬乎你，
 </p><p class="q2">因為你照著各人所做的報應他。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="63">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#62">上一章</a> <h2 class="c">63</h2> <a class="next-chap-link" href="#64">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#62">上一章</a> <span class="c">63</span> <a class="next-chap-link" href="#64">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛在猶大曠野的時候，作了這詩。</h4>
 <h3 class="s">渴慕上帝</h3>
@@ -4027,11 +4172,13 @@ span.r {
 </p><p class="q2">凡指著他發誓的都要誇耀，
 </p><p class="q2">因為說謊之人的口必被塞住。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="64">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#63">上一章</a> <h2 class="c">64</h2> <a class="next-chap-link" href="#65">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#63">上一章</a> <span class="c">64</span> <a class="next-chap-link" href="#65">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">求主保護</h3>
@@ -4072,11 +4219,13 @@ span.r {
 <a class="verse" id="64:10"><sup class="v">10&#160;</sup></a>義人必因耶和華歡喜，並要投靠他；
 </p><p class="q2">凡心裏正直的人都必誇耀。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="65">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#64">上一章</a> <h2 class="c">65</h2> <a class="next-chap-link" href="#66">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#64">上一章</a> <span class="c">65</span> <a class="next-chap-link" href="#66">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩歌。交給聖詠團長。</h4>
 <h3 class="s">頌讚主恩</h3>
@@ -4128,11 +4277,13 @@ span.r {
 </p><p class="q2">谷中也長滿了五穀；
 </p><p class="q1">這一切都歡呼歌唱。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="66">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#65">上一章</a> <h2 class="c">66</h2> <a class="next-chap-link" href="#67">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#65">上一章</a> <span class="c">66</span> <a class="next-chap-link" href="#67">下一章</a> &gt;
+</div>
 
 <h4 class="d">一篇詩歌。交給聖詠團長。</h4>
 <h3 class="s">頌讚感恩的詩</h3>
@@ -4205,11 +4356,13 @@ span.r {
 </p><p class="q2">他沒有推卻我的禱告，
 </p><p class="q2">也沒有使他的慈愛離開我。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="67">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#66">上一章</a> <h2 class="c">67</h2> <a class="next-chap-link" href="#68">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#66">上一章</a> <span class="c">67</span> <a class="next-chap-link" href="#68">下一章</a> &gt;
+</div>
 
 <h4 class="d">一篇詩歌。交給聖詠團長，用絲弦的樂器。</h4>
 <h3 class="s">感恩的詩</h3>
@@ -4238,11 +4391,13 @@ span.r {
 <a class="verse" id="67:7"><sup class="v">7&#160;</sup></a>上帝要賜福給我們，
 </p><p class="q2">地的四極都要敬畏他！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="68">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#67">上一章</a> <h2 class="c">68</h2> <a class="next-chap-link" href="#69">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#67">上一章</a> <span class="c">68</span> <a class="next-chap-link" href="#69">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩歌。交給聖詠團長。</h4>
 <h3 class="s">勝利之歌</h3>
@@ -4375,11 +4530,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">上帝是應當稱頌的！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="69">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#68">上一章</a> <h2 class="c">69</h2> <a class="next-chap-link" href="#70">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#68">上一章</a> <span class="c">69</span> <a class="next-chap-link" href="#70">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長，曲調用「百合花」。</h4>
 <h3 class="s">求助的禱告</h3>
@@ -4510,15 +4667,17 @@ span.r {
 <a class="verse" id="69:36"><sup class="v">36&#160;</sup></a>他僕人的後裔要承受這地，
 </p><p class="q2">愛他名的人要住在其中。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="70">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#69">上一章</a> <h2 class="c">70</h2> <a class="next-chap-link" href="#71">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#69">上一章</a> <span class="c">70</span> <a class="next-chap-link" href="#71">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的紀念詩。交給聖詠團長。</h4>
 <h3 class="s">求助的祈禱</h3>
-<span class="r">（詩40‧13－17）</span>
+<span class="r">（<a href="19-PSA.html#40:13">詩40‧13－17</a>）</span>
 <p class="q1">
 <a class="verse" id="70:1"><sup class="v">1&#160;</sup></a>上帝啊，求你快快搭救我！
 </p><p class="q2">耶和華啊，求你速速幫助我！
@@ -4538,11 +4697,13 @@ span.r {
 </p><p class="q1">你是幫助我的，搭救我的；
 </p><p class="q2">耶和華啊，求你不要耽延！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="71">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#70">上一章</a> <h2 class="c">71</h2> <a class="next-chap-link" href="#72">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#70">上一章</a> <span class="c">71</span> <a class="next-chap-link" href="#72">下一章</a> &gt;
+</div>
 
 <h3 class="s">老年人的祈禱</h3>
 <p class="q1">
@@ -4631,11 +4792,13 @@ span.r {
 <a class="verse" id="71:24"><sup class="v">24&#160;</sup></a>我的舌頭也必終日講論你的公義，
 </p><p class="q2">因為那些謀害我的人已經蒙羞受辱了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="72">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#71">上一章</a> <h2 class="c">72</h2> <a class="next-chap-link" href="#73">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#71">上一章</a> <span class="c">72</span> <a class="next-chap-link" href="#73">下一章</a> &gt;
+</div>
 
 <h4 class="d">所羅門的詩。</h4>
 <h3 class="s">為王祈禱</h3>
@@ -4712,11 +4875,13 @@ span.r {
 <h2 class="ms">第三卷（七十三至八十九篇）</h2>
 <h4 class="d">亞薩的詩。</h4>
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="73">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#72">上一章</a> <h2 class="c">73</h2> <a class="next-chap-link" href="#74">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#72">上一章</a> <span class="c">73</span> <a class="next-chap-link" href="#74">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝的公正</h3>
 <p class="q1">
@@ -4809,11 +4974,13 @@ span.r {
 </p><p class="q2">我以主耶和華為我的避難所，
 </p><p class="q2">好叫我述說你一切的作為。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="74">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#73">上一章</a> <h2 class="c">74</h2> <a class="next-chap-link" href="#75">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#73">上一章</a> <span class="c">74</span> <a class="next-chap-link" href="#75">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的訓誨詩。</h4>
 <h3 class="s">求主解救國家</h3>
@@ -4894,11 +5061,13 @@ span.r {
 <a class="verse" id="74:23"><sup class="v">23&#160;</sup></a>不要忘記你敵人的喧鬧，
 </p><p class="q2">就是那時常上升、起來對抗你之人的喧嘩。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="75">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#74">上一章</a> <h2 class="c">75</h2> <a class="next-chap-link" href="#76">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#74">上一章</a> <span class="c">75</span> <a class="next-chap-link" href="#76">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的詩歌。交給聖詠團長，曲調用「休要毀壞」。</h4>
 <h3 class="s">上帝是審判者</h3>
@@ -4938,11 +5107,13 @@ span.r {
 <a class="verse" id="75:10"><sup class="v">10&#160;</sup></a>惡人一切的角，我要砍斷；
 </p><p class="q2">惟有義人的角必被高舉。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="76">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#75">上一章</a> <h2 class="c">76</h2> <a class="next-chap-link" href="#77">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#75">上一章</a> <span class="c">76</span> <a class="next-chap-link" href="#77">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的詩歌。交給聖詠團長，用絲弦的樂器。</h4>
 <h3 class="s">上帝是勝利者</h3>
@@ -4985,11 +5156,13 @@ span.r {
 <a class="verse" id="76:12"><sup class="v">12&#160;</sup></a>他要挫折王子的驕氣，
 </p><p class="q2">向地上的君王顯為可畏。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="77">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#76">上一章</a> <h2 class="c">77</h2> <a class="next-chap-link" href="#78">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#76">上一章</a> <span class="c">77</span> <a class="next-chap-link" href="#78">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的詩。照耶杜頓的體裁，交給聖詠團長。</h4>
 <h3 class="s">遇難時得安慰</h3>
@@ -5062,11 +5235,13 @@ span.r {
 <a class="verse" id="77:20"><sup class="v">20&#160;</sup></a>你曾藉<span class="pn">摩西</span>和<span class="pn">亞倫</span>的手引導你的百姓，
 </p><p class="q2">好像領羊群一般。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="78">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#77">上一章</a> <h2 class="c">78</h2> <a class="next-chap-link" href="#79">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#77">上一章</a> <span class="c">78</span> <a class="next-chap-link" href="#79">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的訓誨詩。</h4>
 <h3 class="s">上帝與他的子民</h3>
@@ -5307,11 +5482,13 @@ span.r {
 <a class="verse" id="78:72"><sup class="v">72&#160;</sup></a>於是，他以純正的心牧養他們，
 </p><p class="q2">用巧妙的手引導他們。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="79">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#78">上一章</a> <h2 class="c">79</h2> <a class="next-chap-link" href="#80">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#78">上一章</a> <span class="c">79</span> <a class="next-chap-link" href="#80">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的詩。</h4>
 <h3 class="s">求主解救國家</h3>
@@ -5362,11 +5539,13 @@ span.r {
 </p><p class="q2">要稱謝你，直到永遠；
 </p><p class="q2">要述說讚美你的話，直到萬代。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="80">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#79">上一章</a> <h2 class="c">80</h2> <a class="next-chap-link" href="#81">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#79">上一章</a> <span class="c">80</span> <a class="next-chap-link" href="#81">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的見證詩。交給聖詠團長，曲調用「百合花」。</h4>
 <h3 class="s">求主復興國家</h3>
@@ -5434,11 +5613,13 @@ span.r {
 <a class="verse" id="80:19"><sup class="v">19&#160;</sup></a>耶和華─萬軍之上帝啊，求你使我們回轉，
 </p><p class="q2">使你的臉發光，我們就會得救！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="81">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#80">上一章</a> <h2 class="c">81</h2> <a class="next-chap-link" href="#82">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#80">上一章</a> <span class="c">81</span> <a class="next-chap-link" href="#82">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的詩。交給聖詠團長，用迦特樂器。</h4>
 <h3 class="s">勸戒以色列的剛愎</h3>
@@ -5496,11 +5677,13 @@ span.r {
 <a class="verse" id="81:16"><sup class="v">16&#160;</sup></a>他必拿上好的麥子給<span class="pn">以色列</span><a class="f" id="footnote-98-ref"  href="#footnote-98"  epub:type="noteref" ><sup>[註]</sup></a>吃，
 </p><p class="q2">又拿磐石出的蜂蜜使你飽足。 」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="82">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#81">上一章</a> <h2 class="c">82</h2> <a class="next-chap-link" href="#83">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#81">上一章</a> <span class="c">82</span> <a class="next-chap-link" href="#83">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的詩。</h4>
 <h3 class="s">上帝是最高的主宰</h3>
@@ -5534,11 +5717,13 @@ span.r {
 <a class="verse" id="82:8"><sup class="v">8&#160;</sup></a>上帝啊，求你起來審判全地，
 </p><p class="q2">因為你必得萬國為業。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="83">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#82">上一章</a> <h2 class="c">83</h2> <a class="next-chap-link" href="#84">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#82">上一章</a> <span class="c">83</span> <a class="next-chap-link" href="#84">下一章</a> &gt;
+</div>
 
 <h4 class="d">亞薩的詩歌。</h4>
 <h3 class="s">求主敗敵</h3>
@@ -5599,11 +5784,13 @@ span.r {
 <a class="verse" id="83:18"><sup class="v">18&#160;</sup></a>願他們認識你的名是耶和華，
 </p><p class="q2">惟獨你是掌管全地的至高者！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="84">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#83">上一章</a> <h2 class="c">84</h2> <a class="next-chap-link" href="#85">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#83">上一章</a> <span class="c">84</span> <a class="next-chap-link" href="#85">下一章</a> &gt;
+</div>
 
 <h4 class="d">可拉後裔的詩。交給聖詠團長，用迦特樂器。</h4>
 <h3 class="s">渴慕耶和華的殿宇</h3>
@@ -5652,11 +5839,13 @@ span.r {
 <a class="verse" id="84:12"><sup class="v">12&#160;</sup></a>萬軍之耶和華啊，
 </p><p class="q2">倚靠你的人有福了！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="85">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#84">上一章</a> <h2 class="c">85</h2> <a class="next-chap-link" href="#86">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#84">上一章</a> <span class="c">85</span> <a class="next-chap-link" href="#86">下一章</a> &gt;
+</div>
 
 <h4 class="d">可拉後裔的詩。交給聖詠團長。</h4>
 <h3 class="s">為國求福</h3>
@@ -5704,11 +5893,13 @@ span.r {
 <a class="verse" id="85:13"><sup class="v">13&#160;</sup></a>公義要行在他面前，
 </p><p class="q2">使他的腳蹤有可走之路。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="86">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#85">上一章</a> <h2 class="c">86</h2> <a class="next-chap-link" href="#87">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#85">上一章</a> <span class="c">86</span> <a class="next-chap-link" href="#87">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的祈禱。</h4>
 <h3 class="s">求主恩助</h3>
@@ -5769,11 +5960,13 @@ span.r {
 </p><p class="q2">使恨我的人看見就羞愧，
 </p><p class="q2">因為你－耶和華幫助我，安慰了我。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="87">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#86">上一章</a> <h2 class="c">87</h2> <a class="next-chap-link" href="#88">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#86">上一章</a> <span class="c">87</span> <a class="next-chap-link" href="#88">下一章</a> &gt;
+</div>
 
 <h4 class="d">可拉後裔的詩歌。</h4>
 <h3 class="s">錫安頌</h3>
@@ -5803,11 +5996,13 @@ span.r {
 <a class="verse" id="87:7"><sup class="v">7&#160;</sup></a>歌唱的、跳舞的，都要說：
 </p><p class="q2">「我的泉源都在你裏面。」<a class="f" id="footnote-102-ref"  href="#footnote-102"  epub:type="noteref" ><sup>[註]</sup></a>
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="88">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#87">上一章</a> <h2 class="c">88</h2> <a class="next-chap-link" href="#89">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#87">上一章</a> <span class="c">88</span> <a class="next-chap-link" href="#89">下一章</a> &gt;
+</div>
 
 <h4 class="d">可拉後裔的詩歌，就是以斯拉人希幔的訓誨詩。交給聖詠團長，曲調用「麻哈拉利暗俄」。</h4>
 <h3 class="s">求主眷顧</h3>
@@ -5872,11 +6067,13 @@ span.r {
 <a class="verse" id="88:18"><sup class="v">18&#160;</sup></a>你把我的良朋密友隔在遠處，
 </p><p class="q2">使我所認識的人都在黑暗裏<a class="f" id="footnote-104-ref"  href="#footnote-104"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="89">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#88">上一章</a> <h2 class="c">89</h2> <a class="next-chap-link" href="#90">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#88">上一章</a> <span class="c">89</span> <a class="next-chap-link" href="#90">下一章</a> &gt;
+</div>
 
 <h4 class="d">以斯拉人以探的訓誨詩。</h4>
 <h3 class="s">困難中的聖詩</h3>
@@ -6050,11 +6247,13 @@ span.r {
 <h2 class="ms">第四卷（九十至一百零六篇）</h2>
 <h4 class="d">神人摩西的祈禱。</h4>
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="90">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#89">上一章</a> <h2 class="c">90</h2> <a class="next-chap-link" href="#91">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#89">上一章</a> <span class="c">90</span> <a class="next-chap-link" href="#91">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝與人</h3>
 <p class="q1">
@@ -6119,11 +6318,13 @@ span.r {
 </p><p class="q2">願你堅立我們手所做的工，
 </p><p class="q1">我們手所做的工，願你堅立。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="91">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#90">上一章</a> <h2 class="c">91</h2> <a class="next-chap-link" href="#92">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#90">上一章</a> <span class="c">91</span> <a class="next-chap-link" href="#92">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝是我們的保護者</h3>
 <p class="q1">
@@ -6183,11 +6384,13 @@ span.r {
 <a class="verse" id="91:16"><sup class="v">16&#160;</sup></a>我要使他享足長壽，
 </p><p class="q2">將我的救恩顯明給他。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="92">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#91">上一章</a> <h2 class="c">92</h2> <a class="next-chap-link" href="#93">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#91">上一章</a> <span class="c">92</span> <a class="next-chap-link" href="#93">下一章</a> &gt;
+</div>
 
 <h4 class="d">安息日的詩歌。</h4>
 <h3 class="s">頌讚之詩</h3>
@@ -6244,11 +6447,13 @@ span.r {
 <a class="verse" id="92:15"><sup class="v">15&#160;</sup></a>好顯明耶和華是正直的；
 </p><p class="q2">他是我的磐石，在他毫無不義。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="93">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#92">上一章</a> <h2 class="c">93</h2> <a class="next-chap-link" href="#94">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#92">上一章</a> <span class="c">93</span> <a class="next-chap-link" href="#94">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝是王</h3>
 <p class="q1">
@@ -6272,11 +6477,13 @@ span.r {
 </p><p class="q2">你的殿宜稱為聖，直到永遠。
 </p><p class="b">
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="94">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#93">上一章</a> <h2 class="c">94</h2> <a class="next-chap-link" href="#95">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#93">上一章</a> <span class="c">94</span> <a class="next-chap-link" href="#95">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝審判萬人</h3>
 <p class="q1">
@@ -6354,11 +6561,13 @@ span.r {
 </p><p class="q2">要因他們的邪惡剪除他們；
 </p><p class="q1">耶和華－我們的上帝要把他們剪除。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="95">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#94">上一章</a> <h2 class="c">95</h2> <a class="next-chap-link" href="#96">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#94">上一章</a> <span class="c">95</span> <a class="next-chap-link" href="#96">下一章</a> &gt;
+</div>
 
 <h3 class="s">頌讚之詩</h3>
 <p class="q1">
@@ -6398,14 +6607,16 @@ span.r {
 <a class="verse" id="95:11"><sup class="v">11&#160;</sup></a>所以，我在怒中起誓：
 </p><p class="q2">「他們斷不可進入我的安息！」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="96">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#95">上一章</a> <h2 class="c">96</h2> <a class="next-chap-link" href="#97">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#95">上一章</a> <span class="c">96</span> <a class="next-chap-link" href="#97">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝是最高的君王</h3>
-<span class="r">（代上16‧23－33）</span>
+<span class="r">（<a href="13-1CH.html#16:23">代上16‧23－33</a>）</span>
 <p class="q1">
 <a class="verse" id="96:1"><sup class="v">1&#160;</sup></a>你們要向耶和華唱新歌！
 </p><p class="q2">全地都要向耶和華歌唱！
@@ -6450,11 +6661,13 @@ span.r {
 </p><p class="q2">他要按公義審判世界，
 </p><p class="q2">按信實審判萬民。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="97">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#96">上一章</a> <h2 class="c">97</h2> <a class="next-chap-link" href="#98">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#96">上一章</a> <span class="c">97</span> <a class="next-chap-link" href="#98">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝是最高的統治者</h3>
 <p class="q1">
@@ -6498,11 +6711,13 @@ span.r {
 <a class="verse" id="97:12"><sup class="v">12&#160;</sup></a>義人哪，你們當靠耶和華歡喜，
 </p><p class="q2">當頌揚他神聖的名字<a class="f" id="footnote-111-ref"  href="#footnote-111"  epub:type="noteref" ><sup>[註]</sup></a>。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="98">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#97">上一章</a> <h2 class="c">98</h2> <a class="next-chap-link" href="#99">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#97">上一章</a> <span class="c">98</span> <a class="next-chap-link" href="#99">下一章</a> &gt;
+</div>
 
 <h4 class="d">一篇詩。</h4>
 <h3 class="s">上帝掌管世界</h3>
@@ -6538,11 +6753,13 @@ span.r {
 </p><p class="q2">他要按公義審判世界，
 </p><p class="q2">按公正審判萬民。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="99">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#98">上一章</a> <h2 class="c">99</h2> <a class="next-chap-link" href="#100">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#98">上一章</a> <span class="c">99</span> <a class="next-chap-link" href="#100">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝是至高之王</h3>
 <p class="q1">
@@ -6579,11 +6796,13 @@ span.r {
 </p><p class="q2">在他的聖山下拜，
 </p><p class="q2">因為耶和華－我們的上帝本為聖！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="100">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#99">上一章</a> <h2 class="c">100</h2> <a class="next-chap-link" href="#101">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#99">上一章</a> <span class="c">100</span> <a class="next-chap-link" href="#101">下一章</a> &gt;
+</div>
 
 <h4 class="d">稱謝詩。</h4>
 <h3 class="s">頌讚之詩</h3>
@@ -6608,11 +6827,13 @@ span.r {
 </p><p class="q2">他的慈愛存到永遠，
 </p><p class="q2">他的信實直到萬代。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="101">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#100">上一章</a> <h2 class="c">101</h2> <a class="next-chap-link" href="#102">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#100">上一章</a> <span class="c">101</span> <a class="next-chap-link" href="#102">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">王的諾言</h3>
@@ -6644,11 +6865,13 @@ span.r {
 <a class="verse" id="101:8"><sup class="v">8&#160;</sup></a>我每日早晨要滅絕地上所有的惡人，
 </p><p class="q2">把作惡的從耶和華的城裏全都剪除。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="102">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#101">上一章</a> <h2 class="c">102</h2> <a class="next-chap-link" href="#103">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#101">上一章</a> <span class="c">102</span> <a class="next-chap-link" href="#103">下一章</a> &gt;
+</div>
 
 <h4 class="d">困苦人發昏的時候，在耶和華面前傾吐苦情的禱告。</h4>
 <h3 class="s">遭難中的祈禱</h3>
@@ -6746,11 +6969,13 @@ span.r {
 <a class="verse" id="102:28"><sup class="v">28&#160;</sup></a>你僕人的子孫要安然居住，
 </p><p class="q2">他們的後裔要堅立在你面前。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="103">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#102">上一章</a> <h2 class="c">103</h2> <a class="next-chap-link" href="#104">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#102">上一章</a> <span class="c">103</span> <a class="next-chap-link" href="#104">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">耶和華的慈愛</h3>
@@ -6828,11 +7053,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">我的心哪，你要稱頌耶和華！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="104">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#103">上一章</a> <h2 class="c">104</h2> <a class="next-chap-link" href="#105">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#103">上一章</a> <span class="c">104</span> <a class="next-chap-link" href="#105">下一章</a> &gt;
+</div>
 
 <h3 class="s">造化主頌</h3>
 <p class="q1">
@@ -6955,14 +7182,16 @@ span.r {
 </p><p class="q1">我的心哪，你要稱頌耶和華！
 </p><p class="q2">哈利路亞<a class="f" id="footnote-118-ref"  href="#footnote-118"  epub:type="noteref" ><sup>[註]</sup></a>！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="105">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#104">上一章</a> <h2 class="c">105</h2> <a class="next-chap-link" href="#106">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#104">上一章</a> <span class="c">105</span> <a class="next-chap-link" href="#106">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝和他的子民</h3>
-<span class="r">（代上16‧8－22）</span>
+<span class="r">（<a href="13-1CH.html#16:8">代上16‧8－22</a>）</span>
 <p class="q1">
 <a class="verse" id="105:1"><sup class="v">1&#160;</sup></a>你們要稱謝耶和華，求告他的名，
 </p><p class="q2">在萬民中傳揚他的作為！
@@ -7107,11 +7336,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">哈利路亞！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="106">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#105">上一章</a> <h2 class="c">106</h2> <a class="next-chap-link" href="#107">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#105">上一章</a> <span class="c">106</span> <a class="next-chap-link" href="#107">下一章</a> &gt;
+</div>
 
 <h3 class="s">上帝對他子民的良善</h3>
 <p class="q1">
@@ -7285,11 +7516,13 @@ span.r {
 </p><p class="q1">哈利路亞！
 <h2 class="ms">第五卷（一百零七至一百五十篇）</h2>
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="107">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#106">上一章</a> <h2 class="c">107</h2> <a class="next-chap-link" href="#108">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#106">上一章</a> <span class="c">107</span> <a class="next-chap-link" href="#108">下一章</a> &gt;
+</div>
 
 <h3 class="s">頌讚上帝的良善</h3>
 <p class="q1">
@@ -7428,15 +7661,17 @@ span.r {
 <a class="verse" id="107:43"><sup class="v">43&#160;</sup></a>凡有智慧的必在這些事上留心，
 </p><p class="q2">他必思想耶和華的慈愛。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="108">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#107">上一章</a> <h2 class="c">108</h2> <a class="next-chap-link" href="#109">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#107">上一章</a> <span class="c">108</span> <a class="next-chap-link" href="#109">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩歌。</h4>
 <h3 class="s">抗敵求助</h3>
-<span class="r">（詩57‧7－11；60‧5－12）</span>
+<span class="r">（<a href="19-PSA.html#57:7">詩57‧7－11</a>；<a href="19-PSA.html#60:5">60‧5－12</a>）</span>
 <p class="q1">
 <a class="verse" id="108:1"><sup class="v">1&#160;</sup></a>上帝啊，我心堅定；
 </p><p class="q2">我口<a class="f" id="footnote-122-ref"  href="#footnote-122"  epub:type="noteref" ><sup>[註]</sup></a>要唱詩歌頌！
@@ -7485,11 +7720,13 @@ span.r {
 <a class="verse" id="108:13"><sup class="v">13&#160;</sup></a>我們倚靠上帝才得施展大能，
 </p><p class="q2">因為踐踏我們敵人的就是他。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="109">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#108">上一章</a> <h2 class="c">109</h2> <a class="next-chap-link" href="#110">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#108">上一章</a> <span class="c">109</span> <a class="next-chap-link" href="#110">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">遭難者的訴苦</h3>
@@ -7595,11 +7832,13 @@ span.r {
 <a class="verse" id="109:31"><sup class="v">31&#160;</sup></a>因為他必站在貧窮人的右邊，
 </p><p class="q2">救他脫離定他死罪的人。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="110">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#109">上一章</a> <h2 class="c">110</h2> <a class="next-chap-link" href="#111">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#109">上一章</a> <span class="c">110</span> <a class="next-chap-link" href="#111">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">耶和華所揀選之王</h3>
@@ -7632,11 +7871,13 @@ span.r {
 <a class="verse" id="110:7"><sup class="v">7&#160;</sup></a>他要喝路旁的河水，
 </p><p class="q2">因此必抬起頭來。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="111">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#110">上一章</a> <h2 class="c">111 <a class="f" id="footnote-129-ref"  href="#footnote-129"  epub:type="noteref" ><sup>[註]</sup></a></h2> <a class="next-chap-link" href="#112">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#110">上一章</a> <span class="c">111 <a class="f" id="footnote-129-ref"  href="#footnote-129"  epub:type="noteref" ><sup>[註]</sup></a></span> <a class="next-chap-link" href="#112">下一章</a> &gt;
+</div>
 
 <h3 class="s">讚美耶和華</h3>
 <p class="q1">
@@ -7674,11 +7915,13 @@ span.r {
 </p><p class="q2">凡遵行他命令的有美好的見識。
 </p><p class="q2">耶和華是永遠當讚美的！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="112">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#111">上一章</a> <h2 class="c">112 <a class="f" id="footnote-130-ref"  href="#footnote-130"  epub:type="noteref" ><sup>[註]</sup></a></h2> <a class="next-chap-link" href="#113">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#111">上一章</a> <span class="c">112 <a class="f" id="footnote-130-ref"  href="#footnote-130"  epub:type="noteref" ><sup>[註]</sup></a></span> <a class="next-chap-link" href="#113">下一章</a> &gt;
+</div>
 
 <h3 class="s">義人之福</h3>
 <p class="q1">
@@ -7715,11 +7958,13 @@ span.r {
 <a class="verse" id="112:10"><sup class="v">10&#160;</sup></a>惡人看見就憤怒，必咬牙而消亡，
 </p><p class="q2">惡人的心願要歸於幻滅。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="113">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#112">上一章</a> <h2 class="c">113</h2> <a class="next-chap-link" href="#114">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#112">上一章</a> <span class="c">113</span> <a class="next-chap-link" href="#114">下一章</a> &gt;
+</div>
 
 <h3 class="s">讚美耶和華的良善</h3>
 <p class="q1">
@@ -7754,11 +7999,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">哈利路亞！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="114">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#113">上一章</a> <h2 class="c">114</h2> <a class="next-chap-link" href="#115">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#113">上一章</a> <span class="c">114</span> <a class="next-chap-link" href="#115">下一章</a> &gt;
+</div>
 
 <h3 class="s">逾越節之歌</h3>
 <p class="q1">
@@ -7789,11 +8036,13 @@ span.r {
 <a class="verse" id="114:8"><sup class="v">8&#160;</sup></a>他叫磐石變為水池，
 </p><p class="q2">使堅石變為泉源。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="115">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#114">上一章</a> <h2 class="c">115</h2> <a class="next-chap-link" href="#116">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#114">上一章</a> <span class="c">115</span> <a class="next-chap-link" href="#116">下一章</a> &gt;
+</div>
 
 <h3 class="s">獨一真神</h3>
 <p class="q1">
@@ -7862,11 +8111,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">哈利路亞！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="116">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#115">上一章</a> <h2 class="c">116</h2> <a class="next-chap-link" href="#117">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#115">上一章</a> <span class="c">116</span> <a class="next-chap-link" href="#117">下一章</a> &gt;
+</div>
 
 <h3 class="s">為出死入生讚美上帝</h3>
 <p class="q1">
@@ -7935,11 +8186,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">哈利路亞！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="117">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#116">上一章</a> <h2 class="c">117</h2> <a class="next-chap-link" href="#118">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#116">上一章</a> <span class="c">117</span> <a class="next-chap-link" href="#118">下一章</a> &gt;
+</div>
 
 <h3 class="s">讚美耶和華</h3>
 <p class="q1">
@@ -7952,11 +8205,13 @@ span.r {
 </p><p class="q1">哈利路亞！
 </p><p class="b">
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="118">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#117">上一章</a> <h2 class="c">118</h2> <a class="next-chap-link" href="#119">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#117">上一章</a> <span class="c">118</span> <a class="next-chap-link" href="#119">下一章</a> &gt;
+</div>
 
 <h3 class="s">因勝利而稱謝耶和華</h3>
 <p class="q1">
@@ -8061,11 +8316,13 @@ span.r {
 <a class="verse" id="118:29"><sup class="v">29&#160;</sup></a>你們要稱謝耶和華，因他本為善；
 </p><p class="q2">他的慈愛永遠長存！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="119">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#118">上一章</a> <h2 class="c">119 <a class="f" id="footnote-135-ref"  href="#footnote-135"  epub:type="noteref" ><sup>[註]</sup></a></h2> <a class="next-chap-link" href="#120">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#118">上一章</a> <span class="c">119 <a class="f" id="footnote-135-ref"  href="#footnote-135"  epub:type="noteref" ><sup>[註]</sup></a></span> <a class="next-chap-link" href="#120">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華的律法</h3>
 <p class="q1">
@@ -8618,11 +8875,13 @@ span.r {
 <a class="verse" id="119:176"><sup class="v">176&#160;</sup></a>我走迷了路如同失喪的羊，求你尋找你的僕人，
 </p><p class="q2">因我不忘記你的命令。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="120">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#119">上一章</a> <h2 class="c">120</h2> <a class="next-chap-link" href="#121">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#119">上一章</a> <span class="c">120</span> <a class="next-chap-link" href="#121">下一章</a> &gt;
+</div>
 
 <h4 class="d">上行（或譯登階，下同）之詩。</h4>
 <h3 class="s">求主恩助</h3>
@@ -8650,11 +8909,13 @@ span.r {
 <a class="verse" id="120:7"><sup class="v">7&#160;</sup></a>我願和平，
 </p><p class="q2">當我發言，他們卻要戰爭。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="121">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#120">上一章</a> <h2 class="c">121</h2> <a class="next-chap-link" href="#122">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#120">上一章</a> <span class="c">121</span> <a class="next-chap-link" href="#122">下一章</a> &gt;
+</div>
 
 <h4 class="d">上行之詩。</h4>
 <h3 class="s">耶和華是我們的保護者</h3>
@@ -8686,11 +8947,13 @@ span.r {
 <a class="verse" id="121:8"><sup class="v">8&#160;</sup></a>你出你入，耶和華要保護你，
 </p><p class="q2">從今時直到永遠。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="122">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#121">上一章</a> <h2 class="c">122</h2> <a class="next-chap-link" href="#123">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#121">上一章</a> <span class="c">122</span> <a class="next-chap-link" href="#123">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛上行之詩。</h4>
 <h3 class="s">耶路撒冷頌</h3>
@@ -8724,11 +8987,13 @@ span.r {
 <a class="verse" id="122:9"><sup class="v">9&#160;</sup></a>為耶和華－我們上帝殿的緣故，
 </p><p class="q2">我要為你求福！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="123">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#122">上一章</a> <h2 class="c">123</h2> <a class="next-chap-link" href="#124">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#122">上一章</a> <span class="c">123</span> <a class="next-chap-link" href="#124">下一章</a> &gt;
+</div>
 
 <h4 class="d">上行之詩。</h4>
 <h3 class="s">求主憐憫</h3>
@@ -8748,11 +9013,13 @@ span.r {
 <a class="verse" id="123:4"><sup class="v">4&#160;</sup></a>我們受盡了安逸人的譏誚
 </p><p class="q2">和驕傲人的藐視。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="124">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#123">上一章</a> <h2 class="c">124</h2> <a class="next-chap-link" href="#125">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#123">上一章</a> <span class="c">124</span> <a class="next-chap-link" href="#125">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛上行之詩。</h4>
 <h3 class="s">上帝保護他的子民</h3>
@@ -8782,11 +9049,13 @@ span.r {
 <a class="verse" id="124:8"><sup class="v">8&#160;</sup></a>我們得幫助，
 </p><p class="q2">是因造天地之耶和華的名。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="125">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#124">上一章</a> <h2 class="c">125</h2> <a class="next-chap-link" href="#126">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#124">上一章</a> <span class="c">125</span> <a class="next-chap-link" href="#126">下一章</a> &gt;
+</div>
 
 <h4 class="d">上行之詩。</h4>
 <h3 class="s">耶和華子民的安全</h3>
@@ -8809,11 +9078,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">願平安歸於<span class="pn">以色列</span>！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="126">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#125">上一章</a> <h2 class="c">126</h2> <a class="next-chap-link" href="#127">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#125">上一章</a> <span class="c">126</span> <a class="next-chap-link" href="#127">下一章</a> &gt;
+</div>
 
 <h4 class="d">上行之詩。</h4>
 <h3 class="s">被擄歸回者的歡樂</h3>
@@ -8839,11 +9110,13 @@ span.r {
 <a class="verse" id="126:6"><sup class="v">6&#160;</sup></a>那帶種流淚出去的，
 </p><p class="q2">必歡呼地帶禾捆回來！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="127">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#126">上一章</a> <h2 class="c">127</h2> <a class="next-chap-link" href="#128">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#126">上一章</a> <span class="c">127</span> <a class="next-chap-link" href="#128">下一章</a> &gt;
+</div>
 
 <h4 class="d">所羅門上行之詩。</h4>
 <h3 class="s">稱頌上帝的良善</h3>
@@ -8868,11 +9141,13 @@ span.r {
 <a class="verse" id="127:5"><sup class="v">5&#160;</sup></a>箭袋充滿的人有福了！
 </p><p class="q2">他們在城門口和仇敵爭論時必不蒙羞。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="128">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#127">上一章</a> <h2 class="c">128</h2> <a class="next-chap-link" href="#129">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#127">上一章</a> <span class="c">128</span> <a class="next-chap-link" href="#129">下一章</a> &gt;
+</div>
 
 <h4 class="d">上行之詩。</h4>
 <h3 class="s">順從耶和華的報償</h3>
@@ -8899,11 +9174,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">願平安歸於<span class="pn">以色列</span>！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="129">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#128">上一章</a> <h2 class="c">129</h2> <a class="next-chap-link" href="#130">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#128">上一章</a> <span class="c">129</span> <a class="next-chap-link" href="#130">下一章</a> &gt;
+</div>
 
 <h4 class="d">上行之詩。</h4>
 <h3 class="s">求耶和華退敵</h3>
@@ -8932,11 +9209,13 @@ span.r {
 <a class="verse" id="129:8"><sup class="v">8&#160;</sup></a>過路的也不說：「願耶和華所賜的福歸與你們！
 </p><p class="q2">我們奉耶和華的名給你們祝福！」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="130">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#129">上一章</a> <h2 class="c">130</h2> <a class="next-chap-link" href="#131">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#129">上一章</a> <span class="c">130</span> <a class="next-chap-link" href="#131">下一章</a> &gt;
+</div>
 
 <h4 class="d">上行之詩。</h4>
 <h3 class="s">求助的祈禱</h3>
@@ -8968,11 +9247,13 @@ span.r {
 <a class="verse" id="130:8"><sup class="v">8&#160;</sup></a>他必救贖<span class="pn">以色列</span>
 </p><p class="q2">脫離一切的罪孽。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="131">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#130">上一章</a> <h2 class="c">131</h2> <a class="next-chap-link" href="#132">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#130">上一章</a> <span class="c">131</span> <a class="next-chap-link" href="#132">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛上行之詩。</h4>
 <h3 class="s">謙卑靠主</h3>
@@ -8989,11 +9270,13 @@ span.r {
 <a class="verse" id="131:3"><sup class="v">3&#160;</sup></a><span class="pn">以色列</span>啊，你當仰望耶和華，
 </p><p class="q2">從今時直到永遠！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="132">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#131">上一章</a> <h2 class="c">132</h2> <a class="next-chap-link" href="#133">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#131">上一章</a> <span class="c">132</span> <a class="next-chap-link" href="#133">下一章</a> &gt;
+</div>
 
 <h4 class="d">上行之詩。</h4>
 <h3 class="s">聖殿頌</h3>
@@ -9058,11 +9341,13 @@ span.r {
 <a class="verse" id="132:18"><sup class="v">18&#160;</sup></a>我要使他的仇敵披上羞恥；
 </p><p class="q2">但他的冠冕要在他頭上發光。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="133">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#132">上一章</a> <h2 class="c">133</h2> <a class="next-chap-link" href="#134">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#132">上一章</a> <span class="c">133</span> <a class="next-chap-link" href="#134">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛上行之詩。</h4>
 <h3 class="s">弟兄相愛頌</h3>
@@ -9076,11 +9361,13 @@ span.r {
 <a class="verse" id="133:3"><sup class="v">3&#160;</sup></a>又好比<span class="pn">黑門</span>的甘露降在<span class="pn">錫安山</span>；
 </p><p class="q2">因為在那裏有耶和華所命定的福，就是永遠的生命。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="134">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#133">上一章</a> <h2 class="c">134</h2> <a class="next-chap-link" href="#135">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#133">上一章</a> <span class="c">134</span> <a class="next-chap-link" href="#135">下一章</a> &gt;
+</div>
 
 <h4 class="d">上行之詩。</h4>
 <h3 class="s">宣召稱頌</h3>
@@ -9095,11 +9382,13 @@ span.r {
 <a class="verse" id="134:3"><sup class="v">3&#160;</sup></a>願造天地的耶和華
 </p><p class="q2">從<span class="pn">錫安</span>賜福給你們！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="135">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#134">上一章</a> <h2 class="c">135</h2> <a class="next-chap-link" href="#136">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#134">上一章</a> <span class="c">135</span> <a class="next-chap-link" href="#136">下一章</a> &gt;
+</div>
 
 <h3 class="s">稱頌的聖詩</h3>
 <p class="q1">
@@ -9176,11 +9465,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">哈利路亞！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="136">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#135">上一章</a> <h2 class="c">136</h2> <a class="next-chap-link" href="#137">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#135">上一章</a> <span class="c">136</span> <a class="next-chap-link" href="#137">下一章</a> &gt;
+</div>
 
 <h3 class="s">感恩的聖詩</h3>
 <p class="q1">
@@ -9266,11 +9557,13 @@ span.r {
 <a class="verse" id="136:26"><sup class="v">26&#160;</sup></a>你們要稱謝天上的上帝，
 </p><p class="q3">因他的慈愛永遠長存。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="137">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#136">上一章</a> <h2 class="c">137</h2> <a class="next-chap-link" href="#138">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#136">上一章</a> <span class="c">137</span> <a class="next-chap-link" href="#138">下一章</a> &gt;
+</div>
 
 <h3 class="s">被擄的哀歌</h3>
 <p class="q1">
@@ -9307,11 +9600,13 @@ span.r {
 <a class="verse" id="137:9"><sup class="v">9&#160;</sup></a>抓起你的嬰孩摔在磐石上的，
 </p><p class="q2">那人有福了。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="138">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#137">上一章</a> <h2 class="c">138</h2> <a class="next-chap-link" href="#139">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#137">上一章</a> <span class="c">138</span> <a class="next-chap-link" href="#139">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">感恩之禱</h3>
@@ -9346,11 +9641,13 @@ span.r {
 </p><p class="q2">耶和華啊，你的慈愛永遠長存！
 </p><p class="q2">求你不要離棄你手所造的。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="139">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#138">上一章</a> <h2 class="c">139</h2> <a class="next-chap-link" href="#140">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#138">上一章</a> <span class="c">139</span> <a class="next-chap-link" href="#140">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">耶和華的全知和眷顧</h3>
@@ -9434,11 +9731,13 @@ span.r {
 <a class="verse" id="139:24"><sup class="v">24&#160;</sup></a>看在我裏面有甚麼惡行沒有，
 </p><p class="q2">引導我走永生的道路。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="140">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#139">上一章</a> <h2 class="c">140</h2> <a class="next-chap-link" href="#141">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#139">上一章</a> <span class="c">140</span> <a class="next-chap-link" href="#141">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。交給聖詠團長。</h4>
 <h3 class="s">求耶和華護佑</h3>
@@ -9486,11 +9785,13 @@ span.r {
 <a class="verse" id="140:13"><sup class="v">13&#160;</sup></a>義人必頌揚你的名，
 </p><p class="q2">正直人要在你面前居住。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="141">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#140">上一章</a> <h2 class="c">141</h2> <a class="next-chap-link" href="#142">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#140">上一章</a> <span class="c">141</span> <a class="next-chap-link" href="#142">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">晚 禱</h3>
@@ -9533,11 +9834,13 @@ span.r {
 <a class="verse" id="141:10"><sup class="v">10&#160;</sup></a>願惡人落在自己的網中，
 </p><p class="q2">我卻得以逃脫。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="142">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#141">上一章</a> <h2 class="c">142</h2> <a class="next-chap-link" href="#143">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#141">上一章</a> <span class="c">142</span> <a class="next-chap-link" href="#143">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛在洞裏作的訓誨詩，是一篇祈禱。</h4>
 <h3 class="s">求主眷顧</h3>
@@ -9574,11 +9877,13 @@ span.r {
 </p><p class="q1">義人必環繞我，
 </p><p class="q2">因為你用厚恩待我。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="143">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#142">上一章</a> <h2 class="c">143</h2> <a class="next-chap-link" href="#144">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#142">上一章</a> <span class="c">143</span> <a class="next-chap-link" href="#144">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">求主拯救</h3>
@@ -9632,11 +9937,13 @@ span.r {
 <a class="verse" id="143:12"><sup class="v">12&#160;</sup></a>憑你的慈愛剪除我的仇敵，
 </p><p class="q2">滅絕所有苦待我的人，因我是你的僕人。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="144">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#143">上一章</a> <h2 class="c">144</h2> <a class="next-chap-link" href="#145">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#143">上一章</a> <span class="c">144</span> <a class="next-chap-link" href="#145">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的詩。</h4>
 <h3 class="s">君王為勝利感恩</h3>
@@ -9696,11 +10003,13 @@ span.r {
 <a class="verse" id="144:15"><sup class="v">15&#160;</sup></a>這樣情況的百姓有福了！
 </p><p class="q2">以耶和華為他們上帝的百姓有福了！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="145">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#144">上一章</a> <h2 class="c">145 <a class="f" id="footnote-160-ref"  href="#footnote-160"  epub:type="noteref" ><sup>[註]</sup></a></h2> <a class="next-chap-link" href="#146">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#144">上一章</a> <span class="c">145 <a class="f" id="footnote-160-ref"  href="#footnote-160"  epub:type="noteref" ><sup>[註]</sup></a></span> <a class="next-chap-link" href="#146">下一章</a> &gt;
+</div>
 
 <h4 class="d">大衛的讚美詩。</h4>
 <h3 class="s">稱頌之歌</h3>
@@ -9775,11 +10084,13 @@ span.r {
 <a class="verse" id="145:21"><sup class="v">21&#160;</sup></a>我的口要述說讚美耶和華的話；
 </p><p class="q2">惟願有血肉之軀的都永永遠遠稱頌他的聖名。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="146">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#145">上一章</a> <h2 class="c">146</h2> <a class="next-chap-link" href="#147">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#145">上一章</a> <span class="c">146</span> <a class="next-chap-link" href="#147">下一章</a> &gt;
+</div>
 
 <h3 class="s">讚美耶和華的救助</h3>
 <p class="q1">
@@ -9822,11 +10133,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">哈利路亞！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="147">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#146">上一章</a> <h2 class="c">147</h2> <a class="next-chap-link" href="#148">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#146">上一章</a> <span class="c">147</span> <a class="next-chap-link" href="#148">下一章</a> &gt;
+</div>
 
 <h3 class="s">讚美上帝的全能</h3>
 <p class="q1">
@@ -9897,11 +10210,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">哈利路亞！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="148">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#147">上一章</a> <h2 class="c">148</h2> <a class="next-chap-link" href="#149">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#147">上一章</a> <span class="c">148</span> <a class="next-chap-link" href="#149">下一章</a> &gt;
+</div>
 
 <h3 class="s">宣召萬有讚美耶和華</h3>
 <p class="q1">
@@ -9954,11 +10269,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">哈利路亞！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="149">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#148">上一章</a> <h2 class="c">149</h2> <a class="next-chap-link" href="#150">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#148">上一章</a> <span class="c">149</span> <a class="next-chap-link" href="#150">下一章</a> &gt;
+</div>
 
 <h3 class="s">讚美的聖詩</h3>
 <p class="q1">
@@ -9993,11 +10310,13 @@ span.r {
 </p><p class="b">
 </p><p class="q1">哈利路亞！
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="150">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#149">上一章</a> <h2 class="c">150</h2> <a class="next-chap-link" href="#151">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">詩篇</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#149">上一章</a> <span class="c">150</span> <a class="next-chap-link" href="#151">下一章</a> &gt;
+</div>
 
 <h3 class="s">讚美耶和華</h3>
 <p class="q1">
@@ -10026,9 +10345,13 @@ span.r {
 <p class="restore">21-Jul-2010@14:27, Backup Description=21-Jul-2010@14:24, janet -</p>
 <p class="restore">02-Aug-2010@11:51, Backup Description=02-Aug-2010@11:26, Loretta -</p>
 
-<a class="chapter" id="151">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#150">上一章</a> <a class="chapter" id="151">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="20-PRO.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:1</a> 「思想」或譯「默念」。</p>
 </aside>

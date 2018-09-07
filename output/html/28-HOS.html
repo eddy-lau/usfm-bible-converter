@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>何西阿書</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -155,11 +174,13 @@ span.r {
 </p><p class="q2">3. 上帝將會懲罰<span class="pn">以色列</span>（9．1—13．16）
 </p><p class="q2">4. 那些歸向上帝的人將蒙饒恕（14．1—9）
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="1:1"><sup class="v">1&#160;</sup></a>當<span class="pn">烏西雅</span>、<span class="pn">約坦</span>、<span class="pn">亞哈斯</span>、<span class="pn">希西家</span>作<span class="pn">猶大</span>王，<span class="pn">約阿施</span>的兒子<span class="pn">耶羅波安</span>作<span class="pn">以色列</span>王的時候，耶和華的話臨到<span class="pn">備利</span>的兒子<span class="pn">何西阿</span>。
@@ -183,11 +204,13 @@ span.r {
 <a class="verse" id="1:10"><sup class="v">10&#160;</sup></a>然而，<span class="pn">以色列</span>的人數必多如海沙，不可量，不可數。從前在甚麼地方對他們說「你們不是我的子民」，將來就在那裏稱他們為「永生上帝的兒子」。
 <a class="verse" id="1:11"><sup class="v">11&#160;</sup></a><span class="pn">猶大</span>人和<span class="pn">以色列</span>人要一同聚集，為自己設立一個「頭」，從這地上來，因為<span class="pn">耶斯列</span>的日子必為大日。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="2:1"><sup class="v">1&#160;</sup></a>你們要稱你們的眾弟兄<a class="f" id="footnote-5-ref"  href="#footnote-5"  epub:type="noteref" ><sup>[註]</sup></a>為<span class="pn">阿米</span><a class="f" id="footnote-6-ref"  href="#footnote-6"  epub:type="noteref" ><sup>[註]</sup></a>，稱你們的眾姊妹<a class="f" id="footnote-7-ref"  href="#footnote-7"  epub:type="noteref" ><sup>[註]</sup></a>為<span class="pn">路哈瑪</span><a class="f" id="footnote-8-ref"  href="#footnote-8"  epub:type="noteref" ><sup>[註]</sup></a>。
@@ -275,11 +298,13 @@ span.r {
 </p><p class="q1">「你是我的子民」；
 </p><p class="q1">他必說：「我的上帝。」
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">何西阿和不貞的婦人</h3>
 <p class="p">
@@ -289,11 +314,13 @@ span.r {
 <a class="verse" id="3:4"><sup class="v">4&#160;</sup></a>因為<span class="pn">以色列</span>人必多日過著無君王，無領袖，無祭祀，無柱像，無以弗得，無家中神像的生活。
 <a class="verse" id="3:5"><sup class="v">5&#160;</sup></a>後來<span class="pn">以色列</span>人必歸回<a class="f" id="footnote-14-ref"  href="#footnote-14"  epub:type="noteref" ><sup>[註]</sup></a>，尋求耶和華─他們的上帝和他們的王<span class="pn">大衛</span>。在末後的日子，他們必敬畏耶和華，領受他的恩惠。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">耶和華譴責以色列</h3>
 <p class="q1">
@@ -387,11 +414,13 @@ span.r {
 <a class="verse" id="4:19"><sup class="v">19&#160;</sup></a>風把他們捲在翅膀裏，
 </p><p class="q1">他們必因所獻的祭<a class="f" id="footnote-17-ref"  href="#footnote-17"  epub:type="noteref" ><sup>[註]</sup></a>蒙羞。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="5:1"><sup class="v">1&#160;</sup></a>眾祭司啊，要聽這話！
@@ -462,11 +491,13 @@ span.r {
 </p><p class="q1">等他們自覺有罪，尋求我的面；
 </p><p class="q1">急難時他們必切切尋求我。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <h3 class="s">以色列無悔改誠意</h3>
 <p class="q1">
@@ -515,11 +546,13 @@ span.r {
 <a class="verse" id="6:11"><sup class="v">11&#160;</sup></a><span class="pn">猶大</span>啊，我使被擄之民歸回的時候，
 </p><p class="q1">必有為你所預備的豐收。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="7:1"><sup class="v">1&#160;</sup></a>我正要醫治<span class="pn">以色列</span>的時候，
@@ -593,11 +626,13 @@ span.r {
 </p><p class="q1">他們的領袖必因舌頭的狂傲倒在刀下，
 </p><p class="q1">這在<span class="pn">埃及</span>地必成為人的笑柄。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h3 class="s">以色列人因拜偶像被定罪</h3>
 <p class="q1">
@@ -662,11 +697,13 @@ span.r {
 </p><p class="q1">我卻要降火在他的城鎮，
 </p><p class="q1">吞滅其堡壘。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h3 class="s">宣佈以色列受懲罰</h3>
 <p class="q1">
@@ -763,11 +800,13 @@ span.r {
 </p><p class="q1">因為他們不聽從他；
 </p><p class="q1">他們必飄流在列國中。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="10:1"><sup class="v">1&#160;</sup></a><span class="pn">以色列</span>是茂盛的葡萄樹，
@@ -853,11 +892,13 @@ span.r {
 </p><p class="q1">你們必遭遇如此。
 </p><p class="q1">黎明來臨，<span class="pn">以色列</span>的王必全然滅絕。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">憐愛叛民</h3>
 <p class="q1">
@@ -922,11 +963,13 @@ span.r {
 </p><p class="q1"><span class="pn">猶大</span>卻仍與上帝同行<a class="f" id="footnote-41-ref"  href="#footnote-41"  epub:type="noteref" ><sup>[註]</sup></a>，
 </p><p class="q1">向聖者忠心。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <p class="q1">
 <a class="verse" id="12:1"><sup class="v">1&#160;</sup></a><span class="pn">以法蓮</span>以風為食物，
@@ -991,11 +1034,13 @@ span.r {
 </p><p class="q1">他所流的血必歸到他身上。
 </p><p class="q1">主必使他的羞辱歸還給他。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <h3 class="s">以色列最後的審判</h3>
 <p class="q1">
@@ -1077,11 +1122,13 @@ span.r {
 </p><p class="q1">嬰孩必被摔死，
 </p><p class="q1">孕婦必被剖開。
 </p>
+<div class="page-break"></div>
 <a class="chapter" id="14">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#13">上一章</a> <h2 class="c">14</h2> <a class="next-chap-link" href="#15">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">何西阿書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <span class="c">14</span> <a class="next-chap-link" href="#15">下一章</a> &gt;
+</div>
 
 <h3 class="s">勸告以色列人</h3>
 <p class="q1">
@@ -1133,9 +1180,13 @@ span.r {
 </p><p class="restore">22-Feb-2010@11:52, Backup Description=09-Feb-2010@10:06, isa -</p>
 <p class="restore">20-May-2010@16:09, Backup Description=20-May-2010@15:57, kitman -</p>
 
-<a class="chapter" id="15">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#14">上一章</a> <a class="chapter" id="15">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="29-JOL.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:4</a> 「耶斯列」意思是「上帝栽種」；2‧22同。</p>
 </aside>

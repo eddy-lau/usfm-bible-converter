@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" ></meta>
 <title>哥林多後書</title>
 <style><!--
 span.id {
@@ -34,8 +34,13 @@ span.book-nav-link {
   display: inline;
 }
 
+/* page break */
+div.page-break {
+  display: none;
+}
+
 /* chapter */
-h2.c {
+span.c {
   text-align: center;
   display: inline;
   font-size: 2.5em;
@@ -45,9 +50,16 @@ h2.c {
   margin-right: 0;
   font-weight: bold;
 }
+h2.ms {
+  text-align: center;
+}
 
 span.c a sup {
   font-size: 0.5em;
+}
+
+div.chap-top-book-name {
+  text-align: center;
 }
 
 div.chap-nav {
@@ -101,7 +113,7 @@ p.q, p.q1, p.q2 {
 span.pn {
   /*border-bottom: 1px solid #000;*/
   text-decoration: underline;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 /* footnote */
@@ -112,8 +124,15 @@ p.footnote {
   margin-bottom: 0em;
   margin-top: 0.5em;
 }
-h2.footnote-title {
+span.footnote-title {
   text-align: center;
+  display: inline;
+  /*font-size: 2.5em;*/
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 /* reference */
@@ -121,7 +140,7 @@ span.r {
   font-size: smaller;
   display: block;
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -1.75em;
   margin-bottom: 2em;
 }
 
@@ -153,11 +172,13 @@ span.r {
 <p class="ip">四．<span class="pn">保羅</span>為自己的使徒職分辯護（10．1－13．10）</p>
 <p class="ip">五．結語（13．11－13）</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="1">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#0">上一章</a> <h2 class="c">1</h2> <a class="next-chap-link" href="#2">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#0">上一章</a> <span class="c">1</span> <a class="next-chap-link" href="#2">下一章</a> &gt;
+</div>
 
 <h3 class="s">問候</h3>
 <p class="p">
@@ -193,11 +214,13 @@ span.r {
 <a class="verse" id="1:24"><sup class="v">24&#160;</sup></a>我們並不是要控制你們的信心，而是要作你們的同工，讓你們得快樂，因為你們在信仰上已經站得穩了。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="2">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#1">上一章</a> <h2 class="c">2</h2> <a class="next-chap-link" href="#3">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#1">上一章</a> <span class="c">2</span> <a class="next-chap-link" href="#3">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="2:1"><sup class="v">1&#160;</sup></a>我自己定了主意，下次不再帶著悲傷到你們那裏去。
@@ -224,11 +247,13 @@ span.r {
 <a class="verse" id="2:17"><sup class="v">17&#160;</sup></a>我們不像許多人，把上帝的道當商品販賣，而是由於真誠，而是受命於上帝，在上帝面前憑著基督講道。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="3">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#2">上一章</a> <h2 class="c">3</h2> <a class="next-chap-link" href="#4">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#2">上一章</a> <span class="c">3</span> <a class="next-chap-link" href="#4">下一章</a> &gt;
+</div>
 
 <h3 class="s">新約的執事</h3>
 <p class="p">
@@ -255,11 +280,13 @@ span.r {
 <a class="verse" id="3:18"><sup class="v">18&#160;</sup></a>既然我們眾人以揭去面紗的臉得以看見<a class="f" id="footnote-3-ref"  href="#footnote-3"  epub:type="noteref" ><sup>[註]</sup></a>主的榮光，好像從鏡子裏返照，就變成了與主有同樣的形像，榮上加榮，如同從主的靈<a class="f" id="footnote-4-ref"  href="#footnote-4"  epub:type="noteref" ><sup>[註]</sup></a>變成的。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="4">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#3">上一章</a> <h2 class="c">4</h2> <a class="next-chap-link" href="#5">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#3">上一章</a> <span class="c">4</span> <a class="next-chap-link" href="#5">下一章</a> &gt;
+</div>
 
 <h3 class="s">瓦器裏的寶貝</h3>
 <p class="p">
@@ -287,11 +314,13 @@ span.r {
 <a class="verse" id="4:18"><sup class="v">18&#160;</sup></a>因為我們不是顧念看得見的，而是顧念看不見的；原來看得見的是暫時的，看不見的才是永遠的。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="5">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#4">上一章</a> <h2 class="c">5</h2> <a class="next-chap-link" href="#6">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#4">上一章</a> <span class="c">5</span> <a class="next-chap-link" href="#6">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="5:1"><sup class="v">1&#160;</sup></a>因為我們知道，我們這地上的帳篷若拆毀了，我們將有上帝所造的居所，不是人手所造的，而是在天上永存的。
@@ -322,11 +351,13 @@ span.r {
 <a class="verse" id="5:21"><sup class="v">21&#160;</sup></a>上帝使那無罪<a class="f" id="footnote-7-ref"  href="#footnote-7"  epub:type="noteref" ><sup>[註]</sup></a>的，替我們成為罪，好使我們在他裏面成為上帝的義。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="6">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#5">上一章</a> <h2 class="c">6</h2> <a class="next-chap-link" href="#7">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#5">上一章</a> <span class="c">6</span> <a class="next-chap-link" href="#7">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="6:1"><sup class="v">1&#160;</sup></a>我們與上帝同工的也勸你們，不可白受他的恩典；
@@ -366,11 +397,13 @@ span.r {
 </p><p class="q1">這是全能的主說的。」
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="7">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#6">上一章</a> <h2 class="c">7</h2> <a class="next-chap-link" href="#8">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#6">上一章</a> <span class="c">7</span> <a class="next-chap-link" href="#8">下一章</a> &gt;
+</div>
 
 <p class="p">
 <a class="verse" id="7:1"><sup class="v">1&#160;</sup></a>所以，親愛的，既然我們有這樣的應許，就當潔淨自己，除去身體和靈魂一切的污穢，藉著敬畏上帝，得以成聖。
@@ -395,11 +428,13 @@ span.r {
 <a class="verse" id="7:16"><sup class="v">16&#160;</sup></a>我如今歡喜，因為我在一切事上對你們有信心。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="8">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#7">上一章</a> <h2 class="c">8</h2> <a class="next-chap-link" href="#9">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#7">上一章</a> <span class="c">8</span> <a class="next-chap-link" href="#9">下一章</a> &gt;
+</div>
 
 <h3 class="s">慷慨的捐助</h3>
 <p class="p">
@@ -434,11 +469,13 @@ span.r {
 <a class="verse" id="8:24"><sup class="v">24&#160;</sup></a>所以，你們務要在眾教會面前向他們顯明你們的愛心和我所誇獎你們的憑據。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="9">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#8">上一章</a> <h2 class="c">9</h2> <a class="next-chap-link" href="#10">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#8">上一章</a> <span class="c">9</span> <a class="next-chap-link" href="#10">下一章</a> &gt;
+</div>
 
 <h3 class="s">幫助聖徒的捐款</h3>
 <p class="p">
@@ -463,11 +500,13 @@ span.r {
 <a class="verse" id="9:15"><sup class="v">15&#160;</sup></a>感謝上帝，因他有說不盡的恩賜！
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="10">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#9">上一章</a> <h2 class="c">10</h2> <a class="next-chap-link" href="#11">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#9">上一章</a> <span class="c">10</span> <a class="next-chap-link" href="#11">下一章</a> &gt;
+</div>
 
 <h3 class="s">保羅為自己的工作辯護</h3>
 <p class="p">
@@ -493,11 +532,13 @@ span.r {
 <a class="verse" id="10:18"><sup class="v">18&#160;</sup></a>因為蒙悅納的，不是自我稱許的，而是主所稱許的。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="11">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#10">上一章</a> <h2 class="c">11</h2> <a class="next-chap-link" href="#12">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#10">上一章</a> <span class="c">11</span> <a class="next-chap-link" href="#12">下一章</a> &gt;
+</div>
 
 <h3 class="s">保羅和假使徒</h3>
 <p class="p">
@@ -542,11 +583,13 @@ span.r {
 <a class="verse" id="11:33"><sup class="v">33&#160;</sup></a>我被人用筐子從城牆上的窗口縋下，逃脫了他的手。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="12">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#11">上一章</a> <h2 class="c">12</h2> <a class="next-chap-link" href="#13">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#11">上一章</a> <span class="c">12</span> <a class="next-chap-link" href="#13">下一章</a> &gt;
+</div>
 
 <h3 class="s">異象和啟示</h3>
 <p class="p">
@@ -577,11 +620,13 @@ span.r {
 <a class="verse" id="12:21"><sup class="v">21&#160;</sup></a>我怕我再來的時候，我的上帝使我在你們面前蒙羞，並且又因許多人從前犯罪，行污穢、淫亂、放蕩的事，不肯悔改而悲傷。
 </p><p class="restore">12-Mar-2009@10:21, Backup Description=12-Mar-2009@09:54, Loretta -</p>
 
+<div class="page-break"></div>
 <a class="chapter" id="13">
-<div class="chap-nav">
-&lt; <a class="prev-chap-link" href="#12">上一章</a> <h2 class="c">13</h2> <a class="next-chap-link" href="#14">下一章</a> &gt;
-</div>
 </a>
+<div class="chap-top-book-name"><a href="#0">哥林多後書</a></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#12">上一章</a> <span class="c">13</span> <a class="next-chap-link" href="#14">下一章</a> &gt;
+</div>
 
 <h3 class="s">警告和問候</h3>
 <p class="p">
@@ -611,9 +656,13 @@ span.r {
 <p class="restore">02-Aug-2010@11:51, Backup Description=02-Aug-2010@11:26, Loretta -</p>
 <p class="restore">24-Aug-2010@10:54, Backup Description=24-Aug-2010@10:52, janet -</p>
 
-<a class="chapter" id="14">
-<h2 class="footnote-title">註釋</h2>
+<div class="page-break"></div>
+<div class="chap-nav">
+&lt; <a class="prev-chap-link" href="#13">上一章</a> <a class="chapter" id="14">
+<span class="footnote-title">註釋</span>
 </a>
+ <a class="next-chap-link" href="49-GAL.html#0">下一章</a> &gt;
+</div>
 <aside id="footnote-1" epub:type="footnote">
 <p class="footnote"><a href="#footnote-1-ref">1:2</a> 「平安」或譯「和平」。</p>
 </aside>

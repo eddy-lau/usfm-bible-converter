@@ -9,7 +9,7 @@ const PAIRED_MARKERS = [
 const HTML_TAGS = {
   'b': 'p',
   'bk': 'span',
-  'c': 'h2',
+  'c': 'span',
   'd': 'h4',
   'f': 'a',
   'ft': 'span',
@@ -197,7 +197,7 @@ function convertBook(shortName, opts) {
     result += '<div class="chap-nav">\n';
     result += '&lt; <a class="prev-chap-link" href="#' + (chapter) + '">上一章</a> ';
     result += '<a class="chapter" id="' + (chapter + 1) + '">\n';
-    result += '<h2 class="footnote-title">註釋</h2>\n';
+    result += '<span class="footnote-title">註釋</span>\n';
     result += '</a>\n';
     result += ' <a class="next-chap-link" href="' + getFilename(getNextBook())  + '#0">下一章</a> &gt;\n';
     result += '</div>\n';
@@ -229,6 +229,9 @@ function convertBook(shortName, opts) {
       targetBook = books.find( book => {
         return book.localizedAbbreviation === bookname;
       });
+      if (!targetBook) {
+        throw new Error('Book not found: ' + reference);
+      }
     }
 
     var chapter;
@@ -346,11 +349,12 @@ function convertBook(shortName, opts) {
 
       result += closeParagraphIfOpened() + '\n';
       result += '<div class="page-break"></div>\n';
+      result += '<a class="chapter" id="' + chapter + '">\n';
+      result += '</a>\n';
+      result += '<div class="chap-top-book-name"><a href="#0">' + book.localizedName + '</a></div>\n';
       result += '<div class="chap-nav">\n';
       result += '&lt; <a class="prev-chap-link" href="#' + (chapter - 1) + '">上一章</a> ';
-      result += '<a class="chapter" id="' + chapter + '">\n';
       result += htmlElement(marker, text);
-      result += '</a>\n';
       result += ' <a class="next-chap-link" href="#' + (chapter + 1) + '">下一章</a> &gt;\n';
       result += '</div>\n';
       //result += '</a>\n';
