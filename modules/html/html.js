@@ -49,7 +49,32 @@ const PARAGRAPH_BREAKS = [
   'b', 'm', 'nb', 'p', 'ps', 'q', 'q1', 'q2', 'q3'
 ];
 
-function convertBook(shortName, opts) {
+function startDoc(title) {
+  var result = '<!DOCTYPE html>\n';
+  result += '<html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">\n';
+  result += '';
+  result += '<head>\n';
+  result += '<meta charset="UTF-8" ></meta>\n';
+  result += '<title>' + title + '</title>\n';
+  result += css() + '\n';
+  result += '</head>\n';
+  result += '<body>';
+  return result;
+}
+
+function css() {
+  var file = path.join(__dirname, 'style.css');
+  var result = '<style><!--\n';
+  result += fs.readFileSync(file) + '\n';
+  result += '--></style>';
+  return result;
+}
+
+function endDoc() {
+  return '</body></html>';
+}
+
+function convertBook(shortName, opts, order) {
 
   if (!opts || !opts.inputDir) {
     throw new Error('Missing inputDir option');
@@ -69,49 +94,24 @@ function convertBook(shortName, opts) {
   //
   // Methods
   //
-  function getNextBook() {
+  var getNextBook = function() {
 
     var index = opts.books.map( book => {
       return book.index;
     }).indexOf(book.index);
 
     return books[index+1] || books[0];
-  }
+  };
 
-  function getFilename(book) {
+  var getFilename = function(book) {
     if (book) {
       return book.index + '-' + book.id.toUpperCase() + '.html';
     } else {
       return undefined;
     }
-  }
+  };
 
-  function startDoc() {
-    var result = '<!DOCTYPE html>\n';
-    result += '<html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">\n';
-    result += '';
-    result += '<head>\n';
-    result += '<meta charset="UTF-8" ></meta>\n';
-    result += '<title>' + book.localizedName + '</title>\n';
-    result += css() + '\n';
-    result += '</head>\n';
-    result += '<body>';
-    return result;
-  }
-
-  function css() {
-    var file = path.join(__dirname, 'style.css');
-    var result = '<style><!--\n';
-    result += fs.readFileSync(file) + '\n';
-    result += '--></style>';
-    return result;
-  }
-
-  function endDoc() {
-    return '</body></html>';
-  }
-
-  function bookNavigation() {
+  var bookNavigation = function() {
 
     var result = '<div class="book-nav">\n';
     for (var i = 0; i<chapterCount; i++) {
@@ -132,9 +132,9 @@ function convertBook(shortName, opts) {
     result += '</div>\n';
     return result;
 
-  }
+  };
 
-  function closeParagraphIfOpened(marker) {
+  var closeParagraphIfOpened = function(marker) {
 
     marker = marker || 'p';
     var htmlTag = HTML_TAGS[marker];
@@ -144,9 +144,9 @@ function convertBook(shortName, opts) {
       }
     }
     return '';
-  }
+  };
 
-  function startHtmlTag(marker, attr, text) {
+  var startHtmlTag = function(marker, attr, text) {
 
     attr = attr || {};
 
@@ -173,9 +173,9 @@ function convertBook(shortName, opts) {
     }
 
     return result;
-  }
+  };
 
-  function endHtmlTag(marker) {
+  var endHtmlTag = function(marker) {
     var htmlTag = HTML_TAGS[marker];
     if (!htmlTag) {
       throw new Error('No HTML Tag for: "' + marker + '" ' + errorLocation());
@@ -185,13 +185,13 @@ function convertBook(shortName, opts) {
       isParagraphOpened = false;
     }
     return result;
-  }
+  };
 
-  function htmlElement(marker, text, attr) {
+  var htmlElement = function(marker, text, attr) {
     return startHtmlTag(marker, attr) + text + endHtmlTag(marker);
-  }
+  };
 
-  function generateFootnotes() {
+  var generateFootnotes = function() {
 
     var result = '<div class="page-break"></div>\n';
     result += '<div class="chap-nav">\n';
@@ -218,9 +218,9 @@ function convertBook(shortName, opts) {
     return result;
 
 
-  }
+  };
 
-  function parseReference(reference) {
+  var parseReference = function(reference) {
 
     var targetBook;
     var matches = reference.match( /^\D+/ );
@@ -257,9 +257,9 @@ function convertBook(shortName, opts) {
       verse: verse,
       text: reference
     };
-  }
+  };
 
-  function referenceLinks(referenceString) {
+  var referenceLinks = function(referenceString) {
 
     if (!referenceString.match( /^（.+）$/ )) {
       throw new Error('Invalid reference: ' + referenceString);
@@ -302,9 +302,9 @@ function convertBook(shortName, opts) {
     result += '）</span>';
 
     return result;
-  }
+  };
 
-  function convertMarker(marker, text) {
+  var convertMarker = function(marker, text) {
     var htmlTag = HTML_TAGS[marker];
     if (!htmlTag) {
       throw new Error('No HTML Tag for: "' + marker + '" ' + errorLocation());
@@ -402,17 +402,17 @@ function convertBook(shortName, opts) {
     }
 
     return result;
-  }
+  };
 
-  function errorLocation() {
+  var errorLocation = function() {
     return '[' + book.index + '-' + shortName.toUpperCase() + ' ' + chapter + ':' + verse + ']';
-  }
+  };
 
-  function errorMessage(err) {
+  var errorMessage = function(err) {
     return '<pre>' + err + '</pre>';
-  }
+  };
 
-  function run() {
+  var run = function() {
 
     return parser.getBook(shortName).then( result => {
 
@@ -435,7 +435,7 @@ function convertBook(shortName, opts) {
       var currentLine;
       return book.parse({
         onStartBook: function() {
-          writer.write(startDoc() + '\n');
+          writer.write(startDoc(book.localizedData.name) + '\n');
         },
         onStartLine: function(line, c, v) {
           chapter = c || chapter;
@@ -493,10 +493,13 @@ function convertBook(shortName, opts) {
 
       writer.end();
       return {
-        book: book,
+        name: book.localizedName,
         filename: filename,
         id: 'id' + book.index,
-        mediaType: 'application/xhtml+xml'
+        mediaType: 'application/xhtml+xml',
+        order: order,
+        navLabel: book.localizedData.section.order + '. ' + book.localizedData.name,
+        navLevel: 2
       };
 
     }).catch( error => {
@@ -509,9 +512,69 @@ function convertBook(shortName, opts) {
 
     });
 
-  }
+  };
 
   return run();
+}
+
+function convertSection(section, opts, order) {
+
+  var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
+
+  return Promise.resolve().then( ()=> {
+
+    var filename = order + '.html';
+    var outputFilePath = path.join(outputDir, filename);
+    writer = fs.createWriteStream(outputFilePath);
+
+    var result = startDoc(section.name);
+    result += '<h1 class="bible-section-name">' + section.name + '</h1>';
+    result += endDoc();
+
+    writer.write(result);
+    writer.end();
+
+    return {
+      name: section.name,
+      filename: filename,
+      id: 'id' + section.name,
+      mediaType: 'application/xhtml+xml',
+      order: order,
+      navLabel: section.name,
+      navLavel: 0
+    };
+
+  });
+}
+
+function convertCategory(category, opts, order) {
+
+  var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
+
+  return Promise.resolve().then( ()=> {
+
+    var filename = order + '.html';
+    var outputFilePath = path.join(outputDir, filename);
+    writer = fs.createWriteStream(outputFilePath);
+
+    var result = startDoc(category.name);
+    result += '<h1 class="bible-category-name">' + category.name + '</h1>';
+    result += endDoc();
+
+    writer.write(result);
+    writer.end();
+
+    return {
+      name: category.name,
+      filename: filename,
+      id: 'id' + category.name,
+      mediaType: 'application/xhtml+xml',
+      order: order,
+      navLabel: category.name,
+      navLavel: 1
+    };
+
+  });
 }
 
 function convertAll(opts) {
@@ -523,16 +586,48 @@ function convertAll(opts) {
   return parser.getBooks().then( books => {
 
     opts.books = books;
-    return Promise.all( books.map( book => {
-      return convertBook(book.shortName, opts);
-    }));
+    var promises = [];
+
+    var section = {};
+    var category = {};
+    var bookName;
+
+    var order = 1;
+    books.forEach( book => {
+
+      var bookSection = book.localizedData.section;
+      if (section.name != bookSection.name) {
+        console.log('Processing ' + bookSection.name);
+        section = bookSection;
+        promises.push(convertSection(bookSection, opts, order++));
+      }
+
+      if (category.name != bookSection.category.name) {
+        category = bookSection.category;
+        console.log('Processing   ' + bookSection.category.name);
+        promises.push(convertCategory(bookSection.category, opts, order++));
+      }
+
+      if (bookName != book.localizedData.name) {
+        bookName = book.localizedData.name;
+        console.log('Processing     ' + bookName);
+      }
+
+      promises.push(convertBook(book.shortName, opts, order++));
+
+
+
+
+    });
+
+    return Promise.all(promises);
 
   }).then( result => {
 
     return result.sort( (lhs, rhs) => {
-      if (lhs.book.index < rhs.book.index) {
+      if (lhs.order < rhs.order) {
         return -1;
-      } else if (lhs.book.index > rhs.book.index) {
+      } else if (lhs.order > rhs.order) {
         return 1;
       } else {
         return 0;

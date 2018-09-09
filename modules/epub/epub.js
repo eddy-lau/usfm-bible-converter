@@ -23,7 +23,7 @@ function parseXML(data) {
 
 }
 
-function updateMetadata(metadataPath, opts) {
+function buildMetadata(metadataPath, opts) {
 
   return fs.readFile(metadataPath).then( data=> {
 
@@ -43,7 +43,7 @@ function updateMetadata(metadataPath, opts) {
 
 }
 
-function updateManifest(metadataPath, htmlFiles) {
+function buildManifest(metadataPath, htmlFiles) {
 
   return fs.readFile(metadataPath).then( data=> {
 
@@ -92,7 +92,7 @@ function updateManifest(metadataPath, htmlFiles) {
   });
 }
 
-function updateTOC(tocPath, htmlFiles, uuid) {
+function buildTOC(tocPath, htmlFiles, uuid) {
 
   return fs.readFile(tocPath).then( data=> {
 
@@ -113,7 +113,7 @@ function updateTOC(tocPath, htmlFiles, uuid) {
           playOrder: '' + index++
         },
         navLabel: {
-          text: htmlFile.book.localizedName,
+          text: htmlFile.navLabel
         },
         content: {
           '$': {
@@ -185,19 +185,19 @@ function convert(opts) {
   }).then( result => {
 
     conversionResult = result;
-    return updateTOC(tocPath, conversionResult, uuid);
+    return buildTOC(tocPath, conversionResult, uuid);
 
   }).then( toc => {
 
     conversionResult.push(toc);
-    return updateMetadata(metadataPath, {
+    return buildMetadata(metadataPath, {
       lang: opts.lang,
       uuid: uuid
     });
 
   }).then( ()=> {
 
-    return updateManifest(metadataPath, conversionResult);
+    return buildManifest(metadataPath, conversionResult);
 
   }).then( ()=> {
 
@@ -229,8 +229,6 @@ function convert(opts) {
     archive.finalize();
 
   });
-
-
 
 }
 
