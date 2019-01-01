@@ -2,18 +2,21 @@
 var nodemailer = require('nodemailer');
 
 
+const from = 'eddy.lau@gmail.com';
 
 var transporter = nodemailer.createTransport({
-  service: 'Zoho',
+  service: 'gmail',
   auth: {
-    user: 'eddie@ktc.hk',
-    pass: '1Gelia23'
+    user: from,
+    pass: 'covocwaeazicetwb'
   }
 });
 
 var mailOptions = {
-  from: 'eddie@ktc.hk',
+  from: from,
   to: 'eddy.lau_kindle@kindle.com',
+  subject: 'rcuv.mobi',
+  text: 'Dummy text required by Kindle.\n',
   attachments: [
     {
       filename: 'rcuv.mobi',
@@ -22,7 +25,7 @@ var mailOptions = {
   ]
 };
 
-transporter.sendMail(mailOptions, function(error, info){
+transporter.sendMail(mailOptions, (error, info) => {
   if (error) {
     console.log(error);
   } else {
