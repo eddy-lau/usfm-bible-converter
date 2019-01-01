@@ -16,7 +16,8 @@ var mailOptions = {
   to: 'eddy.lau_kindle@kindle.com',
   attachments: [
     {
-      path: './rcuv.mobi'
+      filename: 'rcuv.mobi',
+      path: __dirname + '/rcuv.mobi'
     }
   ]
 };

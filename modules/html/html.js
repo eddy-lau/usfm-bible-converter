@@ -74,6 +74,14 @@ function endDoc() {
   return '</body></html>';
 }
 
+function bookFileName(book) {
+  if (book) {
+    return book.index + '-' + book.id.toUpperCase() + '.html';
+  } else {
+    return undefined;
+  }
+}
+
 function convertBook(shortName, opts, order) {
 
   if (!opts || !opts.inputDir) {
@@ -94,14 +102,7 @@ function convertBook(shortName, opts, order) {
   //
   // Methods
   //
-  var getNextBook = function() {
-
-    var index = opts.books.map( book => {
-      return book.index;
-    }).indexOf(book.index);
-
-    return books[index+1] || books[0];
-  };
+  var getNextBook = bookFileName;
 
   var getFilename = function(book) {
     if (book) {
@@ -517,18 +518,19 @@ function convertBook(shortName, opts, order) {
   return run();
 }
 
-function convertSection(section, opts, order) {
+function convertSection(section, sectionIndex, opts, order) {
 
   var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
 
   return Promise.resolve().then( ()=> {
 
-    var filename = order + '.html';
+    var filename = 'section' + sectionIndex + '.html';
     var outputFilePath = path.join(outputDir, filename);
     writer = fs.createWriteStream(outputFilePath);
 
     var result = startDoc(section.name);
     result += '<h1 class="bible-section-name">' + section.name + '</h1>';
+    result += generateSectionToc(section, opts);
     result += endDoc();
 
     writer.write(result);
@@ -541,10 +543,104 @@ function convertSection(section, opts, order) {
       mediaType: 'application/xhtml+xml',
       order: order,
       navLabel: section.name,
-      navLavel: 0
+      navLevel: 0
     };
 
   });
+}
+
+function convertToc(opts, order) {
+
+  var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
+
+  return Promise.resolve().then( ()=> {
+
+    var name = 'toc';
+    var filename = order + '.html';
+    var outputFilePath = path.join(outputDir, filename);
+    writer = fs.createWriteStream(outputFilePath);
+
+    var result = startDoc(name);
+    result += '<div class="toc">';
+
+    opts.books.map( book => {
+      return book.localizedData.section;
+    }).reduce( (accumulator, currentValue) => {
+      if (accumulator.length === 0 ||
+          accumulator[accumulator.length-1].name !== currentValue.name) {
+        accumulator.push(currentValue);
+      }
+      return accumulator;
+    }, []).forEach( (section,index,array) => {
+      result += '<h1 class="bible-section-name">';
+      result += '<a href="section' + index + '.html">';
+      result += section.name;
+      result += '</a>';
+      result += '</h1>';
+      if (index < array.length - 1) {
+        result += '<img src="divider.png" class="divider">';
+      }
+    });
+
+    result += '</div>';
+    result += endDoc();
+
+    writer.write(result);
+    writer.end();
+
+    return {
+      name: name,
+      filename: filename,
+      id: 'id' + name,
+      mediaType: 'application/xhtml+xml',
+      order: order,
+      navLabel: '目錄',
+      navLevel: 0
+    };
+  });
+
+}
+
+function generateSectionToc(section, opts) {
+
+  result = '';
+
+  opts.books.filter( book => {
+    return book.localizedData.section.name === section.name;
+  }).map( book => {
+    return book.localizedData.section.category;
+  }).reduce( (accumulator, currentValue) => {
+    if (accumulator.length === 0 ||
+        accumulator[accumulator.length-1].name !== currentValue.name) {
+      accumulator.push(currentValue);
+    }
+    return accumulator;
+  }, []).forEach( category => {
+    result += '<h3 class="bible-category-name">';
+    result += category.name;
+    result += '</h3>';
+    result += generateCategoryToc(category, opts);
+  });
+
+  return result;
+
+}
+
+function generateCategoryToc(category, opts) {
+
+  result = '';
+  result += '<ul class="bible-category-list">';
+  opts.books.filter( book => {
+    return book.localizedData.section.category.name === category.name;
+  }).forEach( book => {
+    result += '<li class="bible-category-book">';
+    result +=   '<a class="bible-category-book-link" href="' + bookFileName(book) + '">';
+    result +=     book.localizedData.name;
+    result +=   '</a>';
+    result += '</li>';
+  });
+  result += '</ul>';
+  return result;
 }
 
 function convertCategory(category, opts, order) {
@@ -559,6 +655,7 @@ function convertCategory(category, opts, order) {
 
     var result = startDoc(category.name);
     result += '<h1 class="bible-category-name">' + category.name + '</h1>';
+    result += generateCategoryToc(category, opts);
     result += endDoc();
 
     writer.write(result);
@@ -571,7 +668,7 @@ function convertCategory(category, opts, order) {
       mediaType: 'application/xhtml+xml',
       order: order,
       navLabel: category.name,
-      navLavel: 1
+      navLevel: 1
     };
 
   });
@@ -589,17 +686,20 @@ function convertAll(opts) {
     var promises = [];
 
     var section = {};
+    var sectionIndex = 0;
     var category = {};
     var bookName;
 
     var order = 1;
+    promises.push(convertToc(opts, order++));
     books.forEach( book => {
 
       var bookSection = book.localizedData.section;
       if (section.name != bookSection.name) {
         console.log('Processing ' + bookSection.name);
         section = bookSection;
-        promises.push(convertSection(bookSection, opts, order++));
+        promises.push(convertSection(bookSection, sectionIndex, opts, order++));
+        sectionIndex++;
       }
 
       if (category.name != bookSection.category.name) {
