@@ -49,25 +49,29 @@ const PARAGRAPH_BREAKS = [
   'b', 'm', 'nb', 'p', 'ps', 'q', 'q1', 'q2', 'q3'
 ];
 
-function startDoc(title) {
+function startDoc(title, externalCss) {
   var result = '<!DOCTYPE html>\n';
   result += '<html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">\n';
   result += '';
   result += '<head>\n';
   result += '<meta charset="UTF-8" ></meta>\n';
   result += '<title>' + title + '</title>\n';
-  result += css() + '\n';
+  result += css(externalCss) + '\n';
   result += '</head>\n';
   result += '<body>';
   return result;
 }
 
-function css() {
-  var file = path.join(__dirname, 'style.css');
-  var result = '<style><!--\n';
-  result += fs.readFileSync(file) + '\n';
-  result += '--></style>';
-  return result;
+function css(external) {
+  if (external) {
+    return '<link href="style.css" rel="stylesheet">';
+  } else {
+    var file = path.join(__dirname, 'style.css');
+    var result = '<style><!--\n';
+    result += fs.readFileSync(file) + '\n';
+    result += '--></style>';
+    return result;
+  }
 }
 
 function endDoc() {
@@ -436,7 +440,7 @@ function convertBook(shortName, opts, order) {
       var currentLine;
       return book.parse({
         onStartBook: function() {
-          writer.write(startDoc(book.localizedData.name) + '\n');
+          writer.write(startDoc(book.localizedData.name, opts.externalCss) + '\n');
         },
         onStartLine: function(line, c, v) {
           chapter = c || chapter;
@@ -528,7 +532,7 @@ function convertSection(section, sectionIndex, opts, order) {
     var outputFilePath = path.join(outputDir, filename);
     writer = fs.createWriteStream(outputFilePath);
 
-    var result = startDoc(section.name);
+    var result = startDoc(section.name, opts.externalCss);
     result += '<h1 class="bible-section-name">' + section.name + '</h1>';
     result += generateSectionToc(section, opts);
     result += endDoc();
@@ -565,7 +569,7 @@ function convertToc(opts, order) {
     var outputFilePath = path.join(outputDir, filename);
     writer = fs.createWriteStream(outputFilePath);
 
-    var result = startDoc(name);
+    var result = startDoc(name, opts.externalCss);
     result += '<div class="toc">';
 
     opts.books.map( book => {
@@ -658,7 +662,7 @@ function convertCategory(category, opts, order) {
     var outputFilePath = path.join(outputDir, filename);
     writer = fs.createWriteStream(outputFilePath);
 
-    var result = startDoc(category.name);
+    var result = startDoc(category.name, opts.externalCss);
     result += '<h1 class="bible-category-name">' + category.name + '</h1>';
     result += generateCategoryToc(category, opts);
     result += endDoc();
@@ -684,8 +688,20 @@ function convertAll(opts) {
   if (!opts || !opts.inputDir) {
     throw new Error('Missing inputDir option');
   }
-  var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
-  return parser.getBooks().then( books => {
+
+  opts.externalCss = true;
+  var styleSheet = 'style.css';
+  var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
+
+  return fs.copy(
+    path.join(__dirname, styleSheet),
+    path.join(outputDir, styleSheet)
+  ).then( ()=> {
+
+    var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
+    return parser.getBooks();
+
+  }).then( books => {
 
     opts.books = books;
     var promises = [];
@@ -697,6 +713,7 @@ function convertAll(opts) {
 
     var order = 1;
     promises.push(convertToc(opts, order++));
+
     books.forEach( book => {
 
       var bookSection = book.localizedData.section;
@@ -719,9 +736,6 @@ function convertAll(opts) {
       }
 
       promises.push(convertBook(book.shortName, opts, order++));
-
-
-
 
     });
 

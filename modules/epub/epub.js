@@ -88,6 +88,16 @@ function buildManifest(metadataPath, htmlFiles) {
 
     });
 
+    json.package.manifest[0].item.push( {
+
+        $: {
+          href: 'style.css',
+          id: 'stylesheet',
+          'media-type': 'text/css'
+        }
+
+    });
+
     htmlFiles.pop();
     json.package.spine[0].itemref = htmlFiles.map( htmlFile => {
       return {
