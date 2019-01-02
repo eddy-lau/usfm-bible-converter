@@ -693,10 +693,13 @@ function convertAll(opts) {
   var styleSheet = 'style.css';
   var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
 
-  return fs.copy(
-    path.join(__dirname, styleSheet),
-    path.join(outputDir, styleSheet)
-  ).then( ()=> {
+  return fs.ensureDir(outputDir)
+  .then( () => {
+    return fs.copy(
+      path.join(__dirname, styleSheet),
+      path.join(outputDir, styleSheet)
+    );
+  }).then( ()=> {
 
     var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
     return parser.getBooks();
