@@ -553,7 +553,12 @@ function convertToc(opts, order) {
 
   var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
 
-  return Promise.resolve().then( ()=> {
+  var dividerFile = 'divider.png';
+
+  return fs.copy(
+    path.join(__dirname, dividerFile),
+    path.join(outputDir, dividerFile)
+  ).then( ()=> {
 
     var name = 'toc';
     var filename = order + '.html';
