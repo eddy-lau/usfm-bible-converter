@@ -38,9 +38,8 @@ if (program.epub) {
     outputDir = path.join(__dirname, outputDir);
   }
 
-
-  var converter  = require('./modules/html');
-  converter.convertAll( {
+  var converter  = require('./modules/multi');
+  converter.convert( {
     inputDir: program.inputDir,
     outputDir: outputDir,
     lang: program.language

@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 var fs = require('fs-extra');
 var path = require('path');
-var converter = require('../html');
+var converter = require('../multi');
 var archiver = require('archiver');
 var parseString = require('xml2js').parseString;
 var moment = require('moment');
@@ -207,7 +207,7 @@ function convert(opts) {
   }).then( () => {
 
     opts.outputDir = templateDir;
-    return converter.convertAll(opts);
+    return converter.convert(opts);
 
   }).then( result => {
 
