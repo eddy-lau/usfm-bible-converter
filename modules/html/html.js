@@ -500,7 +500,7 @@ function convertBook(shortName, opts, order) {
         mediaType: 'application/xhtml+xml',
         order: order,
         navLabel: book.localizedData.section.order + '. ' + book.localizedData.name,
-        navLevel: 2
+        navLevel: 1
       };
 
     }).catch( error => {
@@ -667,7 +667,7 @@ function convertCategory(category, opts, order) {
       id: 'id' + category.name,
       mediaType: 'application/xhtml+xml',
       order: order,
-      navLabel: category.name,
+      navLabel: '▼' + category.name,
       navLevel: 1
     };
 
@@ -733,6 +733,27 @@ function convertAll(opts) {
         return 0;
       }
     });
+
+  }).then( htmlFiles => {
+
+    return htmlFiles.reduce( (accumulator, htmlFile) => {
+
+      accumulator.array.push(htmlFile);
+
+      if (htmlFile.navLevel == 0) {
+        htmlFile.parent_id = undefined;
+        accumulator.navLevelMap[0] = htmlFile;
+      } else {
+        htmlFile.parent_id = accumulator.navLevelMap[htmlFile.navLevel-1].id;
+        accumulator.navLevelMap[htmlFile.navLevel] = htmlFile;
+      }
+
+      return accumulator;
+
+    }, {
+      navLevelMap: {},
+      array: []
+    }).array;
 
   });
 

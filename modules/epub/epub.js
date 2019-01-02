@@ -7,6 +7,7 @@ var parseString = require('xml2js').parseString;
 var moment = require('moment');
 var xml2js = require('xml2js');
 var uuidv1 = require('uuid/v1');
+var arrayToTree = require('array-to-tree');
 
 
 function parseXML(data) {
@@ -77,6 +78,16 @@ function buildManifest(metadataPath, htmlFiles) {
 
     });
 
+    json.package.manifest[0].item.push( {
+
+        $: {
+          href: 'divider.png',
+          id: 'divider',
+          'media-type': 'image/png'
+        }
+
+    });
+
     htmlFiles.pop();
     json.package.spine[0].itemref = htmlFiles.map( htmlFile => {
       return {
@@ -94,6 +105,33 @@ function buildManifest(metadataPath, htmlFiles) {
 
 function buildTOC(tocPath, htmlFiles, uuid) {
 
+  function htmlFileToElement(htmlFile) {
+
+    var element = {};
+    element = {
+      $: {
+        id: 'num_' + htmlFile.order,
+        playOrder: '' + htmlFile.order
+      },
+      navLabel: {
+        text: htmlFile.navLabel
+      },
+      content: {
+        '$': {
+          src: htmlFile.filename
+        }
+      }
+    };
+
+    if (htmlFile.children && htmlFile.children.length> 0) {
+      element.navPoint = htmlFile.children.map(htmlFileToElement);
+    }
+
+    return element;
+
+  }
+
+
   return fs.readFile(tocPath).then( data=> {
 
       return parseXML(data);
@@ -103,28 +141,7 @@ function buildTOC(tocPath, htmlFiles, uuid) {
     var builder = new xml2js.Builder();
 
     json.ncx.head[0].meta[0].$.content = uuid;
-
-    var index = 1;
-    json.ncx.navMap[0].navPoint = htmlFiles.map( htmlFile => {
-
-      var element = {};
-      element = {
-        $: {id: 'num_' + index,
-          playOrder: '' + index++
-        },
-        navLabel: {
-          text: htmlFile.navLabel
-        },
-        content: {
-          '$': {
-            src: htmlFile.filename
-          }
-        }
-      };
-
-      return element;
-
-    });
+    json.ncx.navMap[0].navPoint = arrayToTree(htmlFiles).map(htmlFileToElement);
 
     builder.options.xmldec.standalone = undefined;
     builder.options.xmldec.encoding = 'utf-8';
