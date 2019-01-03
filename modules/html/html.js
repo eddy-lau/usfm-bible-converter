@@ -387,7 +387,17 @@ function convertBook(shortName, opts, order) {
 
   var run = function() {
 
-    return parser.getBook(shortName).then( result => {
+    return Promise.resolve().then( ()=> {
+
+      if (!books) {
+        return parser.getBooks().then( result => books = result );
+      }
+
+    }).then( () => {
+
+      return parser.getBook(shortName);
+
+    }).then( result => {
 
       book = result;
       return fs.ensureDir(outputDir);
@@ -407,7 +417,12 @@ function convertBook(shortName, opts, order) {
 
       var currentLine;
       return book.parse({
+        fromChapter: opts.fromChapter,
+        fromVerse: opts.fromVerse,
+        toChapter: opts.toChapter,
+        toVerse: opts.toVerse,
         onStartBook: function() {
+          chapter = opts.fromChapter;
           writer.write(startDoc(book.localizedData.name, opts.externalCss) + '\n');
         },
         onStartLine: function(line, c, v) {
