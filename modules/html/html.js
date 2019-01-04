@@ -327,9 +327,9 @@ function convertBook(shortName, opts, order) {
       result += '</a>\n';
       result += '<div class="chap-top-book-name"><a href="#0">' + book.localizedName + '</a></div>\n';
       result += '<div class="chap-nav">\n';
-      result += '&lt; <a class="prev-chap-link" href="#' + (chapter - 1) + '">上一章</a> ';
+      result += '<span class="prev-chap">&lt; <a class="prev-chap-link" href="#' + (chapter - 1) + '">上一章</a> </span>';
       result += htmlElement(marker, text);
-      result += ' <a class="next-chap-link" href="#' + (chapter + 1) + '">下一章</a> &gt;\n';
+      result += '<span class="next-chap"> <a class="next-chap-link" href="#' + (chapter + 1) + '">下一章</a> &gt</span>\n';
       result += '</div>\n';
       //result += '</a>\n';
 
