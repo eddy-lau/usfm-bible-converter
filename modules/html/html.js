@@ -68,6 +68,7 @@ function convertBook(shortName, opts, order) {
   var writer;
   var chapter;
   var verse;
+  var endVerse;
   var footnotes = [];
   var filename;
 
@@ -425,10 +426,11 @@ function convertBook(shortName, opts, order) {
           chapter = opts.fromChapter;
           writer.write(startDoc(book.localizedData.name, opts.externalCss) + '\n');
         },
-        onStartLine: function(line, c, v) {
-          chapter = c || chapter;
-          verse = v || verse;
-          currentLine = line;
+        onStartLine: function(_line, _chapter, _startVerse, _endVerse) {
+          chapter = _chapter || chapter;
+          verse = _startVerse || verse;
+          endVerse = _endVerse || verse;
+          currentLine = _line;
           markers = [];
           texts = [];
         },
