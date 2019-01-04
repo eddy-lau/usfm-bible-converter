@@ -18,7 +18,7 @@ function convertSection(section, sectionIndex, opts, order) {
     var outputFilePath = path.join(outputDir, filename);
     writer = fs.createWriteStream(outputFilePath);
 
-    var result = startDoc(section.name, opts.externalCss);
+    var result = startDoc(section.name, opts);
     result += '<h1 class="bible-section-name">' + section.name + '</h1>';
     result += generateSectionToc(section, opts);
     result += endDoc();
@@ -55,7 +55,7 @@ function convertToc(opts, order) {
     var outputFilePath = path.join(outputDir, filename);
     writer = fs.createWriteStream(outputFilePath);
 
-    var result = startDoc(name, opts.externalCss);
+    var result = startDoc(name, opts);
     result += '<div class="toc">';
 
     opts.books.map( book => {
@@ -148,7 +148,7 @@ function convertCategory(category, opts, order) {
     var outputFilePath = path.join(outputDir, filename);
     writer = fs.createWriteStream(outputFilePath);
 
-    var result = startDoc(category.name, opts.externalCss);
+    var result = startDoc(category.name, opts);
     result += '<h1 class="bible-category-name">' + category.name + '</h1>';
     result += generateCategoryToc(category, opts);
     result += endDoc();
@@ -176,16 +176,11 @@ function convertAll(opts) {
   }
 
   opts.externalCss = true;
-  var styleSheet = 'style.css';
+  opts.layout = opts.layout || 'paragraph';
   var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
 
-  return fs.ensureDir(outputDir)
-  .then( () => {
-    return fs.copy(
-      htmlHelper.cssPath,
-      path.join(outputDir, styleSheet)
-    );
-  }).then( ()=> {
+  return htmlHelper.copyCss(opts)
+  .then( ()=> {
 
     var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
     return parser.getBooks();

@@ -1,0 +1,33 @@
+/* verse-per-line layout */
+.verse {
+  width: 1.5em;
+  float: left;
+}
+
+.verse-line {
+  display: block;
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+}
+
+p.q1, p.q2, p.q3, p.tr, p.tc1 {
+  margin-left: 1.5em;
+  text-indent: 0em;
+}
+
+p.q1 > .verse-line {
+  padding-left: 0em;
+}
+
+p.p {
+  text-indent: 0em;
+}
+
+p.p > .verse-text,
+p.li1 > .verse-text,
+p.tr > .verse-text,
+p.tc1 > .verse-text,
+p.m > .verse-text {
+  display: block;
+  margin-left: 1.5em;
+}

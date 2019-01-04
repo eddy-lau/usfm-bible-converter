@@ -10,6 +10,7 @@ program
   .option('-e, --epub', 'convert to EPUB format')
   .option('-t, --html', 'convert to HTML format (default)')
   .option('-l, --language [language code]', 'the language of the USFM files, e.g. zh-Hant')
+  .option('-y, --layout [layout]', 'the layout of the text, must be "paragraph" or "line"')
   .parse(process.argv);
 
 if (!program.inputDir) {
@@ -28,7 +29,8 @@ if (program.epub) {
   converter.convert( {
     inputDir: program.inputDir,
     outputDir: outputDir,
-    lang: program.language
+    lang: program.language,
+    layout: program.layout
   });
 
 } else {
@@ -42,7 +44,8 @@ if (program.epub) {
   converter.convert( {
     inputDir: program.inputDir,
     outputDir: outputDir,
-    lang: program.language
+    lang: program.language,
+    layout: program.layout
   });
 
 }

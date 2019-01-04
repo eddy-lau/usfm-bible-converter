@@ -1,0 +1,8 @@
+/* paragraph layout */
+p.p {
+  text-indent: 2em;
+}
+
+p.q, p.q1, p.q2, p.tr, p.tc1 {
+  text-indent: 2em;
+}

@@ -41,7 +41,7 @@ const HTML_TAGS = {
   's1': 'h3',
   's2': 'h3',
   'sp': 'h3',
-  'tc1': 'span',
+  'tc1': 'p',
   'tr': 'p',
   'v': 'sup'
 };
@@ -59,6 +59,7 @@ function convertBook(shortName, opts, order) {
   if (!opts || !opts.inputDir) {
     throw new Error('Missing inputDir option');
   }
+  opts.layout = opts.layout || 'paragraph';
   var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
   var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
   var isParagraphOpened = false;
@@ -146,6 +147,17 @@ function convertBook(shortName, opts, order) {
       result += text;
     }
 
+    return result;
+  };
+
+  var verseText = function(text) {
+    var result = '';
+    if (text && text.length > 0 && verse) {
+      var className = book.shortName + '-' + chapter + '-' + verse;
+      result += '<span class="verse-text ' + className + '">';
+      result += text;
+      result += '</span>';
+    }
     return result;
   };
 
@@ -314,10 +326,12 @@ function convertBook(shortName, opts, order) {
       var nonBreakableVerse = verseNumberStr.replace(' ', '&#160;');
 
       var anchor = ('' + chapter + ':' + verseNumberStr).trim();
+      result += '<span class="verse-line">';
       result += '<a class="verse" id="' + anchor + '">';
       result += htmlElement(marker, nonBreakableVerse);
       result += '</a>';
-      result += text.substring(verseNumberStr.length);
+      result += verseText(text.substring(verseNumberStr.length));
+      result += '</span>';
 
     } else if (marker == 'c') {
 
@@ -341,7 +355,7 @@ function convertBook(shortName, opts, order) {
     } else if (PARAGRAPH_BREAKS.indexOf(marker) != -1) {
 
       result += closeParagraphIfOpened(marker);
-      result += startHtmlTag(marker, {}, text);
+      result += startHtmlTag(marker, {}, verseText(text));
 
     } else if (marker == 'r') {
 
@@ -371,7 +385,7 @@ function convertBook(shortName, opts, order) {
 
     } else {
 
-      result += htmlElement(marker, text);
+      result += htmlElement(marker, verseText(text));
 
     }
 
@@ -424,7 +438,7 @@ function convertBook(shortName, opts, order) {
         toVerse: opts.toVerse,
         onStartBook: function() {
           chapter = opts.fromChapter;
-          writer.write(startDoc(book.localizedData.name, opts.externalCss) + '\n');
+          writer.write(startDoc(book.localizedData.name, opts) + '\n');
         },
         onStartLine: function(_line, _chapter, _startVerse, _endVerse) {
           chapter = _chapter || chapter;

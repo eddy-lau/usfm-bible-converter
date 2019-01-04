@@ -93,14 +93,9 @@ p {
   margin-bottom: 0em;
 }
 
-p.p {
-  text-indent: 2em;
-}
-
-p.q, p.q1, p.q2 {
+p.q, p.q1, p.q2, p.tr, p.tc1 {
   margin-top: 0em;
   margin-bottom: 0em;
-  margin-left: 2em;
 }
 
 /* underline */
