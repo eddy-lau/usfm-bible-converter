@@ -7,18 +7,22 @@ a.verse {
 }
 
 p.p {
-  text-indent: 2em;
+  text-indent: 1em;
 }
 
-p.q, p.q1, p.q2, p.tr, p.tc1, p.m {
-  text-indent: 3em;
+p.m {
+  text-indent: 0em;
+}
+
+p.q, p.q1, p.q2, p.tr, p.tc1 {
+  text-indent: 0em;
+  padding-left: 2em;
 }
 
 p.q > .verse-line,
 p.q1 > .verse-line,
 p.q2 > .verse-line,
 p.tr > .verse-line,
-p.tc1 > .verse-line,
-p.m > .verse-line {
+p.tc1 > .verse-line {
   margin-left: -1em;
 }

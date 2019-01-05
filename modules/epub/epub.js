@@ -91,8 +91,28 @@ function buildManifest(metadataPath, htmlFiles) {
     json.package.manifest[0].item.push( {
 
         $: {
-          href: 'style.css',
-          id: 'stylesheet',
+          href: 'common.css',
+          id: 'common-stylesheet',
+          'media-type': 'text/css'
+        }
+
+    });
+
+    json.package.manifest[0].item.push( {
+
+        $: {
+          href: 'paragraph.css',
+          id: 'paragraph-stylesheet',
+          'media-type': 'text/css'
+        }
+
+    });
+
+    json.package.manifest[0].item.push( {
+
+        $: {
+          href: 'line.css',
+          id: 'line-stylesheet',
           'media-type': 'text/css'
         }
 

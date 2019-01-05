@@ -480,7 +480,7 @@ function convertBook(shortName, opts, order) {
         },
         onEndLine: function(line) {
 
-          //writer.write( '<!-- ' + line + ' -->\n');
+          writer.write( '<!-- ' + line + ' -->\n');
           while(markers.length > 0) {
             writer.write( convertMarker(markers.pop(), texts.pop()) + '\n');
           }
