@@ -152,11 +152,15 @@ function convertBook(shortName, opts, order) {
 
   var verseText = function(text) {
     var result = '';
-    if (text && text.length > 0 && verse) {
-      var className = book.shortName + '-' + chapter + '-' + verse;
-      result += '<span class="verse-text ' + className + '">';
-      result += text;
-      result += '</span>';
+    if (text && text.length > 0) {
+      if (verse) {
+        var className = book.shortName + '-' + chapter + '-' + verse;
+        result += '<span class="verse-text ' + className + '">';
+        result += text;
+        result += '</span>';
+      } else {
+        result += text;
+      }
     }
     return result;
   };
