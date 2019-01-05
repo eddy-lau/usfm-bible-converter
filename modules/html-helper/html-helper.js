@@ -26,7 +26,7 @@ function css(opts) {
   var result;
   if (opts.externalCss) {
     result = '<link href="common.css" rel="stylesheet">\n';
-    result += '<link href="' + opts.layout + '-layout.css" rel="stylesheet">\n';
+    result += '<link href="' + opts.layout + '.css" rel="stylesheet">\n';
     return result;
   } else {
     result = '<style><!--\n';
