@@ -2,7 +2,7 @@
   "name": "usfm-converter",
   "version": "1.0.0",
   "description": "Convert the USFM Bible texts to different formats.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "node test/test.js"
   },
@@ -15,6 +15,7 @@
     "fs-extra": "^7.0.0",
     "moment": "^2.22.2",
     "nodemailer": "^4.6.8",
+    "string-writer": "^0.1.0",
     "usfm-bible-parser": "file:../usfm-bible-parser",
     "uuid": "^3.3.2",
     "xml2js": "^0.4.19"

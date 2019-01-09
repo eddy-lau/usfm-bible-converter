@@ -1,6 +1,5 @@
 /*jshint esversion: 6 */
 var path = require('path');
-var fs = require('fs-extra');
 var htmlHelper = require('../html-helper');
 
 const PAIRED_MARKERS = [
@@ -51,6 +50,7 @@ const PARAGRAPH_BREAKS = [
 ];
 
 var startDoc = htmlHelper.startDoc;
+var css = htmlHelper.css;
 var endDoc = htmlHelper.endDoc;
 var bookFileName = htmlHelper.bookFileName;
 
@@ -60,18 +60,21 @@ function convertBook(shortName, opts, order) {
     throw new Error('Missing inputDir option');
   }
   opts.layout = opts.layout || 'paragraph';
+  opts.outputFormat = opts.outputFormat || 'html';
   var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
-  var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
   var isParagraphOpened = false;
   var books = opts.books;
   var book;
   var chapterCount;
   var writer;
+  var cssWriter;
+  var footnoteWriter;
   var chapter;
   var verse;
   var endVerse;
   var footnotes = [];
   var filename;
+  var outputJson;
 
   //
   // Methods
@@ -185,11 +188,11 @@ function convertBook(shortName, opts, order) {
 
     var result = '<div class="page-break"></div>\n';
     result += '<div class="chap-nav">\n';
-    result += '&lt; <a class="prev-chap-link" href="#' + (chapter) + '">上一章</a> ';
+    result += '&lt; <a class="prev-chap-link chap-link" href="#' + (chapter) + '">上一章</a> ';
     result += '<a class="chapter" id="' + (chapter + 1) + '">\n';
     result += '<span class="footnote-title">註釋</span>\n';
     result += '</a>\n';
-    result += ' <a class="next-chap-link" href="' + getFilename(getNextBook())  + '#0">下一章</a> &gt;\n';
+    result += ' <a class="next-chap-link chap-link" href="' + getFilename(getNextBook())  + '#0">下一章</a> &gt;\n';
     result += '</div>\n';
 
     footnotes.forEach( footnote => {
@@ -345,9 +348,9 @@ function convertBook(shortName, opts, order) {
       result += '</a>\n';
       result += '<div class="chap-top-book-name"><a href="#0">' + book.localizedName + '</a></div>\n';
       result += '<div class="chap-nav">\n';
-      result += '<span class="prev-chap">&lt; <a class="prev-chap-link" href="#' + (chapter - 1) + '">上一章</a> </span>';
+      result += '<span class="prev-chap">&lt; <a class="prev-chap-link chap-link" href="#' + (chapter - 1) + '">上一章</a> </span>';
       result += htmlElement(marker, text);
-      result += '<span class="next-chap"> <a class="next-chap-link" href="#' + (chapter + 1) + '">下一章</a> &gt</span>\n';
+      result += '<span class="next-chap"> <a class="next-chap-link chap-link" href="#' + (chapter + 1) + '">下一章</a> &gt</span>\n';
       result += '</div>\n';
       //result += '</a>\n';
 
@@ -404,6 +407,59 @@ function convertBook(shortName, opts, order) {
     return '<pre>' + err + '</pre>';
   };
 
+  var createWriters = function() {
+
+    if (opts.outputDir) {
+      var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
+      var fs = require('fs-extra');
+      return fs.ensureDir(outputDir)
+      .then( ()=> {
+        filename = getFilename(book);
+        var outputFilePath = path.join(outputDir, filename);
+        writer = fs.createWriteStream(outputFilePath);
+        footnoteWriter = writer;
+      });
+    } else {
+
+      if (opts.outputFormat === 'html') {
+        writer = require('string-writer').start();
+        cssWriter = writer;
+        footnoteWriter = writer;
+      } else if (opts.outputFormat === 'htmlElements') {
+        writer = require('string-writer').start();
+        cssWriter = require('string-writer').start();
+        footnoteWriter = require('string-writer').start();
+      }
+
+    }
+  };
+
+  var closeWriters = function() {
+
+    if (!opts.ouputDir) {
+
+      if (opts.outputFormat === 'htmlElements') {
+        outputJson = {
+          html: writer.toString(),
+          css: cssWriter.toString(),
+          footnote: footnoteWriter.toString()
+        };
+      } else {
+        outputJson = writer.toString();
+      }
+
+    } else {
+      writer.end();
+      if (footnoteWriter != writer) {
+        footnoteWriter.end();
+      }
+      if (cssWriter) {
+        cssWriter.end();
+      }
+    }
+
+  };
+
   var run = function() {
 
     return Promise.resolve().then( ()=> {
@@ -419,13 +475,10 @@ function convertBook(shortName, opts, order) {
     }).then( result => {
 
       book = result;
-      return fs.ensureDir(outputDir);
+      return createWriters();
 
-    }).then( result => {
+    }).then( ()=> {
 
-      filename = getFilename(book);
-      var outputFilePath = path.join(outputDir, filename);
-      writer = fs.createWriteStream(outputFilePath);
       return book.getChapterCount();
 
     }).then( result => {
@@ -443,6 +496,9 @@ function convertBook(shortName, opts, order) {
         onStartBook: function() {
           chapter = opts.fromChapter;
           writer.write(startDoc(book.localizedData.name, opts) + '\n');
+          if (cssWriter) {
+            cssWriter.write(css(opts));
+          }
         },
         onStartLine: function(_line, _chapter, _startVerse, _endVerse) {
           chapter = _chapter || chapter;
@@ -492,29 +548,42 @@ function convertBook(shortName, opts, order) {
         },
         onEndBook: function() {
           writer.write( closeParagraphIfOpened() + '\n');
-          writer.write( generateFootnotes() + '\n');
-          writer.write( endDoc() + '\n');
+          footnoteWriter.write( generateFootnotes() + '\n');
+          writer.write( endDoc(opts) + '\n');
         }
       });
 
     }).then( () => {
 
-      writer.end();
-      return {
+      closeWriters();
+
+      var result = {
         name: book.localizedName,
-        filename: filename,
         id: 'id' + book.index,
         mediaType: 'application/xhtml+xml',
-        order: order,
         navLabel: book.localizedData.section.order + '. ' + book.localizedData.name,
         navLevel: 1
       };
+
+      if (filename) {
+        result.filename = filename;
+      }
+
+      if (order) {
+        result.order = order;
+      }
+
+      if (outputJson) {
+        result.output = outputJson;
+      }
+
+      return result;
 
     }).catch( error => {
 
       if (writer) {
         writer.write( errorMessage(error) + '\n');
-        writer.end();
+        closeWriters();
       }
       return Promise.reject(error);
 

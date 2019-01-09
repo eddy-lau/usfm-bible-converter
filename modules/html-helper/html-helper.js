@@ -10,16 +10,20 @@ var cssPaths = {
 };
 
 function startDoc(title, opts) {
-  var result = '<!DOCTYPE html>\n';
-  result += '<html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">\n';
-  result += '';
-  result += '<head>\n';
-  result += '<meta charset="UTF-8" ></meta>\n';
-  result += '<title>' + title + '</title>\n';
-  result += css(opts);
-  result += '</head>\n';
-  result += '<body>';
-  return result;
+  if (opts.outputFormat === 'html') {
+    var result = '<!DOCTYPE html>\n';
+    result += '<html xmlns="http://www.idpf.org/2007/ops" xmlns:epub="http://www.idpf.org/2007/ops">\n';
+    result += '';
+    result += '<head>\n';
+    result += '<meta charset="UTF-8" ></meta>\n';
+    result += '<title>' + title + '</title>\n';
+    result += css(opts) + '\n';
+    result += '</head>\n';
+    result += '<body>';
+    return result;
+  } else if (opts.outputFormat === 'htmlElements') {
+    return '<div class="scripture-text">\n';
+  }
 }
 
 function css(opts) {
@@ -37,8 +41,12 @@ function css(opts) {
   }
 }
 
-function endDoc() {
-  return '</body></html>';
+function endDoc(opts) {
+  if (opts.outputFormat === 'html') {
+    return '</body></html>';
+  } else if (opts.outputFormat === 'htmlElements') {
+    return '</div>';
+  }
 }
 
 function bookFileName(book) {
@@ -82,6 +90,7 @@ function copyCss(opts) {
 
 module.exports = {
   startDoc: startDoc,
+  css: css,
   endDoc: endDoc,
   bookFileName: bookFileName,
   copyCss: copyCss
