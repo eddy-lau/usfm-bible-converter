@@ -21,7 +21,7 @@ function convertSection(section, sectionIndex, opts, order) {
     var result = startDoc(section.name, opts);
     result += '<h1 class="bible-section-name">' + section.name + '</h1>';
     result += generateSectionToc(section, opts);
-    result += endDoc();
+    result += endDoc(opts);
 
     writer.write(result);
     writer.end();
@@ -78,7 +78,7 @@ function convertToc(opts, order) {
     });
 
     result += '</div>';
-    result += endDoc();
+    result += endDoc(opts);
 
     writer.write(result);
     writer.end();
@@ -151,7 +151,7 @@ function convertCategory(category, opts, order) {
     var result = startDoc(category.name, opts);
     result += '<h1 class="bible-category-name">' + category.name + '</h1>';
     result += generateCategoryToc(category, opts);
-    result += endDoc();
+    result += endDoc(opts);
 
     writer.write(result);
     writer.end();
