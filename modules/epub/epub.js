@@ -69,58 +69,11 @@ function buildManifest(metadataPath, htmlFiles) {
 
       });
 
-    json.package.manifest[0].item.push( {
+    json.package.spine[0].itemref = htmlFiles.filter( htmlFile => {
 
-        $: {
-          href: 'cover.jpg',
-          id: 'cover',
-          'media-type': 'image/jpeg'
-        }
+      return htmlFile.order !== undefined;
 
-    });
-
-    json.package.manifest[0].item.push( {
-
-        $: {
-          href: 'divider.png',
-          id: 'divider',
-          'media-type': 'image/png'
-        }
-
-    });
-
-    json.package.manifest[0].item.push( {
-
-        $: {
-          href: 'common.css',
-          id: 'common-stylesheet',
-          'media-type': 'text/css'
-        }
-
-    });
-
-    json.package.manifest[0].item.push( {
-
-        $: {
-          href: 'paragraph.css',
-          id: 'paragraph-stylesheet',
-          'media-type': 'text/css'
-        }
-
-    });
-
-    json.package.manifest[0].item.push( {
-
-        $: {
-          href: 'line.css',
-          id: 'line-stylesheet',
-          'media-type': 'text/css'
-        }
-
-    });
-
-    htmlFiles.pop();
-    json.package.spine[0].itemref = htmlFiles.map( htmlFile => {
+    }).map( htmlFile => {
       return {
         $: {
           idref: htmlFile.id
@@ -132,6 +85,51 @@ function buildManifest(metadataPath, htmlFiles) {
     return fs.writeFile(metadataPath, xml);
 
   });
+}
+
+function convertToTree(htmlFiles) {
+
+  return arrayToTree(
+
+    htmlFiles.filter( htmlFile => {
+
+      return htmlFile.navLevel !== undefined &&
+             htmlFile.navLabel !== undefined &&
+             htmlFile.order !== undefined &&
+             htmlFile.filename !== undefined &&
+             htmlFile.id !== undefined;
+
+    }).sort( (lhs, rhs) => {
+
+      if (lhs.order < rhs.order) {
+        return -1;
+      } else if (lhs.order > rhs.order) {
+        return 1;
+      } else {
+        return 0;
+      }
+
+    }).reduce( (accumulator, htmlFile) => {
+
+      accumulator.array.push(htmlFile);
+
+      if (htmlFile.navLevel == 0) {
+        htmlFile.parent_id = undefined;
+        accumulator.navLevelMap[0] = htmlFile;
+      } else {
+        htmlFile.parent_id = accumulator.navLevelMap[htmlFile.navLevel-1].id;
+        accumulator.navLevelMap[htmlFile.navLevel] = htmlFile;
+      }
+
+      return accumulator;
+
+    }, {
+      navLevelMap: {},
+      array: []
+    }).array
+
+  );
+
 }
 
 function buildTOC(tocPath, htmlFiles, uuid) {
@@ -162,7 +160,6 @@ function buildTOC(tocPath, htmlFiles, uuid) {
 
   }
 
-
   return fs.readFile(tocPath).then( data=> {
 
       return parseXML(data);
@@ -172,7 +169,7 @@ function buildTOC(tocPath, htmlFiles, uuid) {
     var builder = new xml2js.Builder();
 
     json.ncx.head[0].meta[0].$.content = uuid;
-    json.ncx.navMap[0].navPoint = arrayToTree(htmlFiles).map(htmlFileToElement);
+    json.ncx.navMap[0].navPoint = convertToTree(htmlFiles).map(htmlFileToElement);
 
     builder.options.xmldec.standalone = undefined;
     builder.options.xmldec.encoding = 'utf-8';
@@ -254,11 +251,9 @@ function convert(opts) {
     var fileOutput = fs.createWriteStream(outputFilePath);
 
     fileOutput.on('close', function () {
-        console.log(archive.pointer() + ' total bytes');
-        console.log('archiver has been finalized and the output file descriptor has closed.');
+        console.log('ePub generated. ' + archive.pointer() + ' total bytes');
     });
 
-    // good practice to catch warnings (ie stat failures and other non-blocking errors)
     var archive = archiver('zip');
     archive.pipe(fileOutput);
     archive.directory(templateDir, false);

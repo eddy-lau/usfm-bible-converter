@@ -84,15 +84,22 @@ function convertToc(opts, order) {
     writer.write(result);
     writer.end();
 
-    return {
-      name: name,
-      filename: filename,
-      id: 'id' + name,
-      mediaType: 'application/xhtml+xml',
-      order: order,
-      navLabel: '目錄',
-      navLevel: 0
-    };
+    return [
+      {
+        name: name,
+        filename: filename,
+        id: 'id' + name,
+        mediaType: 'application/xhtml+xml',
+        order: order,
+        navLabel: '目錄',
+        navLevel: 0
+      },
+      {
+        filename: 'divider.png',
+        id: 'divider',
+        mediaType: 'image/png'
+      }
+    ];
   });
 
 }
@@ -170,40 +177,67 @@ function convertCategory(category, opts, order) {
   });
 }
 
+function processCover(opts) {
+  var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
+  return fs.copy(
+    path.join(__dirname, 'cover.jpg'),
+    path.join(outputDir, 'cover.jpg')
+  ).then( ()=> {
+
+    return {
+      filename: 'cover.jpg',
+      id: 'cover',
+      mediaType: 'image/jpeg'
+    };
+
+  });
+}
+
 function convertAll(opts) {
+
+  console.log('Conversion start with config: ', opts);
 
   if (!opts || !opts.inputDir) {
     throw new Error('Missing inputDir option');
   }
 
+  opts.outputFormat = 'html';
   opts.externalCss = true;
   opts.layout = opts.layout || 'paragraph';
-  var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
+  var processedFiles = [];
+  var order = 1;
 
-  return htmlHelper.copyCss(opts)
-  .then( ()=> {
-
-    var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
-    return parser.getBooks();
-
-  }).then( books => {
+  var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
+  return parser.getBooks().then ( books => {
 
     opts.books = books;
-    var promises = [];
+    return htmlHelper.copyCss(opts);
+
+  }).then( cssFiles => {
+
+    processedFiles = processedFiles.concat(cssFiles);
+    return processCover(opts);
+
+  }).then( coverFile => {
+
+    processedFiles.push( coverFile );
+    return convertToc(opts, order++);
+
+  }).then( tocFiles => {
+
+    processedFiles = processedFiles.concat(tocFiles);
 
     var section = {};
     var sectionIndex = 0;
     var category = {};
     var bookName;
 
-    var order = 1;
-    promises.push(convertToc(opts, order++));
-
-    books.forEach( book => {
+    var promises = [];
+    opts.books.forEach( book => {
 
       var bookSection = book.localizedData.section;
       if (section.name != bookSection.name) {
-        console.log('Processing ' + bookSection.name);
+        console.log('Processing ' + order + '.' + bookSection.name);
         section = bookSection;
         promises.push(convertSection(bookSection, sectionIndex, opts, order++));
         sectionIndex++;
@@ -211,13 +245,13 @@ function convertAll(opts) {
 
       if (category.name != bookSection.category.name) {
         category = bookSection.category;
-        console.log('Processing   ' + bookSection.category.name);
+        console.log('Processing   ' + order + '.' + bookSection.category.name);
         promises.push(convertCategory(bookSection.category, opts, order++));
       }
 
       if (bookName != book.localizedData.name) {
         bookName = book.localizedData.name;
-        console.log('Processing     ' + bookName);
+        console.log('Processing     ' + order + '.' + bookName);
       }
 
       promises.push(htmlConverter.convertBook(book.shortName, opts, order++));
@@ -226,38 +260,10 @@ function convertAll(opts) {
 
     return Promise.all(promises);
 
-  }).then( result => {
-
-    return result.sort( (lhs, rhs) => {
-      if (lhs.order < rhs.order) {
-        return -1;
-      } else if (lhs.order > rhs.order) {
-        return 1;
-      } else {
-        return 0;
-      }
-    });
-
   }).then( htmlFiles => {
 
-    return htmlFiles.reduce( (accumulator, htmlFile) => {
-
-      accumulator.array.push(htmlFile);
-
-      if (htmlFile.navLevel == 0) {
-        htmlFile.parent_id = undefined;
-        accumulator.navLevelMap[0] = htmlFile;
-      } else {
-        htmlFile.parent_id = accumulator.navLevelMap[htmlFile.navLevel-1].id;
-        accumulator.navLevelMap[htmlFile.navLevel] = htmlFile;
-      }
-
-      return accumulator;
-
-    }, {
-      navLevelMap: {},
-      array: []
-    }).array;
+    processedFiles = processedFiles.concat(htmlFiles);
+    return processedFiles;
 
   });
 

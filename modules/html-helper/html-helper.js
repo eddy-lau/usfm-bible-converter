@@ -1,5 +1,5 @@
-/* jshint esversion: 6 */
-
+/* jshint esversion: 6, node: true */
+'use strict';
 var path = require('path');
 var fs = require('fs-extra');
 
@@ -23,6 +23,8 @@ function startDoc(title, opts) {
     return result;
   } else if (opts.outputFormat === 'htmlElements') {
     return '<div class="scripture-text">\n';
+  } else {
+    throw 'Unknown format';
   }
 }
 
@@ -46,6 +48,8 @@ function endDoc(opts) {
     return '</body></html>';
   } else if (opts.outputFormat === 'htmlElements') {
     return '</div>';
+  } else {
+    throw 'Unknown format';    
   }
 }
 
@@ -79,7 +83,17 @@ function copyCss(opts) {
         return fs.copy(
           cssPaths[key],
           path.join(outputDir, key + '.css')
-        );
+        ).then( ()=> {
+          return {
+            name: undefined,
+            filename: key + '.css',
+            id: key + 'stylesheet',
+            mediaType: 'text/css',
+            order: undefined,
+            navLabel: undefined,
+            navLevel: undefined
+          };
+        });
 
       })
     );
