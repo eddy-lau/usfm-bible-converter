@@ -1,4 +1,5 @@
-/*jshint esversion: 6 */
+/* jshint esversion: 6, node: true */
+'use strict';
 var fs = require('fs-extra');
 var path = require('path');
 var converter = require('../multi');

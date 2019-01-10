@@ -1,4 +1,5 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 6, node: true */
+'use strict';
 var path = require('path');
 var fs = require('fs-extra');
 var htmlHelper = require('../html-helper');
@@ -16,7 +17,7 @@ function convertSection(section, sectionIndex, opts, order) {
 
     var filename = 'section' + sectionIndex + '.html';
     var outputFilePath = path.join(outputDir, filename);
-    writer = fs.createWriteStream(outputFilePath);
+    var writer = fs.createWriteStream(outputFilePath);
 
     var result = startDoc(section.name, opts);
     result += '<h1 class="bible-section-name">' + section.name + '</h1>';
@@ -53,7 +54,7 @@ function convertToc(opts, order) {
     var name = 'toc';
     var filename = 'index.html';
     var outputFilePath = path.join(outputDir, filename);
-    writer = fs.createWriteStream(outputFilePath);
+    var writer = fs.createWriteStream(outputFilePath);
 
     var result = startDoc(name, opts);
     result += '<div class="toc">';
@@ -98,7 +99,7 @@ function convertToc(opts, order) {
 
 function generateSectionToc(section, opts) {
 
-  result = '';
+  var result = '';
 
   opts.books.filter( book => {
     return book.localizedData.section.name === section.name;
@@ -123,7 +124,7 @@ function generateSectionToc(section, opts) {
 
 function generateCategoryToc(category, opts) {
 
-  result = '';
+  var result = '';
   result += '<ul class="bible-category-list">';
   opts.books.filter( book => {
     return book.localizedData.section.category.name === category.name;
@@ -146,7 +147,7 @@ function convertCategory(category, opts, order) {
 
     var filename = order + '.html';
     var outputFilePath = path.join(outputDir, filename);
-    writer = fs.createWriteStream(outputFilePath);
+    var writer = fs.createWriteStream(outputFilePath);
 
     var result = startDoc(category.name, opts);
     result += '<h1 class="bible-category-name">' + category.name + '</h1>';
