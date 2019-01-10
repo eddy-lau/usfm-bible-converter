@@ -186,6 +186,10 @@ function convertBook(shortName, opts, order) {
 
   var generateFootnotes = function() {
 
+    if (!footnotes || footnotes.length == 0) {
+      return '';
+    }
+
     var result = '<div class="page-break"></div>\n';
     result += '<div class="chap-nav">\n';
     result += '&lt; <a class="prev-chap-link chap-link" href="#' + (chapter) + '">上一章</a> ';
@@ -199,11 +203,12 @@ function convertBook(shortName, opts, order) {
 
       let footnoteLinkText = footnote.verse ? (footnote.chapter + ':' + footnote.verse) : (footnote.chapter);
 
-      result += '<aside id="footnote-' + footnote.index + '" epub:type="footnote">\n';
+      var tag = opts.footnoteTag || 'aside';
+      result += '<' + tag + ' id="footnote-' + footnote.index + '" epub:type="footnote">\n';
       result += '<p class="footnote">';
       result += '<a href="#footnote-' + footnote.index + '-ref">' + footnoteLinkText + '</a> ';
       result += footnote.text + '</p>\n';
-      result += '</aside>\n';
+      result += '</'+ tag + '>\n';
 
     });
 
