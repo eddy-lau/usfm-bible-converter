@@ -114,6 +114,5 @@ function convertScripture(scripture, opts) {
 
 
 module.exports = {
-  convertScripture: convertScripture,
-  parseScripture: parseScripture
+  convertScripture: convertScripture
 };

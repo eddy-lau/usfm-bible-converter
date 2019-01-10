@@ -436,7 +436,7 @@ function convertBook(shortName, opts, order) {
 
   var closeWriters = function() {
 
-    if (!opts.ouputDir) {
+    if (!opts.outputDir) {
 
       if (opts.outputFormat === 'htmlElements') {
         outputJson = {

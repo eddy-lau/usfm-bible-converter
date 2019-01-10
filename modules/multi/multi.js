@@ -263,6 +263,20 @@ function convertAll(opts) {
   }).then( htmlFiles => {
 
     processedFiles = processedFiles.concat(htmlFiles);
+
+    var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
+    return fs.writeFile(
+      path.join(outputDir, 'htmls-to-epub.json'),
+      JSON.stringify({
+        title: '聖經．和合本修訂版',
+        creator: 'eddie@TouchUtility.com',
+        language: opts.lang,
+        files: processedFiles
+      })
+    );
+
+  }).then( ()=> {
+
     return processedFiles;
 
   });
