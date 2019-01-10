@@ -12,6 +12,7 @@
     "commander": "^2.17.1",
     "fs-extra": "^7.0.0",
     "moment": "^2.22.2",
+    "string-writer": "^0.1.0",
     "usfm-bible-parser": "file:../usfm-bible-parser"
   },
   "engines": {
