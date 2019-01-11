@@ -56,12 +56,18 @@ var bookFileName = htmlHelper.bookFileName;
 
 function convertBook(shortName, opts, order) {
 
-  if (!opts || !opts.inputDir) {
-    throw new Error('Missing inputDir option');
+  if (opts !== undefined && typeof opts === 'object') {
+    if (!opts.inputDir && !opts.bible) {
+      throw new Error('Missing inputDir or bible option');
+    }
+  } else {
+    throw new Error('Missing option');
   }
+
+  opts.lang = opts.lang || 'en';
   opts.layout = opts.layout || 'paragraph';
   opts.outputFormat = opts.outputFormat || 'html';
-  var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
+  var parser = opts.bible || require('usfm-bible-parser')(opts.inputDir, opts.lang);
   var isParagraphOpened = false;
   var books = opts.books;
   var book;
