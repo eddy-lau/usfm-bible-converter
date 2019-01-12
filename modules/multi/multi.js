@@ -195,19 +195,24 @@ function processCover(opts) {
 
 function convertAll(opts) {
 
-  console.log('Conversion start with config: ', opts);
-
-  if (!opts || !opts.inputDir) {
-    throw new Error('Missing inputDir option');
+  if (opts !== undefined && typeof opts === 'object') {
+    if (!opts.inputDir && !opts.bible) {
+      throw new Error('Missing inputDir or bible option');
+    }
+  } else {
+    throw new Error('Missing option');
   }
 
+  console.log('Conversion start with config: ', opts);
+
+  opts.lang = opts.lang || 'en';
   opts.outputFormat = 'html';
   opts.externalCss = true;
   opts.layout = opts.layout || 'paragraph';
   var processedFiles = [];
   var order = 1;
 
-  var parser = require('usfm-bible-parser')(opts.inputDir, opts.lang);
+  var parser = opts.bible || require('usfm-bible-parser')(opts.inputDir, opts.lang);
   return parser.getBooks().then ( books => {
 
     opts.books = books;

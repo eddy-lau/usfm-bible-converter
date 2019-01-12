@@ -3,36 +3,26 @@
 var scriptureModule = require('./modules/scripture');
 var multiBooksModule = require('./modules/multi');
 var bookModule = require('./modules/html');
-
+var options;
 
 module.exports = function(opts) {
+
+  options = Object.assign({}, opts);
   return {
 
-    options: opts,
-    bible: opts.bible,
-
     convertScripture: function(scripture, opts) {
-      var options = {};
-      Object.assign(options, this.options);
-      Object.assign(options, opts || {});
-      options.bible = this.bible;
-      return scriptureModule.convertScripture(scripture, options);
+      var o = Object.assign({},options,opts);
+      return scriptureModule.convertScripture(scripture, o);
     },
 
     convert: function(opts) {
-      var options = {};
-      Object.assign(options, this.options);
-      Object.assign(options, opts || {});
-      options.bible = this.bible;
-      return multiBooksModule.convert(options);
+      var o = Object.assign({},options,opts);
+      return multiBooksModule.convert(o);
     },
 
     convertBook: function(shortName, opts) {
-      var options = {};
-      Object.assign(options, this.options);
-      Object.assign(options, opts || {});
-      options.bible = this.bible;
-      return bookModule.convertBook(shortName, opts);
+      var o = Object.assign({},options,opts);
+      return bookModule.convertBook(shortName, o);
     }
   };
 };
