@@ -178,9 +178,10 @@ function convertCategory(category, opts, order) {
 }
 
 function processCover(opts) {
+  var coverPath = opts.coverPath || path.join(__dirname, 'cover.jpg');
   var outputDir = opts.outputDir || path.join(__dirname, '..', '..', 'output');
   return fs.copy(
-    path.join(__dirname, 'cover.jpg'),
+    coverPath,
     path.join(outputDir, 'cover.jpg')
   ).then( ()=> {
 
