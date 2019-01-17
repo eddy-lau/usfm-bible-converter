@@ -105,6 +105,14 @@ span.pn {
   /*white-space: nowrap;*/
 }
 
+/* dotted underline */
+span.add {
+  border-bottom: 1px dotted #000;
+  /*text-decoration: underline;*/
+  /*white-space: nowrap;*/
+}
+
+
 /* footnote */
 span.f {
   display: none;

@@ -205,6 +205,8 @@ function convertAll(opts) {
 
   console.log('Conversion start with config: ', opts);
 
+  opts.title = opts.title || 'My Great Book';
+  opts.creator = opts.creator || 'Myself';
   opts.lang = opts.lang || 'en';
   opts.outputFormat = 'html';
   opts.externalCss = true;
@@ -273,8 +275,8 @@ function convertAll(opts) {
     return fs.writeFile(
       path.join(outputDir, 'htmls-to-epub.json'),
       JSON.stringify({
-        title: '聖經．和合本修訂版',
-        creator: 'eddie@TouchUtility.com',
+        title: opts.title,
+        creator: opts.creator,
         language: opts.lang,
         files: processedFiles
       })

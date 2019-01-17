@@ -3,7 +3,7 @@ var path = require('path');
 var htmlHelper = require('../html-helper');
 
 const PAIRED_MARKERS = [
-  'bk', 'f', 'fv', 'pn', 'qs'
+  'bk', 'f', 'fv', 'pn', 'qs', 'add'
 ];
 
 const HTML_TAGS = {
@@ -28,6 +28,7 @@ const HTML_TAGS = {
   'nb': 'p',
   'p': 'p',
   'pn': 'span',
+  'add': 'span',
   'ps': 'p',
   'q' : 'p',
   'q1': 'p',
@@ -229,7 +230,7 @@ function convertBook(shortName, opts, order) {
     var targetBook;
     var matches = reference.match( /^\D+/ );
     if (matches && matches.length > 0) {
-      var bookname = matches[0];
+      var bookname = matches[0].trim();
       targetBook = books.find( book => {
         return book.localizedAbbreviation === bookname;
       });
@@ -265,10 +266,10 @@ function convertBook(shortName, opts, order) {
 
   var referenceLinks = function(referenceString) {
 
-    if (!referenceString.match( /^（.+）$/ )) {
-      throw new Error('Invalid reference: ' + referenceString);
+    if (!referenceString.match( /^[*(（].+[）)*]$/ )) {
+      throw new Error('Invalid reference: ' + errorLocation() + " '" + referenceString + "'");
     }
-    var references = referenceString.substring(1, referenceString.length-1).split('；');
+    var references = referenceString.substring(1, referenceString.length-1).split(/；/);
 
     var result = '<span class="r">（';
 
