@@ -11,11 +11,11 @@ function getBookShortName(bookName) {
       return books;
     }
 
-    books = usfmBible.getBooks();
-    return books;
+    return usfmBible.getBooks();
 
-  }).then( books => {
+  }).then( result => {
 
+    books = result;
     return books.find( book => {
       return book.localizedData.name == bookName ||
              book.localizedAltNames.indexOf(bookName) != -1;
@@ -26,7 +26,10 @@ function getBookShortName(bookName) {
     if (book) {
       return book.shortName;
     } else {
-      throw new Error('Book not found: ' + bookName);
+      var availableBooks = books.map( book => {
+        return book.localizedData.name;
+      }).join(', ');
+      throw new Error('Book not found: ' + bookName, ' from [', availableBooks, ']');
     }
 
   });
@@ -104,13 +107,7 @@ function convertScripture(scripture, opts) {
 
   } else {
 
-    if (!opts.inputDir) {
-      console.log(opts);
-      throw new Error('Missing inputDir option');
-    }
-
-    opts.language = opts.language || 'en';
-    usfmBible = require('usfm-bible-parser')(opts.inputDir, opts.language);
+    usfmBible = require('rcuv-usfm').bible;
 
   }
 
