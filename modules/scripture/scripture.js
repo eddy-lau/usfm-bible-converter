@@ -36,8 +36,8 @@ function getBookShortName(bookName) {
 
 function parseScripture(scripture) {
 
-  scripture = scripture.replace('～', '-');
-  scripture = scripture.replace('：', ':');
+  scripture = scripture.replace(/～/g, '-');
+  scripture = scripture.replace(/：/g, ':');
   scripture = scripture.replace(/ /g, '');
 
   var parts;
