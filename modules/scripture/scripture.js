@@ -1,21 +1,20 @@
 /* jshint esversion: 6, node: true */
 'use strict';
 var converter  = require('../html');
-var usfmBible;
-var books;
 
-function getBookShortName(bookName) {
+function getBookShortName(bookName, opts) {
 
   return Promise.resolve().then( ()=> {
-    if (books) {
-      return books;
+
+    if (opts.bible._books) {
+      return opts.bible._books;
     }
 
-    return usfmBible.getBooks();
+    return opts.bible.getBooks();
 
-  }).then( result => {
+  }).then( books => {
 
-    books = result;
+    opts.bible._books = books;
     return books.find( book => {
       return book.localizedData.name == bookName ||
              book.localizedAltNames.indexOf(bookName) != -1;
@@ -26,7 +25,7 @@ function getBookShortName(bookName) {
     if (book) {
       return book.shortName;
     } else {
-      var availableBooks = books.map( book => {
+      var availableBooks = opts.bible._books.map( book => {
         return book.localizedData.name;
       }).join(', ');
       throw new Error('Book not found: ' + bookName, ' from [', availableBooks, ']');
@@ -37,7 +36,7 @@ function getBookShortName(bookName) {
 
 
 
-function parseScripture(scripture) {
+function parseScripture(scripture, opts) {
 
   scripture = scripture.replace(/[～~]/g, '-');
   scripture = scripture.replace(/：/g, ':');
@@ -56,7 +55,7 @@ function parseScripture(scripture) {
 
   //console.log(parts[1], scripture);
 
-  return getBookShortName(parts[0])
+  return getBookShortName(parts[0], opts)
   .then( shortName => {
 
     var result = {};
@@ -101,20 +100,16 @@ function convertScripture(scripture, opts) {
     throw new Error('Invalid options');
   }
 
-  if (opts.bible !== undefined) {
+  if (opts.bible == undefined) {
 
-    usfmBible = opts.bible;
-
-  } else {
-
-    usfmBible = require('rcuv-usfm').bible;
+    opts.bible = require('rcuv-usfm').bible;
 
   }
 
-
   opts = opts || {};
+  opts.convertScripture = true;
 
-  return parseScripture(scripture)
+  return parseScripture(scripture, opts)
   .then( result => {
 
     Object.assign(opts, result);

@@ -6,7 +6,8 @@ var fs = require('fs-extra');
 var cssPaths = {
   common: path.join(__dirname, 'style-common.css'),
   paragraph: path.join(__dirname, 'style-paragraph-layout.css'),
-  line: path.join(__dirname, 'style-line-layout.css')
+  line: path.join(__dirname, 'style-line-layout.css'),
+  scripture: path.join(__dirname, 'style-scripture-only.css')
 };
 
 function startDoc(title, opts) {
@@ -38,6 +39,9 @@ function css(opts) {
     result = '<style><!--\n';
     result += fs.readFileSync(cssPaths.common) + '\n';
     result += fs.readFileSync(cssPaths[opts.layout]) + '\n';
+    if (opts.convertScripture) {
+      result += fs.readFileSync(cssPaths.scripture) + '\n';
+    }
     result += '--></style>';
     return result;
   }
@@ -49,7 +53,7 @@ function endDoc(opts) {
   } else if (opts.outputFormat === 'htmlElements') {
     return '</div>';
   } else {
-    throw 'Unknown format';    
+    throw 'Unknown format';
   }
 }
 
