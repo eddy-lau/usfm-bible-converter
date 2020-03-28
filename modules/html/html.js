@@ -35,7 +35,7 @@ const HTML_TAGS = {
   'q2': 'p',
   'q3': 'p',
   'qs': 'span',
-  'r': 'span',
+  'r': 'p',
   'restore': 'p',
   's': 'h3',
   's1': 'h3',
@@ -213,7 +213,11 @@ function convertBook(shortName, opts, order) {
       var tag = opts.footnoteTag || 'aside';
       result += '<' + tag + ' id="footnote-' + footnote.index + '" epub:type="footnote">\n';
       result += '<p class="footnote">';
-      result += '<a href="#footnote-' + footnote.index + '-ref">' + footnoteLinkText + '</a> ';
+      if (opts.convertScripture) {
+        result += footnoteLinkText + ' ';
+      } else {
+        result += '<a href="#footnote-' + footnote.index + '-ref">' + footnoteLinkText + '</a> ';
+      }
       result += footnote.text + '</p>\n';
       result += '</'+ tag + '>\n';
 
@@ -271,7 +275,8 @@ function convertBook(shortName, opts, order) {
     }
     var references = referenceString.substring(1, referenceString.length-1).split(/；/);
 
-    var result = '<span class="r">（';
+    const tag = HTML_TAGS['r'];
+    var result = '<' + tag + ' class="r">（';
 
     // Parse the links
     var links = references.map( reference => {
@@ -293,10 +298,14 @@ function convertBook(shortName, opts, order) {
       }
     }
 
-
     result += links.reduce( (accumulator, link, index, links) => {
 
-      var text = '<a href="' + getFilename(link.book) + '#' + link.chapter + ':' + link.verse + '">' + link.text + '</a>';
+      var text;
+      if (opts.convertScripture) {
+        text = link.text;
+      } else {
+        text = '<a href="' + getFilename(link.book) + '#' + link.chapter + ':' + link.verse + '">' + link.text + '</a>';
+      }
       if (links[links.length-1].text !== link.text) {
         text += '；';
       }
@@ -304,7 +313,7 @@ function convertBook(shortName, opts, order) {
 
     }, '');
 
-    result += '）</span>';
+    result += '）</' + tag + '>';
 
     return result;
   };
@@ -435,7 +444,7 @@ function convertBook(shortName, opts, order) {
 
       if (opts.outputFormat === 'html') {
         writer = require('string-writer').start();
-        cssWriter = writer;
+        //cssWriter = writer;
         footnoteWriter = writer;
       } else if (opts.outputFormat === 'htmlElements') {
         writer = require('string-writer').start();
@@ -552,7 +561,8 @@ function convertBook(shortName, opts, order) {
         },
         onEndLine: function(line) {
 
-          writer.write( '<!-- ' + line + ' -->\n');
+          // Uncomment this line for debug only
+          //writer.write( '<!-- ' + line + ' -->\n');
           while(markers.length > 0) {
             writer.write( convertMarker(markers.pop(), texts.pop()) + '\n');
           }
