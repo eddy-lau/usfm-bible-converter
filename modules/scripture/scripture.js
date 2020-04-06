@@ -34,9 +34,40 @@ function getBookShortName(bookName, opts) {
   });
 }
 
+function parseScriptures(scriptures, opts) {
 
+  /* handle these cases here
+  E.g.  使徒行傳6：8～15，7：54～56
+  E.g.  瑪拉基書2：10～16，3：7～12
+  E.g.  瑪拉基書2：17～3：6，3：13～4：3
+  E.g.  瑪拉基書2：10～16，3：7～12
+  E.g.  瑪拉基書2：17～3：6，3：13～4：3
+  E.g.  瑪拉基書2：17～3：6，3：13～4：3
+  E.g.  瑪拉基書2：10～16，3：7～12
+  E.g.  利未記18：1～5、24～30
+  E.g.  利未記18：1～5、24～30
+  E.g.  利未記18：1～5、24～30
+  */
 
-function parseScripture(scripture, opts) {
+  var array = scriptures.split(/[，、]/)
+
+  var results = [];
+  array.forEach( (s, i) => {
+    results.push(parseScripture(s, opts, i>0 ? results[i-1]: undefined));
+  });
+
+  return Promise.all( results.map( result => {
+
+    return getBookShortName(result.book, opts).then( shortName => {
+      result.bookName = shortName
+      return result;
+    });
+
+  }));
+
+}
+
+function parseScripture(scripture, opts, prevResult) {
 
   scripture = scripture.replace(/[～~]/g, '-');
   scripture = scripture.replace(/：/g, ':');
@@ -50,47 +81,50 @@ function parseScripture(scripture, opts) {
       scripture.substring(matches[0].length-1)
     ];
   } else {
+
+    if (!prevResult) {
+      throw new Error('Invalid scripture: ', scripture);
+    }
+
+    if (!scripture.match(/:/)) {
+      scripture = '' + prevResult.toChapter + ':' + scripture;
+    }
+
+    parts = [
+      prevResult.book,
+      scripture
+    ];
+  }
+
+  var result = {};
+  result.book = parts[0];
+
+  parts = parts[1].split('-');
+  var fromParts = parts[0].split(':');
+  var toParts = parts.length > 1 ? parts[1].split(':'):undefined;
+
+  if (fromParts.length == 1) {
+    fromParts = ['1', fromParts[0]];
+  }
+  result.fromChapter = parseInt(fromParts[0]);
+  result.fromVerse = fromParts.length > 1 ? parseInt(fromParts[1]):undefined;
+  if (toParts) {
+    result.toChapter = toParts.length > 1 ? parseInt(toParts[0]):result.fromChapter;
+    result.toVerse = toParts.length > 1 ? parseInt(toParts[1]):parseInt(toParts[0]);
+  } else {
+    result.toChapter = result.fromChapter;
+    result.toVerse = result.fromVerse;
+  }
+
+  if (!result.fromChapter || !result.fromVerse ||
+      !result.toChapter) {
+
+    console.log(result);
     throw new Error('Parse error: ' + scripture);
   }
 
-  //console.log(parts[1], scripture);
+  return result;
 
-  return getBookShortName(parts[0], opts)
-  .then( shortName => {
-
-    var result = {};
-    result.bookName = shortName;
-
-    if (parts.length > 1) {
-      parts = parts[1].split('-');
-      var fromParts = parts[0].split(':');
-      var toParts = parts.length > 1 ? parts[1].split(':'):undefined;
-
-      if (fromParts.length == 1) {
-        fromParts = ['1', fromParts[0]];
-      }
-      result.fromChapter = parseInt(fromParts[0]);
-      result.fromVerse = fromParts.length > 1 ? parseInt(fromParts[1]):undefined;
-      if (toParts) {
-        result.toChapter = toParts.length > 1 ? parseInt(toParts[0]):result.fromChapter;
-        result.toVerse = toParts.length > 1 ? parseInt(toParts[1]):parseInt(toParts[0]);
-      } else {
-        result.toChapter = result.fromChapter;
-        result.toVerse = result.fromVerse;
-      }
-    } else {
-      throw new Error('Parse error: ' + scripture);
-    }
-
-    if (!result.fromChapter || !result.fromVerse ||
-        !result.toChapter) {
-
-      console.log(result);
-      throw new Error('Parse error: ' + scripture);
-    }
-
-    return result;
-  });
 }
 
 
@@ -109,10 +143,22 @@ function convertScripture(scripture, opts) {
   opts = opts || {};
   opts.convertScripture = true;
 
-  return parseScripture(scripture, opts)
-  .then( result => {
+  return parseScriptures(scripture, opts)
+  .then( array => {
+    if (array.length > 1) {
 
-    Object.assign(opts, result);
+      var sameBook = array.reduce( (accumulator, currentValue) => {
+        return accumulator && currentValue.bookName == array[0].bookName;
+      }, true);
+
+      if (!sameBook) {
+        throw new Error('Not supported, different book: ', scripture);
+      }
+
+      Object.assign(opts, {scriptures:array, bookName:array[0].bookName});
+    } else {
+      Object.assign(opts, array[0]);
+    }
     return converter.convertBook(opts.bookName, opts);
   });
 

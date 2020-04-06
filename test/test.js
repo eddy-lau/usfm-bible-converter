@@ -17,7 +17,7 @@ var opts = {
   outputFormat: 'html'
 };
 
-converter.convertScripture(scripture)
+converter(opts).convertScripture(scripture)
 .then( result => {
   console.log(result.output);
 }).catch( err => {

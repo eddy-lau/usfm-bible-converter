@@ -514,8 +514,13 @@ function convertBook(shortName, opts, order) {
         fromVerse: opts.fromVerse,
         toChapter: opts.toChapter,
         toVerse: opts.toVerse,
+        scriptures: opts.scriptures,
         onStartBook: function() {
-          chapter = opts.fromChapter;
+          if (opts.fromChapter) {
+            chapter = opts.fromChapter;
+          } else if (opts.scriptures && Array.isArray(opts.scriptures)) {
+            chapter = opts.scriptures[0].fromChapter;
+          }
           writer.write(startDoc(book.localizedData.name, opts) + '\n');
           if (cssWriter) {
             cssWriter.write(css(opts));
