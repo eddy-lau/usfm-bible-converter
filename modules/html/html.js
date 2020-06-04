@@ -198,7 +198,7 @@ function convertBook(shortName, opts, order) {
     }
 
     var result = '<div class="page-break"></div>\n';
-    result += '<div class="chap-nav">\n';
+    result += '<div class="chap-nav foot-chap-nav">\n';
     result += '&lt; <a class="prev-chap-link chap-link" href="#' + (chapter) + '">上一章</a> ';
     result += '<a class="chapter" id="' + (chapter + 1) + '">\n';
     result += '<span class="footnote-title">註釋</span>\n';
@@ -335,6 +335,10 @@ function convertBook(shortName, opts, order) {
       result += bookNavigation();
 
     } else if (marker == 'v') {
+
+      if (!isParagraphOpened) {
+        result += startHtmlTag('p', {}, '');
+      }
 
       var verseNumberStr;
       let matches = text.match( /^\d+? / );
