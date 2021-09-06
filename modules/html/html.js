@@ -518,6 +518,8 @@ function convertBook(shortName, opts, order) {
         fromVerse: opts.fromVerse,
         toChapter: opts.toChapter,
         toVerse: opts.toVerse,
+        secondHalfOfFirstVerse: opts.secondHalfOfFirstVerse,
+        firstHalfOfLastVerse: opts.firstHalfOfLastVerse,
         scriptures: opts.scriptures,
         onStartBook: function() {
           if (opts.fromChapter) {

@@ -49,7 +49,7 @@ function parseScriptures(scriptures, opts) {
   E.g.  利未記18：1～5、24～30
   */
 
-  var array = scriptures.split(/[，、]/)
+  var array = scriptures.split(/[，、]/);
 
   var results = [];
   array.forEach( (s, i) => {
@@ -59,7 +59,7 @@ function parseScriptures(scriptures, opts) {
   return Promise.all( results.map( result => {
 
     return getBookShortName(result.book, opts).then( shortName => {
-      result.bookName = shortName
+      result.bookName = shortName;
       return result;
     });
 
@@ -96,7 +96,14 @@ function parseScripture(scripture, opts, prevResult) {
     ];
   }
 
-  var result = {};
+  var result = {
+    fromChapter: undefined,
+    fromVerse: undefined,
+    toChapter: undefined,
+    toVerse: undefined,
+    secondHalfOfFirstVerse: false,
+    firstHalfOfLastVerse: false    
+  };
   result.book = parts[0];
 
   parts = parts[1].split('-');
@@ -107,10 +114,29 @@ function parseScripture(scripture, opts, prevResult) {
     fromParts = ['1', fromParts[0]];
   }
   result.fromChapter = parseInt(fromParts[0]);
-  result.fromVerse = fromParts.length > 1 ? parseInt(fromParts[1]):undefined;
+
+  var fromVerseStr = fromParts.length > 1 ? fromParts[1] : undefined;
+  if (fromVerseStr) {
+    result.fromVerse = parseInt(fromVerseStr);
+    if (fromVerseStr.endsWith('b')) {
+      result.secondHalfOfFirstVerse = true;
+    }
+  }
+
   if (toParts) {
     result.toChapter = toParts.length > 1 ? parseInt(toParts[0]):result.fromChapter;
     result.toVerse = toParts.length > 1 ? parseInt(toParts[1]):parseInt(toParts[0]);
+
+    var toVerseStr = toParts.length > 1 ? toParts[1] : toParts[0];
+    result.toVerse = parseInt(toVerseStr);
+
+    if (toVerseStr.endsWith('a')) {
+      // To handle the following
+      // e.g. ACT 9:1-19a
+      // Just need the first half of the to verse text.
+      result.firstHalfOfLastVerse = true;
+    }
+
   } else {
     result.toChapter = result.fromChapter;
     result.toVerse = result.fromVerse;
