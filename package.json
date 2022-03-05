@@ -4,7 +4,8 @@
   "description": "Convert the USFM Bible texts to different formats.",
   "main": "main.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "cli": "node cli.js"
   },
   "author": "Eddie Lau",
   "license": "ISC",

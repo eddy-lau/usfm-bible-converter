@@ -27,6 +27,9 @@ program.on('--help', ()=> {
   console.log('  Example 4, to convert part and output to console');
   console.log('  $ node cli.js -s 列王紀上15：33～16：14 -f html');
   console.log('');
+  console.log('  Example 5, to convert chapter 15 and output to console');
+  console.log('  $ node cli.js -s 列王紀上15～ -f html');
+  console.log('');
 });
 
 if (!program.outputDir && !program.outputFormat) {
@@ -52,6 +55,9 @@ if (program.outputDir) {
   if (!path.isAbsolute(outputDir) ) {
     outputDir = path.join(__dirname, outputDir);
   }
+  if (program.outputFormat) {
+    console.warn('Warning: Output dir is specified, so output format must be "html" and the augument is ignored');
+  }
 } else if (program.outputFormat) {
   if (program.outputFormat !== 'html' && program.outputFormat !== 'htmlElements') {
     console.error('Invalid output format: ', program.outputFormat);
@@ -67,7 +73,7 @@ var options = {
   layout: program.layout
 };
 
-return Promise.resolve().then( ()=> {
+Promise.resolve().then( ()=> {
 
   var converter  = require('./main.js')(options);
 
