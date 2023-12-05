@@ -107,7 +107,7 @@ moment@^2.22.2:
   dependencies:
     fs "0.0.1-security"
     htmlparser2 "^3.9.2"
-    usfm-bible-parser "file:../../../Library/Caches/Yarn/v6/npm-rcuv-usfm-1.0.0-fcf1f50d-8064-4574-9e22-b15ddaf790a2-1678784451700/node_modules/usfm-bible-parser"
+    usfm-bible-parser "file:../../../Library/Caches/Yarn/v6/npm-rcuv-usfm-1.0.0-ec6c6bba-4b28-49d9-aedf-e2af43a467e9-1701735467074/node_modules/usfm-bible-parser"
 
 readable-stream@^3.1.1:
   version "3.6.2"
@@ -140,8 +140,14 @@ universalify@^0.1.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 
+usfm-bible-parser@../usfm-bible-parser/usfm-bible-parser-1.0.1.tgz:
+  version "1.0.1"
+  resolved "../usfm-bible-parser/usfm-bible-parser-1.0.1.tgz#030cce4cb8215e2b7c490915d5e9c73e7ecb9b82"
+  dependencies:
+    bible-book-data "git+https://github.com/eddy-lau/bible-book-data"
+
 "usfm-bible-parser@file:../usfm-bible-parser":
-  version "1.0.0"
+  version "1.0.1"
   dependencies:
     bible-book-data "git+https://github.com/eddy-lau/bible-book-data"
 

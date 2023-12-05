@@ -14,7 +14,7 @@
     "fs-extra": "^7.0.0",
     "moment": "^2.22.2",
     "string-writer": "^0.1.0",
-    "usfm-bible-parser": "file:../usfm-bible-parser"
+    "usfm-bible-parser": "../usfm-bible-parser/usfm-bible-parser-1.0.1.tgz"
   },
   "engines": {
     "node": ">=6.0.0"
