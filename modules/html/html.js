@@ -68,7 +68,7 @@ function convertBook(shortName, opts, order) {
   opts.lang = opts.lang || 'en';
   opts.layout = opts.layout || 'paragraph';
   opts.outputFormat = opts.outputFormat || 'html';
-  var parser = opts.bible || require('usfm-bible-parser')(opts.inputDir, opts.lang);
+  var parser = opts.bible || require('usfm-bible-parser').default(opts.inputDir, opts.lang);
   var isParagraphOpened = false;
   var books = opts.books;
   var book;

@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"bible-book-data@git+https://github.com/eddy-lau/bible-book-data":
-  version "1.0.0"
-  resolved "git+https://github.com/eddy-lau/bible-book-data#a601636391fd9c7be8bd357e167a654295d863e3"
+"bible-book-data@https://github.com/eddy-lau/bible-book-data/releases/download/1.1.0/bible-book-data-1.1.0.tgz":
+  version "1.1.0"
+  resolved "https://github.com/eddy-lau/bible-book-data/releases/download/1.1.0/bible-book-data-1.1.0.tgz#6e2722e23d6b628936d70e6ec35f4907030228c0"
 
 commander@^2.17.1:
   version "2.20.3"
@@ -69,9 +69,9 @@ fs@0.0.1-security:
   integrity sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==
 
 graceful-fs@^4.1.2, graceful-fs@^4.1.6:
-  version "4.2.10"
-  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
-  integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
+  version "4.2.11"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
+  integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
 htmlparser2@^3.9.2:
   version "3.10.1"
@@ -102,12 +102,9 @@ moment@^2.22.2:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
   integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
-"rcuv-usfm@file:../rcuv-usfm":
-  version "1.0.0"
-  dependencies:
-    fs "0.0.1-security"
-    htmlparser2 "^3.9.2"
-    usfm-bible-parser "file:../../../Library/Caches/Yarn/v6/npm-rcuv-usfm-1.0.0-ec6c6bba-4b28-49d9-aedf-e2af43a467e9-1701735467074/node_modules/usfm-bible-parser"
+"rcuv-usfm@link:../rcuv-usfm":
+  version "0.0.0"
+  uid ""
 
 readable-stream@^3.1.1:
   version "3.6.2"
@@ -140,16 +137,9 @@ universalify@^0.1.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 
-usfm-bible-parser@../usfm-bible-parser/usfm-bible-parser-1.0.1.tgz:
-  version "1.0.1"
-  resolved "../usfm-bible-parser/usfm-bible-parser-1.0.1.tgz#030cce4cb8215e2b7c490915d5e9c73e7ecb9b82"
-  dependencies:
-    bible-book-data "git+https://github.com/eddy-lau/bible-book-data"
-
-"usfm-bible-parser@file:../usfm-bible-parser":
-  version "1.0.1"
-  dependencies:
-    bible-book-data "git+https://github.com/eddy-lau/bible-book-data"
+"usfm-bible-parser@link:../usfm-bible-parser":
+  version "0.0.0"
+  uid ""
 
 util-deprecate@^1.0.1:
   version "1.0.2"

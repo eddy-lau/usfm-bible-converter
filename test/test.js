@@ -1,6 +1,5 @@
 /* jshint esversion: 6 */
-var path = require('path');
-var converter  = require('../main.js');
+var converter = require('..');
 
 var scripture;
 if (process.argv.length == 3) {

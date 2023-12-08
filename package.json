@@ -14,12 +14,12 @@
     "fs-extra": "^7.0.0",
     "moment": "^2.22.2",
     "string-writer": "^0.1.0",
-    "usfm-bible-parser": "../usfm-bible-parser/usfm-bible-parser-1.0.1.tgz"
+    "usfm-bible-parser": "link:../usfm-bible-parser"
   },
   "engines": {
     "node": ">=6.0.0"
   },
   "devDependencies": {
-    "rcuv-usfm": "file:../rcuv-usfm"
+    "rcuv-usfm": "link:../rcuv-usfm"
   }
 }

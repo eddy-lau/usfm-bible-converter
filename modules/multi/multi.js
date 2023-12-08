@@ -215,7 +215,7 @@ function convertAll(opts) {
   var processedFiles = [];
   var order = 1;
 
-  var parser = opts.bible || require('usfm-bible-parser')(opts.inputDir, opts.lang);
+  var parser = opts.bible || require('usfm-bible-parser').default(opts.inputDir, opts.lang);
   return parser.getBooks().then ( books => {
 
     opts.books = books;
