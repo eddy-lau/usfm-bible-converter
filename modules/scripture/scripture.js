@@ -70,7 +70,7 @@ function parseScriptures(scriptures, opts) {
 function parseScripture(scripture, opts, prevResult) {
 
   scripture = scripture.replace(/[～~]/g, '-');
-  scripture = scripture.replace(/：/g, ':');
+  scripture = scripture.replace(/[：︰]/g, ':');
   scripture = scripture.replace(/ /g, '');
 
   var parts;
